@@ -1,34 +1,18 @@
 <?php
-/**
- * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- * @link          https://cakephp.org CakePHP(tm) Project
- * @since         0.10.0
- * @license       https://opensource.org/licenses/mit-license.php MIT License
- */
-
-$cakeDescription = 'CakePHP: the rapid development php framework';
+$cakeDescription = 'Visitez Lyon en 4L';
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]><html class="ie ie8"> <![endif]-->
 <!--[if IE 9]><html class="ie ie9"> <![endif]-->
-<html>
+<html lang="en">
 <head>
-    <!--<meta charset="utf-8">-->
-    <?= $this->Html->charset() ?>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <meta name="description" content="Citytours - Premium site template for city tours agencies, transfers and tickets.">
     <meta name="author" content="Ansonika">
-    <title><?= $cakeDescription; ?>:
-        <?= $this->fetch('title'); ?></title>
+    <title>CITY TOURS - City tours and travel site template by Ansonika</title>
     
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -36,37 +20,20 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
-	
-	<!-- Google web fonts -->
+    
+    <!-- Google web fonts -->
     <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Lato:300,400|Montserrat:400,400i,700,700i" rel="stylesheet">
 
     <!-- CSS -->
     <!--<link href="css/base.css" rel="stylesheet">-->
-	<?= $this->Html->css('base'); ?>
-
+    <?php echo $this->Html->css('base.css'); ?>
+    <?php echo $this->fetch('css'); ?>
+        
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
-
-    <!-- Common scripts -->
-<!--<script src="js/jquery-2.2.4.min.js"></script>
-<script src="js/common_scripts_min.js"></script>
-<script src="js/functions.js"></script>-->
-
-<?= $this->Html->script('jquery-2.2.4.min'); ?>
-<?= $this->Html->script('common_scripts_min'); ?>
-<?= $this->Html->script('functions'); ?>
- <!-- Map -->
-<script src="http://maps.googleapis.com/maps/api/js"></script>                                                   
-<!--<script type="text/javascript" src="js/map_home.js"></script>
-<script type="text/javascript" src="js/infobox.js"></script>-->
-<?= $this->Html->script('map_home'); ?>
-<?= $this->Html->script('infobox'); ?>
-
-    <?= $this->fetch('css'); ?>
-    <?= $this->fetch('script'); ?>
-           
+        
 </head>
 <body>
 
@@ -138,16 +105,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <div class="row">
                 <div class="col-md-3 col-sm-3 col-xs-3">
                     <div id="logo_home">
-                    	<h1><a href="index.html" title="City tours travel template">City Tours travel template</a></h1>
+                        <h1><a href="index.html" title="City tours travel template">City Tours travel template</a></h1>
                     </div>
                 </div>
                 <nav class="col-md-9 col-sm-9 col-xs-9">
                     <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu mobile</span></a>
                     <div class="main-menu">
                         <div id="header_menu">
-
-                            <!--<img src="img/logo_sticky.png" width="160" height="34" alt="City tours" data-retina="true">-->
-
+                            <img src="img/logo_sticky.png" width="160" height="34" alt="City tours" data-retina="true">
                         </div>
                         <a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
                         <ul>
@@ -348,19 +313,19 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                                     <li>
                                         <div class="image"><img src="img/thumb_cart_1.jpg" alt="image"></div>
                                         <strong>
-										<a href="#">Louvre museum</a>1x $36.00 </strong>
+                                        <a href="#">Louvre museum</a>1x $36.00 </strong>
                                         <a href="#" class="action"><i class="icon-trash"></i></a>
                                     </li>
                                     <li>
                                         <div class="image"><img src="img/thumb_cart_2.jpg" alt="image"></div>
                                         <strong>
-										<a href="#">Versailles tour</a>2x $36.00 </strong>
+                                        <a href="#">Versailles tour</a>2x $36.00 </strong>
                                         <a href="#" class="action"><i class="icon-trash"></i></a>
                                     </li>
                                     <li>
                                         <div class="image"><img src="img/thumb_cart_3.jpg" alt="image"></div>
                                         <strong>
-										<a href="#">Versailles tour</a>1x $36.00 </strong>
+                                        <a href="#">Versailles tour</a>1x $36.00 </strong>
                                         <a href="#" class="action"><i class="icon-trash"></i></a>
                                     </li>
                                     <li>
@@ -377,480 +342,220 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </div><!-- container -->
     </header><!-- End Header -->
     
-	<section id="hero">
-		<div class="intro_title">
-			<h3 class="animated fadeInDown">Affordable Paris tours</h3>
-			<p class="animated fadeInDown">City Tours / Tour Tickets / Tour Guides</p>
-			<a href="#" class="animated fadeInUp button_intro">View Tours</a> <a href="#" class="animated fadeInUp button_intro outline">View Tickets</a>
-		</div>
-	</section>
-	<!-- End hero -->
+    <section id="hero">
+        <div class="intro_title">
+            <h3 class="animated fadeInDown">Affordable Paris tours</h3>
+            <p class="animated fadeInDown">City Tours / Tour Tickets / Tour Guides</p>
+            <a href="#" class="animated fadeInUp button_intro">View Tours</a> <a href="#" class="animated fadeInUp button_
+            intro outline">View Tickets</a>
+        </div>
+    </section>
+    <!-- End hero -->
 
-	<main>
-		<div class="container margin_60">
+    <main>
 
-			<div class="main_title">
-				<h2>Paris <span>Top</span> Tours</h2>
-				<p>Quisque at tortor a libero posuere laoreet vitae sed arcu. Curabitur consequat.</p>
-				<?= $this->fetch('content') ?>
-			</div>
+    	<?= $this->fetch('content') ?>
+    	
+        <!-- End container -->
 
-			<div class="row">
+        <div class="white_bg">
+            <div class="container margin_60">
+                <div class="main_title">
+                    <h2>Other <span>Popular</span> tours</h2>
+                    <p>
+                        Quisque at tortor a libero posuere laoreet vitae sed arcu. Curabitur consequat.
+                    </p>
+                </div>
+                <div class="row add_bottom_45">
+                    <div class="col-md-4 other_tours">
+                        <ul>
+                            <li><a href="#"><i class="icon_set_1_icon-3"></i>Tour Eiffel<span class="other_tours_price">$42</span></a>
+                            </li>
+                            <li><a href="#"><i class="icon_set_1_icon-30"></i>Shopping tour<span class="other_tours_price">$35</span></a>
+                            </li>
+                            <li><a href="#"><i class="icon_set_1_icon-44"></i>Versailles tour<span class="other_tours_price">$20</span></a>
+                            </li>
+                            <li><a href="#"><i class="icon_set_1_icon-3"></i>Montparnasse skyline<span class="other_tours_price">$26</span></a>
+                            </li>
+                            <li><a href="#"><i class="icon_set_1_icon-44"></i>Pompidue<span class="other_tours_price">$26</span></a>
+                            </li>
+                            <li><a href="#"><i class="icon_set_1_icon-3"></i>Senna River tour<span class="other_tours_price">$32</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 other_tours">
+                        <ul>
+                            <li><a href="#"><i class="icon_set_1_icon-1"></i>Notredame<span class="other_tours_price">$48</span></a>
+                            </li>
+                            <li><a href="#"><i class="icon_set_1_icon-4"></i>Lafaiette<span class="other_tours_price">$55</span></a>
+                            </li>
+                            <li><a href="#"><i class="icon_set_1_icon-30"></i>Trocadero<span class="other_tours_price">$76</span></a>
+                            </li>
+                            <li><a href="#"><i class="icon_set_1_icon-3"></i>Open Bus tour<span class="other_tours_price">$55</span></a>
+                            </li>
+                            <li><a href="#"><i class="icon_set_1_icon-30"></i>Louvre museum<span class="other_tours_price">$24</span></a>
+                            </li>
+                            <li><a href="#"><i class="icon_set_1_icon-3"></i>Madlene Cathedral<span class="other_tours_price">$24</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 other_tours">
+                        <ul>
+                            <li><a href="#"><i class="icon_set_1_icon-37"></i>Montparnasse<span class="other_tours_price">$36</span></a>
+                            </li>
+                            <li><a href="#"><i class="icon_set_1_icon-1"></i>D'Orsey museum<span class="other_tours_price">$28</span></a>
+                            </li>
+                            <li><a href="#"><i class="icon_set_1_icon-50"></i>Gioconda Louvre musuem<span class="other_tours_price">$44</span></a>
+                            </li>
+                            <li><a href="#"><i class="icon_set_1_icon-44"></i>Tour Eiffel<span class="other_tours_price">$56</span></a>
+                            </li>
+                            <li><a href="#"><i class="icon_set_1_icon-50"></i>Ladefanse<span class="other_tours_price">$16</span></a>
+                            </li>
+                            <li><a href="#"><i class="icon_set_1_icon-44"></i>Notredame<span class="other_tours_price">$26</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End row -->
 
-				<div class="col-md-4 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
-					<div class="tour_container">
-						<div class="ribbon_3 popular"><span>Popular</span></div>
-						<div class="img_container">
-							<a href="single_tour.html">
-								<img src="img/tour_box_1.jpg" class="img-responsive" alt="Image">
-								<div class="short_info">
-									<i class="icon_set_1_icon-44"></i>Historic Buildings<span class="price"><sup>$</sup>39</span>
-								</div>
-							</a>
-						</div>
-						<div class="tour_title">
-							<h3><strong>Arc Triomphe</strong> tour</h3>
-							<div class="rating">
-								<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small>
-							</div>
-							<!-- end rating -->
-							<div class="wishlist">
-								<a class="tooltip_flip tooltip-effect-1" href="javascript:void(0);">+<span class="tooltip-content-flip"><span class="tooltip-back">Add to wishlist</span></span></a>
-							</div>
-							<!-- End wish list-->
-						</div>
-					</div>
-					<!-- End box tour -->
-				</div>
-				<!-- End col-md-4 -->
+                <div class="banner colored add_bottom_30">
+                    <h4>Discover our Top tours <span>from $34</span></h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in.
+                    </p>
+                    <a href="single_tour.html" class="btn_1 white">Read more</a>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 text-center">
+                        <p>
+                            <a href="#"><img src="img/bus.jpg" alt="Pic" class="img-responsive"></a>
+                        </p>
+                        <h4><span>Sightseen tour</span> booking</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex.
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 text-center">
+                        <p>
+                            <a href="#"><img src="img/transfer.jpg" alt="Pic" class="img-responsive"></a>
+                        </p>
+                        <h4><span>Transfer</span> booking</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex.
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 text-center">
+                        <p>
+                            <a href="#"><img src="img/guide.jpg" alt="Pic" class="img-responsive"></a>
+                        </p>
+                        <h4><span>Tour guide</span> booking</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex.
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 text-center">
+                        <p>
+                            <a href="#"><img src="img/hotel.jpg" alt="Pic" class="img-responsive"></a>
+                        </p>
+                        <h4><span>Hotel</span> booking</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex.
+                        </p>
+                    </div>
+                </div>
+                <!-- End row -->
+            </div>
+            <!-- End container -->
+        </div>
+        <!-- End white_bg -->
 
-				<div class="col-md-4 col-sm-6 wow zoomIn" data-wow-delay="0.2s">
-					<div class="tour_container">
-						<div class="ribbon_3 popular"><span>Popular</span></div>
-						<div class="img_container">
-							<a href="single_tour.html">
-								<img src="img/tour_box_2.jpg" width="800" height="533" class="img-responsive" alt="Image">
-								<div class="badge_save">Save<strong>30%</strong></div>
-								<div class="short_info">
-									<i class="icon_set_1_icon-43"></i>Churches<span class="price"><sup>$</sup>45</span>
-								</div>
-							</a>
-						</div>
-						<div class="tour_title">
-							<h3><strong>Notredame</strong> tour</h3>
-							<div class="rating">
-								<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small>
-							</div>
-							<!-- end rating -->
-							<div class="wishlist">
-								<a class="tooltip_flip tooltip-effect-1" href="javascript:void(0);">+<span class="tooltip-content-flip"><span class="tooltip-back">Add to wishlist</span></span></a>
-							</div>
-							<!-- End wish list-->
-						</div>
-					</div>
-					<!-- End box tour -->
-				</div>
-				<!-- End col-md-4 -->
+        <section class="promo_full">
+            <div class="promo_full_wp magnific">
+                <div>
+                    <h3>BELONG ANYWHERE</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex.
+                    </p>
+                    <a href="https://www.youtube.com/watch?v=Zz5cu72Gv5Y" class="video"><i class="icon-play-circled2-1"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- End section -->
 
-				<div class="col-md-4 col-sm-6 wow zoomIn" data-wow-delay="0.3s">
-					<div class="tour_container">
-						<div class="ribbon_3 popular"><span>Popular</span></div>
-						<div class="img_container">
-							<a href="single_tour.html">
-								<img src="img/tour_box_3.jpg" width="800" height="533" class="img-responsive" alt="Image">
-								<div class="short_info">
-									<i class="icon_set_1_icon-44"></i>Historic Buildings<span class="price"><sup>$</sup>48</span>
-								</div>
-							</a>
-						</div>
-						<div class="tour_title">
-							<h3><strong>Versailles</strong> tour</h3>
-							<div class="rating">
-								<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small>
-							</div>
-							<!-- end rating -->
-							<div class="wishlist">
-								<a class="tooltip_flip tooltip-effect-1" href="javascript:void(0);">+<span class="tooltip-content-flip"><span class="tooltip-back">Add to wishlist</span></span></a>
-							</div>
-							<!-- End wish list-->
-						</div>
-					</div>
-					<!-- End box tour -->
-				</div>
-				<!-- End col-md-4 -->
+        <div class="container margin_60">
 
-				<div class="col-md-4 col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-					<div class="tour_container">
-						<div class="ribbon_3"><span>Top rated</span></div>
-						<div class="img_container">
-							<a href="single_tour.html">
-								<img src="img/tour_box_4.jpg" width="800" height="533" class="img-responsive" alt="Image">
-								<div class="badge_save">Save<strong>30%</strong></div>
-								<div class="short_info">
-									<i class="icon_set_1_icon-30"></i>Walking tour<span class="price"><sup>$</sup>36</span>
-								</div>
-							</a>
-						</div>
-						<div class="tour_title">
-							<h3><strong>Pompidue</strong> tour</h3>
-							<div class="rating">
-								<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small>
-							</div>
-							<!-- end rating -->
-							<div class="wishlist">
-								<a class="tooltip_flip tooltip-effect-1" href="javascript:void(0);">+<span class="tooltip-content-flip"><span class="tooltip-back">Add to wishlist</span></span></a>
-							</div>
-							<!-- End wish list-->
-						</div>
-					</div>
-					<!-- End box tour -->
-				</div>
-				<!-- End col-md-4 -->
+            <div class="main_title">
+                <h2>Some <span>good</span> reasons</h2>
+                <p>
+                    Quisque at tortor a libero posuere laoreet vitae sed arcu. Curabitur consequat.
+                </p>
+            </div>
 
-				<div class="col-md-4 col-sm-6 wow zoomIn" data-wow-delay="0.5s">
-					<div class="tour_container">
-						<div class="ribbon_3"><span>Top rated</span></div>
-						<div class="img_container">
-							<a href="single_tour.html">
-								<img src="img/tour_box_14.jpg" width="800" height="533" class="img-responsive" alt="Image">
-								<div class="short_info">
-									<i class="icon_set_1_icon-28"></i>Skyline tours<span class="price"><sup>$</sup>42</span>
-								</div>
-							</a>
-						</div>
-						<div class="tour_title">
-							<h3><strong>Tour Eiffel</strong> tour</h3>
-							<div class="rating">
-								<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small>
-							</div>
-							<!-- end rating -->
-							<div class="wishlist">
-								<a class="tooltip_flip tooltip-effect-1" href="javascript:void(0);">+<span class="tooltip-content-flip"><span class="tooltip-back">Add to wishlist</span></span></a>
-							</div>
-							<!-- End wish list-->
-						</div>
-					</div>
-					<!-- End box tour -->
-				</div>
-				<!-- End col-md-4 -->
+            <div class="row">
 
-				<div class="col-md-4 col-sm-6 wow zoomIn" data-wow-delay="0.6s">
-					<div class="tour_container">
-						<div class="ribbon_3"><span>Top rated</span></div>
-						<div class="img_container">
-							<a href="single_tour.html">
-								<img src="img/tour_box_5.jpg" width="800" height="533" class="img-responsive" alt="Image">
-								<div class="short_info">
-									<i class="icon_set_1_icon-44"></i>Historic Buildings<span class="price"><sup>$</sup>40</span>
-								</div>
-							</a>
-						</div>
-						<div class="tour_title">
-							<h3><strong>Pantheon</strong> tour</h3>
-							<div class="rating">
-								<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small>
-							</div>
-							<!-- end rating -->
-							<div class="wishlist">
-								<a class="tooltip_flip tooltip-effect-1" href="javascript:void(0);">+<span class="tooltip-content-flip"><span class="tooltip-back">Add to wishlist</span></span></a>
-							</div>
-							<!-- End wish list-->
-						</div>
-					</div>
-					<!-- End box tour -->
-				</div>
-				<!-- End col-md-4 -->
+                <div class="col-md-4 wow zoomIn" data-wow-delay="0.2s">
+                    <div class="feature_home">
+                        <i class="icon_set_1_icon-41"></i>
+                        <h3><span>+120</span> Premium tours</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.
+                        </p>
+                        <a href="about.html" class="btn_1 outline">Read more</a>
+                    </div>
+                </div>
 
-				<div class="col-md-4 col-sm-6 wow zoomIn" data-wow-delay="0.7s">
-					<div class="tour_container">
-						<div class="ribbon_3"><span>Top rated</span></div>
-						<div class="img_container">
-							<a href="single_tour.html">
-								<img src="img/tour_box_8.jpg" width="800" height="533" class="img-responsive" alt="Image">
-								<div class="short_info">
-									<i class="icon_set_1_icon-3"></i>City sightseeing<span class="price"><sup>$</sup>35</span>
-								</div>
-							</a>
-						</div>
-						<div class="tour_title">
-							<h3><strong>Open Bus</strong> tour</h3>
-							<div class="rating">
-								<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small>
-							</div>
-							<!-- end rating -->
-							<div class="wishlist">
-								<a class="tooltip_flip tooltip-effect-1" href="javascript:void(0);">+<span class="tooltip-content-flip"><span class="tooltip-back">Add to wishlist</span></span></a>
-							</div>
-							<!-- End wish list-->
-						</div>
-					</div>
-					<!-- End box tour -->
-				</div>
-				<!-- End col-md-4 -->
+                <div class="col-md-4 wow zoomIn" data-wow-delay="0.4s">
+                    <div class="feature_home">
+                        <i class="icon_set_1_icon-30"></i>
+                        <h3><span>+1000</span> Customers</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.
+                        </p>
+                        <a href="about.html" class="btn_1 outline">Read more</a>
+                    </div>
+                </div>
 
-				<div class="col-md-4 col-sm-6 wow zoomIn" data-wow-delay="0.8s">
-					<div class="tour_container">
-						<div class="ribbon_3"><span>Top rated</span></div>
-						<div class="img_container">
-							<a href="single_tour.html">
-								<img src="img/tour_box_9.jpg" width="800" height="533" class="img-responsive" alt="Image">
-								<div class="short_info">
-									<i class="icon_set_1_icon-4"></i>Museums<span class="price"><sup>$</sup>38</span>
-								</div>
-							</a>
-						</div>
-						<div class="tour_title">
-							<h3><strong>Louvre museum</strong> tour</h3>
-							<div class="rating">
-								<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small>
-							</div>
-							<!-- end rating -->
-							<div class="wishlist">
-								<a class="tooltip_flip tooltip-effect-1" href="javascript:void(0);">+<span class="tooltip-content-flip"><span class="tooltip-back">Add to wishlist</span></span></a>
-							</div>
-							<!-- End wish list-->
-						</div>
-					</div>
-					<!-- End box tour -->
-				</div>
-				<!-- End col-md-4 -->
+                <div class="col-md-4 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="feature_home">
+                        <i class="icon_set_1_icon-57"></i>
+                        <h3><span>H24 </span> Support</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.
+                        </p>
+                        <a href="about.html" class="btn_1 outline">Read more</a>
+                    </div>
+                </div>
 
-				<div class="col-md-4 col-sm-6 wow zoomIn" data-wow-delay="0.9s">
-					<div class="tour_container">
-						<div class="ribbon_3"><span>Top rated</span></div>
-						<div class="img_container">
-							<a href="single_tour.html">
-								<img src="img/tour_box_12.jpg" width="800" height="533" class="img-responsive" alt="Image">
-								<div class="short_info">
-									<i class="icon_set_1_icon-14"></i>Eat &amp; drink<span class="price"><sup>$</sup>25</span>
-								</div>
-							</a>
-						</div>
-						<div class="tour_title">
-							<h3><strong>Boulangerie</strong> tour</h3>
-							<div class="rating">
-								<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small>
-							</div>
-							<!-- end rating -->
-							<div class="wishlist">
-								<a class="tooltip_flip tooltip-effect-1" href="javascript:void(0);">+<span class="tooltip-content-flip"><span class="tooltip-back">Add to wishlist</span></span></a>
-							</div>
-							<!-- End wish list-->
-						</div>
-					</div>
-					<!-- End box tour -->
-				</div>
-				<!-- End col-md-4 -->
+            </div>
+            <!--End row -->
 
-			</div>
-			<!-- End row -->
-			<p class="text-center nopadding">
-				<a href="#" class="btn_1 medium"><i class="icon-eye-7"></i>View all tours (144) </a>
-			</p>
-		</div>
-		<!-- End container -->
+            <hr>
 
-		<div id="map" class="map"></div>
-		<!-- End map -->
+            <div class="row">
+                <div class="col-md-8 col-sm-6 hidden-xs">
+                    <img src="img/laptop.png" alt="Laptop" class="img-responsive laptop">
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <h3><span>Get started</span> with CityTours</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.
+                    </p>
+                    <ul class="list_order">
+                        <li><span>1</span>Select your preferred tours</li>
+                        <li><span>2</span>Purchase tickets and options</li>
+                        <li><span>3</span>Pick them directly from your office</li>
+                    </ul>
+                    <a href="all_tour_list.html" class="btn_1">Start now</a>
+                </div>
+            </div>
+            <!-- End row -->
 
-		<div class="white_bg">
-			<div class="container margin_60">
-				<div class="main_title">
-					<h2>Other <span>Popular</span> tours</h2>
-					<p>
-						Quisque at tortor a libero posuere laoreet vitae sed arcu. Curabitur consequat.
-					</p>
-				</div>
-				<div class="row add_bottom_45">
-					<div class="col-md-4 other_tours">
-						<ul>
-							<li><a href="#"><i class="icon_set_1_icon-3"></i>Tour Eiffel<span class="other_tours_price">$42</span></a>
-							</li>
-							<li><a href="#"><i class="icon_set_1_icon-30"></i>Shopping tour<span class="other_tours_price">$35</span></a>
-							</li>
-							<li><a href="#"><i class="icon_set_1_icon-44"></i>Versailles tour<span class="other_tours_price">$20</span></a>
-							</li>
-							<li><a href="#"><i class="icon_set_1_icon-3"></i>Montparnasse skyline<span class="other_tours_price">$26</span></a>
-							</li>
-							<li><a href="#"><i class="icon_set_1_icon-44"></i>Pompidue<span class="other_tours_price">$26</span></a>
-							</li>
-							<li><a href="#"><i class="icon_set_1_icon-3"></i>Senna River tour<span class="other_tours_price">$32</span></a>
-							</li>
-						</ul>
-					</div>
-					<div class="col-md-4 other_tours">
-						<ul>
-							<li><a href="#"><i class="icon_set_1_icon-1"></i>Notredame<span class="other_tours_price">$48</span></a>
-							</li>
-							<li><a href="#"><i class="icon_set_1_icon-4"></i>Lafaiette<span class="other_tours_price">$55</span></a>
-							</li>
-							<li><a href="#"><i class="icon_set_1_icon-30"></i>Trocadero<span class="other_tours_price">$76</span></a>
-							</li>
-							<li><a href="#"><i class="icon_set_1_icon-3"></i>Open Bus tour<span class="other_tours_price">$55</span></a>
-							</li>
-							<li><a href="#"><i class="icon_set_1_icon-30"></i>Louvre museum<span class="other_tours_price">$24</span></a>
-							</li>
-							<li><a href="#"><i class="icon_set_1_icon-3"></i>Madlene Cathedral<span class="other_tours_price">$24</span></a>
-							</li>
-						</ul>
-					</div>
-					<div class="col-md-4 other_tours">
-						<ul>
-							<li><a href="#"><i class="icon_set_1_icon-37"></i>Montparnasse<span class="other_tours_price">$36</span></a>
-							</li>
-							<li><a href="#"><i class="icon_set_1_icon-1"></i>D'Orsey museum<span class="other_tours_price">$28</span></a>
-							</li>
-							<li><a href="#"><i class="icon_set_1_icon-50"></i>Gioconda Louvre musuem<span class="other_tours_price">$44</span></a>
-							</li>
-							<li><a href="#"><i class="icon_set_1_icon-44"></i>Tour Eiffel<span class="other_tours_price">$56</span></a>
-							</li>
-							<li><a href="#"><i class="icon_set_1_icon-50"></i>Ladefanse<span class="other_tours_price">$16</span></a>
-							</li>
-							<li><a href="#"><i class="icon_set_1_icon-44"></i>Notredame<span class="other_tours_price">$26</span></a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<!-- End row -->
-
-				<div class="banner colored add_bottom_30">
-					<h4>Discover our Top tours <span>from $34</span></h4>
-					<p>
-						Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in.
-					</p>
-					<a href="single_tour.html" class="btn_1 white">Read more</a>
-				</div>
-				<div class="row">
-					<div class="col-md-3 col-sm-6 text-center">
-						<p>
-							<a href="#"><img src="img/bus.jpg" alt="Pic" class="img-responsive"></a>
-						</p>
-						<h4><span>Sightseen tour</span> booking</h4>
-						<p>
-							Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex.
-						</p>
-					</div>
-					<div class="col-md-3 col-sm-6 text-center">
-						<p>
-							<a href="#"><img src="img/transfer.jpg" alt="Pic" class="img-responsive"></a>
-						</p>
-						<h4><span>Transfer</span> booking</h4>
-						<p>
-							Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex.
-						</p>
-					</div>
-					<div class="col-md-3 col-sm-6 text-center">
-						<p>
-							<a href="#"><img src="img/guide.jpg" alt="Pic" class="img-responsive"></a>
-						</p>
-						<h4><span>Tour guide</span> booking</h4>
-						<p>
-							Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex.
-						</p>
-					</div>
-					<div class="col-md-3 col-sm-6 text-center">
-						<p>
-							<a href="#"><img src="img/hotel.jpg" alt="Pic" class="img-responsive"></a>
-						</p>
-						<h4><span>Hotel</span> booking</h4>
-						<p>
-							Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex.
-						</p>
-					</div>
-				</div>
-				<!-- End row -->
-			</div>
-			<!-- End container -->
-		</div>
-		<!-- End white_bg -->
-
-		<section class="promo_full">
-			<div class="promo_full_wp magnific">
-				<div>
-					<h3>BELONG ANYWHERE</h3>
-					<p>
-						Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex.
-					</p>
-					<a href="https://www.youtube.com/watch?v=Zz5cu72Gv5Y" class="video"><i class="icon-play-circled2-1"></i></a>
-				</div>
-			</div>
-		</section>
-		<!-- End section -->
-
-		<div class="container margin_60">
-
-			<div class="main_title">
-				<h2>Some <span>good</span> reasons</h2>
-				<p>
-					Quisque at tortor a libero posuere laoreet vitae sed arcu. Curabitur consequat.
-				</p>
-			</div>
-
-			<div class="row">
-
-				<div class="col-md-4 wow zoomIn" data-wow-delay="0.2s">
-					<div class="feature_home">
-						<i class="icon_set_1_icon-41"></i>
-						<h3><span>+120</span> Premium tours</h3>
-						<p>
-							Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.
-						</p>
-						<a href="about.html" class="btn_1 outline">Read more</a>
-					</div>
-				</div>
-
-				<div class="col-md-4 wow zoomIn" data-wow-delay="0.4s">
-					<div class="feature_home">
-						<i class="icon_set_1_icon-30"></i>
-						<h3><span>+1000</span> Customers</h3>
-						<p>
-							Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.
-						</p>
-						<a href="about.html" class="btn_1 outline">Read more</a>
-					</div>
-				</div>
-
-				<div class="col-md-4 wow zoomIn" data-wow-delay="0.6s">
-					<div class="feature_home">
-						<i class="icon_set_1_icon-57"></i>
-						<h3><span>H24 </span> Support</h3>
-						<p>
-							Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.
-						</p>
-						<a href="about.html" class="btn_1 outline">Read more</a>
-					</div>
-				</div>
-
-			</div>
-			<!--End row -->
-
-			<hr>
-
-			<div class="row">
-				<div class="col-md-8 col-sm-6 hidden-xs">
-					<img src="img/laptop.png" alt="Laptop" class="img-responsive laptop">
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<h3><span>Get started</span> with CityTours</h3>
-					<p>
-						Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.
-					</p>
-					<ul class="list_order">
-						<li><span>1</span>Select your preferred tours</li>
-						<li><span>2</span>Purchase tickets and options</li>
-						<li><span>3</span>Pick them directly from your office</li>
-					</ul>
-					<a href="all_tour_list.html" class="btn_1">Start now</a>
-				</div>
-			</div>
-			<!-- End row -->
-
-		</div>
-		<!-- End container -->
-	</main>
-	<!-- End main -->
-	
-	<footer class="revealed">
+        </div>
+        <!-- End container -->
+    </main>
+    <!-- End main -->
+    
+    <footer class="revealed">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-sm-3">
@@ -917,19 +622,28 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </div><!-- End container -->
     </footer><!-- End footer -->
 
-	<div id="toTop"></div><!-- Back to top button -->
-	
-	<!-- Search Menu -->
-	<div class="search-overlay-menu">
-		<span class="search-overlay-close"><i class="icon_set_1_icon-77"></i></span>
-		<form role="search" id="searchform" method="get">
-			<input value="" name="q" type="search" placeholder="Search..." />
-			<button type="submit"><i class="icon_set_1_icon-78"></i>
-			</button>
-		</form>
-	</div><!-- End Search Menu -->
+    <div id="toTop"></div><!-- Back to top button -->
+    
+    <!-- Search Menu -->
+    <div class="search-overlay-menu">
+        <span class="search-overlay-close"><i class="icon_set_1_icon-77"></i></span>
+        <form role="search" id="searchform" method="get">
+            <input value="" name="q" type="search" placeholder="Search..." />
+            <button type="submit"><i class="icon_set_1_icon-78"></i>
+            </button>
+        </form>
+    </div><!-- End Search Menu -->
+
+ <!-- Common scripts -->
+<!--<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/common_scripts_min.js"></script>
+<script src="js/functions.js"></script-->
+
+<?php echo $this->Html->script('jquery-2.2.4.min.js'); ?>
+<?php echo $this->Html->script('common_scripts_min.js'); ?>
+<?php echo $this->Html->script('functions.js'); ?>
+
+<?php echo $this->fetch('script'); ?>
 
   </body>
 </html>
-
-

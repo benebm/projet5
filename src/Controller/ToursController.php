@@ -18,4 +18,9 @@ class ToursController extends AppController
     	$this->set(compact('tour'));
 	}
 
+     public function beforeRender(\Cake\Event\Event $event)
+    {
+        $this->viewBuilder()->setTheme('City');
+    } 
+
 }

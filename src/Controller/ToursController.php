@@ -14,6 +14,7 @@ class ToursController extends AppController
 
     public function view($slug = null)
 	{
+		$this->viewBuilder()->setLayout('singletour');
     	$tour = $this->Tours->findBySlug($slug)->firstOrFail();
     	$this->set(compact('tour'));
 	}

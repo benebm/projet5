@@ -4,7 +4,12 @@ namespace App\Model\Table;
 
 use Cake\ORM\Table;
 
-class ArticlesTable extends Table
+class ToursTable extends Table
 {
-    //j'enlève timestamp qui ne servira pas pour l'objet tour
+	public function initialize(array $config)
+	{
+    	/*$this->addBehavior('Timestamp'); */ //j'enlève timestamp qui ne servira pas pour l'objet tour
+    	$this->hasMany('Reviews');
+	}
+    
 }

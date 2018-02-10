@@ -27,7 +27,9 @@
 					</li>
 					<li><a href="#">Category</a>
 					</li>
-					<li>Page active</li>
+					<li>
+						<?= $tour->category->title ?>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -113,12 +115,12 @@
 							<div class="review_strip_single">
 								<!--<img src="img/avatar1.jpg" class="img-circle">-->
 								<?php echo $this->Html->image("avatar1.jpg", ["class" => "img-circle"]); ?>
-								<small> - <?= $review->created->timeAgoInWords() ?> -</small>
+								<small> - <?= $review->created->format('F jS Y, H:i') ?> -</small>
 								<h4><?= $review->username ?></h4>
 								<p>
 									<?= $review->content ?>
 								</p>
-								<div class="rating">
+								<div class="rating"><?= $review->rating ?>
 									<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i>
 								</div>
 							</div>
@@ -127,28 +129,21 @@
 							<!-- End review strip -->
 
 							<?= $this->Form->create($review); ?>
-        <div class="row">
-            <div class="col-md-6">
-                <?= $this->Form->control('mail', ['class' => 'form-control', 'placeholder' => 'Your email', 'label' => false]) ?>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <?= $this->Form->control('username', ['class' => 'form-control', 'placeholder' => 'Your username', 'label' => false]) ?>
-                </div>
-            </div>
-            <?= $this->Form->control('tour_id', ['type' => 'hidden', 'value' => $tour->id]) ?>
-        </div>
-        <div class="form-group">
-            <?= $this->Form->control('content', ['class' => 'form-control', 'placeholder' => 'Your review', 'label' => false]) ?>
-        </div>
-        <div class="form-group">
-            <button type="submit" class="btn_1 add_bottom_30" data-toggle="modal" data-target="#myReview">Laisser un avis</button>
-        </div>
-        <?= $this->Form->end(); ?>
-
-
-						</div>
-						
+                				<div class="form-group">
+                    				<?= $this->Form->control('username', ['class' => 'form-control', 'placeholder' => 'Your username', 'label' => false]) ?>
+                				</div>
+            					<?= $this->Form->control('tour_id', ['type' => 'hidden', 'value' => $tour->id]) ?>
+        						<div class="form-group">
+            						<?= $this->Form->control('content', ['class' => 'form-control', 'placeholder' => 'Your review', 'label' => false]) ?>
+        						</div>
+        						<div class="form-group">
+            						<?= $this->Form->control('rating', ['class' => 'form-control', 'placeholder' => 'votre note', 'label' => false]) ?>
+        						</div>
+        						<div class="form-group">
+            					<button type="submit" class="btn_1 add_bottom_30" data-toggle="modal" data-target="#myReview">Laisser un avis</button>
+        						</div>
+        						<?= $this->Form->end(); ?>
+						</div>		
 					</div>
 				</div>
 				<!--End  single_tour_desc-->
@@ -215,7 +210,7 @@
 										Total amount
 									</td>
 									<td class="text-right">
-										3x $52
+										3x <?= $tour->price ?>
 									</td>
 								</tr>
 								<tr class="total">

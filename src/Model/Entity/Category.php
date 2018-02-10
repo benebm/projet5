@@ -1,18 +1,19 @@
 <?php
+
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
 
 /**
- * User Entity
+ * Category Entity
  *
  * @property int $id
- * @property string $email
- * @property string $password
+ * @property string $title
+ * @property string $icon
  *
- * @property \App\Model\Entity\Review[] $reviews
+ * @property \App\Model\Entity\Tour[] $tours
  */
-class User extends Entity
+class Category extends Entity
 {
 
     /**
@@ -25,17 +26,7 @@ class User extends Entity
      * @var array
      */
     protected $_accessible = [
-        'email' => true,
-        'password' => true,
-        'reviews' => true
-    ];
-
-    /**
-     * Fields that are excluded from JSON versions of the entity.
-     *
-     * @var array
-     */
-    protected $_hidden = [
-        'password'
+        '*' => true,
+        'id' => false
     ];
 }

@@ -114,7 +114,7 @@
     <?php echo $this->Html->script('validate.js'); ?>
 
     <!-- Map -->
-    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAqoTjKLYOr9z45jZ990XYItWB88c6LtZ8"></script>                                 
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAqoTjKLYOr9z45jZ990XYItWB88c6LtZ8"></script>                               
     <!--<script src="js/map.js"></script>
     <script src="js/infobox.js"></script>-->
     <?php echo $this->Html->script('map.js'); ?>

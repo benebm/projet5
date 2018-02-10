@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
@@ -10,9 +11,10 @@ use Cake\I18n\FrozenTime;
  * @property int $id
  * @property int $tour_id
  * @property int $user_id
+ * @property string $username
  * @property string $content
  * @property \Cake\I18n\FrozenTime $created
- * @property bool $rating
+ * @property int $rating
  *
  * @property \App\Model\Entity\Tour $tour
  * @property \App\Model\Entity\User $user
@@ -30,12 +32,7 @@ class Review extends Entity
      * @var array
      */
     protected $_accessible = [
-        'tour_id' => true,
-        'user_id' => true,
-        'content' => true,
-        'created' => true,
-        'rating' => true,
-        'tour' => true,
-        'user' => true
+        '*' => true,
+        'id' => false
     ];
 }

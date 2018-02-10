@@ -34,42 +34,17 @@ class ToursController extends AppController
         if ($this->request->is(['tour'])) {
             $review = $this->Tours->Reviews->patchEntity($review, $this->request->getData());
             if ($this->Tours->Reviews->save($review)) {
+                $this->Flash->success(__('The review has been saved.'));
+
+                return $this->redirect(['action' => 'view']);
             }
+            $this->Flash->error(__('The review could not be saved. Please, try again.'));
         }
 
-        $tour = $this->Tours->find()->where(['Tours.slug' => $slug])->contain(['Reviews'])->first();
-        $this->set(compact('tour', 'view', 'errors'));
-        $this->set('_serialize', ['tour']);
-
-        
+        $tour = $this->Tours->find()->where(['Tours.slug' => $slug])->contain(['Categories','Reviews'])->first();
+        $this->set(compact('review', 'tour', 'view', 'errors'));
+        $this->set('_serialize', ['tour']);        
 	}
-
-
-    public function add()
-    {
-        $tour = $this->Tours->newEntity();
-        if ($this->request->is('tour')) {
-            $tour = $this->Tours->patchEntity($tour, $this->request->getData());
-
-            // Hardcoding the user_id is temporary, and will be removed later
-            // when we build authentication out.
-            $article->user_id = 1;
-
-            if ($this->Tours->save($tour)) {
-                $this->Flash->success(__('Votre article a été sauvegardé.'));
-                return $this->redirect(['action' => 'index']);
-            }
-            $this->Flash->error(__('Impossible de sauvegarder l\'article.'));
-        }
-        // Récupère une liste des tags.
-        $reviews = $this->Tours->Reviews->find('list');
-
-        // Passe les tags au context de la view
-        $this->set('reviews', $reviews);
-
-        $this->set('tour', $tour);
-    }
-
 
 
      public function beforeRender(\Cake\Event\Event $event)

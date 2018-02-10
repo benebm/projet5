@@ -50,10 +50,6 @@ class ReviewsTable extends Table
             'foreignKey' => 'tour_id',
             'joinType' => 'INNER'
         ]);
-        $this->belongsTo('Users', [
-            'foreignKey' => 'user_id',
-            'joinType' => 'INNER'
-        ]);
     }
 
     /**
@@ -69,14 +65,13 @@ class ReviewsTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
+            ->requirePresence('username')
+            ->notEmpty('username');
+
+        $validator
             ->scalar('content')
             ->requirePresence('content', 'create')
             ->notEmpty('content');
-
-        $validator
-            ->boolean('rating')
-            ->requirePresence('rating', 'create')
-            ->notEmpty('rating');
 
         return $validator;
     }
@@ -91,7 +86,6 @@ class ReviewsTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->existsIn(['tour_id'], 'Tours'));
-        $rules->add($rules->existsIn(['user_id'], 'Users'));
 
         return $rules;
     }

@@ -17,7 +17,7 @@
                                 <?php echo $this->Html->image($tour->image, ['alt' => 'Image'], ['class' => 'img-responsive']); ?>
                                 <!--<img src="img/tour_box_1.jpg" class="img-responsive" alt="Image">-->
                                 <div class="short_info">
-                                    <i class="icon_set_1_icon-44"></i><?= $tour->category ?><span class="price"><sup>€</sup><?= $tour->price ?></span>
+                                    <!--<i class="icon_set_1_icon-44"></i>--><span class="price"><sup>€</sup><?= $tour->price ?></span>
                                 </div>
                             </a>
                         </div>

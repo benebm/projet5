@@ -6,7 +6,7 @@
 					<div class="col-md-8 col-sm-8">
 						<h1><?= $tour->name ?></h1>
 						<span><?= $tour->address ?></span>
-						<span class="rating"><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small></span>
+						<span class="rating"><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(<?= count($tour->reviews) ?>)</small></span>
 					</div>
 					<div class="col-md-4 col-sm-4">
 						<div id="price_single_main">
@@ -103,36 +103,15 @@
 						<div class="col-md-3">
 							<h3>Appréciations </h3>
 						</div>
-						<div class="col-md-9"><?php if ($tour->reviews): ?>
-							<div id="general_rating"><?= count($tour->reviews) ?> Appréciations
-								<div class="rating">
-									<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i>
-								</div>
-							</div>
-							<!-- End general_rating -->
-							<hr>
-							<?php foreach ($tour->reviews as $review): ?>
-							<div class="review_strip_single">
-								<!--<img src="img/avatar1.jpg" class="img-circle">-->
-								<?php echo $this->Html->image("avatar1.jpg", ["class" => "img-circle"]); ?>
-								<small> - <?= $review->created->format('F jS Y, H:i') ?> -</small>
-								<h4><?= $review->username ?></h4>
-								<p>
-									<?= $review->content ?>
-								</p>
-								<div class="rating"><?= $review->rating ?>
-									<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i>
-								</div>
-							</div>
-							<?php endforeach; ?>
-        					<?php endif; ?>
-							<!-- End review strip -->
+						<div class="col-md-9">
 
-							<?= $this->Form->create($review); ?>
+						
+							<?= $this->Form->create($review, ['url' => ['action' => 'addReview']]); ?>
                 				<div class="form-group">
                     				<?= $this->Form->control('username', ['class' => 'form-control', 'placeholder' => 'Your username', 'label' => false]) ?>
                 				</div>
             					<?= $this->Form->control('tour_id', ['type' => 'hidden', 'value' => $tour->id]) ?>
+            					<?= $this->Form->control('tour_slug', ['type' => 'hidden', 'value' => $tour->slug]) ?>
         						<div class="form-group">
             						<?= $this->Form->control('content', ['class' => 'form-control', 'placeholder' => 'Your review', 'label' => false]) ?>
         						</div>
@@ -143,6 +122,51 @@
             					<button type="submit" class="btn_1 add_bottom_30" data-toggle="modal" data-target="#myReview">Laisser un avis</button>
         						</div>
         						<?= $this->Form->end(); ?>
+
+							<?php if ($tour->reviews): ?>
+							<div id="general_rating"><?= count($tour->reviews) ?> Appréciations
+								<!--<div class="rating">
+									<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i>
+								</div>-->
+							</div>
+							<!-- End general_rating -->
+							<hr>
+
+
+
+
+							<?php foreach ($tour->reviews as $review): ?>
+							<div class="review_strip_single">
+								<!--<img src="img/avatar1.jpg" class="img-circle">-->
+								<?php echo $this->Html->image("avatar1.jpg", ["class" => "img-circle"]); ?>
+								<small> - <?= $review->created->format('F jS Y, H:i') ?> -</small>
+								<h4><?= h($review->username) ?></h4>
+								<p>
+									<?= h($review->content) ?>
+								</p>
+								<div class="rating">
+
+									<?php 
+									for ($i = 1; $i <= 5; $i++)
+									{
+										if ($i <= $review->rating)
+										{
+											echo "<i class=\"icon-smile voted\"></i>";
+										}
+										else
+										{
+											echo "<i class=\"icon-smile\"></i>";
+										}
+									} 
+									?>
+
+								</div>
+							</div>
+							<?php endforeach; ?>
+        					<?php endif; ?>
+							<!-- End review strip -->
+
+							
 						</div>		
 					</div>
 				</div>

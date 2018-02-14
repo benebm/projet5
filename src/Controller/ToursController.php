@@ -29,22 +29,27 @@ class ToursController extends AppController
 
         $this->viewBuilder()->setLayout('singletour');
         
-        $errors = [];
         $review = $this->Tours->Reviews->newEntity();
-        if ($this->request->is(['tour'])) {
-            $review = $this->Tours->Reviews->patchEntity($review, $this->request->getData());
-            if ($this->Tours->Reviews->save($review)) {
-                $this->Flash->success(__('The review has been saved.'));
-
-                return $this->redirect(['action' => 'view']);
-            }
-            $this->Flash->error(__('The review could not be saved. Please, try again.'));
-        }
 
         $tour = $this->Tours->find()->where(['Tours.slug' => $slug])->contain(['Categories','Reviews'])->first();
-        $this->set(compact('review', 'tour', 'view', 'errors'));
-        $this->set('_serialize', ['tour']);        
+        $this->set(compact('review', 'tour', 'view'));
+        $this->set('_serialize', ['tour']);
+
 	}
+
+    public function addReview($slug = null)
+    {
+        $review = $this->Tours->Reviews->newEntity();
+        if ($this->request->is(['post'])) {
+            $review = $this->Tours->Reviews->patchEntity($review, $this->request->getData());
+            if ($this->Tours->Reviews->save($review)) {
+                return $this->redirect(['action' => 'view', $_POST['tour_slug']]);
+                /*$this->Flash->success(__('The review has been saved.'));*/
+            }
+            /*$this->Flash->error(__('The review could not be saved. Please, try again.'));
+                return $this->redirect(['action' => 'view']);*/
+        }
+    }
 
 
      public function beforeRender(\Cake\Event\Event $event)

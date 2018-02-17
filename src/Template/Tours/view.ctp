@@ -180,38 +180,41 @@
 						<h3 class="inner">- Booking -</h3>
 						<div class="row">
 							<div class="col-md-6 col-sm-6">
+
+        						<?= $this->Form->create($order, ['url' => ['action' => 'addOrder', $tour->slug]]); ?>
 								<div class="form-group">
-									<label><i class="icon-calendar-7"></i> Select a date</label>
-									<input class="date-pick form-control" data-date-format="M d, D" type="text">
+									<i class="icon-calendar-7"></i> <strong>Date</strong>
+									<?= $this->Form->control('day', ['class' => 'date-pick form-control', 'label' => false, 'data-date-format' => 'M d, D', 'type' => 'text']) ?>
 								</div>
 							</div>
+							<?= $this->Form->control('tour_id', ['type' => 'hidden', 'value' => $tour->id]) ?>
 							<div class="col-md-6 col-sm-6">
 								<div class="form-group">
-									<label><i class=" icon-clock"></i> Time</label>
-									<input class="time-pick form-control" value="12:00 AM" type="text">
+									<i class=" icon-clock"></i> <strong>Heure de début</strong>
+									<?= $this->Form->control('time', ['class' => 'time-pick form-control', 'value' => '12:00 AM', 'label' => false, 'type' => 'text']) ?>
 								</div>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-6 col-sm-6">
 								<div class="form-group">
-									<label>Adults</label>
-									<div class="numbers-row">
-										<input type="text" value="1" id="adults" class="qty2 form-control" name="quantity">
-									</div>
+										<strong>Participants</strong>
+										<div class="numbers-row">
+										<?= $this->Form->control('guests', ['class' => 'qty2 form-control', 'value' => '1', 'type' => 'text', 'id' => 'adults', 'name' => 'quantity', 'label' => false, 'name' => 'guests']) ?>
+										</div>
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6">
 								<div class="form-group">
-									<label>Children</label>
-									<div class="numbers-row">
-										<input type="text" value="0" id="children" class="qty2 form-control" name="quantity">
+										<strong>Durée</strong>
+										<div class="numbers-row">
+									<?= $this->Form->control('duration', ['class' => 'qty2 form-control', 'placeholder' => false, 'label' => false, 'type' => 'text', 'value' => '2h', 'id' => 'children', 'name' => 'duration']) ?>
 									</div>
 								</div>
 							</div>
 						</div>
 						<br>
-						<table class="table table_summary">
+						<!--<table class="table table_summary">
 							<tbody>
 								<tr>
 									<td>
@@ -246,10 +249,15 @@
 									</td>
 								</tr>
 							</tbody>
-						</table>
-						<a class="btn_full" href="cart.html">Book now</a>
-						<a class="btn_full_outline" href="#"><i class=" icon-heart"></i> Add to whislist</a>
+						</table>-->
+						<button type="submit" class="btn_full">Réserver maintenant</button>
+						<!--<a class="btn_full" href="cart.html">Book now</a>--> 
+						<a class="btn_full_outline"
+						href="">
+
+							<i class=" icon-heart"></i> Add to whislist</a>
 					</div>
+					<?= $this->Form->end(); ?>
 					<!--/box_style_1 -->
 
 					<div class="box_style_4">

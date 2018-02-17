@@ -56,6 +56,10 @@ class ToursTable extends Table
             'foreignKey' => 'tour_id'
         ]);
 
+        $this->hasMany('Orders', [
+            'foreignKey' => 'tour_id'
+        ]);
+
 	}
     
 }

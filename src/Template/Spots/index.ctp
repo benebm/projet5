@@ -9,7 +9,9 @@
                 <?php foreach ($spots as $spot): ?>
                 <div class="col-md-4 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
                     <div class="tour_container">
+
                         <div class="<?= $spot->banner_type ?>"><span><?= $spot->banner ?></span></div>
+
                         <!--<div class="ribbon_3"><span>Top rated</span></div>-->
                         <div class="img_container">
                             <a href="single_tour.html">
@@ -17,7 +19,9 @@
                                 <?php echo $this->Html->image($spot->image, ['alt' => 'Image'], ['class' => 'img-responsive']); ?>
                                 <!--<img src="img/tour_box_1.jpg" class="img-responsive" alt="Image">-->
                                 <div class="short_info">
+
                                     <i class="<?= $spot->category->icon ?>"></i><?= $spot->category->title ?><span class="price"><?= $spot->area ?></span>
+
                                 </div>
                             </a>
                         </div>

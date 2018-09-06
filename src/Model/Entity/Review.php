@@ -9,14 +9,14 @@ use Cake\I18n\FrozenTime;
  * Review Entity
  *
  * @property int $id
- * @property int $tour_id
+ * @property int $spot_id
  * @property int $user_id
  * @property string $username
  * @property string $content
  * @property \Cake\I18n\FrozenTime $created
  * @property int $rating
  *
- * @property \App\Model\Entity\Tour $tour
+ * @property \App\Model\Entity\Spot $spot
  * @property \App\Model\Entity\User $user
  */
 class Review extends Entity

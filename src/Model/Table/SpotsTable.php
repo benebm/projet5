@@ -3,7 +3,7 @@
 namespace App\Model\Table;
 
 use Cake\ORM\Table;
-use App\Model\Entity\Tour;
+use App\Model\Entity\Spot;
 use ArrayObject;
 use Cake\Datasource\EntityInterface;
 use Cake\Event\Event;
@@ -16,36 +16,36 @@ use Cake\Utility\Text;
 use Cake\Validation\Validator;
 
 /**
- * Tours Model
+ * Spots Model
  *
  * @property BelongsTo $Categories
  * @property BelongsTo $Users
  * @property HasMany $Reviews
  *
- * @method Tour get($primaryKey, $options = [])
- * @method Tour newEntity($data = null, array $options = [])
- * @method Tour[] newEntities(array $data, array $options = [])
- * @method Tour|bool save(EntityInterface $entity, $options = [])
- * @method Tour patchEntity(EntityInterface $entity, array $data, array $options = [])
- * @method Tour[] patchEntities($entities, array $data, array $options = [])
- * @method Tour findOrCreate($search, callable $callback = null, $options = [])
+ * @method Spot get($primaryKey, $options = [])
+ * @method Spot newEntity($data = null, array $options = [])
+ * @method Spot[] newEntities(array $data, array $options = [])
+ * @method Spot|bool save(EntityInterface $entity, $options = [])
+ * @method Spot patchEntity(EntityInterface $entity, array $data, array $options = [])
+ * @method Spot[] patchEntities($entities, array $data, array $options = [])
+ * @method Spot findOrCreate($search, callable $callback = null, $options = [])
  *
  * @mixin TimestampBehavior
  * @mixin CounterCacheBehavior
  */
 
 
-class ToursTable extends Table
+class SpotsTable extends Table
 {
 	public function initialize(array $config)
 	{
 		parent::initialize($config);
 
-		$this->setTable('tours');
+		$this->setTable('spots');
         $this->setDisplayField('name');
         $this->setPrimaryKey('id');
 
-    	/*$this->addBehavior('Timestamp'); */ //j'enlève timestamp qui ne servira pas pour l'objet tour
+    	/*$this->addBehavior('Timestamp'); */ //j'enlève timestamp qui ne servira pas pour l'objet spot
     	$this->addBehavior('CounterCache', ['Categories' => ['post_count']]);
 
     	 $this->belongsTo('Categories', [
@@ -53,11 +53,7 @@ class ToursTable extends Table
             'joinType' => 'INNER'
         ]);
         $this->hasMany('Reviews', [
-            'foreignKey' => 'tour_id'
-        ]);
-
-        $this->hasMany('Orders', [
-            'foreignKey' => 'tour_id'
+            'foreignKey' => 'spot_id'
         ]);
 
 	}

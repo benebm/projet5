@@ -5,7 +5,7 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Tour Entity
+ * Spot Entity
  *
  * @property int $id
  * @property string $name
@@ -18,7 +18,7 @@ use Cake\ORM\Entity;
  * @property Review[] $reviews
  */
 
-class Tour extends Entity
+class Spot extends Entity
 {
     protected $_accessible = [
         '*' => true,

@@ -35,7 +35,7 @@ class CategoriesController extends AppController
     public function view($id = null)
     {
         $category = $this->Categories->get($id, [
-            'contain' => ['Tours']
+            'contain' => ['Spots']
         ]);
 
         $this->set('category', $category);

@@ -21,7 +21,7 @@ class ReviewsController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Tours', 'Users']
+            'contain' => ['Spots', 'Users']
         ];
         $reviews = $this->paginate($this->Reviews);
 
@@ -38,7 +38,7 @@ class ReviewsController extends AppController
     public function view($id = null)
     {
         $review = $this->Reviews->get($id, [
-            'contain' => ['Tours', 'Users']
+            'contain' => ['Spots', 'Users']
         ]);
 
         $this->set('review', $review);
@@ -61,9 +61,9 @@ class ReviewsController extends AppController
             }
             $this->Flash->error(__('The review could not be saved. Please, try again.'));
         }
-        $tours = $this->Reviews->Tours->find('list', ['limit' => 200]);
+        $spots = $this->Reviews->Spots->find('list', ['limit' => 200]);
         $users = $this->Reviews->Users->find('list', ['limit' => 200]);
-        $this->set(compact('review', 'tours', 'users'));
+        $this->set(compact('review', 'spots', 'users'));
     }
 
     /**
@@ -87,9 +87,9 @@ class ReviewsController extends AppController
             }
             $this->Flash->error(__('The review could not be saved. Please, try again.'));
         }
-        $tours = $this->Reviews->Tours->find('list', ['limit' => 200]);
+        $spots = $this->Reviews->Spots->find('list', ['limit' => 200]);
         $users = $this->Reviews->Users->find('list', ['limit' => 200]);
-        $this->set(compact('review', 'tours', 'users'));
+        $this->set(compact('review', 'spots', 'users'));
     }
 
     /**

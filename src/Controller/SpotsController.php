@@ -16,7 +16,9 @@ class SpotsController extends AppController
         /*$this->loadComponent('Paginator');
         $spots = $this->Paginator->paginate($this->spots->find());*/
 
-        $spots = $this->Spots->find('all');
+        $spots = $this->Spots->find('all')
+        ->contain(['Categories'])
+        ;
         $this->set(compact('spots'));
     }
 

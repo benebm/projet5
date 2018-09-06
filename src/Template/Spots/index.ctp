@@ -6,23 +6,23 @@
 
             <div class="row">
 
-                <?php foreach ($tours as $tour): ?>
+                <?php foreach ($spots as $spot): ?>
                 <div class="col-md-4 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
                     <div class="tour_container">
-                        <div class="ribbon_3 popular"><span><?= $tour->banner ?></span></div>
+                        <div class="ribbon_3 popular"><span><?= $spot->banner ?></span></div>
                         <!--<div class="ribbon_3"><span>Top rated</span></div>-->
                         <div class="img_container">
                             <a href="single_tour.html">
 
-                                <?php echo $this->Html->image($tour->image, ['alt' => 'Image'], ['class' => 'img-responsive']); ?>
+                                <?php echo $this->Html->image($spot->image, ['alt' => 'Image'], ['class' => 'img-responsive']); ?>
                                 <!--<img src="img/tour_box_1.jpg" class="img-responsive" alt="Image">-->
                                 <div class="short_info">
-                                    <!--<i class="icon_set_1_icon-44"></i>--><span class="price"><sup>€</sup><?= $tour->price ?></span>
+                                    <!--<i class="icon_set_1_icon-44"></i>--><span class="price"><sup>€</sup><?= $spot->slug ?></span>
                                 </div>
                             </a>
                         </div>
                         <div class="tour_title">
-                            <h3><strong><?php echo $this->Html->link($tour->name, ['action' => 'view', $tour->slug]) ?></strong></h3>
+                            <h3><strong><?php echo $this->Html->link($spot->name, ['action' => 'view', $spot->slug]) ?></strong></h3>
                             <div class="rating">
                                 <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small>
                             </div>
@@ -41,6 +41,6 @@
             </div>
             <!-- End row -->
             <p class="text-center nopadding">
-                <a href="#" class="btn_1 medium"><i class="icon-eye-7"></i>View all tours (144) </a>
+                <a href="#" class="btn_1 medium"><i class="icon-eye-7"></i>View all spots (144) </a>
             </p>
         </div>

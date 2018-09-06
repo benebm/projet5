@@ -4,13 +4,13 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-sm-8">
-						<h1><?= $tour->name ?></h1>
-						<span><?= $tour->address ?></span>
-						<span class="rating"><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(<?= count($tour->reviews) ?>)</small></span>
+						<h1><?= $spot->name ?></h1>
+						<span><?= $spot->address ?></span>
+						<span class="rating"><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(<?= count($spot->reviews) ?>)</small></span>
 					</div>
 					<div class="col-md-4 col-sm-4">
 						<div id="price_single_main">
-							from/per person <span><?= $tour->price ?><sup>€</sup></span>
+							from/per person <span><?= $spot->slug ?><sup>€</sup></span>
 						</div>
 					</div>
 				</div>
@@ -28,7 +28,7 @@
 					<li><a href="#">Category</a>
 					</li>
 					<li>
-						<?= $tour->category->title ?>
+						<?= $spot->category->title ?>
 					</li>
 				</ul>
 			</div>
@@ -67,7 +67,7 @@
 						<div class="col-md-9">
 							<h4>Category</h4>
 							<p>
-								<?= $tour->description ?>
+								<?= $spot->description ?>
 							</p>
 							<h4>What's include</h4>
 							<p>
@@ -110,8 +110,8 @@
                 				<div class="form-group">
                     				<?= $this->Form->control('username', ['class' => 'form-control', 'placeholder' => 'Your username', 'label' => false]) ?>
                 				</div>
-            					<?= $this->Form->control('tour_id', ['type' => 'hidden', 'value' => $tour->id]) ?>
-            					<?= $this->Form->control('tour_slug', ['type' => 'hidden', 'value' => $tour->slug]) ?>
+            					<?= $this->Form->control('spot_id', ['type' => 'hidden', 'value' => $spot->id]) ?>
+            					<?= $this->Form->control('spot_slug', ['type' => 'hidden', 'value' => $spot->slug]) ?>
         						<div class="form-group">
             						<?= $this->Form->control('content', ['class' => 'form-control', 'placeholder' => 'Your review', 'label' => false]) ?>
         						</div>
@@ -123,8 +123,8 @@
         						</div>
         						<?= $this->Form->end(); ?>
 
-							<?php if ($tour->reviews): ?>
-							<div id="general_rating"><?= count($tour->reviews) ?> Appréciations
+							<?php if ($spot->reviews): ?>
+							<div id="general_rating"><?= count($spot->reviews) ?> Appréciations
 								<!--<div class="rating">
 									<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i>
 								</div>-->
@@ -135,7 +135,7 @@
 
 
 
-							<?php foreach ($tour->reviews as $review): ?>
+							<?php foreach ($spot->reviews as $review): ?>
 							<div class="review_strip_single">
 								<!--<img src="img/avatar1.jpg" class="img-circle">-->
 								<?php echo $this->Html->image("avatar1.jpg", ["class" => "img-circle"]); ?>
@@ -181,13 +181,13 @@
 						<div class="row">
 							<div class="col-md-6 col-sm-6">
 
-        						<?= $this->Form->create($order, ['url' => ['action' => 'addOrder', $tour->slug]]); ?>
+        						<?= $this->Form->create($order, ['url' => ['action' => 'addOrder', $spot->slug]]); ?>
 								<div class="form-group">
 									<i class="icon-calendar-7"></i> <strong>Date</strong>
 									<?= $this->Form->control('day', ['class' => 'date-pick form-control', 'label' => false, 'data-date-format' => 'M d, D', 'type' => 'text']) ?>
 								</div>
 							</div>
-							<?= $this->Form->control('tour_id', ['type' => 'hidden', 'value' => $tour->id]) ?>
+							<?= $this->Form->control('spot_id', ['type' => 'hidden', 'value' => $spot->id]) ?>
 							<div class="col-md-6 col-sm-6">
 								<div class="form-group">
 									<i class=" icon-clock"></i> <strong>Heure de début</strong>
@@ -237,7 +237,7 @@
 										Total amount
 									</td>
 									<td class="text-right">
-										3x <?= $tour->price ?>
+										3x <?= $spot->slug ?>
 									</td>
 								</tr>
 								<tr class="total">

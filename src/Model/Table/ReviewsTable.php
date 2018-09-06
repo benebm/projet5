@@ -13,7 +13,7 @@ use Cake\Validation\Validator;
 /**
  * Reviews Model
  *
- * @property \App\Model\Table\ToursTable|\Cake\ORM\Association\BelongsTo $Tours
+ * @property \App\Model\Table\SpotsTable|\Cake\ORM\Association\BelongsTo $Spots
  * @property \App\Model\Table\UsersTable|\Cake\ORM\Association\BelongsTo $Users
  *
  * @method \App\Model\Entity\Review get($primaryKey, $options = [])
@@ -46,8 +46,8 @@ class ReviewsTable extends Table
 
         $this->addBehavior('Timestamp');
 
-        $this->belongsTo('Tours', [
-            'foreignKey' => 'tour_id',
+        $this->belongsTo('Spots', [
+            'foreignKey' => 'spot_id',
             'joinType' => 'INNER'
         ]);
     }
@@ -85,7 +85,7 @@ class ReviewsTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->existsIn(['tour_id'], 'Tours'));
+        $rules->add($rules->existsIn(['spot_id'], 'Spots'));
 
         return $rules;
     }

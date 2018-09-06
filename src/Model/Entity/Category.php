@@ -11,7 +11,7 @@ use Cake\ORM\Entity;
  * @property string $title
  * @property string $icon
  *
- * @property \App\Model\Entity\Tour[] $tours
+ * @property \App\Model\Entity\Spot[] $spots
  */
 class Category extends Entity
 {

@@ -12,7 +12,7 @@ use Cake\ORM\Association\HasMany;
 /**
  * Categories Model
  *
- * @property \App\Model\Table\ToursTable|\Cake\ORM\Association\HasMany $Tours
+ * @property \App\Model\Table\SpotsTable|\Cake\ORM\Association\HasMany $Spots
  *
  * @method \App\Model\Entity\Category get($primaryKey, $options = [])
  * @method \App\Model\Entity\Category newEntity($data = null, array $options = [])
@@ -39,7 +39,7 @@ class CategoriesTable extends Table
         $this->setDisplayField('title');
         $this->setPrimaryKey('id');
 
-        $this->hasMany('Tours', [
+        $this->hasMany('Spots', [
             'foreignKey' => 'category_id'
         ]);
     }

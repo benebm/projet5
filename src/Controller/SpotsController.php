@@ -17,9 +17,13 @@ class SpotsController extends AppController
         $spots = $this->Paginator->paginate($this->spots->find());*/
 
         $spots = $this->Spots->find('all')
-        ->contain(['Categories'])
-        ;
+        ->where(['spots.top' => 1])
+        ->contain(['Categories', 'Reviews']);
+
         $this->set(compact('spots'));
+
+        // Résultats dans SELECT COUNT(*) count FROM ...
+
     }
 
     public function view($slug = null)

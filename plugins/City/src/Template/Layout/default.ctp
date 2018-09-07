@@ -1,18 +1,18 @@
 <?php
-$cakeDescription = 'Visitez Lyon en 4L';
+$cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro déchet à Marseille';
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]><html class="ie ie8"> <![endif]-->
 <!--[if IE 9]><html class="ie ie9"> <![endif]-->
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <meta name="description" content="Citytours - Premium site template for city tours agencies, transfers and tickets.">
-    <meta name="author" content="Ansonika">
-    <title>CITY TOURS - City tours and travel site template by Ansonika</title>
+    <meta name="description" content="MARSEILLE GREEN - Le guide des spots bio, écolo & zéro déchet à Marseille">
+    <meta name="author" content="benebm">
+    <title>MARSEILLE GREEN - Le guide des spots bio, écolo & zéro déchet à Marseille</title>
     
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -65,7 +65,7 @@ $cakeDescription = 'Visitez Lyon en 4L';
     	<?= $this->fetch('content') ?>
     	
         <!-- End container -->
-        <?= $this->element('tours_reassurance') ?>
+        <?= $this->element('reasonswhy') ?>
         
         <!-- End container -->
     </main>
@@ -79,7 +79,7 @@ $cakeDescription = 'Visitez Lyon en 4L';
     <div class="search-overlay-menu">
         <span class="search-overlay-close"><i class="icon_set_1_icon-77"></i></span>
         <form role="search" id="searchform" method="get">
-            <input value="" name="q" type="search" placeholder="Search..." />
+            <input value="" name="q" type="search" placeholder="Recherchez..." />
             <button type="submit"><i class="icon_set_1_icon-78"></i>
             </button>
         </form>

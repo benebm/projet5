@@ -1,5 +1,5 @@
 <section class="parallax-window" data-parallax="scroll" data-image-src="" data-natural-width="1400" data-natural-height="470">
-	<?php echo $this->Html->image("single_tour_bg_1.jpg", ["class" => "parallax-window"]); ?>
+	<?php echo $this->Html->image($spot->image, ['alt' => 'Image'], ['class' => 'parallax-window']); ?>
 			<div class="parallax-content-2">
 			<div class="container">
 				<div class="row">

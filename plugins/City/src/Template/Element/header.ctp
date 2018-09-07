@@ -3,15 +3,15 @@
         <div id="top_line">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-6"><i class="icon-phone"></i><strong>0045 043204434</strong></div>
+                    <div class="col-md-6 col-sm-6 col-xs-6"><!--<i class="icon-phone"></i><strong>0045 043204434</strong>--></div>
                     
                     <div class="col-md-6 col-sm-6 col-xs-6">
                         <ul id="top_links">
                             <li>
                                 <div class="dropdown dropdown-access">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="access_link">Sign in</a>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="access_link">Se connecter</a>
                                     <div class="dropdown-menu">
-                                        <div class="row">
+                                        <!--<div class="row">
                                             <div class="col-md-6 col-sm-6 col-xs-6">
                                                 <a href="#" class="bt_facebook">
                                                     <i class="icon-facebook"></i>Facebook </a>
@@ -24,7 +24,7 @@
                                         <div class="login-or">
                                             <hr class="hr-or">
                                             <span class="span-or">or</span>
-                                        </div>
+                                        </div>-->
                                         <div class="form-group">
                                             <input type="text" class="form-control" id="inputUsernameEmail" placeholder="Email">
                                         </div>
@@ -48,7 +48,7 @@
             <div class="row">
                 <div class="col-md-3 col-sm-3 col-xs-3">
                     <div id="logo_home">
-                        <h1><a href="index.html" title="City tours travel template">City Tours travel template</a></h1>
+                        <h1><a href="index.html" title="Marseille Green">Marseille Green, le guide !</a></h1>
                     </div>
                 </div>
                 <nav class="col-md-9 col-sm-9 col-xs-9">
@@ -56,64 +56,57 @@
                     <div class="main-menu">
                         <div id="header_menu">
                             <?php echo $this->Html->image("logo_sticky.png", [
-                            "alt" => "City tours", "data-retina" => "true"]); ?>
+                            "alt" => "Marseille Green", "data-retina" => "true"]); ?>
                             <!--<img src="img/logo_sticky.png" width="160" height="34" alt="City tours" data-retina="true">-->
                         </div>
                         <a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
                         <ul>
                             <li class="submenu">
-                                <a href="javascript:void(0);" class="show-submenu">Accueil<i class="icon-down-open-mini"></i></a>
+                                <a href="javascript:void(0);">Accueil<!--<i class="icon-down-open-mini"></i>--></a>
                             </li>
                             <li class="submenu">
-                                <a href="javascript:void(0);" class="show-submenu">Visites <i class="icon-down-open-mini"></i></a>
+                                <a href="javascript:void(0);">Qui sommes-nous ?<!--<i class="icon-down-open-mini"></i>--></a>
+                            </li>
+                            <li class="submenu">
+                                <a href="javascript:void(0);">Concept<!--<i class="icon-down-open-mini"></i>--></a>
+                            </li>
+                            <li class="submenu">
+                                <a href="javascript:void(0);" class="show-submenu">Les spots <i class="icon-down-open-mini"></i></a>
                                 <ul>
-                                    <li><a href="all_tours_list.html">All tours list</a></li>
-                                    <li><a href="all_tours_grid.html">All tours grid</a></li>
-                                    <li><a href="all_tours_map_listing.html">All tours map listing</a></li>
-                                    <li><a href="single_tour.html">Single tour page</a></li>
-                                    <li><a href="single_tour_with_gallery.html">Single tour with gallery</a></li>
-                                    <li><a href="javascript:void(0);">Single tour fixed sidebar</a>
+                                    <li><a href="#">Tous les spots</a></li>
+                                    <li><a href="#">Par catégorie</a>
                                         <ul>
-                                            <li><a href="single_tour_fixed_sidebar.html">Single tour fixed sidebar</a></li>
-                                            <li><a href="single_tour_with_gallery_fixed_sidebar.html">Single tour 2 Fixed Sidebar</a></li>
-                                            <li><a href="cart_fixed_sidebar.html">Cart Fixed Sidebar</a></li>
-                                            <li><a href="payment_fixed_sidebar.html">Payment Fixed Sidebar</a></li>
-                                            <li><a href="confirmation_fixed_sidebar.html">Confirmation Fixed Sidebar</a></li>
+                                            <li><a href="#">Magasins bio</a></li>
+                                            <li><a href="#">Epiceries vrac</a></li>
+                                            <li><a href="#">Restos bio & vegan</a></li>
+                                            <li><a href="#">Soins naturels</a></li>
+                                            <li><a href="#">Zéro déchet</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="single_tour_working_booking.php">Single tour working booking</a></li>
-                                    <li><a href="single_tour_datepicker_v2.html">Date and time picker V2</a></li>
-                                    <li><a href="cart.html">Single tour cart</a></li>
-                                    <li><a href="payment.html">Single tour booking</a></li>
-                                </ul>
-                            </li>
-                             <li class="submenu">
-                                <a href="javascript:void(0);" class="show-submenu">A propos <i class="icon-down-open-mini"></i></a>
-                            </li>
-                            <li class="submenu">
-                                <a href="javascript:void(0);" class="show-submenu">FAQ <i class="icon-down-open-mini"></i></a>
-                                <ul>
-                                    <li><a href="all_transfer_list.html">All transfers list</a></li>
-                                    <li><a href="all_transfer_grid.html">All transfers grid</a></li>
-                                    <li><a href="single_transfer.html">Single transfer page</a></li>
-                                    <li><a href="single_transfer_datepicker_v2.html">Date and time picker V2</a></li>
-                                    <li><a href="cart_transfer.html">Cart transfers</a></li>
-                                    <li><a href="payment_transfer.html">Booking transfers</a></li>
-                                    <li><a href="confirmation_transfer.html">Confirmation transfers</a></li>
+                                    <li><a href="#">Par quartier</a>
+                                    	<ul>
+                                            <li><a href="#">Le Panier</a></li>
+                                            <li><a href="#">Euroméditerranée</a></li>
+                                            <li><a href="#">Noailles</a></li>
+                                            <li><a href="#">Le Pharo</a></li>
+                                            <li><a href="#">Saint Giniez</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Voir sur une carte</a></li>
                                 </ul>
                             </li>
                               <li class="submenu">
-                                <a href="javascript:void(0);" class="show-submenu">Contactez-nous <i class="icon-down-open-mini"></i></a>
+                                <a href="javascript:void(0);" class="show-submenu">Contact <!--<i class="icon-down-open-mini"></i>--></a>
                             </li>
                         </ul>
                     </div><!-- End main-menu -->
                     <ul id="top_tools">
                         <li>
                             <div class="dropdown dropdown-search">
-                                <a href="#" class="search-overlay-menu-btn" data-toggle="dropdown"><i class="icon-search"></i></a>
+                                <a href="#" class="search-overlay-menu-btn" data-toggle="dropdown"><i class="icon-search"> Rechercher par mot clé</i></a>
                             </div>
                         </li>
-                        <li>
+                        <!--<li>
                             <div class="dropdown dropdown-cart">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class=" icon-basket-1"></i>Cart (0) </a>
                                 <ul class="dropdown-menu" id="cart_items">
@@ -121,7 +114,7 @@
                                         <div class="image">
                                              <?php echo $this->Html->image("thumb_cart_1.jpg", [
                                             "alt" => "image"]); ?>
-                                            <!--<img src="img/thumb_cart_1.jpg" alt="image">-->
+                                            <img src="img/thumb_cart_1.jpg" alt="image">
                                         </div>
                                         <strong>
                                         <a href="#">Louvre museum</a>1x $36.00 </strong>
@@ -131,7 +124,7 @@
                                         <div class="image">
                                              <?php echo $this->Html->image("thumb_cart_2.jpg", [
                                             "alt" => "image"]); ?>
-                                            <!--<img src="img/thumb_cart_2.jpg" alt="image">-->
+                                            <img src="img/thumb_cart_2.jpg" alt="image">
                                         </div>
                                         <strong>
                                         <a href="#">Versailles tour</a>2x $36.00 </strong>
@@ -141,7 +134,7 @@
                                         <div class="image">
                                              <?php echo $this->Html->image("thumb_cart_3.jpg", [
                                             "alt" => "image"]); ?>
-                                            <!--<img src="img/thumb_cart_3.jpg" alt="image">-->
+                                            <img src="img/thumb_cart_3.jpg" alt="image">
                                         </div>
                                         <strong>
                                         <a href="#">Versailles tour</a>1x $36.00 </strong>
@@ -154,7 +147,7 @@
                                     </li>
                                 </ul>
                             </div><!-- End dropdown-cart-->
-                        </li>
+                        <!--</li>-->
                     </ul>
                 </nav>
             </div>

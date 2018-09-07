@@ -1,33 +1,36 @@
         <div class="container margin_60">
             <div class="main_title">
-                <h2>Nos Tops <span>Green</span></h2>
+                <h2>Nos <span>Green</span> Tops</h2>
                 <p>Nos meilleures adresses éco-friendly, bio ou zéro déchet à Marseille.</p>
             </div>
 
             <div class="row">
 
                 <?php foreach ($spots as $spot): ?>
-                <div class="col-md-4 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
+
+                <div class="col-md-4 col-sm-6 wow zoomIn" data-wow-delay="0.3s">
                     <div class="tour_container">
 
                         <div class="<?= $spot->banner_type ?>"><span><?= $spot->banner ?></span></div>
-
                         <!--<div class="ribbon_3"><span>Top rated</span></div>-->
+
                         <div class="img_container">
-                            <a href="single_tour.html">
+                            <a href="#">
 
                                 <?php echo $this->Html->image($spot->image, ['alt' => 'Image'], ['class' => 'img-responsive']); ?>
                                 <!--<img src="img/tour_box_1.jpg" class="img-responsive" alt="Image">-->
+
+                                <div class="<?= $spot->badge_type ?>"><?= $spot->badge ?></div>
+
                                 <div class="short_info">
-
                                     <i class="<?= $spot->category->icon ?>"></i><?= $spot->category->title ?><span class="price"><?= $spot->area ?></span>
-
                                 </div>
                             </a>
                         </div>
                         <div class="tour_title">
                             <h3><strong><?php echo $this->Html->link($spot->name, ['action' => 'view', $spot->slug]) ?></strong></h3>
                             <div class="rating">
+                                2
                                 <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small>
                             </div>
                             <!-- end rating -->
@@ -45,6 +48,6 @@
             </div>
             <!-- End row -->
             <p class="text-center nopadding">
-                <a href="#" class="btn_1 medium"><i class="icon-eye-7"></i>View all spots (144) </a>
+                <a href="#" class="btn_1 medium"><i class="icon-eye-7"></i>Voir tous les spots (xx) </a>
             </p>
         </div>

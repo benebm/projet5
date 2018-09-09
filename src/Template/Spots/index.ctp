@@ -30,7 +30,7 @@
                         <div class="tour_title">
                             <h3><strong><?php echo $this->Html->link($spot->name, ['action' => 'view', $spot->slug]) ?></strong></h3>
                             <div class="rating">
-                                2
+                                2 
                                 <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small>
                             </div>
                             <!-- end rating -->
@@ -48,6 +48,6 @@
             </div>
             <!-- End row -->
             <p class="text-center nopadding">
-                <a href="#" class="btn_1 medium"><i class="icon-eye-7"></i>Voir tous les spots (xx) </a>
+                <a href="#" class="btn_1 medium"><i class="icon-eye-7"></i>Voir tous les spots (<?= $totalnumber ?>) </a>
             </p>
         </div>

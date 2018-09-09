@@ -23,7 +23,29 @@ class CategoriesController extends AppController
         $categories = $this->paginate($this->Categories);
 
         $this->set(compact('categories'));
+
     }
+
+
+    public function test()
+    {
+         /*$categories = $this->Categories->find('all');
+        $this->set(compact('categories')); */
+
+        $category = $this->Categories->find('all');
+
+        $this->set('category', $category); 
+
+        $number = $category->count();
+
+         $this->set('number', $number); 
+
+        
+
+
+    }
+
+
 
     /**
      * View method

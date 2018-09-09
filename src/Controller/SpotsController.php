@@ -19,10 +19,13 @@ class SpotsController extends AppController
         $spots = $this->Spots->find('all')
         ->where(['spots.top' => 1])
         ->contain(['Categories', 'Reviews']);
-
         $this->set(compact('spots'));
 
-        // Résultats dans SELECT COUNT(*) count FROM ...
+        $totalspots = $this->Spots->find('all');
+        $totalnumber = $totalspots->count();
+        $this->set('totalnumber', $totalnumber); 
+
+
 
     }
 
@@ -32,7 +35,7 @@ class SpotsController extends AppController
         $spot = $this->Spots->findBySlug($slug)->firstOrFail();
         $this->set(compact('spot'));*/
 
-        $this->viewBuilder()->setLayout('singletour');
+        $this->viewBuilder()->setLayout('singlespot');
 
         $review = $this->Spots->Reviews->newEntity();
 

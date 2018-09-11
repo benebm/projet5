@@ -13,21 +13,34 @@ class SpotsController extends AppController
 {
     public function index()
     {
-        /*$this->loadComponent('Paginator');
-        $spots = $this->Paginator->paginate($this->spots->find());*/
 
+        // ce bloc affiche de façon compacte tous les spots classés en top (top=1)
         $spots = $this->Spots->find('all')
         ->where(['spots.top' => 1])
         ->contain(['Categories', 'Reviews']);
         $this->set(compact('spots'));
+        foreach ($spots as $spot)
+        {
+            $spotslug = $spot->slug;
+        }
 
+        // ce bloc affiche la somme totale de tous les spots (top et non top)
         $totalspots = $this->Spots->find('all');
         $totalnumber = $totalspots->count();
         $this->set('totalnumber', $totalnumber); 
 
+        // ce bloc affiche le nombre de toutes les reviews
+        $reviews = $this->Spots->Reviews->find('all');
+        $reviewnumber = $reviews->count();
+        $this->set('reviewnumber', $reviewnumber); 
 
-
+        // ce bloc affiche la moyenne de toutes les reviews
+        $query = $this->Spots->Reviews->find()
+        ->where(['Reviews.spot_slug' => $spotslug]);
+        $rating = $query->select(['moyenne' => $query->func()->avg('rating')])->first();
+        $this->set('rating', $rating);     
     }
+
 
     public function view($slug = null)
     {
@@ -39,10 +52,18 @@ class SpotsController extends AppController
 
         $review = $this->Spots->Reviews->newEntity();
 
-        $spot = $this->Spots->find()->where(['Spots.slug' => $slug])->contain(['Categories', 'Reviews'])->first();
+        $spot = $this->Spots->find()
+        ->where(['Spots.slug' => $slug])
+        ->contain(['Categories', 'Reviews'])->first();
         $this->set(compact('review', 'spot', 'view'));
         $this->set('_serialize', ['spot']);
 
+        // ce bloc affiche la moyenne des reviews pour ce spot_slug
+        $query = $this->Spots->Reviews->find()
+        ->where(['Reviews.spot_slug' => $slug]);
+        $rating = $query->select(['moyenne' => $query->func()->avg('rating')])->first();
+        $this->set('rating', $rating); 
+    
     }
 
     /**

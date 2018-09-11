@@ -30,7 +30,9 @@
                         <div class="tour_title">
                             <h3><strong><?php echo $this->Html->link($spot->name, ['action' => 'view', $spot->slug]) ?></strong></h3>
                             <div class="rating">
-                                2 
+                                <?= $spot->slug ?>
+
+                                <?= $rating->moyenne ?> 
                                 <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small>
                             </div>
                             <!-- end rating -->

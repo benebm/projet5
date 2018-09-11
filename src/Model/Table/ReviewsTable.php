@@ -89,4 +89,5 @@ class ReviewsTable extends Table
 
         return $rules;
     }
+
 }

@@ -6,7 +6,21 @@
 					<div class="col-md-8 col-sm-8">
 						<h1><?= $spot->name ?></h1>
 						<span><?= $spot->address ?></span>
-						<span class="rating"><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(<?= count($spot->reviews) ?>)</small></span>
+						<span class="rating">
+							<?php for ($i = 1; $i <= 5; $i++)
+									{
+										if ($i <= $rating->moyenne)
+										{
+											echo "<i class=\"icon-smile voted\"></i>";
+										}
+										else
+										{
+											echo "<i class=\"icon-smile\"></i>";
+										}
+									} 
+							?>
+							<small>(<?= count($spot->reviews) ?>)</small>
+						</span>
 					</div>
 					<div class="col-md-4 col-sm-4">
 						<div id="price_single_main">
@@ -23,7 +37,7 @@
 		<div id="position">
 			<div class="container">
 				<ul>
-					<li><a href="#">Home</a>
+					<li><a href="#">Accueil</a>
 					</li>
 					<li><a href="#">Category</a>
 					</li>

@@ -30,6 +30,9 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
     <?php echo $this->Html->css('base.css'); ?>
     <?php echo $this->Html->css('date_time_picker.css'); ?>
 
+    <!-- leaflet map css implementation-->
+    <link href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" rel="stylesheet" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+
      <?php echo $this->fetch('css'); ?>
         
     <!--[if lt IE 9]>
@@ -116,12 +119,15 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
     <!--<script src="validate.js"></script>-->
     <?php echo $this->Html->script('validate.js'); ?>
 
+    <!--leaflet map-->
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+
     <!-- Map -->
-    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAqoTjKLYOr9z45jZ990XYItWB88c6LtZ8"></script>                               
+    <?php echo $this->Html->script('map2.js'); ?>
+
+    <!--<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB84YOXFIn5Oi5Y7zLG3a_W7c8uMlSFcqA"></script>-->                               
     <!--<script src="js/map.js"></script>
     <script src="js/infobox.js"></script>-->
-    <?php echo $this->Html->script('map.js'); ?>
-    <?php echo $this->Html->script('infobox.js'); ?>
 
 
 <?php echo $this->fetch('script'); ?>

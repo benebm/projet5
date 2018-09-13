@@ -24,7 +24,7 @@
 					</div>
 					<div class="col-md-4 col-sm-4">
 						<div id="price_single_main">
-							from/per person <span><?= $spot->slug ?><sup>€</sup></span>
+							<span><?= $spot->area ?></span>
 						</div>
 					</div>
 				</div>
@@ -39,7 +39,7 @@
 				<ul>
 					<li><a href="#">Accueil</a>
 					</li>
-					<li><a href="#">Category</a>
+					<li><a href="#">Catégorie</a>
 					</li>
 					<li>
 						<?= $spot->category->title ?>
@@ -51,6 +51,11 @@
 
 		<div class="collapse" id="collapseMap">
 			<div id="map" class="map"></div>
+			<script>
+				var longitude = <?= $spot->position_lng ?>;
+				var latitude = <?= $spot->position_lat ?>;
+				
+			</script>
 		</div>
 		<!-- End Map -->
 
@@ -70,20 +75,20 @@
 						</ul>
 					</div>
 
-					<p class="visible-sm visible-xs"><a class="btn_map" data-toggle="collapse" href="#collapseMap" aria-expanded="false" aria-controls="collapseMap" data-text-swap="Hide map" data-text-original="View on map">View on map</a>
+					<p class="visible-sm visible-xs"><a class="btn_map" data-toggle="collapse" href="#collapseMap" aria-expanded="false" aria-controls="collapseMap" data-text-swap="Hide map" data-text-original="View on map">Voir sur la carte</a>
 					</p>
 					<!-- Map button for tablets/mobiles -->
 
 					<div class="row">
 						<div class="col-md-3">
-							<h3>Description</h3>
+							<h3>Tout savoir sur ce spot</h3>
 						</div>
 						<div class="col-md-9">
-							<h4>Category</h4>
+							<h4>En bref</h4>
 							<p>
 								<?= $spot->description ?>
 							</p>
-							<h4>What's include</h4>
+							<h4>Green aime...</h4>
 							<p>
 								Lorem ipsum dolor sit amet, at omnes deseruisse pri. Quo aeterno legimus insolens ad. Sit cu detraxit constituam, an mel iudico constituto efficiendi.
 							</p>
@@ -122,15 +127,15 @@
 						
 							<?= $this->Form->create($review, ['url' => ['action' => 'addReview']]); ?>
                 				<div class="form-group">
-                    				<?= $this->Form->control('username', ['class' => 'form-control', 'placeholder' => 'Your username', 'label' => false]) ?>
+                    				<?= $this->Form->control('username', ['class' => 'form-control', 'placeholder' => 'Votre nom', 'label' => false]) ?>
                 				</div>
             					<?= $this->Form->control('spot_id', ['type' => 'hidden', 'value' => $spot->id]) ?>
             					<?= $this->Form->control('spot_slug', ['type' => 'hidden', 'value' => $spot->slug]) ?>
         						<div class="form-group">
-            						<?= $this->Form->control('content', ['class' => 'form-control', 'placeholder' => 'Your review', 'label' => false]) ?>
+            						<?= $this->Form->control('content', ['class' => 'form-control', 'placeholder' => 'Votre commentaire', 'label' => false]) ?>
         						</div>
         						<div class="form-group">
-            						<?= $this->Form->control('rating', ['class' => 'form-control', 'placeholder' => 'votre note', 'label' => false]) ?>
+            						<?= $this->Form->control('rating', ['class' => 'form-control', 'placeholder' => 'Votre note', 'label' => false]) ?>
         						</div>
         						<div class="form-group">
             					<button type="submit" class="btn_1 add_bottom_30" data-toggle="modal" data-target="#myReview">Laisser un avis</button>
@@ -146,14 +151,11 @@
 							<!-- End general_rating -->
 							<hr>
 
-
-
-
 							<?php foreach ($spot->reviews as $review): ?>
 							<div class="review_strip_single">
 								<!--<img src="img/avatar1.jpg" class="img-circle">-->
 								<?php echo $this->Html->image("avatar1.jpg", ["class" => "img-circle"]); ?>
-								<small> - <?= $review->created->format('F jS Y, H:i') ?> -</small>
+								<small> - <?= $review->created->format('d M y, H:i') ?> -</small>
 								<h4><?= h($review->username) ?></h4>
 								<p>
 									<?= h($review->content) ?>
@@ -188,99 +190,37 @@
 
 				<aside class="col-md-4">
 					<p class="hidden-sm hidden-xs">
-						<a class="btn_map" data-toggle="collapse" href="#collapseMap" aria-expanded="false" aria-controls="collapseMap" data-text-swap="Hide map" data-text-original="View on map">View on map</a>
+						<a class="btn_map" data-toggle="collapse" href="#collapseMap" aria-expanded="false" aria-controls="collapseMap" data-text-swap="Replier la carte" data-text-original="View on map">Voir sur la carte</a>
 					</p>
-					<div class="box_style_1 expose">
-						<h3 class="inner">- Booking -</h3>
-						<div class="row">
-							<div class="col-md-6 col-sm-6">
 
-        						<?= $this->Form->create($order, ['url' => ['action' => 'addOrder', $spot->slug]]); ?>
-								<div class="form-group">
-									<i class="icon-calendar-7"></i> <strong>Date</strong>
-									<?= $this->Form->control('day', ['class' => 'date-pick form-control', 'label' => false, 'data-date-format' => 'M d, D', 'type' => 'text']) ?>
-								</div>
-							</div>
-							<?= $this->Form->control('spot_id', ['type' => 'hidden', 'value' => $spot->id]) ?>
-							<div class="col-md-6 col-sm-6">
-								<div class="form-group">
-									<i class=" icon-clock"></i> <strong>Heure de début</strong>
-									<?= $this->Form->control('time', ['class' => 'time-pick form-control', 'value' => '12:00 AM', 'label' => false, 'type' => 'text']) ?>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-6 col-sm-6">
-								<div class="form-group">
-										<strong>Participants</strong>
-										<div class="numbers-row">
-										<?= $this->Form->control('guests', ['class' => 'qty2 form-control', 'value' => '1', 'type' => 'text', 'id' => 'adults', 'name' => 'quantity', 'label' => false, 'name' => 'guests']) ?>
-										</div>
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-6">
-								<div class="form-group">
-										<strong>Durée</strong>
-										<div class="numbers-row">
-									<?= $this->Form->control('duration', ['class' => 'qty2 form-control', 'placeholder' => false, 'label' => false, 'type' => 'text', 'value' => '2h', 'id' => 'children', 'name' => 'duration']) ?>
-									</div>
-								</div>
-							</div>
-						</div>
-						<br>
-						<!--<table class="table table_summary">
-							<tbody>
-								<tr>
-									<td>
-										Adults
-									</td>
-									<td class="text-right">
-										2
-									</td>
-								</tr>
-								<tr>
-									<td>
-										Children
-									</td>
-									<td class="text-right">
-										0
-									</td>
-								</tr>
-								<tr>
-									<td>
-										Total amount
-									</td>
-									<td class="text-right">
-										3x <?= $spot->slug ?>
-									</td>
-								</tr>
-								<tr class="total">
-									<td>
-										Total cost
-									</td>
-									<td class="text-right">
-										$154
-									</td>
-								</tr>
-							</tbody>
-						</table>-->
-						<button type="submit" class="btn_full">Réserver maintenant</button>
-						<!--<a class="btn_full" href="cart.html">Book now</a>--> 
+					<!--<div class="box_style_1 expose">
+						<h3 class="inner">- Booking -</h3>
 						<a class="btn_full_outline"
 						href="">
-
 							<i class=" icon-heart"></i> Add to whislist</a>
-					</div>
-					<?= $this->Form->end(); ?>
+					</div>-->
+					
 					<!--/box_style_1 -->
 
 					<div class="box_style_4">
+						<i class="icon_set_1_icon-83"></i>
+						<h4><span>Horaires</span></h4>
+						<a href="tel://004542344599" class="phone">+45 423 445 99</a>
+						Monday to Friday 9.00am - 7.30pm
+					</div>
+
+					<div class="box_style_4">
 						<i class="icon_set_1_icon-90"></i>
-						<h4><span>Book</span> by phone</h4>
+						<h4><span>Contact</span></h4>
+						<a href="tel://004542344599" class="phone">+45 423 445 99</a>
+					</div>
+		
+					<div class="box_style_4">
+						<i class="icon_set_1_icon-54"></i>
+						<h4><span>Site web</span></h4>
 						<a href="tel://004542344599" class="phone">+45 423 445 99</a>
 						<small>Monday to Friday 9.00am - 7.30pm</small>
 					</div>
-
 				</aside>
 			</div>
 			<!--End row -->

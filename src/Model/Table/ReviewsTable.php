@@ -50,6 +50,11 @@ class ReviewsTable extends Table
             'foreignKey' => 'spot_id',
             'joinType' => 'INNER'
         ]);
+
+        $this->belongsTo('Users', [
+            'foreignKey' => 'username',
+            'joinType' => 'INNER'
+        ]);
     }
 
     /**

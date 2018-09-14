@@ -54,7 +54,7 @@
 			<script>
 				var longitude = <?= $spot->position_lng ?>;
 				var latitude = <?= $spot->position_lat ?>;
-				
+				var name = <?= $spot->name ?>;
 			</script>
 		</div>
 		<!-- End Map -->

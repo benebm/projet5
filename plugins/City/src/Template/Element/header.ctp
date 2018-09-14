@@ -9,7 +9,11 @@
                         <ul id="top_links">
                             <li>
                                 <div class="dropdown dropdown-access">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="access_link">Se connecter</a>
+                                    <a href="<?= $this->Url->build(['controller' => 'Users','action' => 'login']); ?>">Se connecter</a>
+                                    <!--redirection vers /users/login-->
+
+                                    
+
                                     <div class="dropdown-menu">
                                         <!--<div class="row">
                                             <div class="col-md-6 col-sm-6 col-xs-6">

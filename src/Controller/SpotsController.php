@@ -14,6 +14,8 @@ class SpotsController extends AppController
     public function index()
     {
 
+        $this->viewBuilder()->setLayout('home');
+
         // ce bloc affiche de façon compacte tous les spots classés en top (top=1)
         $spots = $this->Spots->find('all')
         ->where(['spots.top' => 1])
@@ -47,8 +49,6 @@ class SpotsController extends AppController
         /*$this->viewBuilder()->setLayout('singletour');
         $spot = $this->Spots->findBySlug($slug)->firstOrFail();
         $this->set(compact('spot'));*/
-
-        $this->viewBuilder()->setLayout('singlespot');
 
         $review = $this->Spots->Reviews->newEntity();
 

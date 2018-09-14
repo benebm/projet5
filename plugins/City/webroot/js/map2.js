@@ -3,7 +3,7 @@ $('#collapseMap').on('shown.bs.collapse', function(e){
  });
 
 
-var mymap = L.map('map').setView([43.2969500, 5.3810700], 14);
+var mymap = L.map('map').setView([latitude, longitude], 14);
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -14,9 +14,9 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 
 var marker = L.marker([latitude, longitude]).addTo(mymap);
 
-/*
-marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+marker.bindPopup("<b>"+name+"</b><br>I am a popup.").openPopup();
 
+/*
 var greenIcon = L.icon({
     iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-green.png',
     shadowUrl: 'https://leafletjs.com/examples/custom-icons/leaf-shadow.png',

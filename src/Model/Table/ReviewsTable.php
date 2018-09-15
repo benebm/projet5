@@ -52,7 +52,7 @@ class ReviewsTable extends Table
         ]);
 
         $this->belongsTo('Users', [
-            'foreignKey' => 'username',
+            'foreignKey' => 'user_id',
             'joinType' => 'INNER'
         ]);
     }
@@ -93,6 +93,12 @@ class ReviewsTable extends Table
         $rules->add($rules->existsIn(['spot_id'], 'Spots'));
 
         return $rules;
+    }
+
+
+        public function isOwnedBy($reviewId, $userId)
+    {
+        return $this->exists(['id' => $reviewId, 'user_id' => $userId]);
     }
 
 }

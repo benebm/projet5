@@ -35,7 +35,7 @@ class UsersTable extends Table
         $this->setPrimaryKey('id');
 
         $this->hasMany('Reviews', [
-            'foreignKey' => 'username'
+            'foreignKey' => 'user_id'
         ]);
     }
 

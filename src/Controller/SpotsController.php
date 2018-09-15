@@ -76,6 +76,10 @@ class SpotsController extends AppController
 
         if ($this->request->is(['post'])) {
             $review = $this->Spots->Reviews->patchEntity($review, $this->request->getData());
+
+            // ajout auth
+            $review->user_id = $this->Auth->user('id');
+
             if ($this->Spots->Reviews->save($review)) {
                 return $this->redirect(['action' => 'view', $_POST['spot_slug']]);
                 /*$this->Flash->success(__('The review has been saved.'));*/
@@ -85,6 +89,32 @@ class SpotsController extends AppController
         }
         return $this->redirect(['action' => 'view', $_POST['spot_slug']]);
     }
+
+
+
+    public function isAuthorized($user)
+    {
+        // Tous les utilisateurs enregistrés peuvent ajouter des articles
+        // Avant 3.4.0 $this->request->param('action') etait utilisée.
+        if ($this->request->getParam('action') === 'addReview') {
+            return true;
+        }
+
+
+        // Le propriétaire d'un article peut l'éditer et le supprimer
+        // Avant 3.4.0 $this->request->param('action') etait utilisée.
+        if (in_array($this->request->getParam('action'), ['edit', 'delete'])) {
+            // Avant 3.4.0 $this->request->params('pass.0')
+            $reviewId = (int)$this->request->getParam('pass.0');
+            if ($this->Spots->Reviews->isOwnedBy($reviewId, $user['id'])) {
+                return true;
+            }
+        }
+
+        return parent::isAuthorized($user);
+    }
+
+
 
 
     public function beforeRender(\Cake\Event\Event $event)

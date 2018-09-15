@@ -135,10 +135,45 @@ class UsersController extends AppController
     }
     //fin couche auth
 
-public function beforeRender(\Cake\Event\Event $event)
+
+    public function admin()
+    {
+    	$userId = $this->Auth->user("id");
+
+    	$review = $this->Users->Reviews->find()
+    	->where(['Reviews.user_id' => $userId]);
+        $this->set(compact('review'));
+	}
+
+
+	public function isAuthorized($user)
+    {
+        // Tous les utilisateurs enregistrés peuvent ajouter des articles
+        // Avant 3.4.0 $this->request->param('action') etait utilisée.
+        if ($this->request->getParam('action') === 'admin') {
+            return true;
+        }
+
+
+        // Le propriétaire d'un article peut l'éditer et le supprimer
+        // Avant 3.4.0 $this->request->param('action') etait utilisée.
+        if (in_array($this->request->getParam('action'), ['edit', 'delete'])) {
+            // Avant 3.4.0 $this->request->params('pass.0')
+            $reviewId = (int)$this->request->getParam('pass.0');
+            if ($this->Users->Reviews->isOwnedBy($reviewId, $user['id'])) {
+                return true;
+            }
+        }
+
+        return parent::isAuthorized($user);
+    }        
+
+
+	public function beforeRender(\Cake\Event\Event $event)
     {
         $this->viewBuilder()->setTheme('City');
     }
+
 
 
 }

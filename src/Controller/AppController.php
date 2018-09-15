@@ -46,14 +46,15 @@ class AppController extends Controller
 
         //couche d'authentification
         $this->loadComponent('Auth', [
+            'authorize' => ['Controller'], // Ajout de cette ligne
             'loginRedirect' => [
-                'controller' => 'Reviews',
-                'action' => 'index'
+                'controller' => 'Users',
+                'action' => 'admin',
             ],
             'logoutRedirect' => [
                 'controller' => 'Spots',
                 'action' => 'index'
-            ]
+            ],
         ]);
         //fin auth
 
@@ -64,6 +65,20 @@ class AppController extends Controller
         //$this->loadComponent('Security');
         //$this->loadComponent('Csrf');
     }
+
+
+
+        public function isAuthorized($user) 
+    {
+        // Admin peuvent accéder à chaque action
+        if (isset($user['role']) && $user['role'] === 'admin') {
+            return true;
+        }
+
+        // Par défaut refuser
+        return false;
+    }
+
 
 
         // autoriser consultation sans connexion

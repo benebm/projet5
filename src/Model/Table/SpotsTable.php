@@ -57,5 +57,6 @@ class SpotsTable extends Table
         ]);
 
 	}
+
     
 }

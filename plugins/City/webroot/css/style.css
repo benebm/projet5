@@ -2867,6 +2867,18 @@ ul.list_order li span {
 }
 
 /* Parallax bg */
+
+/*custo dashboard*/
+
+#dashboardhero.parallax-window {
+	height: auto;
+	display: block;
+	background: url(../img/admin_top.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+/* fin custo dashboard */
+
 .parallax-window {
 	min-height: 470px;
 	background: transparent;

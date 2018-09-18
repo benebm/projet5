@@ -26,10 +26,16 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
 
     <!-- CSS -->
     <!--<link href="css/base.css" rel="stylesheet">-->
+    <!--<link href="css/date_time_picker.css" rel="stylesheet">-->
     <?php echo $this->Html->css('base.css'); ?>
 
+    <!-- admin CSS -->
+    <!--<link href="css/admin.css" rel="stylesheet">
+    <link href="css/jquery.switch.css" rel="stylesheet">-->
+    <?php echo $this->Html->css('admin.css'); ?>
+    <?php echo $this->Html->css('jquery.switch.css'); ?>
+
      <?php echo $this->fetch('css'); ?>
-    
         
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
@@ -57,17 +63,13 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
     <div class="layer"></div>
     <!-- Mobile menu overlay mask -->
 
-    <?=  $this->element('header'); ?>
-    <?=  $this->element('hero'); ?>  
+     <?= $this->element('header') ?>
+     <?= $this->element('dashboardhero') ?>
 
     <main>
 
     	<?= $this->fetch('content') ?>
-        <!-- End container -->
-
-        <?= $this->element('reasonswhy') ?>
-        <!-- End container -->
-        
+    	
     </main>
     <!-- End main -->
     
@@ -79,7 +81,7 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
     <div class="search-overlay-menu">
         <span class="search-overlay-close"><i class="icon_set_1_icon-77"></i></span>
         <form role="search" id="searchform" method="get">
-            <input value="" name="q" type="search" placeholder="Recherchez..." />
+            <input value="" name="q" type="search" placeholder="Search..." />
             <button type="submit"><i class="icon_set_1_icon-78"></i>
             </button>
         </form>
@@ -94,6 +96,19 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
 <?php echo $this->Html->script('common_scripts_min.js'); ?>
 <?php echo $this->Html->script('functions.js'); ?>
 
+<!-- Specific scripts -->
+
+    <!--admin scripts-->
+    <!--<script src="js/tabs.js"></script>-->
+    <?php echo $this->Html->script('tabs.js'); ?>
+    <?php $this->Html->scriptStart(['block' => true]); ?>
+        new CBPFWTabs(document.getElementById('tabs'));
+    <?php $this->Html->scriptEnd(); ?>
+     <?php $this->Html->scriptStart(['block' => true]); ?>
+        $('.wishlist_close_admin').on('click', function (c) {
+            $(this).parent().parent().parent().fadeOut('slow', function (c) {});
+        });
+    <?php $this->Html->scriptEnd(); ?>
 
 <?php echo $this->fetch('script'); ?>
 

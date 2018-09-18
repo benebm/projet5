@@ -1,5 +1,3 @@
-<!-- src/Template/Users/login.ctp -->
-
     <section id="hero" class="login">
     	<div class="container">
         	<div class="row">
@@ -18,15 +16,14 @@
                                 <div class="form-group">
                                 <?= $this->Form->control('password', ['class' => 'form-control', 'placeholder' => '*****', 'label' => 'Votre mot de passe']) ?>
                                 </div>
-                                <p class="small">
+                                <!--<p class="small">
                                     <a href="#">Forgot Password?</a>
-                                </p>
+                                </p>-->
                             
                                 <?= $this->Form->button(__('Se Connecter'), ['class' => 'btn_full']); ?>
                                 <?= $this->Form->end() ?>
 
-                                <a href="register.html " class="btn_full_outline">Register</a>
-                           
+                                <center><i>Pas encore inscrit ?</i></center><a href="<?= $this->Url->build(['controller' => 'Users','action' => 'add']); ?>" class="btn_full_outline">Créer un compte</a>
                         
                         </div>
                 </div>

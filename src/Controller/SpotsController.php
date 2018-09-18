@@ -14,6 +14,9 @@ class SpotsController extends AppController
     public function index()
     {
 
+        $userlogin = $this->Auth->user("username");
+        $this->set('userlogin', $userlogin); 
+
         $this->viewBuilder()->setLayout('home');
 
         // ce bloc affiche de façon compacte tous les spots classés en top (top=1)
@@ -46,6 +49,10 @@ class SpotsController extends AppController
 
     public function view($slug = null)
     {
+
+        $userlogin = $this->Auth->user("username");
+        $this->set('userlogin', $userlogin); 
+
         /*$this->viewBuilder()->setLayout('singletour');
         $spot = $this->Spots->findBySlug($slug)->firstOrFail();
         $this->set(compact('spot'));*/

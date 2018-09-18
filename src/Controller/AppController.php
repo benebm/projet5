@@ -49,7 +49,7 @@ class AppController extends Controller
             'authorize' => ['Controller'], // Ajout de cette ligne
             'loginRedirect' => [
                 'controller' => 'Users',
-                'action' => 'admin',
+                'action' => 'dashboard',
             ],
             'logoutRedirect' => [
                 'controller' => 'Spots',

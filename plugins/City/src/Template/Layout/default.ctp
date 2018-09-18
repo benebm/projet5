@@ -29,11 +29,6 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
     <!--<link href="css/date_time_picker.css" rel="stylesheet">-->
     <?php echo $this->Html->css('base.css'); ?>
     <?php echo $this->Html->css('date_time_picker.css'); ?>
-    <!-- admin CSS -->
-    <!--<link href="css/admin.css" rel="stylesheet">
-    <link href="css/jquery.switch.css" rel="stylesheet">-->
-    <?php echo $this->Html->css('admin.css'); ?>
-    <?php echo $this->Html->css('jquery.switch.css'); ?>
 
     <!-- leaflet map css implementation-->
     <link href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" rel="stylesheet" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
@@ -107,36 +102,15 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
         });
     <?php $this->Html->scriptEnd(); ?>
 
-    <!--admin scripts-->
-    <!--<script src="js/tabs.js"></script>-->
-    <?php echo $this->Html->script('tabs.js'); ?>
-    <?php $this->Html->scriptStart(['block' => true]); ?>
-        new CBPFWTabs(document.getElementById('tabs'));
-    <?php $this->Html->scriptEnd(); ?>
-     <?php $this->Html->scriptStart(['block' => true]); ?>
-        $('.wishlist_close_admin').on('click', function (c) {
-            $(this).parent().parent().parent().fadeOut('slow', function (c) {});
-        });
-    <?php $this->Html->scriptEnd(); ?>
-
-    <!-- Date and time pickers -->
-    <!--<script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/bootstrap-timepicker.js"></script>-->
-    <?php echo $this->Html->script('bootstrap-datepicker.js'); ?>
-    <?php echo $this->Html->script('bootstrap-timepicker.js'); ?>
-    <?php $this->Html->scriptStart(['block' => true]); ?>
-        $('input.date-pick').datepicker('setDate', 'today');
-        $('input.time-pick').timepicker({
-            minuteStep: 15,
-            showInpunts: false
-        })
-    <?php $this->Html->scriptEnd(); ?>
+    <!--checking password strenght when registering-->
+    <!--<script src="js/pw_strenght.js"></script>-->
+    <?php echo $this->Html->script('pw_strenght.js'); ?>
 
     <!--Review modal validation -->
     <!--<script src="validate.js"></script>-->
     <?php echo $this->Html->script('validate.js'); ?>
 
-    <!--leaflet map-->
+    <!--Leaflet map-->
     <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
 
     <!-- Map -->

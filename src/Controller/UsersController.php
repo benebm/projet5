@@ -43,26 +43,6 @@ class UsersController extends AppController
     }
 
     /**
-     * Add method
-     *
-     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
-     */
-    public function add()
-    {
-        $user = $this->Users->newEntity();
-        if ($this->request->is('post')) {
-            $user = $this->Users->patchEntity($user, $this->request->getData());
-            if ($this->Users->save($user)) {
-                $this->Flash->success(__('Lutilisateur a été créé.'));
-
-                return $this->redirect(['action' => 'index']);
-            }
-            $this->Flash->error(__('Impossible dajouter lutilisateur.'));
-        }
-        $this->set(compact('user'));
-    }
-
-    /**
      * Edit method
      *
      * @param string|null $id User id.
@@ -135,10 +115,34 @@ class UsersController extends AppController
     }
     //fin couche auth
 
-
-    public function admin()
+    /**
+     * Add method
+     *
+     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
+     */
+    public function add()
     {
+        $user = $this->Users->newEntity();
+        if ($this->request->is('post')) {
+            $user = $this->Users->patchEntity($user, $this->request->getData());
+            if ($this->Users->save($user)) {
+                $this->Flash->success(__('Lutilisateur a été créé. Connectez vous pour acceder a votre compte'));
+
+                return $this->redirect(['controller' => 'Users', 'action' => 'login']);
+            }
+            $this->Flash->error(__('Impossible dajouter lutilisateur.'));
+        }
+        $this->set(compact('user'));
+    }
+
+
+    public function dashboard()
+    {
+    	$this->viewBuilder()->setLayout('dashboard');
+
     	$userId = $this->Auth->user("id");
+    	$userlogin = $this->Auth->user("username");
+    	$this->set('userlogin', $userlogin); 
 
     	$review = $this->Users->Reviews->find()
     	->where(['Reviews.user_id' => $userId]);
@@ -150,7 +154,7 @@ class UsersController extends AppController
     {
         // Tous les utilisateurs enregistrés peuvent ajouter des articles
         // Avant 3.4.0 $this->request->param('action') etait utilisée.
-        if ($this->request->getParam('action') === 'admin') {
+        if ($this->request->getParam('action') === 'dashboard') {
             return true;
         }
 

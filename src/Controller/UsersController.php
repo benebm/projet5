@@ -105,7 +105,7 @@ class UsersController extends AppController
                 $this->Auth->setUser($user);
                 return $this->redirect($this->Auth->redirectUrl());
             }
-            $this->Flash->error(__('Invalid username or password, try again'));
+            $this->Flash->error(__('Nom d\'utilisateur ou mot de passe invalide, veuillez réessayer'));
         }
     }
 
@@ -126,11 +126,11 @@ class UsersController extends AppController
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('Lutilisateur a été créé. Connectez vous pour acceder a votre compte'));
+                $this->Flash->success(__('Félicitations, l\'utilisateur a bien été créé. Connectez-vous pour accéder à votre compte'));
 
                 return $this->redirect(['controller' => 'Users', 'action' => 'login']);
             }
-            $this->Flash->error(__('Impossible dajouter lutilisateur.'));
+            $this->Flash->error(__('Impossible d\'ajouter l\'utilisateur.'));
         }
         $this->set(compact('user'));
     }

@@ -1458,8 +1458,8 @@ a#filters_col_bt .icon_set_1_icon-65 {
 }
 
 #price_single_main span {
-	font-size: 60px;
-	color: #3CF;
+	font-size: 40px;
+	color: #FFF;
 }
 
 #price_single_main sup {
@@ -2971,7 +2971,7 @@ ul.list_order li span {
 
 .tour_container .tour_title h3 {
 	margin: 0;
-	font-size: 18px;
+	font-size: 22px;
 	text-transform: uppercase;
 }
 
@@ -3072,7 +3072,7 @@ ul.list_order li span {
 
 .short_info .price {
 	float: right;
-	font-size: 28px;
+	font-size: 16px;
 	font-weight: bold;
 	display: inline-block;
 }

@@ -1,6 +1,6 @@
         <div class="container margin_60">
             <div class="main_title">
-                <h2>Nos <span>Green</span> Tops</h2>
+                <h2>Nos <span>Green</span> Tops du moment</h2>
                 <p>Nos meilleures adresses éco-friendly, bio ou zéro déchet à Marseille.</p>
             </div>
 

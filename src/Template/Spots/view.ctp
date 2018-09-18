@@ -123,12 +123,14 @@
 							<h3>Appréciations </h3>
 						</div>
 						<div class="col-md-9">
+						<i><?= $this->Flash->render(); ?><br /></i>
 
-						
 							<?= $this->Form->create($review, ['url' => ['action' => 'addReview']]); ?>
                 				<div class="form-group">
-                    				<?= $this->Form->control('username', ['class' => 'form-control', 'placeholder' => 'Votre nom', 'label' => false]) ?>
+                    				<?= $this->Form->control('title', ['class' => 'form-control', 'placeholder' => 'Votre titre', 'label' => false]) ?>
                 				</div>
+                				<?= $this->Form->control('username', ['type' => 'hidden', 'value' => $userlogin]) ?>
+
             					<?= $this->Form->control('spot_id', ['type' => 'hidden', 'value' => $spot->id]) ?>
             					<?= $this->Form->control('spot_slug', ['type' => 'hidden', 'value' => $spot->slug]) ?>
         						<div class="form-group">
@@ -155,8 +157,8 @@
 							<div class="review_strip_single">
 								<!--<img src="img/avatar1.jpg" class="img-circle">-->
 								<?php echo $this->Html->image("avatar1.jpg", ["class" => "img-circle"]); ?>
-								<small> - <?= $review->created->format('d M y, H:i') ?> -</small>
-								<h4><?= h($review->username) ?></h4>
+								 <small>Publié par <?= $review->username ?><br />- le <?= $review->created->format('d M y') ?> -</small>
+								<h4><?= h($review->title) ?></h4>
 								<p>
 									<?= h($review->content) ?>
 								</p>

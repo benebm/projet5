@@ -80,7 +80,6 @@ class AppController extends Controller
     }
 
 
-
         // autoriser consultation sans connexion
         public function beforeFilter(Event $event)
     {

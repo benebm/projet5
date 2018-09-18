@@ -88,11 +88,11 @@ class SpotsController extends AppController
             $review->user_id = $this->Auth->user('id');
 
             if ($this->Spots->Reviews->save($review)) {
+                $this->Flash->success(__('Votre avis a bien été ajouté, merci !'));
                 return $this->redirect(['action' => 'view', $_POST['spot_slug']]);
-                /*$this->Flash->success(__('The review has been saved.'));*/
             }
-            /*$this->Flash->error(__('The review could not be saved. Please, try again.'));
-                return $this->redirect(['action' => 'view']);*/
+            $this->Flash->error(__('Votre avis n\'a pas pu être ajouté. On réessaie ? :)'));
+            return $this->redirect(['action' => 'view']);
         }
         return $this->redirect(['action' => 'view', $_POST['spot_slug']]);
     }

@@ -70,8 +70,8 @@ class ReviewsTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->requirePresence('username')
-            ->notEmpty('username');
+            ->requirePresence('title', 'Le titre ne peut être vide')
+            ->notEmpty('title');
 
         $validator
             ->scalar('content')

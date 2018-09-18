@@ -12,7 +12,7 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-6 text-center">
                         <p>
-                            <?php echo $this->Html->image("bus.jpg", [
+                            <?php echo $this->Html->image("magasins-bio.jpg", [
                             "alt" => "Pic", "class" => "img-responsive"]); ?>
 
                             <!--<a href="#"><img src="img/bus.jpg" alt="Pic" class="img-responsive"></a>-->
@@ -24,7 +24,7 @@
                     </div>
                     <div class="col-md-3 col-sm-6 text-center">
                         <p>
-                            <?php echo $this->Html->image("transfer.jpg", [
+                            <?php echo $this->Html->image("vrac.jpg", [
                             "alt" => "Pic", "class" => "img-responsive"]); ?>
                             <!--<a href="#"><img src="img/transfer.jpg" alt="Pic" class="img-responsive"></a>-->
                         </p>
@@ -35,7 +35,7 @@
                     </div>
                     <div class="col-md-3 col-sm-6 text-center">
                         <p>
-                            <?php echo $this->Html->image("guide.jpg", [
+                            <?php echo $this->Html->image("resto-vegan.jpg", [
                             "alt" => "Pic", "class" => "img-responsive"]); ?>
                             <!--<a href="#"><img src="img/guide.jpg" alt="Pic" class="img-responsive"></a>-->
                         </p>
@@ -46,7 +46,7 @@
                     </div>
                     <div class="col-md-3 col-sm-6 text-center">
                         <p>
-                            <?php echo $this->Html->image("hotel.jpg", [
+                            <?php echo $this->Html->image("soins-nature.jpg", [
                             "alt" => "Pic", "class" => "img-responsive"]); ?>
                             <!--<a href="#"><img src="img/hotel.jpg" alt="Pic" class="img-responsive"></a>-->
                         </p>

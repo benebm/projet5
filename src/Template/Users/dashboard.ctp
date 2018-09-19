@@ -109,20 +109,16 @@
 					<section id="section-3">
 						<div class="row">
 							<div class="col-md-6 col-sm-6 add_bottom_30">
-								<h4>Change your password</h4>
+								<h4>Mettre à jour votre nom d'utilisateur</h4>
+								<strong>Nom d'utilisateur actuel</strong><br /><?= $userlogin ?>
+								<?= $this->Form->create($user, ['url' => ['action' => 'editUser']]); ?>
 								<div class="form-group">
-									<label>Old password</label>
-									<input class="form-control" name="old_password" id="old_password" type="password">
+									<label>Nouveau nom d'utilisateur</label>
+									<?= $this->Form->control('username', ['class' => 'form-control', 'placeholder' => 'Votre nouveau pseudo', 'label' => false]) ?>
 								</div>
-								<div class="form-group">
-									<label>New password</label>
-									<input class="form-control" name="new_password" id="new_password" type="password">
-								</div>
-								<div class="form-group">
-									<label>Confirm new password</label>
-									<input class="form-control" name="confirm_new_password" id="confirm_new_password" type="password">
-								</div>
-								<button type="submit" class="btn_1 green">Update Password</button>
+								<button type="submit" class="btn_1 green">Mettre à jour</button>
+								<?= $this->Form->end() ?>
+								
 							</div>
 							<div class="col-md-6 col-sm-6 add_bottom_30">
 								<h4>Change your email</h4>

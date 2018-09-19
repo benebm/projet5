@@ -42,29 +42,7 @@ class UsersController extends AppController
         $this->set('user', $user);
     }
 
-    /**
-     * Edit method
-     *
-     * @param string|null $id User id.
-     * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
-     * @throws \Cake\Network\Exception\NotFoundException When record not found.
-     */
-    public function edit($id = null)
-    {
-        $user = $this->Users->get($id, [
-            'contain' => []
-        ]);
-        if ($this->request->is(['patch', 'post', 'put'])) {
-            $user = $this->Users->patchEntity($user, $this->request->getData());
-            if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
-            }
-            $this->Flash->error(__('The user could not be saved. Please, try again.'));
-        }
-        $this->set(compact('user'));
-    }
+   
 
     /**
      * Delete method
@@ -141,6 +119,7 @@ class UsersController extends AppController
     	$this->viewBuilder()->setLayout('dashboard');
 
     	$userId = $this->Auth->user("id");
+
     	$userlogin = $this->Auth->user("username");
     	$this->set('userlogin', $userlogin); 
 
@@ -148,10 +127,6 @@ class UsersController extends AppController
     	->where(['Reviews.user_id' => $userId])
         ->contain(['Spots']);
         $this->set(compact('review'));
-
-        $user = $this->Users->find()
-        ->where(['Users.id' => $userId]);
-        $this->set(compact('user'));
 
 	}
 
@@ -168,6 +143,32 @@ class UsersController extends AppController
             $this->Flash->error(__('L\'avis n\'a pas pu être supprimé. Veuillez réessayer :)'));
         }
         return $this->redirect(['action' => 'dashboard']);
+    }
+
+
+     /**
+     * Edit method
+     *
+     * @param string|null $id User id.
+     * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
+     * @throws \Cake\Network\Exception\NotFoundException When record not found.
+     */
+    public function editUser($id = null)
+    {
+
+    	$userId = $this->Auth->user("id");
+
+        $user = $this->Users->get($userId);
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $user = $this->Users->patchEntity($user, $this->request->getData());
+            if ($this->Users->save($user)) {
+                $this->Flash->success(__('Votre nom d\'utilisateur a bien été modifié.'));
+
+                return $this->redirect(['action' => 'dashboard']);
+            }
+            $this->Flash->error(__('Votre nom d\'utilisateur n\'a pas pu être modifié. Réessayez :)'));
+        }
+        $this->set(compact('user'));
     }
 
 

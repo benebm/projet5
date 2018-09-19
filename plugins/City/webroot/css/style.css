@@ -2870,11 +2870,12 @@ ul.list_order li span {
 
 /*custo dashboard*/
 
-#dashboardhero.parallax-window {
-	height: auto;
-	display: block;
-	background: url(../img/admin_top.jpg) no-repeat center center;
-	background-size: cover;
+#dashboardthumb {
+	padding-top: 30px;
+}
+
+#dashboardrating {
+	font-size: 125%;
 }
 
 /* fin custo dashboard */

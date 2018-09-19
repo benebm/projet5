@@ -145,9 +145,30 @@ class UsersController extends AppController
     	$this->set('userlogin', $userlogin); 
 
     	$review = $this->Users->Reviews->find()
-    	->where(['Reviews.user_id' => $userId]);
+    	->where(['Reviews.user_id' => $userId])
+        ->contain(['Spots']);
         $this->set(compact('review'));
+
+        $user = $this->Users->find()
+        ->where(['Users.id' => $userId]);
+        $this->set(compact('user'));
+
 	}
+
+    public function deleteReview($id = null)
+    {
+
+        $this->request->allowMethod(['post', 'delete']);
+
+        $review = $this->Users->Reviews->get($id);
+
+        if ($this->Users->Reviews->delete($review)) {
+            $this->Flash->success(__('L\'avis a bien été supprimé!'));
+        } else {
+            $this->Flash->error(__('L\'avis n\'a pas pu être supprimé. Veuillez réessayer :)'));
+        }
+        return $this->redirect(['action' => 'dashboard']);
+    }
 
 
 	public function isAuthorized($user)

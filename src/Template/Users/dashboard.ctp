@@ -52,30 +52,48 @@
 						<?php foreach ($review as $review): ?>
 						<div class="strip_booking">
 							<div class="row">
-								
 								<div class="col-md-2 col-sm-2">
-									<div class="date">
-										<span class="month">Dec</span>
-										<span class="day"><strong>23</strong>Sat</span>
+									<div id="dashboardthumb"><?php echo $this->Html->image($review->spot->imagethumb, ['alt' => 'Image', 'url' => ['controller' => 'Spots', 'action' => 'view', $review->spot->slug]]); ?>
+
+									
+
 									</div>
 								</div>
-								<div class="col-md-6 col-sm-5">
-									<h3 class="hotel_booking"><?= $review->username ?><span>
-										<blockquote class="styled">
-										<?= $review->content ?>
-										</blockquote>
-									</span></h3>
+								<div class="col-md-6 col-sm-5"><?= $this->Flash->render(); ?>
+									<h3><?= $review->title ?></h3>
+									<blockquote class="styled"><?= $review->content ?></blockquote>
 								</div>
 								<div class="col-md-2 col-sm-3">
 									<ul class="info_booking">
-										<li><strong>Booking id</strong> 23442</li>
-										<li><strong>Booked on</strong> Sat. 23 Dec. 2015</li>
+										<li><strong>Note</strong><div class="rating" id="dashboardrating">	
+										<?php for ($i = 1; $i <= 5; $i++) {
+											if ($i <= $review->rating)
+											{
+												echo "<i class=\"icon-smile voted\"></i>";
+											}
+											else
+											{
+												echo "<i class=\"icon-smile\"></i>";
+											}
+										} ?>
+										</div></li><br />
+										<li><strong>Spot</strong> <?php echo $this->Html->link($review->spot->name, ['controller' => 'Spots', 'action' => 'view', $review->spot->slug]) ?></li><br />
+
+										<li><strong>Quartier</strong> <?= $review->spot->area ?></li><br />
+										<li><strong>Date</strong> <?= $review->created->format('d M y') ?></li>
 									</ul>
 								</div>
 								<div class="col-md-2 col-sm-2">
 									<div class="booking_buttons">
-										<a href="#0" class="btn_2">Edit</a>
-										<a href="#0" class="btn_3">Cancel</a>
+										<!--<a href="#0" class="btn_2">Modifier</a>-->
+										<?= $this->Html->link('Voir l\'avis', ['controller' => 'Spots', 'action' => 'view', $review->spot->slug], ['class' => 'btn_2']) ?>
+										<?= $this->Form->postLink(__('Supprimer l\'avis'),
+											
+											['action' => 'deleteReview', $review->id],
+											['class' => 'btn_3']
+											//['confirm' => __('Etes vous sûr de vouloir supprimer cet avis (#{0})?', $review->id)]
+										); ?>
+										
 									</div>
 								</div>
 								
@@ -126,101 +144,27 @@
 						<!-- End row -->
 
 						<hr>
-						<br>
-						<div class="row">
-							<div class="col-md-6 col-sm-6">
-								<h4>Notification settings</h4>
-								<table class="table table-striped options_cart">
-									<tbody>
-										<tr>
-											<td style="width:10%">
-												<i class="icon_set_1_icon-33"></i>
-											</td>
-											<td style="width:60%">
-												New Citytours Tours
-											</td>
-											<td style="width:35%">
-												<label class="switch-light switch-ios pull-right">
-													<input type="checkbox" name="option_1" id="option_1" checked value="">
-													<span>
-							<span>No</span>
-													<span>Yes</span>
-													</span>
-													<a></a>
-												</label>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<i class="icon_set_1_icon-6"></i>
-											</td>
-											<td>
-												New Citytours Hotels
-											</td>
-											<td>
-												<label class="switch-light switch-ios pull-right">
-													<input type="checkbox" name="option_2" id="option_2" value="">
-													<span>
-							<span>No</span>
-													<span>Yes</span>
-													</span>
-													<a></a>
-												</label>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<i class="icon_set_1_icon-26"></i>
-											</td>
-											<td>
-												New Citytours Transfers
-											</td>
-											<td>
-												<label class="switch-light switch-ios pull-right">
-													<input type="checkbox" name="option_3" id="option_3" value="" checked>
-													<span>
-							<span>No</span>
-													<span>Yes</span>
-													</span>
-													<a></a>
-												</label>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<i class="icon_set_1_icon-81"></i>
-											</td>
-											<td>
-												New Citytours special offers
-											</td>
-											<td>
-												<label class="switch-light switch-ios pull-right">
-													<input type="checkbox" name="option_4" id="option_4" value="">
-													<span>
-							<span>No</span>
-													<span>Yes</span>
-													</span>
-													<a></a>
-												</label>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-								<button type="submit" class="btn_1 green">Update notifications settings</button>
+						<h4>Upload profile photo</h4>
+						<div class="form-inline upload_1">
+							<div class="form-group">
+								<input type="file" name="files[]" id="js-upload-files" multiple>
 							</div>
+							<button type="submit" class="btn_1 green" id="js-upload-submit">Upload file</button>
 						</div>
-						<!-- End row -->
+						<hr>
+							<button type="submit" class="btn_1 green">Update Profile</button>
+
 					</section>
 					<!-- End section 3 -->
 
 					<section id="section-4">
 						<div class="row">
 							<div class="col-md-6 col-sm-6">
-								<h4>Your profile</h4>
+								<h4>Profil</h4>
 								<ul id="profile_summary">
-									<li>Username <span>info@clara.com</span>
+									<li>Nom d'utilisateur <span><?= $user->username ?></span>
 									</li>
-									<li>First name <span>Clara</span>
+									<li>Prénom <span>Clara</span>
 									</li>
 									<li>Last name <span>Tomson</span>
 									</li>

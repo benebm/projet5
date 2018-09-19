@@ -14,8 +14,8 @@
             )
         ?></li>
         <li><?= $this->Html->link(__('List Reviews'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Tours'), ['controller' => 'Tours', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Tour'), ['controller' => 'Tours', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Spots'), ['controller' => 'Spots', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Spot'), ['controller' => 'Spot', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="reviews form large-9 medium-8 columns content">
@@ -23,7 +23,7 @@
     <fieldset>
         <legend><?= __('Edit Review') ?></legend>
         <?php
-            echo $this->Form->control('tour_id', ['options' => $tours]);
+            echo $this->Form->control('spot_id', ['options' => $spot]);
             echo $this->Form->control('user_id');
             echo $this->Form->control('content');
             echo $this->Form->control('rating');

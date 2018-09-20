@@ -116,12 +116,10 @@ class UsersController extends AppController
 
     public function dashboard()
     {
-    	$this->viewBuilder()->setLayout('dashboard');
-
     	$userId = $this->Auth->user("id");
 
-    	$userlogin = $this->Auth->user("username");
-    	$this->set('userlogin', $userlogin); 
+    	$username = $this->Auth->user("username");
+    	$this->set('username', $username); 
 
     	$review = $this->Users->Reviews->find()
     	->where(['Reviews.user_id' => $userId])

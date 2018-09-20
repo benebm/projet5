@@ -58,7 +58,7 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
     <!-- Mobile menu overlay mask -->
 
     <?=  $this->element('header'); ?>
-    <?=  $this->element('hero'); ?>  
+    <?=  $this->element('hero/homehero'); ?>  
 
     <main>
 

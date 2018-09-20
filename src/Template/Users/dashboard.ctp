@@ -1,3 +1,6 @@
+<?= $this->element('hero/dashboardhero') ?>
+
+<main>
 <div id="position">
 			<div class="container">
 				<ul>
@@ -303,3 +306,5 @@
 				<!-- End tabs -->
 			</div>
 			<!-- end container -->
+		 </main>
+    <!-- End main -->

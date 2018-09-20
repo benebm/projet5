@@ -7,7 +7,7 @@
                     
                     <div class="col-md-6 col-sm-6 col-xs-6">
                         <ul id="top_links">    
-                                <?php if (!isset($userlogin))
+                                <?php if (!isset($username))
                                 { 
                                 ?>
                                     <li>Bienvenue, visiteur !&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="<?= $this->Url->build(['controller' => 'Users','action' => 'login']); ?>">Se connecter</a>
@@ -19,7 +19,7 @@
                                 else 
                                 { 
                                 ?>
-                                    <li>Bonjour, <?= $userlogin?> !&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="<?= $this->Url->build(['controller' => 'Users','action' => 'logout']); ?>">Se déconnecter </a>
+                                    <li>Bonjour, <?= $username ?> !&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="<?= $this->Url->build(['controller' => 'Users','action' => 'logout']); ?>">Se déconnecter </a>
                                     </li>
                                     <li><a href="<?= $this->Url->build(['controller' => 'Users','action' => 'dashboard']); ?>">Mon compte</a>
                                     </li>

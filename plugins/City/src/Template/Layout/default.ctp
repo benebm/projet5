@@ -30,6 +30,12 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
     <?php echo $this->Html->css('base.css'); ?>
     <?php echo $this->Html->css('date_time_picker.css'); ?>
 
+    <!-- admin CSS -->
+    <!--<link href="css/admin.css" rel="stylesheet">
+    <link href="css/jquery.switch.css" rel="stylesheet">-->
+    <?php echo $this->Html->css('admin.css'); ?>
+    <?php echo $this->Html->css('jquery.switch.css'); ?>
+
     <!-- leaflet map css implementation-->
     <link href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" rel="stylesheet" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
 
@@ -60,16 +66,11 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
 
     <div class="layer"></div>
     <!-- Mobile menu overlay mask -->
-     <?= $this->element('header') ?>
-
-    <main>
-
-    	<?= $this->fetch('content') ?>
-    	
-    </main>
-    <!-- End main -->
+    <?= $this->element('header') ?>
+        
+    <?= $this->fetch('content') ?>
     
-     <?= $this->element('footer') ?>
+    <?= $this->element('footer') ?>
     
     <div id="toTop"></div><!-- Back to top button -->
     
@@ -109,6 +110,18 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
     <!--Review modal validation -->
     <!--<script src="validate.js"></script>-->
     <?php echo $this->Html->script('validate.js'); ?>
+
+    <!--admin scripts-->
+    <!--<script src="js/tabs.js"></script>-->
+    <?php echo $this->Html->script('tabs.js'); ?>
+    <?php $this->Html->scriptStart(['block' => true]); ?>
+        new CBPFWTabs(document.getElementById('tabs'));
+    <?php $this->Html->scriptEnd(); ?>
+     <?php $this->Html->scriptStart(['block' => true]); ?>
+        $('.wishlist_close_admin').on('click', function (c) {
+            $(this).parent().parent().parent().fadeOut('slow', function (c) {});
+        });
+    <?php $this->Html->scriptEnd(); ?>
 
     <!--Leaflet map-->
     <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>

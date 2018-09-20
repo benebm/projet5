@@ -14,8 +14,8 @@ class SpotsController extends AppController
     public function index()
     {
 
-        $userlogin = $this->Auth->user("username");
-        $this->set('userlogin', $userlogin); 
+        $username = $this->Auth->user("username");
+        $this->set('username', $username); 
 
         $this->viewBuilder()->setLayout('home');
 
@@ -50,8 +50,8 @@ class SpotsController extends AppController
     public function view($slug = null)
     {
 
-        $userlogin = $this->Auth->user("username");
-        $this->set('userlogin', $userlogin); 
+        $username = $this->Auth->user("username");
+        $this->set('username', $username); 
 
         /*$this->viewBuilder()->setLayout('singletour');
         $spot = $this->Spots->findBySlug($slug)->firstOrFail();
@@ -97,6 +97,22 @@ class SpotsController extends AppController
         return $this->redirect(['action' => 'view', $_POST['spot_slug']]);
     }
 
+    public function all()
+    {
+
+        $username = $this->Auth->user("username");
+        $this->set('username', $username); 
+
+        // ce bloc affiche de façon compacte tous les spots
+        $spots = $this->Spots->find('all')
+        ->contain(['Categories', 'Reviews']);
+        $this->set(compact('spots'));
+
+        // ce bloc affiche la somme totale de tous les spots
+        $totalspots = $this->Spots->find('all');
+        $totalnumber = $totalspots->count();
+        $this->set('totalnumber', $totalnumber);         
+    }
 
 
     public function isAuthorized($user)

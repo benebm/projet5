@@ -26,15 +26,23 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
 
     <!-- CSS -->
     <!--<link href="css/base.css" rel="stylesheet">-->
-    <!--<link href="css/date_time_picker.css" rel="stylesheet">-->
     <?php echo $this->Html->css('base.css'); ?>
-    <?php echo $this->Html->css('date_time_picker.css'); ?>
 
     <!-- admin CSS -->
     <!--<link href="css/admin.css" rel="stylesheet">
     <link href="css/jquery.switch.css" rel="stylesheet">-->
     <?php echo $this->Html->css('admin.css'); ?>
     <?php echo $this->Html->css('jquery.switch.css'); ?>
+
+    <!-- view all CSS -->
+    <!-- Radio and check inputs -->
+    <!--<link href="css/skins/square/grey.css" rel="stylesheet">-->
+    <?php echo $this->Html->css('skins_square_grey.css'); ?>
+    <!-- Range slider -->
+    <!--<link href="css/ion.rangeSlider.css" rel="stylesheet">
+    <link href="css/ion.rangeSlider.skinFlat.css" rel="stylesheet">-->
+    <?php echo $this->Html->css('ion.rangeSlider.css'); ?>
+    <?php echo $this->Html->css('ion.rangeSlider.skinFlat.css'); ?>
 
     <!-- leaflet map css implementation-->
     <link href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" rel="stylesheet" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
@@ -94,6 +102,7 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
 <?php echo $this->Html->script('functions.js'); ?>
 
 <!-- Specific scripts -->
+    <!-- Check and radio inputs -->
     <!--<script src="js/icheck.js"></script>-->
     <?php echo $this->Html->script('icheck.js'); ?>
     <?php $this->Html->scriptStart(['block' => true]); ?>
@@ -110,6 +119,13 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
     <!--Review modal validation -->
     <!--<script src="validate.js"></script>-->
     <?php echo $this->Html->script('validate.js'); ?>
+
+    <!-- Cat nav mobile -->
+    <!--<script src="js/cat_nav_mobile.js"></script>-->
+    <?php echo $this->Html->script('cat_nav_mobile.js'); ?>
+    <?php $this->Html->scriptStart(['block' => true]); ?>
+        $('#cat_nav').mobileMenu();
+     <?php $this->Html->scriptEnd(); ?>
 
     <!--admin scripts-->
     <!--<script src="js/tabs.js"></script>-->

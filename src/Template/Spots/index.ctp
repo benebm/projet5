@@ -5,9 +5,7 @@
             </div>
 
             <div class="row">
-
                 <?php foreach ($spots as $spot): ?>
-
                 <div class="col-md-4 col-sm-6 wow zoomIn" data-wow-delay="0.3s">
                     <div class="tour_container">
 
@@ -36,17 +34,16 @@
                                 <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small>
                             </div>
                             <!-- end rating -->
-                            <div class="wishlist">
+                            <!--<div class="wishlist">
                                 <a class="tooltip_flip tooltip-effect-1" href="javascript:void(0);">+<span class="tooltip-content-flip"><span class="tooltip-back">Add to wishlist</span></span></a>
-                            </div>
+                            </div>-->
                             <!-- End wish list-->
                         </div>
                     </div>
                     <!-- End box tour -->
-                </div>
-                <?php endforeach; ?>
+                </div>   
                 <!-- End col-md-4 -->
-
+                <?php endforeach; ?>
             </div>
             <!-- End row -->
             <p class="text-center nopadding">

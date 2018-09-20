@@ -33,13 +33,7 @@
 
 					<div id="single_tour_feat">
 						<ul>
-							<li><i class="icon_set_1_icon-4"></i>Museum</li>
-							<li><i class="icon_set_1_icon-83"></i>3 Hours</li>
-							<li><i class="icon_set_1_icon-13"></i>Accessibiliy</li>
-							<li><i class="icon_set_1_icon-82"></i>144 Likes</li>
-							<li><i class="icon_set_1_icon-22"></i>Pet allowed</li>
-							<li><i class="icon_set_1_icon-97"></i>Audio guide</li>
-							<li><i class="icon_set_1_icon-29"></i>Tour guide</li>
+							<?= $spot->iconlist ?>
 						</ul>
 					</div>
 
@@ -57,26 +51,10 @@
 								<?= $spot->description ?>
 							</p>
 							<h4>Green aime...</h4>
-							<p>
-								Lorem ipsum dolor sit amet, at omnes deseruisse pri. Quo aeterno legimus insolens ad. Sit cu detraxit constituam, an mel iudico constituto efficiendi.
-							</p>
 							<div class="row">
 								<div class="col-md-6 col-sm-6">
 									<ul class="list_ok">
-										<li>Lorem ipsum dolor sit amet</li>
-										<li>No scripta electram necessitatibus sit</li>
-										<li>Quidam percipitur instructior an eum</li>
-										<li>Ut est saepe munere ceteros</li>
-										<li>No scripta electram necessitatibus sit</li>
-										<li>Quidam percipitur instructior an eum</li>
-									</ul>
-								</div>
-								<div class="col-md-6 col-sm-6">
-									<ul class="list_ok">
-										<li>Lorem ipsum dolor sit amet</li>
-										<li>No scripta electram necessitatibus sit</li>
-										<li>Quidam percipitur instructior an eum</li>
-										<li>No scripta electram necessitatibus sit</li>
+										<?= $spot->likelist ?>
 									</ul>
 								</div>
 							</div>
@@ -97,7 +75,7 @@
                 				<div class="form-group">
                     				<?= $this->Form->control('title', ['class' => 'form-control', 'placeholder' => 'Votre titre', 'label' => false]) ?>
                 				</div>
-                				<?= $this->Form->control('username', ['type' => 'hidden', 'value' => $userlogin]) ?>
+                				<?= $this->Form->control('username', ['type' => 'hidden', 'value' => $username]) ?>
 
             					<?= $this->Form->control('spot_id', ['type' => 'hidden', 'value' => $spot->id]) ?>
             					<?= $this->Form->control('spot_slug', ['type' => 'hidden', 'value' => $spot->slug]) ?>
@@ -175,21 +153,19 @@
 					<div class="box_style_4">
 						<i class="icon_set_1_icon-83"></i>
 						<h4><span>Horaires</span></h4>
-						<a href="tel://004542344599" class="phone">+45 423 445 99</a>
-						Monday to Friday 9.00am - 7.30pm
+						<?= $spot->schedule ?>
 					</div>
 
 					<div class="box_style_4">
 						<i class="icon_set_1_icon-90"></i>
 						<h4><span>Contact</span></h4>
-						<a href="tel://004542344599" class="phone">+45 423 445 99</a>
+						<strong><?= $spot->contact ?></strong>
 					</div>
 		
 					<div class="box_style_4">
-						<i class="icon_set_1_icon-54"></i>
+						<i class="icon_set_1_icon-63"></i>
 						<h4><span>Site web</span></h4>
-						<a href="tel://004542344599" class="phone">+45 423 445 99</a>
-						<small>Monday to Friday 9.00am - 7.30pm</small>
+						<strong><a href="#"><?= $spot->website ?></a></strong>
 					</div>
 				</aside>
 			</div>

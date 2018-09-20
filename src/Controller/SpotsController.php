@@ -14,6 +14,7 @@ class SpotsController extends AppController
     public function index()
     {
 
+        // affichage du nom dans le header quand user connecté
         $username = $this->Auth->user("username");
         $this->set('username', $username); 
 
@@ -50,6 +51,7 @@ class SpotsController extends AppController
     public function view($slug = null)
     {
 
+        // affichage du nom dans le header quand user connecté
         $username = $this->Auth->user("username");
         $this->set('username', $username); 
 
@@ -99,14 +101,19 @@ class SpotsController extends AppController
 
     public function all()
     {
-
+        // affichage du nom dnas le header quand user connecté
         $username = $this->Auth->user("username");
         $this->set('username', $username); 
 
-        // ce bloc affiche de façon compacte tous les spots
+        // ce bloc affiche de façon compacte tous les spots et pagine
         $spots = $this->Spots->find('all')
         ->contain(['Categories', 'Reviews']);
-        $this->set(compact('spots'));
+        //$spots = $this->paginate($this->Spots)
+        $this->set(compact('spots', $this->paginate($spots)));
+
+        // ce bloc affiche de façon compacte les catégories et les 
+        $categories = $this->Spots->Categories->find('all');
+        $this->set(compact('categories'));
 
         // ce bloc affiche la somme totale de tous les spots
         $totalspots = $this->Spots->find('all');

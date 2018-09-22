@@ -121,6 +121,29 @@ class SpotsController extends AppController
         $this->set('totalnumber', $totalnumber);         
     }
 
+    public function sort($id = null, $rating = null)
+    {
+        // affichage du nom dnas le header quand user connecté
+        $username = $this->Auth->user("username");
+        $this->set('username', $username); 
+
+        $spots = $this->Spots->find()
+        ->where(['Spots.category_id' => $id])
+        ->contain(['Categories', 'Reviews']);
+        $this->set(compact('spots'));
+
+        // ce bloc affiche de façon compacte les catégories et les 
+        $categories = $this->Spots->Categories->find('all');
+        $this->set(compact('categories'));
+
+         // ce bloc affiche la somme totale de tous les spots
+        $totalspots = $this->Spots->find('all');
+        $totalnumber = $totalspots->count();
+        $this->set('totalnumber', $totalnumber);  
+
+        $this->render('all');
+    }
+
 
     public function isAuthorized($user)
     {
@@ -129,7 +152,6 @@ class SpotsController extends AppController
         if ($this->request->getParam('action') === 'addReview') {
             return true;
         }
-
 
         // Le propriétaire d'un article peut l'éditer et le supprimer
         // Avant 3.4.0 $this->request->param('action') etait utilisée.
@@ -143,7 +165,6 @@ class SpotsController extends AppController
 
         return parent::isAuthorized($user);
     }
-
 
 
 

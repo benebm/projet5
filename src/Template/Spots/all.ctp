@@ -36,11 +36,20 @@
 					</p>
 
 					<div class="box_style_cat">
-						<ul id="cat_nav">
-							<li><a href="#" id="active"><i class="icon_set_1_icon-51"></i>Tous les spots <span>(<?= $totalnumber ?>)</span></a>
+						<ul id="cat_nav">			
+							<li>
+							<?= $this->Html->link('<i class="icon_set_1_icon-51"></i>Tous les spots <span>(' . $totalnumber . ')</span>',
+    							['action' => 'all'],
+    							['escape' => false, 'id' => 'active']
+							)?>
 							</li>
 							<?php foreach ($categories as $category): ?>
-							<li><a href="#"><i class="<?= $category->icon ?>"></i><?= $category->title ?> <span>(<?= count($category->spots) ?>)</span></a>
+
+							<li>
+                            <?= $this->Html->link('<i class="' . $category->icon . '"></i>' . $category->title . ' <span>(' . $totalnumber . ')</span>',
+    							['action' => 'sort', $category->id],
+    							['escape' => false]
+							)?>
 							</li>
 							<?php endforeach; ?>
 						</ul>
@@ -94,7 +103,8 @@
 								<ul><?php foreach ($spots as $spot): ?>
 									<li>
 										<label>
-											<input type="checkbox"><?= $spot->area ?></label>
+											<input type="checkbox"><?= $spot->area ?>
+										</label>
 									</li>
 									<?php endforeach; ?>
 								</ul>

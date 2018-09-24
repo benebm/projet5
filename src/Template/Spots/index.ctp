@@ -3,6 +3,9 @@
                 <h2>Nos <span>Green</span> Tops du moment</h2>
                 <p>Nos meilleures adresses éco-friendly, bio ou zéro déchet à Marseille.</p>
             </div>
+            <div>espace de test
+
+            fin test</div>
 
             <div class="row">
                 <?php foreach ($spots as $spot): ?>
@@ -28,9 +31,17 @@
                         <div class="tour_title">
                             <h3><strong><?php echo $this->Html->link($spot->name, ['action' => 'view', $spot->slug]) ?></strong></h3>
                             <div class="rating">
-                                <?= $spot->slug ?>
+                                
+                                <?php foreach ($resultats as $resultat): ?>
+                                <?php if ($resultat->spot_slug === $spot->slug)
+                                {
+                                    echo $resultat->moyenne;
+                                }
+                                ?>
 
-                                <?= $rating->moyenne ?> 
+                                
+                                <?php endforeach; ?>
+                                
                                 <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small>
                             </div>
                             <!-- end rating -->

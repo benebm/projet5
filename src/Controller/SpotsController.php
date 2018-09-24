@@ -36,16 +36,25 @@ class SpotsController extends AppController
         $this->set('totalnumber', $totalnumber); 
 
         // ce bloc affiche le nombre de toutes les reviews
-        $reviews = $this->Spots->Reviews->find('all');
-        $reviewnumber = $reviews->count();
-        $this->set('reviewnumber', $reviewnumber); 
+        //$reviews = $this->Spots->Reviews->find('all');
+        //$reviewnumber = $reviews->count();
+        //$this->set('reviewnumber', $reviewnumber);    
 
-        // ce bloc affiche la moyenne de toutes les reviews
-        $query = $this->Spots->Reviews->find()
-        ->where(['Reviews.spot_slug' => $spotslug]);
-        $rating = $query->select(['moyenne' => $query->func()->avg('rating')])->first();
-        $this->set('rating', $rating);     
-    }
+
+        // essayons de trouver la moyenne par spot
+        $reviews = $this->Spots->Reviews->find();
+        $resultats = $reviews->select(['moyenne' => $reviews->func()->avg('rating'), 'spot_slug'])
+        ->group('spot_slug');
+        $this->set(compact('resultats'));
+
+// Dans un controller ou dans une méthode de table.
+
+
+
+
+
+
+      }
 
 
     public function view($slug = null)
@@ -72,7 +81,6 @@ class SpotsController extends AppController
         ->where(['Reviews.spot_slug' => $slug]);
         $rating = $query->select(['moyenne' => $query->func()->avg('rating')])->first();
         $this->set('rating', $rating); 
-    
     }
 
     /**

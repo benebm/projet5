@@ -83,7 +83,14 @@
             						<?= $this->Form->control('content', ['class' => 'form-control', 'placeholder' => 'Votre commentaire', 'label' => false]) ?>
         						</div>
         						<div class="form-group">
-            						<?= $this->Form->control('rating', ['class' => 'form-control', 'placeholder' => 'Votre note', 'label' => false]) ?>
+            						<?= $this->Form->radio('rating',[
+        								['value' => '1', 'text' => '1 sur 5'],
+        								['value' => '2', 'text' => '2 sur 5'],
+        								['value' => '3', 'text' => '3 sur 5'],
+        								['value' => '4', 'text' => '4 sur 5'],
+        								['value' => '5', 'text' => '5 sur 5'], 
+        							]
+        							); ?>
         						</div>
         						<div class="form-group">
             					<button type="submit" class="btn_1 add_bottom_30" data-toggle="modal" data-target="#myReview">Laisser un avis</button>

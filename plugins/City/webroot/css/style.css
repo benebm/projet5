@@ -1191,6 +1191,7 @@ ul#cat_nav i {
   cursor: pointer;
 }
 
+/*
 .mapboxgl-popup {
   max-width: 200px;
 }
@@ -1198,7 +1199,7 @@ ul#cat_nav i {
 .mapboxgl-popup-content {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
-}
+}*/
 
 
 /* end of custo */

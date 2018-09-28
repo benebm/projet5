@@ -16,44 +16,39 @@
 		<!-- Position -->
 
 		<div class="collapse" id="collapseMap">
-			<div id="map" class="map">
-
-				
+			<div id="map" class="map">			
 				<?php
+				$geojson = array(
+					'type' => 'FeatureCollection', 
+					'features' => array()
+				);
+				foreach ($spots as $spot) {
+    				$marker = array(
+        				'type' => 'Feature',
+        				'geometry' => array(
+            			'type' => 'Point',
+            			'coordinates' => array(
+                			$spot->position_lng,
+                			$spot->position_lat
+            				)
+        				),
+        				'properties' => array(
+            				'title' => $spot->name,
+            				'description' => $spot->short_description,
+            				'image' => $this->Url->image($spot->imagemap),
+            				'phone' => $spot->contact,
+            				'details' => $spot->website,
+            				'category' => $spot->category_id,
+        					)
+    					);
+    				array_push($geojson['features'], $marker);
+				}
 
-$geojson = array(
-	'type' => 'FeatureCollection', 
-	'features' => array()
-);
+				$spot_json = json_encode($geojson); ?>
 
-	foreach ($spots as $spot) {
-
-    $marker = array(
-        'type' => 'Feature',
-        'geometry' => array(
-            'type' => 'Point',
-            'coordinates' => array(
-                $spot->position_lng,
-                $spot->position_lat
-            )
-        ),
-        'properties' => array(
-            'title' => $spot->name,
-            'summary' => $spot->description,
-        )
-    );
-    array_push($geojson['features'], $marker);
-	}
-
-$spot_json = json_encode($geojson);
-?>
-
-<script>
-	// The GeoJSON representing the two point features
-var spot_json = <?php echo ($spot_json); ?>;
-console.log(spot_json);
-	</script>
-
+			<script>
+			var spot_json = <?php echo ($spot_json); ?>;
+			</script>
 			</div>
 		</div>
 		<!-- End Map -->

@@ -172,7 +172,7 @@
 					<div class="box_style_4">
 						<i class="icon_set_1_icon-63"></i>
 						<h4><span>Site web</span></h4>
-						<strong><a href="#"><?= $spot->website ?></a></strong>
+						<strong><?= $this->Html->link(__($spot->website), $spot->website, ['target' => '_blank']) ?></strong>
 					</div>
 				</aside>
 			</div>

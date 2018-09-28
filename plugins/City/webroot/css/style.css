@@ -1183,12 +1183,31 @@ ul#cat_nav i {
 /* mapall customization */
 
 .marker {
-  background-image: url('../img/pins/airports.png');
   background-size: cover;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   cursor: pointer;
+}
+
+#marker1 {
+  background-image: url('../img/pins/airports.png');
+}
+
+#marker2 {
+  background-image: url('../img/pins/bar.png');
+}
+
+#marker3 {
+  background-image: url('../img/pins/historic.png');
+}
+
+#marker4 {
+  background-image: url('../img/pins/single_hotel.png');
+}
+
+#marker5 {
+  background-image: url('../img/pins/walking.png');
 }
 
 /*
@@ -1206,7 +1225,7 @@ ul#cat_nav i {
 
 .marker_info {
 	width: 280px;
-	height: 320px;
+	/*height: 320px;*/
 	border-radius: 3px;
 	text-align: center;
 	background: #FFF;

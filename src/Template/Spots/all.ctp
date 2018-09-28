@@ -35,9 +35,9 @@
         				'properties' => array(
             				'title' => $spot->name,
             				'description' => $spot->short_description,
-            				'image' => $this->Url->image($spot->imagemap),
+            				'image' => $this->Html->image($spot->imagemap),
             				'phone' => $spot->contact,
-            				'details' => $spot->website,
+            				'details' => $this->Html->link(__('Site web'), $spot->website, ['class' => 'btn_infobox', 'target' => '_blank']),
             				'category' => $spot->category_id,
         					)
     					);

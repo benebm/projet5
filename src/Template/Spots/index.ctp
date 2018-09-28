@@ -3,9 +3,6 @@
                 <h2>Nos <span>Green</span> Tops du moment</h2>
                 <p>Nos meilleures adresses éco-friendly, bio ou zéro déchet à Marseille.</p>
             </div>
-            <div>espace de test
-
-            fin test</div>
 
             <div class="row">
                 <?php foreach ($spots as $spot): ?>
@@ -30,19 +27,24 @@
                         </div>
                         <div class="tour_title">
                             <h3><strong><?php echo $this->Html->link($spot->name, ['action' => 'view', $spot->slug]) ?></strong></h3>
-                            <div class="rating">
-                                
-                                <?php foreach ($resultats as $resultat): ?>
-                                <?php if ($resultat->spot_slug === $spot->slug)
+                            <div class="rating">    
+                                <?php foreach ($avgratings as $avgrating): 
+                                if ($avgrating->spot_slug === $spot->slug)
                                 {
-                                    echo $resultat->moyenne;
+                                    for ($i = 1; $i <= 5; $i++)
+                                    {
+                                        if ($i <= $avgrating->moyenne)
+                                        {
+                                            echo "<i class=\"icon-smile voted\"></i>";
+                                        }
+                                        else
+                                        {
+                                            echo "<i class=\"icon-smile\"></i>";
+                                        }
+                                    } 
                                 }
-                                ?>
-
-                                
-                                <?php endforeach; ?>
-                                
-                                <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small>
+                                endforeach; ?>
+                                <small>(<?= count($spot->reviews) ?>)</small>
                             </div>
                             <!-- end rating -->
                             <!--<div class="wishlist">

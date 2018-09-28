@@ -1,0 +1,2802 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "description": "Appel d’Aire  - http://www.appeldaire.com/\nActivité\nAménagement d'espaces et création de mobilier éco-conçu pour des associations et des particuliers. Exemple de réalisations: auvent, table, lits, cuisine solaire, toilettes sèches, récupérateur d'eau, etc. Organisme de formation en métallerie et travail du bois pour des jeunes de 16 à 25 ans déscolarisés et/ou sous main de justice.\n7, impasse sylvestre \n13013 Marseille\n04 96 13 10 45\ncontact@appeldaire.com\n",
+        "name": "Appel d'Aire ",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.394663,
+          43.317544
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true,
+          "color": "Black"
+        },
+        "description": "Atelier 38 - Concept Store\n38 Rue Ste Françoise 13002 Marseille\n0689989889",
+        "name": "Atelier 38",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true,
+          "color": "Black"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.366521,
+          43.298877
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "description": "Biocoop Bioestella\nPont de Joux, Auriol, près de Roquevaire \nTél : 04 42 04 75 54\nVendent le Pain des Collines.",
+        "name": "Biocoop Bioestella",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.602341,
+          43.350148
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "description": "Biocoop des Collines\n203 , rte des Camoins, à l’entrée des Camoins - 13011\nTél: 04 91 24 74 58",
+        "name": "Biocoop des Collines",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.50576,
+          43.301243
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Charivari",
+        "description": "Boutique de créateurs. ",
+        "_umap_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.385496,
+          43.292779
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "description": "Valorisation des huiles usagées\n27 CHEMIN DE BIZET 13016 MARSEILLE",
+        "name": "Chaufmafrite",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.328004,
+          43.365578
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Chocolaterie du Panier",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.366875,
+          43.299635
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "description": "Cinéma Le Méliès\n12 RUE DENIS PAPIN\n13110 PORT DE BOUC\n04 42 06 29 77\ncinemelies@wanadoo.fr\n\"L’important est de pouvoir continuer à défendre nos valeurs qui sont celles du cinéma indépendant et destiné à un public plus acteur que consommateur.\"\n",
+        "name": "Cinéma Le Méliès",
+        "_umap_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.984617,
+          43.407199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "description": "Coopcinelles\n18, traverse Marcel-Maridet, Marseille 12e\nTél : 04 91 49 65 778",
+        "name": "Coopcinelles",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.420766,
+          43.309644
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "showLabel": true,
+          "iconClass": "Drop"
+        },
+        "description": "Coopérative du Garlaban\nPont de Lamagnon, Rte de Géménos, Aubagne - Tél. 04 42 84 21 21",
+        "name": "Coopérative du Garlaban",
+        "_umap_options": {
+          "showLabel": true,
+          "iconClass": "Drop"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.576935,
+          43.297198
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        },
+        "description": "Depelectro\nhttp://www.depelectro.com/\nCombattre \"l'obsolescence programmée\" des appareils Faire prendre conscience aux utilisateurs de l'importance qu'un entretien régulier prévient des pannes. Accompagner les usagers dans leur mode d'utilisation des appareils pour réduire les consommations électriques et d'eau.\nCoordonnées\n1 rue des orgues \n13004 MARSEILLE\n0618065949\n",
+        "name": "Depelectro",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.399735,
+          43.299933
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "description": "Energira - http://www.energira.com/\nenergira@gmail.com\nDiagnostic et conseil en éco-construction et isolation écologique à Marseille\n69,RueJeanCristofol\n13003Marseille\n09 53 52 02 59 \n",
+        "name": "Energira",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.383108,
+          43.310768
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        },
+        "name": "Friperie",
+        "description": "",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.371349,
+          43.297628
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "H20 Nettoyage",
+        "description": "H20 Nettoyage – http://www.h2onettoyage.lesite.pro/\nProduits et Services - Entreprise de nettoyage écologique. Nettoyage et l'entretien de copropriétés, locaux professionnels et d'habitations.\n33 rue Neuve Sainte Catherine 13007 Marseille\ntél: 09.61.06.28.11\nMail: h2o.nettoyage@orange.fr\n",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.368195,
+          43.291959
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Histoire de l'Oeil",
+        "description": "Librairie. A voir.",
+        "_umap_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.385291,
+          43.292146
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "description": "Hom & Ter \nhttp://www.hom-ter.com/web/societe.php\nRegroupement de 3 structures productrices de thé, de cosmétiques et de panneaux solaires\n269, Route des trois Lucs\n13011 Marseille\n06 87 79 57 13\nHom&Ter est une entreprise d’entrepreneurs en réseau, créée en 2007.\nIndépendant financièrement, c’est un groupe détenu et dirigé par les entrepreneurs qui le composent.\nC’est aussi un groupe dont la préoccupation est l’essaimage en petites structures capables de partager des moyens plutôt que de viser une croissance en taille et en effectifs au sein d’une seule structure.\n",
+        "name": "Hom & Ter",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.482081,
+          43.298073
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "description": "Inspire : http://www.inspire-institut.org/ \nInitiative pour la Promotion d’une Industrie Réconciliée avec l’Ecologie et la société (bio-mimétisme, économie circulaire, économie de fonctionnalité...)\ninfo@inspire-institut.org\n149ruedeRome\n13006Marseille\n06 83 55 66 25\n",
+        "name": "Inspire",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.382083,
+          43.289108
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Jérome Solari - Architecte",
+        "description": "Jérôme Solari\nArchitecte- Conception bioclimatique et matériaux écologiques\n103, Avenue Roger Salengro\n13003 Marseille\n04 96 13 02 98\n",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.370609,
+          43.314226
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "L'adresse bio",
+        "description": "",
+        "_umap_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.385138,
+          43.292384
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "description": "17 chemin Castellas\n13710 Fuveau\nloreedubio@neuf.fr",
+        "name": "L'orée du Bio",
+        "_umap_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.560799,
+          43.455411
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "La Criée",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.367991,
+          43.292544
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "description": "100 bd Baille\nBaille-Lodi\n13005 Marseille\nLa Conception, Baille\n04 91 75 90 14\nC'est une petite boutique spécialisée dans le bio qui fait aussi restaurant.\nVous trouverez tous les produits que vous désirez\n-Cosmétiques: shampooings, gels douches, crèmes et même maquillage\n-produits d'entretient\n- nourriture",
+        "name": "La Gaoudina",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.390543,
+          43.287824
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "La Piccoline",
+        "description": "Resto de quartier.",
+        "_umap_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.387077,
+          43.293708
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "La Ruche - espace de coworking (Enercoop, La Nef...)",
+        "description": "28 Bvd National - 13001 Marseille \nhttps://la-ruche.net/ruche/marseille/\n\nEnercoop Provence-Alpes-Côte-d’Azur \n04 84 25 89 19 \ncontact@enercoop-paca.fr \nhttp://www.enercoop-paca.fr",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.386788,
+          43.302953
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        },
+        "name": "Le CIRA",
+        "description": "Le Le Centre International de Recherche sur l'Anarchisme.",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.388644,
+          43.300665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Le Galet - Bioconstruction",
+        "description": "Le Galet - Bioconstruction\nRénovation, construction, isolation, bioélectricité, toitures végétales\nRénovations et constructions écologiques, saines et naturelles.\nMise en oeuvre de la terre\nIsolation thermique et phonique naturelle\nBioélectricité (protection contre les champs électromagnétiques)\nAtelier - Bureau :\n11 bis, rue Armand Bédarrides 13006 Marseille\nTél. : 04.91.53.09.58 - 06.83.08.48.84\nnicolas@legalet-bioconstruction.net\nwww.legalet-bioconstruction.net/\n",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.38267,
+          43.294331
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "description": "Le Jardineur\nActivité\nEntretien et aménagement de tous les types de jardins : aucun pesticide, utilisation de produits biologiques, préservation de la biodiversité, paillage (BRF), développement des prairies fleuries et des jardins économes en eau, sensibilisation au compostage, limitation de l'activité au périmètre de la ville.\nCoordonnées\n64, rue Jules Moulet \n13006 Marseille\n06 10 27 35 00\nhttp://www.lejardineur.com/\n",
+        "name": "Le Jardineur",
+        "_umap_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.37342,
+          43.286476
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Le Kiosk ",
+        "description": "",
+        "_umap_options": {
+          "color": "Green",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.386101,
+          43.309769
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Le RAVI",
+        "description": "Déjà au courant, à voir.",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.387136,
+          43.30202
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        },
+        "name": "Les Amis de Georges + Marseille Nature",
+        "description": "Restaurant macrobiotique & épicerie.\n19 place Gouffé",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.391927,
+          43.284703
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        },
+        "name": "Les Poulets Bicyclettes",
+        "description": "Agence de com écolo.\n38, imp. Croix de Régnier\n",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.391283,
+          43.299275
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Gold",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        },
+        "name": "Marché Paysan de St Pierre",
+        "description": "Place Paul Lapeyre",
+        "_umap_options": {
+          "color": "Gold",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.408792,
+          43.292607
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        },
+        "name": "Pains, cakes et Cie",
+        "description": "Boulangerie bio\n262, Rue de Paradis 13008 \nSituée en plein coeur de Marseille, à côté du lycée Périer, Pains, cakes & compagnie fait son pain bio depuis septembre 2006. Une partie de la boulangerie est traditionnelle, cependant une partie est réservée à des pains spéciaux bio (Petit épeautre, épeautre, céréales, intégral, campagne et seigle…).",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.382679,
+          43.278814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        },
+        "description": "Restaurant bio\n39, Rue de la Paix,13001 Marseille",
+        "name": "Rackham Le Rouge",
+        "_umap_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.373108,
+          43.291802
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Resto provençal",
+        "description": "",
+        "_umap_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.382957,
+          43.293997
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Retouches Fontange",
+        "description": "",
+        "_umap_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.385426,
+          43.292532
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "SCOP-TI (ex-Fralibs)",
+        "description": "",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.628862,
+          43.2937
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Black",
+          "popupTemplate": "Default",
+          "showLabel": true,
+          "iconClass": "Drop"
+        },
+        "description": "Galerie d'art. ",
+        "name": "Seize",
+        "_umap_options": {
+          "color": "Black",
+          "popupTemplate": "Default",
+          "showLabel": true,
+          "iconClass": "Drop"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.385074,
+          43.292191
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "description": "T3 Architecture\nArchitectes DPLG spécialisés en architecture bioclimatique et architecture écologique\n3, Rue Pastoret\n13006 Marseille\n09 54 92 23 21\nhttp://www.t3architecture.fr/\ncontact@t3architecture.fr\n",
+        "name": "T3 Architecture",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.38406,
+          43.293595
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Théâtre du Carré Rond",
+        "description": "",
+        "_umap_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.385079,
+          43.29377
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Théâtre Mazenod",
+        "description": "",
+        "_umap_options": {
+          "color": "Black",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.381528,
+          43.293704
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Aloine Retouches",
+        "description": "Tailleur syrien fort sympathique.",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.386825,
+          43.29613
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        },
+        "name": "Artisans du Monde",
+        "description": "Boutique de commerce équitable. ",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.389464,
+          43.300504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Bar associatif",
+        "description": "Ouvre bientôt à La Bouilladisse.",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.594788,
+          43.394072
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true,
+          "color": "red"
+        },
+        "description": "Boutique de produits bio sympa",
+        "name": "Bio",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true,
+          "color": "red"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.384803,
+          43.293458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "BIOCOOP Endoume",
+        "description": "",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.384004,
+          43.2874
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        },
+        "description": "",
+        "name": "Bouquiniste",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.382516,
+          43.295509
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        },
+        "name": "Bouquiniste BD",
+        "description": "",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.38712,
+          43.294766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "description": "Oleodéclic - récupération des huiles végétales\nhttp://www.oleodeclic.org_ 18 rue du Transvaal - 13004 Marseille \n04 86 11 04 74 \ncontact@oleodeclic.org \nCoordination // Développement : Alain Vigier \n06 34 03 20 86 \nalain.vigier@oleodeclic.org \nCommercial // Administratif : Cédric Hamon \n06 52 82 36 17 \ncedric.hamon@oleodeclic.org\n",
+        "name": "Boutique Eco - Epices - InterMade - Oleodéclic",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.399888,
+          43.309019
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Brocante Vintage le 74",
+        "description": "Avenue des Chartreux",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.399212,
+          43.305143
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Chèvrerie du Mas Doutreleau",
+        "description": "Chèvrerie du Mas Doutreleau\nFromages de Chèvre Fermiers.\nStéphanie et Christophe Deville\n13310 St Martin de Crau.\n0622890694\nchevre.doutreleau@aol.fr\nFB : Chèvrerie du Mas Doutreleau.\n",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.809608,
+          43.638808
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        },
+        "name": "Chez Lucas",
+        "description": "Brocanteur sympathique.",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.369267,
+          43.299158
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true,
+          "color": "red"
+        },
+        "name": "Cinéma les Variétés",
+        "description": "Programmation indépendante, avec le César à Castellane.",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true,
+          "color": "red"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.379787,
+          43.297516
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "description": "Coucoukoulou\nKoulouthoumi ALI\nVêtements féminins aux couleurs d’ici et d’ailleurs.\n0659244456\ncoucoukoulou75@hotmail.fr\n42, rue du Panier 13002 \nwww.coucoukoulou.fr\n",
+        "name": "Coucoukoulou",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.367147,
+          43.299424
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Cyberkartie",
+        "description": "Recyclage de pièces d'ordinateurs. ",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.387051,
+          43.302399
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "description": "Bar associatif & disquaire.\n108 Cours Julien\nelachedecuba@wanadoo.fr",
+        "name": "El Ache de Cuba",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.383344,
+          43.292622
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Epicerie Paysanne ",
+        "description": "Rue Léon Bourgeois",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.393965,
+          43.302133
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "description": "Fleurs d’antan : fleurs coupées, bouquets champêtres, fleurs comestibles.\nPrésents au marché du Cours Ju\nPhilippe et Virginie Makeeff, horticulteurs à Aubagne.\n0627825796\nraesmakeeff.virginie@orange.fr\n",
+        "name": "Fleurs d'antan",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.572815,
+          43.292701
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Friperie / Asso Famille Solidarités",
+        "description": "",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.392184,
+          43.301227
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Galette Records",
+        "description": "Vinyles d'occasion et produits dérivés. ",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.385366,
+          43.293356
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Green Bear Coffee",
+        "description": "Restaurant bio avec 3 adresses à Marseille.",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.382679,
+          43.298487
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        },
+        "name": "Herboriste",
+        "description": "",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.385023,
+          43.295588
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Kawawateï",
+        "description": "Bar associatif et ateliers musicaux.\n27 rue de la Loubière (6e) \n09.81.25.66.62 / 06.60.73.29.43 / 06.60.13.15.84\nprogdukawa@yahoo.com / mainslibres@yahoo.fr / www.mains-libres.org \nhttp://programmationdukawa.blogspot.fr/\n",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.386648,
+          43.291545
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        },
+        "name": "L'Ecomotive - bar/restaurant",
+        "description": "Etablissement bio au pied des marches de la Gare St Charles.\nAcceptent les Roues.",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.380798,
+          43.301413
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        },
+        "name": "L'éléphant rose à pois blancs",
+        "description": "Glaces, crèpes, rhums arrangés.\nAcceptent la Roue.",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.384696,
+          43.294344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "La Fabulerie",
+        "description": "Déjà vus, intéressés mais compliqué à mettre en place pour eux.",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.38388,
+          43.295305
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true,
+          "popupTemplate": "Default"
+        },
+        "name": "La Friche + Marché Paysan",
+        "description": "Lundi 16h30 - 19h30",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true,
+          "popupTemplate": "Default"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.390317,
+          43.309995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true,
+          "color": "Red"
+        },
+        "description": "La Kuisin\n(36 rue Bernard,  à la Belle de Mai)",
+        "name": "La Kuizin / Le Lokal",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true,
+          "color": "Red"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.387163,
+          43.310721
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        },
+        "name": "La Mer Veilleuse.",
+        "description": "Bar associatif militant.",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.384116,
+          43.291781
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Orange",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        },
+        "description": "Boulanger bio sur le Cours Joseph Thierry.\nAccepte la Roue. ",
+        "name": "Le Bar à Pain",
+        "_umap_options": {
+          "color": "Orange",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.386772,
+          43.300371
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        },
+        "name": "Le Cours-en-Vert",
+        "description": "Déjà vus, intéressés.",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.383326,
+          43.292899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        },
+        "name": "Le Molotov",
+        "description": "Bar/concert avec une sensibilité activiste.",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.383108,
+          43.292685
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Le Pain de Nicolas",
+        "description": "Présent au marché des Réformés le mardi",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.55994,
+          43.450053
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "description": "Adresse :  Place St Christophe Les accates  13011 \ntel : 04 91 43 38 63",
+        "name": "Le Pain des Collines",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.494151,
+          43.302649
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Le Père Blaize",
+        "description": "Le Père Blaize. \nHerboriste depuis 1815\n4 et 6 rue Méolan\n0491334131\ncoulardcyril@pereblaize.fr",
+        "_storage_options": {
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        },
+        "_umap_options": {
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.378795,
+          43.295461
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Le Vidéodrome",
+        "description": "Cinéma indépendant avec terrasse. Location de DVD.",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.383451,
+          43.294204
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Longomaï ",
+        "description": "LongomaÏ \nPlutôt motivés, ils en discutent.\nSt Martin de Crau 13310\n0490472742 \nlmcrau@wanadoo.fr\nUne personne particulièrement intéressée par les monnaies locales : Hannes Lämler (préciser son nom dans le mail pour redirection).",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.801025,
+          43.653963
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Manifesten",
+        "description": "Bar associatif et maison d'édition (Al Dante).",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.385527,
+          43.29682
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Microcosmos",
+        "description": "Chai urbain, vin de Marseille. ",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.3663,
+          43.299045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "description": "Miel de Gémenos.\nVus au marché paysan du Cours Ju.\n0670511591\ninnarey@mail.ru\n",
+        "name": "Miel de Gémenos",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.629807,
+          43.295949
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Mille Babords",
+        "description": "Librairie et espace associatif alternatif. \nhttp://www.millebabords.org",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.389019,
+          43.301087
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "description": "Pépinière La Belle Verte à Rognes (13) \nVus au marché du cours Ju, intéressés.\nPlantes et graines pour jardins et potagers.\nPlantes vivaces, aromatiques, officinales, nombreuses variétés de tomates et d’autres légumes d’été, plantes insolites. Variétés paysannes et locales. Production agro écologique.\n0616548368\nlabelleverte13840@free.fr\n",
+        "name": "Pépinière La Belle Verte",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.344849,
+          43.665885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        },
+        "name": "Plus belle la Vigne",
+        "description": "Caviste.",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.382614,
+          43.294985
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        },
+        "name": "Pouce",
+        "description": "Resto bio & local sur Longchamp.",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.390929,
+          43.30275
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        },
+        "name": "Recyclodrome",
+        "description": "Ils prévoient ça pour 2015, on attend la réponse de vincent.",
+        "_umap_options": {
+          "color": "Red",
+          "iconClass": "Drop",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.381278,
+          43.295413
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Red",
+          "popupTemplate": "Default",
+          "showLabel": true,
+          "iconClass": "Drop"
+        },
+        "name": "Terre de Chanvre",
+        "description": "",
+        "_umap_options": {
+          "color": "Red",
+          "popupTemplate": "Default",
+          "showLabel": true,
+          "iconClass": "Drop"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.385126,
+          43.292327
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true,
+          "color": "Red"
+        },
+        "description": "CONCEPT STORE UndARTground (Le Panier)\n21 rue des repenties – 13002 Marseille\n06 50 08 28 21 – undartground@gmail.com\nOuvert de juin à aout : 7j/7 de 10h30 à 20h.\nHors saison : ouvert du mercredi au dimanche aux mêmes horaires, et les jours fériés de beaux temps (sinon, Julien est  à côté, à son atelier, alors si vous si vous trouver le rideau fermé, passez un coup de tel;)\nhttp://undartground.com/\nhttps://www.facebook.com/UndARTground\n",
+        "name": "UndArtGround",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true,
+          "color": "Red"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.366516,
+          43.298703
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Orange",
+          "showLabel": true,
+          "iconClass": "Drop"
+        },
+        "name": "Vélos en Ville - Vélosophie Café",
+        "description": "Atelier de réparation et lobby pro-vélo.\nAcceptent la Roue.\nhttp://www.velosenville.org",
+        "_umap_options": {
+          "color": "Orange",
+          "showLabel": true,
+          "iconClass": "Drop"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.380737,
+          43.294102
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.408363,
+          43.300978
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Armelle Beraudy",
+        "description": "Praticienne en relation d aide, sophrologue",
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/hospital-24-white.png",
+          "showLabel": true
+        },
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/hospital-24-white.png",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.38417,
+          43.296777
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true,
+          "iconUrl": "/uploads/pictogram/shop-24_1.png"
+        },
+        "name": "Article 13",
+        "description": "Brocanteur",
+        "_umap_options": {
+          "color": "Green",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true,
+          "iconUrl": "/uploads/pictogram/shop-24_1.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.383759,
+          43.300892
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "atelier boutique 1 par 1",
+        "description": "atelier associatif et création bijoux",
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/shop-24_1.png",
+          "showLabel": true
+        },
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/shop-24_1.png",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.367031,
+          43.299396
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Atelier étoile errante",
+        "description": "Faiences sculpture art de la table",
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/shop-24_1.png",
+          "showLabel": true
+        },
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/shop-24_1.png",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.367969,
+          43.299611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Au grain près",
+        "description": "Epicerie vrac et bio tout près du Pharo",
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/shop-24_1.png",
+          "showLabel": true
+        },
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/shop-24_1.png",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.359182,
+          43.291467
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true,
+          "iconUrl": "/uploads/pictogram/restaurant-24_1.png"
+        },
+        "name": "Boudiou",
+        "description": "Resto végét-vegan",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true,
+          "iconUrl": "/uploads/pictogram/restaurant-24_1.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.381626,
+          43.291089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true,
+          "color": "green",
+          "iconUrl": "/uploads/pictogram/restaurant-24_1.png"
+        },
+        "name": "Casa Consolat",
+        "description": "Bar associatif incontournable.\nhttp://casaconsolat.org",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true,
+          "color": "green",
+          "iconUrl": "/uploads/pictogram/restaurant-24_1.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.385956,
+          43.299545
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/bar-24_1.png",
+          "showLabel": true
+        },
+        "name": "Chez Georges bar brasserie",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/bar-24_1.png",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.393761,
+          43.295527
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true,
+          "iconUrl": "/uploads/pictogram/theatre-24-white.png"
+        },
+        "name": "Dar La Mifa",
+        "description": "Bar associatif - Espace d'épanouissement populaire.\nhttps://darlamifa.org\nAcceptent les Roues.",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true,
+          "iconUrl": "/uploads/pictogram/theatre-24-white.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.382807,
+          43.292884
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true,
+          "iconUrl": "/uploads/pictogram/grocery-24_1.png"
+        },
+        "name": "Epicerie Paysanne Adele",
+        "description": "La première épicerie paysanne, sur le boulevard Chave. Produits locaux et bio.",
+        "_umap_options": {
+          "color": "Green",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true,
+          "iconUrl": "/uploads/pictogram/grocery-24_1.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.390242,
+          43.295365
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true,
+          "iconUrl": "/uploads/pictogram/restaurant-24_1.png"
+        },
+        "name": "Greendeliss",
+        "description": "Cantine traiteur aux 5 Avenues.\nhttp://www.greendeliss.fr\nAcceptent les Roues.",
+        "_umap_options": {
+          "color": "Green",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true,
+          "iconUrl": "/uploads/pictogram/restaurant-24_1.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.397763,
+          43.301985
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "showLabel": true,
+          "color": "DarkGreen"
+        },
+        "description": "Gère le marché du cours ju. \nAdhère dès janvier 2015\nEARL DU POTAGEROME, JÉRÔME LAPLANE\nMARAÎCHER BIO\nROQUEVAIRE\nVente à la ferme le vendredi après-midi\n2360 La Dorgale, 13360 ROQUEVAIRE\n06.71.11.29.82\nlaplane.jerome@gmail.com\nhttp://jerome.laplane.free.fr/index.htm",
+        "name": "Jerome Laplane - Maraîcher",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "showLabel": true,
+          "color": "DarkGreen"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.602341,
+          43.346403
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Katrin Lesèvre",
+        "description": "Réflexologie plantaire et palmaire",
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/hospital-24-white.png",
+          "showLabel": true
+        },
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/hospital-24-white.png",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.390414,
+          43.295785
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "L'alimentation Générale",
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/restaurant-24_1.png",
+          "showLabel": true
+        },
+        "description": "Restauration, sympathique annexe de La Passarelle.\nAcceptent La Roue.\nhttps://fr-fr.facebook.com/alimentationgeneralemarseille/",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/restaurant-24_1.png",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.367508,
+          43.292013
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true,
+          "iconUrl": "/uploads/pictogram/cafe-24_1.png"
+        },
+        "name": "L'Equitable Café",
+        "description": "Bar associatif de référence.\nhttps://equitablecafe.org\nAcceptent la Roue.",
+        "_umap_options": {
+          "color": "Green",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true,
+          "iconUrl": "/uploads/pictogram/cafe-24_1.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.383029,
+          43.294514
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true,
+          "iconUrl": "/uploads/pictogram/shop-24_1.png"
+        },
+        "description": "Des paniers BIO récupérables le mardi et mercredi à notre local de 16h30 à 19h30.\nDe la vente au détail,\nchaque lundi, mardi, mercredi et vendredi:\nDe 16h30 à 19h30.\nEt le samedi matin de 10h à 13h.\nAu: 1 Bis rue Farjon 13001 Marseille.\nContact: 06 69 65 86 01\nBureau d'échanges de la Roue.",
+        "name": "La Bonne Saison - Epicerie Paysanne.",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true,
+          "iconUrl": "/uploads/pictogram/shop-24_1.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.386273,
+          43.302812
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconClass": "Drop",
+          "color": "Green",
+          "showLabel": true,
+          "iconUrl": "/uploads/pictogram/theatre-24-white.png"
+        },
+        "name": "La Ferronnerie",
+        "description": "Ateliers et Pièces de théâtre pour enfants.\nAcceptent la Roue.\n",
+        "_umap_options": {
+          "iconClass": "Drop",
+          "color": "Green",
+          "showLabel": true,
+          "iconUrl": "/uploads/pictogram/theatre-24-white.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.386959,
+          43.299924
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/shop-24_1.png"
+        },
+        "name": "La Meute, épicerie et resto bio",
+        "description": "Boulevard Chave, non loin de chez Adele.",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/shop-24_1.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.389481,
+          43.295293
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "La paix des ménages",
+        "description": "Boutique créateur",
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/shop-24_1.png",
+          "showLabel": true
+        },
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/shop-24_1.png",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.393322,
+          43.2955
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "La Passarelle",
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/restaurant-24_1.png",
+          "showLabel": true
+        },
+        "description": "Restaurant gastronomique bio-local, avec terrasse idyllique. Acceptent la Roue.\nhttp://www.restaurantlapassarelle.fr",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/restaurant-24_1.png",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.368023,
+          43.292146
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "DarkGreen",
+          "showLabel": true,
+          "iconClass": "Drop",
+          "iconUrl": "/uploads/pictogram/restaurant-24_1.png"
+        },
+        "name": "Les Ondines",
+        "description": "Restaurant et traiteur vegan d'insertion.\nAcceptent la Roue.",
+        "_umap_options": {
+          "color": "DarkGreen",
+          "showLabel": true,
+          "iconClass": "Drop",
+          "iconUrl": "/uploads/pictogram/restaurant-24_1.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.383789,
+          43.299834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/shop-24_1.png",
+          "showLabel": true
+        },
+        "name": "Les Toqués du Bocal",
+        "description": "Epicerie Vrac proche de Castellane.\nhttp://www.lestoquesdubocal.fr",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/shop-24_1.png",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.382491,
+          43.283475
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ma terre",
+        "description": "Epicerie paysanne, tout est bio et local.\nIdéalement situés, au beau milieu du Cours Julien.\nAcceptent la Roue",
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/restaurant-24_1.png",
+          "showLabel": true
+        },
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/restaurant-24_1.png",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.383011,
+          43.293337
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true,
+          "iconUrl": "/uploads/pictogram/pitch-24_1.png"
+        },
+        "name": "Manon Reynaud, ostéopathe",
+        "description": "8 rue des Trois Rois",
+        "_umap_options": {
+          "color": "Green",
+          "iconClass": "Drop",
+          "popupTemplate": "Default",
+          "showLabel": true,
+          "iconUrl": "/uploads/pictogram/pitch-24_1.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.384374,
+          43.294555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Margot Leplay ",
+        "description": "Naturopathe",
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/hospital-24-white.png",
+          "showLabel": true
+        },
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/hospital-24-white.png",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.387861,
+          43.294551
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mezze Conexion",
+        "description": "Atelier pour soi, vers les autres.\nhttps://mezzeconnexions.com",
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/star-24-white.png",
+          "labelDirection": "auto",
+          "showLabel": true
+        },
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/star-24-white.png",
+          "labelDirection": "auto",
+          "showLabel": true
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.348582,
+          43.281298
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green",
+          "iconClass": "Drop",
+          "showLabel": true,
+          "iconUrl": "/uploads/pictogram/shop-24_1.png"
+        },
+        "name": "Potentielles ",
+        "description": "Magasin alternatif. Hôtel d'activités féministe.\nAcceptent les Roues.",
+        "_umap_options": {
+          "color": "Green",
+          "iconClass": "Drop",
+          "showLabel": true,
+          "iconUrl": "/uploads/pictogram/shop-24_1.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.392384,
+          43.301325
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green",
+          "iconClass": "Drop",
+          "showLabel": true,
+          "iconUrl": "/uploads/pictogram/shop-24_1.png"
+        },
+        "name": "Tani Mena",
+        "description": "Tani Mena \nCommerce équitable. Créations locales. \nAu Panier : Du mercredi au dimanche : 20 bis rue du Panier, 1300.\nA Castellane : 45 rue Jean Fiolle.\nFB : TaniMena Commerce Equitable\ntanimena@gmail.com\n0630610974\n\n",
+        "_umap_options": {
+          "color": "Green",
+          "iconClass": "Drop",
+          "showLabel": true,
+          "iconUrl": "/uploads/pictogram/shop-24_1.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.382029,
+          43.28476
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.470505,
+          43.327051
+        ]
+      }
+    }
+  ]
+}

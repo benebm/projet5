@@ -14,46 +14,29 @@ class SpotsController extends AppController
     public function index()
     {
 
-        // affichage du nom dans le header quand user connecté
+        // affiche le nom dans le header quand user connecté
         $username = $this->Auth->user("username");
         $this->set('username', $username); 
 
+        // affiche le layout
         $this->viewBuilder()->setLayout('home');
 
-        // ce bloc affiche de façon compacte tous les spots classés en top (top=1)
+        // affiche de façon compacte tous les spots classés en top (top=1)
         $spots = $this->Spots->find('all')
         ->where(['spots.top' => 1])
         ->contain(['Categories', 'Reviews']);
         $this->set(compact('spots'));
-        foreach ($spots as $spot)
-        {
-            $spotslug = $spot->slug;
-        }
 
-        // ce bloc affiche la somme totale de tous les spots (top et non top)
+        // affiche la somme totale de tous les spots (top et non top)
         $totalspots = $this->Spots->find('all');
         $totalnumber = $totalspots->count();
         $this->set('totalnumber', $totalnumber); 
 
-        // ce bloc affiche le nombre de toutes les reviews
-        //$reviews = $this->Spots->Reviews->find('all');
-        //$reviewnumber = $reviews->count();
-        //$this->set('reviewnumber', $reviewnumber);    
-
-
-        // essayons de trouver la moyenne par spot
+        // affiche la moyenne de rating par spot
         $reviews = $this->Spots->Reviews->find();
-        $resultats = $reviews->select(['moyenne' => $reviews->func()->avg('rating'), 'spot_slug'])
+        $avgratings = $reviews->select(['moyenne' => $reviews->func()->avg('rating'), 'spot_slug'])
         ->group('spot_slug');
-        $this->set(compact('resultats'));
-
-// Dans un controller ou dans une méthode de table.
-
-
-
-
-
-
+        $this->set(compact('avgratings'));
       }
 
 
@@ -109,29 +92,40 @@ class SpotsController extends AppController
 
     public function all()
     {
-        // affichage du nom dnas le header quand user connecté
+
+        // affiche le layout
+        $this->viewBuilder()->setLayout('mapall');
+
+        // affiche le nom dans le header quand user connecté
         $username = $this->Auth->user("username");
         $this->set('username', $username); 
 
-        // ce bloc affiche de façon compacte tous les spots et pagine
+        // affiche de façon compacte tous les spots et pagine
         $spots = $this->Spots->find('all')
         ->contain(['Categories', 'Reviews']);
         //$spots = $this->paginate($this->Spots)
         $this->set(compact('spots', $this->paginate($spots)));
 
-        // ce bloc affiche de façon compacte les catégories et les 
+        // affiche de façon compacte les catégories 
         $categories = $this->Spots->Categories->find('all');
         $this->set(compact('categories'));
 
-        // ce bloc affiche la somme totale de tous les spots
+        // affiche la somme totale de tous les spots
         $totalspots = $this->Spots->find('all');
         $totalnumber = $totalspots->count();
-        $this->set('totalnumber', $totalnumber);         
+        $this->set('totalnumber', $totalnumber);   
+
+        // affiche la moyenne de rating par spot
+        $reviews = $this->Spots->Reviews->find();
+        $avgratings = $reviews->select(['moyenne' => $reviews->func()->avg('rating'), 'spot_slug'])
+        ->group('spot_slug');
+        $this->set(compact('avgratings'));
+
     }
 
     public function sort($id = null, $rating = null)
     {
-        // affichage du nom dnas le header quand user connecté
+        // affiche le nom dans le header quand user connecté
         $username = $this->Auth->user("username");
         $this->set('username', $username); 
 
@@ -140,15 +134,24 @@ class SpotsController extends AppController
         ->contain(['Categories', 'Reviews']);
         $this->set(compact('spots'));
 
-        // ce bloc affiche de façon compacte les catégories et les 
+        // affiche de façon compacte les catégories
         $categories = $this->Spots->Categories->find('all');
         $this->set(compact('categories'));
 
-         // ce bloc affiche la somme totale de tous les spots
+         // affiche la somme totale de tous les spots
         $totalspots = $this->Spots->find('all');
         $totalnumber = $totalspots->count();
-        $this->set('totalnumber', $totalnumber);  
+        $this->set('totalnumber', $totalnumber);
 
+        // affiche la moyenne de rating par spot
+        $reviews = $this->Spots->Reviews->find();
+        $avgratings = $reviews->select(['moyenne' => $reviews->func()->avg('rating'), 'spot_slug'])
+        ->group('spot_slug');
+        $this->set(compact('avgratings')); 
+
+          
+
+        // on utilise la view all
         $this->render('all');
     }
 
@@ -162,9 +165,7 @@ class SpotsController extends AppController
         }
 
         // Le propriétaire d'un article peut l'éditer et le supprimer
-        // Avant 3.4.0 $this->request->param('action') etait utilisée.
         if (in_array($this->request->getParam('action'), ['edit', 'delete'])) {
-            // Avant 3.4.0 $this->request->params('pass.0')
             $reviewId = (int)$this->request->getParam('pass.0');
             if ($this->Spots->Reviews->isOwnedBy($reviewId, $user['id'])) {
                 return true;

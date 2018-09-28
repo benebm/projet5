@@ -17,11 +17,43 @@
 
 		<div class="collapse" id="collapseMap">
 			<div id="map" class="map">
-			<script>
-				var longitude = <?= $spot->position_lng ?>;
-				var latitude = <?= $spot->position_lat ?>;
-				var name = <?= $spot->name ?>;
-			</script>
+
+				
+				<?php
+
+$geojson = array(
+	'type' => 'FeatureCollection', 
+	'features' => array()
+);
+
+	foreach ($spots as $spot) {
+
+    $marker = array(
+        'type' => 'Feature',
+        'geometry' => array(
+            'type' => 'Point',
+            'coordinates' => array(
+                $spot->position_lng,
+                $spot->position_lat
+            )
+        ),
+        'properties' => array(
+            'title' => $spot->name,
+            'summary' => $spot->description,
+        )
+    );
+    array_push($geojson['features'], $marker);
+	}
+
+$spot_json = json_encode($geojson);
+?>
+
+<script>
+	// The GeoJSON representing the two point features
+var spot_json = <?php echo ($spot_json); ?>;
+console.log(spot_json);
+	</script>
+
 			</div>
 		</div>
 		<!-- End Map -->
@@ -44,7 +76,6 @@
 							)?>
 							</li>
 							<?php foreach ($categories as $category): ?>
-
 							<li>
                             <?= $this->Html->link('<i class="' . $category->icon . '"></i>' . $category->title . ' <span>(' . $totalnumber . ')</span>',
     							['action' => 'sort', $category->id],
@@ -63,35 +94,35 @@
 								<ul>
 									<li>
 										<label>
-											<input type="checkbox"><span class="rating">
+											<input type="checkbox"><span class="rating">1
 						<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i>
 						</span>
 										</label>
 									</li>
 									<li>
 										<label>
-											<input type="checkbox"><span class="rating">
+											<input type="checkbox"><span class="rating">2
 						<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i>
 						</span>
 										</label>
 									</li>
 									<li>
 										<label>
-											<input type="checkbox"><span class="rating">
+											<input type="checkbox"><span class="rating">3
 						<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i>
 						</span>
 										</label>
 									</li>
 									<li>
 										<label>
-											<input type="checkbox"><span class="rating">
+											<input type="checkbox"><span class="rating">4
 						<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i><i class="icon-smile"></i>
 						</span>
 										</label>
 									</li>
 									<li>
 										<label>
-											<input type="checkbox"><span class="rating">
+											<input type="checkbox"><span class="rating">5
 						<i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i><i class="icon-smile"></i><i class="icon-smile"></i>
 						</span>
 										</label>
@@ -143,7 +174,24 @@
 
 							<div class="col-lg-6 col-md-6 col-sm-6">
 								<div class="tour_list_desc">
-									<div class="rating"><i class="icon-smile voted"></i><i class="icon-smile  voted"></i><i class="icon-smile  voted"></i><i class="icon-smile  voted"></i><i class="icon-smile"></i><small>(75)</small>
+									<div class="rating">
+										<?php foreach ($avgratings as $avgrating): 
+                                 		if ($avgrating->spot_slug === $spot->slug)
+                                		{
+                                    		for ($i = 1; $i <= 5; $i++)
+                                    		{
+                                        		if ($i <= $avgrating->moyenne)
+                                        		{
+                                            		echo "<i class=\"icon-smile voted\"></i>";
+                                        		}
+                                        		else
+                                        		{
+                                            	echo "<i class=\"icon-smile\"></i>";
+                                        		}
+                                    		} 
+                                		}
+                                		endforeach; ?>
+                                		<small>(<?= count($spot->reviews) ?>)</small>
 									</div>
 									<h3><strong><?php echo $this->Html->link($spot->name, ['action' => 'view', $spot->slug]) ?></strong></h3>
 									<p><?= $spot->short_description ?></p>

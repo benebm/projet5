@@ -83,7 +83,7 @@ class AppController extends Controller
         // autoriser consultation sans connexion
         public function beforeFilter(Event $event)
     {
-        $this->Auth->allow(['index', 'view', 'all', 'display', 'sort']);
+        $this->Auth->allow(['index', 'view', 'all', 'display', 'sort', 'mapall']);
     }
 
 

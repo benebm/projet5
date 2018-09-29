@@ -66,4 +66,10 @@ class PagesController extends AppController
             throw new NotFoundException();
         }
     }
+
+    public function beforeRender(\Cake\Event\Event $event)
+    {
+        $this->viewBuilder()->setTheme('City');
+    }
+
 }

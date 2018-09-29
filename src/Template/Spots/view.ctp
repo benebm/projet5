@@ -18,12 +18,39 @@
 		<!-- End Position -->
 
 		<div class="collapse" id="collapseMap">
-			<div id="map" class="map"></div>
+			<div id="map" class="map">
+				<?php
+				$geojson = array(
+					'type' => 'FeatureCollection', 
+					'features' => array()
+				);
+				
+    				$marker = array(
+        				'type' => 'Feature',
+        				'geometry' => array(
+            			'type' => 'Point',
+            			'coordinates' => array(
+                			$spot->position_lng,
+                			$spot->position_lat
+            				)
+        				),
+        				'properties' => array(
+            				'title' => $spot->name,
+            				'description' => $spot->short_description,
+            				'image' => $this->Html->image($spot->imagemap),
+            				'phone' => $spot->contact,
+            				'details' => $this->Html->link(__('Site web'), $spot->website, ['class' => 'btn_infobox', 'target' => '_blank']),
+            				'category' => $spot->category_id,
+        					)
+    					);
+    				array_push($geojson['features'], $marker);
+
+				$spot_json = json_encode($geojson); ?>
+
 			<script>
-				var longitude = <?= $spot->position_lng ?>;
-				var latitude = <?= $spot->position_lat ?>;
-				var name = <?= $spot->name ?>;
+			var spot_json = <?php echo ($spot_json); ?>;
 			</script>
+			</div>
 		</div>
 		<!-- End Map -->
 

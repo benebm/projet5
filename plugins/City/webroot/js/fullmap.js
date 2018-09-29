@@ -1,6 +1,4 @@
-$('#collapseMap').on('shown.bs.collapse', function(e){
-      map.resize(); 
- });
+
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiYmVuZWJtIiwiYSI6ImNqbTBpaTlhZjBhNTAzcWs4OHR3ZnhyOTcifQ.rrN8JyistnzI9931hveh4w';
 
@@ -11,6 +9,11 @@ var map = new mapboxgl.Map({
 	center: [5.404463, 43.295502],
  	zoom: 12.0
 });
+
+// your code that shows the map div
+$('#map').show();
+// detect the map's new width and height and resize it
+map.resize();
 
 // ajout des boutons de zoom
 map.addControl(new mapboxgl.NavigationControl());

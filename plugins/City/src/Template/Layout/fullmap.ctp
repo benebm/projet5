@@ -28,29 +28,10 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
     <!--<link href="css/base.css" rel="stylesheet">-->
     <?php echo $this->Html->css('base.css'); ?>
 
-    <!-- admin CSS -->
-    <!--<link href="css/admin.css" rel="stylesheet">
-    <link href="css/jquery.switch.css" rel="stylesheet">-->
-    <?php echo $this->Html->css('admin.css'); ?>
-    <?php echo $this->Html->css('jquery.switch.css'); ?>
-
-    <!-- view all CSS -->
-    <!-- Radio and check inputs -->
-    <!--<link href="css/skins/square/grey.css" rel="stylesheet">-->
-    <?php echo $this->Html->css('skins_square_grey.css'); ?>
-    <!-- Range slider -->
-    <!--<link href="css/ion.rangeSlider.css" rel="stylesheet">
-    <link href="css/ion.rangeSlider.skinFlat.css" rel="stylesheet">-->
-    <?php echo $this->Html->css('ion.rangeSlider.css'); ?>
-    <?php echo $this->Html->css('ion.rangeSlider.skinFlat.css'); ?>
-
-    <!-- leaflet map css implementation-->
-    <link href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" rel="stylesheet" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
-
     <!-- mapbox map css implementation-->
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css' rel='stylesheet' />
-
-     <?php echo $this->fetch('css'); ?>
+    
+    <?php echo $this->fetch('css'); ?>
         
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
@@ -77,13 +58,10 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
 
     <div class="layer"></div>
     <!-- Mobile menu overlay mask -->
-    <?= $this->element('header') ?>
-        
+
+     <?= $this->element('mapheader') ?>
+
     <?= $this->fetch('content') ?>
-    
-    <?= $this->element('footer') ?>
-    
-    <div id="toTop"></div><!-- Back to top button -->
     
     <!-- Search Menu -->
     <div class="search-overlay-menu">
@@ -105,58 +83,13 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
 <?php echo $this->Html->script('functions.js'); ?>
 
 <!-- Specific scripts -->
-    <!-- Check and radio inputs -->
-    <!--<script src="js/icheck.js"></script>-->
-    <?php echo $this->Html->script('icheck.js'); ?>
-    <?php $this->Html->scriptStart(['block' => true]); ?>
-        $('input').iCheck({
-            checkboxClass: 'icheckbox_square-grey',
-            radioClass: 'iradio_square-grey'
-        });
-    <?php $this->Html->scriptEnd(); ?>
 
-    <!--checking password strenght when registering-->
-    <!--<script src="js/pw_strenght.js"></script>-->
-    <?php echo $this->Html->script('pw_strenght.js'); ?>
-
-    <!--Review modal validation -->
-    <!--<script src="validate.js"></script>-->
-    <?php echo $this->Html->script('validate.js'); ?>
-
-    <!-- Cat nav mobile -->
-    <!--<script src="js/cat_nav_mobile.js"></script>-->
-    <?php echo $this->Html->script('cat_nav_mobile.js'); ?>
-    <?php $this->Html->scriptStart(['block' => true]); ?>
-        $('#cat_nav').mobileMenu();
-     <?php $this->Html->scriptEnd(); ?>
-
-    <!--admin scripts-->
-    <!--<script src="js/tabs.js"></script>-->
-    <?php echo $this->Html->script('tabs.js'); ?>
-    <?php $this->Html->scriptStart(['block' => true]); ?>
-        new CBPFWTabs(document.getElementById('tabs'));
-    <?php $this->Html->scriptEnd(); ?>
-     <?php $this->Html->scriptStart(['block' => true]); ?>
-        $('.wishlist_close_admin').on('click', function (c) {
-            $(this).parent().parent().parent().fadeOut('slow', function (c) {});
-        });
-    <?php $this->Html->scriptEnd(); ?>
-
-    <!--Leaflet map-->
-    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
     <!--Mapbox map-->
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js'></script>
-    
 
     <!-- Map -->
-    <?php echo $this->Html->script('mapall.js'); ?>
-
-    <!--<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB84YOXFIn5Oi5Y7zLG3a_W7c8uMlSFcqA"></script>-->                               
-    <!--<script src="js/map.js"></script>
-    <script src="js/infobox.js"></script>-->
-
-
-<?php echo $this->fetch('script'); ?>
+    <?php echo $this->Html->script('fullmap.js'); ?>
+    <?php echo $this->fetch('script'); ?>
 
   </body>
 </html>

@@ -59,7 +59,7 @@
 			<div class="row">
 				<aside class="col-lg-3 col-md-3">
 					<p>
-						<a class="btn_map" data-toggle="collapse" href="#collapseMap" aria-expanded="false" aria-controls="collapseMap" data-text-swap="Hide map" data-text-original="View on map">View on map</a>
+						<a class="btn_map" data-toggle="collapse" href="#collapseMap" aria-expanded="false" aria-controls="collapseMap" data-text-swap="Replier la carte" data-text-original="Voir sur la carte">Voir sur la carte</a>
 					</p>
 
 					<div class="box_style_cat">

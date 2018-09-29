@@ -93,9 +93,6 @@ class SpotsController extends AppController
     public function all()
     {
 
-        // affiche le layout
-        $this->viewBuilder()->setLayout('mapall');
-
         // affiche le nom dans le header quand user connecté
         $username = $this->Auth->user("username");
         $this->set('username', $username); 
@@ -149,10 +146,25 @@ class SpotsController extends AppController
         ->group('spot_slug');
         $this->set(compact('avgratings')); 
 
-          
-
         // on utilise la view all
         $this->render('all');
+    }
+
+
+        public function mapall()
+    {
+        // affiche le layout
+        $this->viewBuilder()->setLayout('fullmap');
+
+        // affiche le nom dans le header quand user connecté
+        $username = $this->Auth->user("username");
+        $this->set('username', $username);
+
+        $spots = $this->Spots->find('all')
+        ->contain(['Categories', 'Reviews']);
+        $this->set(compact('spots'));
+
+
     }
 
 

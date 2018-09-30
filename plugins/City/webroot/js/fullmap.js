@@ -10,9 +10,8 @@ var map = new mapboxgl.Map({
  	zoom: 12.0
 });
 
-// your code that shows the map div
+// détecte les dimensions de la map à l'affichage et resizing
 $('#map').show();
-// detect the map's new width and height and resize it
 map.resize();
 
 // ajout des boutons de zoom
@@ -46,6 +45,35 @@ spot_json.features.forEach(function(marker) {
 	  '</div>')						
     ) 
     .addTo(map);
+
+    getCategory();
+
+    function getCategory() {
+    var buttons = document.querySelectorAll('.cat');
+          for (var i = 0; i < buttons.length; i++) {
+            buttons[i].onclick = function getcatid () {
+              var catid = this.getAttribute('data-index');
+              console.log(catid); 
+            };        
+          }  
+    }
+
+    //function hideAllMarkers() {
+      //          marker.remove();
+        //      }
+    
+    
+
+
+//document.getElementById('map_filter').addEventListener('click', function(e) {
+    
+  //  getCategory();
+    
+    //hideAllMarkers();
+    
+//    animateMarker();
+//});
+
 });
 
 //centre la carte sur le clic
@@ -53,3 +81,5 @@ map.on('click', function (e) {
         var clicked = e.lngLat;
         map.flyTo({center: clicked});
 });
+
+

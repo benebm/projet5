@@ -4299,23 +4299,19 @@ ul.plan-features {
 #map_filter ul li {
 	display: inline-block;
 	text-align: center;
-}
-
-#map_filter ul li a {
-	display: inline-block;
 	padding: 15px;
 	color: #444;
 	min-width: 120px;
 	margin: 0 -3px;
 }
 
-#map_filter ul li a:hover,
-#map_filter ul li a.active {
+#map_filter ul li:hover,
+#map_filter ul li.active {
 	background-color: #fff;
 	color: #e04f67;
 }
 
-#map_filter ul li a i {
+#map_filter ul li i {
 	display: block;
 	font-size: 36px;
 	margin: 5px 0;

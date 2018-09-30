@@ -151,7 +151,7 @@ class SpotsController extends AppController
     }
 
 
-        public function mapall()
+        public function mapall($id = null)
     {
         // affiche le layout
         $this->viewBuilder()->setLayout('fullmap');
@@ -164,7 +164,9 @@ class SpotsController extends AppController
         ->contain(['Categories', 'Reviews']);
         $this->set(compact('spots'));
 
-
+        // affiche de façon compacte les catégories 
+        $categories = $this->Spots->Categories->find('all');
+        $this->set(compact('categories'));
     }
 
 

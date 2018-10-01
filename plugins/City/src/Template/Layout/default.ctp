@@ -74,8 +74,12 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
 
     <div class="layer"></div>
     <!-- Mobile menu overlay mask -->
+
+
+    <header>
     <?= $this->element('header') ?>
-        
+    </header><!-- End Header -->
+    
     <?= $this->fetch('content') ?>
     
     <?= $this->element('footer') ?>
@@ -83,14 +87,14 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
     <div id="toTop"></div><!-- Back to top button -->
     
     <!-- Search Menu -->
-    <div class="search-overlay-menu">
+    <!--<div class="search-overlay-menu">
         <span class="search-overlay-close"><i class="icon_set_1_icon-77"></i></span>
         <form role="search" id="searchform" method="get">
             <input value="" name="q" type="search" placeholder="Search..." />
             <button type="submit"><i class="icon_set_1_icon-78"></i>
             </button>
         </form>
-    </div><!-- End Search Menu -->
+    </div>--><!-- End Search Menu -->
 
  <!-- Common scripts -->
 <!--<script src="js/jquery-2.2.4.min.js"></script>

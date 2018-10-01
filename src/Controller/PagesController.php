@@ -18,6 +18,8 @@ use Cake\Core\Configure;
 use Cake\Network\Exception\ForbiddenException;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
+use App\Controller\AppController;
+use App\Form\ContactForm;
 
 /**
  * Static content controller
@@ -40,6 +42,11 @@ class PagesController extends AppController
      */
     public function display(...$path)
     {
+
+        // affiche le nom dans le header quand user connecté
+        $username = $this->Auth->user("username");
+        $this->set('username', $username); 
+
         $count = count($path);
         if (!$count) {
             return $this->redirect('/');
@@ -66,6 +73,21 @@ class PagesController extends AppController
             throw new NotFoundException();
         }
     }
+
+
+    public function contact()
+    {
+        $contact = new ContactForm();
+        if ($this->request->is('post')) {
+            if ($contact->execute($this->request->getData())) {
+                $this->Flash->success('Nous reviendrons vers vous rapidement.');
+            } else {
+                $this->Flash->error('Il y a eu un problème lors de la soumission de votre formulaire.');
+            }
+        }
+        $this->set('contact', $contact);
+    }
+
 
     public function beforeRender(\Cake\Event\Event $event)
     {

@@ -1,6 +1,4 @@
-<!-- Header================================================== -->
-    <header>
-        <div id="top_line">
+<div id="top_line">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-6"><!--<i class="icon-phone"></i><strong>0045 043204434</strong>--></div>
@@ -51,13 +49,13 @@
                         <a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
                         <ul>
                             <li class="submenu">
-                                <a href="javascript:void(0);"><a href="<?= $this->Url->build(['controller' => 'Spots','action' => 'index']); ?>">Accueil</a><!--<i class="icon-down-open-mini"></i>--></a>
+                                <a href="<?= $this->Url->build(['controller' => 'Spots','action' => 'index']); ?>">Accueil</a></a>
                             </li>
                             <li class="submenu">
-                                <a href="javascript:void(0);">Qui sommes-nous ?<!--<i class="icon-down-open-mini"></i>--></a>
+                                <a href="<?= $this->Url->build(['controller' => 'Pages','action' => 'identity']); ?>">Qui sommes-nous ?</a>
                             </li>
                             <li class="submenu">
-                                <a href="javascript:void(0);">Concept<!--<i class="icon-down-open-mini"></i>--></a>
+                                <a href="<?= $this->Url->build(['controller' => 'Pages','action' => 'concept']); ?>">Concept</a>
                             </li>
                             <li class="submenu">
                                 <a href="javascript:void(0);" class="show-submenu">Les spots <i class="icon-down-open-mini"></i></a>
@@ -81,22 +79,21 @@
                                             <li><a href="#">Saint Giniez</a></li>
                                         </ul>
                                     </li>-->
-                                    <li><a href="#">Voir sur une carte</a></li>
+                                    <li><a href="<?= $this->Url->build(['controller' => 'Spots','action' => 'mapall']); ?>">Tout voir sur une carte</a></li>
                                 </ul>
                             </li>
                               <li class="submenu">
-                                <a href="javascript:void(0);" class="show-submenu">Contact <!--<i class="icon-down-open-mini"></i>--></a>
+                                <a href="<?= $this->Url->build(['controller' => 'Pages','action' => 'contact']); ?>">Contact</a>
                             </li>
                         </ul>
                     </div><!-- End main-menu -->
-                    <ul id="top_tools">
+                    <!--<ul id="top_tools">
                         <li>
                             <div class="dropdown dropdown-search">
                                 <a href="#" class="search-overlay-menu-btn" data-toggle="dropdown"><i class="icon-search"> Rechercher par mot clé</i></a>
                             </div>
                         </li>
-                    </ul>
+                    </ul>-->
                 </nav>
             </div>
         </div><!-- container -->
-    </header><!-- End Header -->

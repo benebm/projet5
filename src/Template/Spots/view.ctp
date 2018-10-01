@@ -51,6 +51,25 @@
 			var spot_json = <?php echo ($spot_json); ?>;
 			</script>
 			</div>
+			<div id="directions">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<form action="http://maps.google.com/maps" method="get" target="_blank">
+							<div class="input-group">
+								<input type="text" name="saddr" placeholder="Entrez votre point de départ" class="form-control style-2" />
+								<input type="hidden" name="daddr" value="<?= $spot->position_lat . ',' . $spot->position_lng ?>">
+								<span class="input-group-btn">
+					<button class="btn" type="submit" value="Itinéraire" style="margin-left:0;">Itinéraire</button>
+					</span>
+							</div>
+							<!-- /input-group -->
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end directions-->
 		</div>
 		<!-- End Map -->
 

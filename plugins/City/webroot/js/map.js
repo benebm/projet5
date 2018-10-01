@@ -9,7 +9,7 @@ var map = new mapboxgl.Map({
 	container: 'map',
 	style: 'mapbox://styles/mapbox/streets-v9',
 	center: [5.404463, 43.295502],
- 	zoom: 12.0
+ 	zoom: 11.0
 });
 
 // ajout des boutons de zoom

@@ -55,9 +55,30 @@
 				<div class="col-md-6 wow fadeIn" data-wow-delay="0.4s">
 					<div class="feature">
 						<i class="icon_set_1_icon-61"></i>
-						<h3><span>4 catégories</span> pour plus de choix</h3>
+						<h3><span>8 catégories</span> pour plus de choix</h3>
 						<p>
 							Nourriture, sport, loisirs : tout est à disposition !
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- End row -->
+			<div class="row">
+				<div class="col-md-6 wow fadeIn" data-wow-delay="0.3s">
+					<div class="feature">
+						<i class="icon_set_1_icon-57"></i>
+						<h3>Le label <span>Green</span></h3>
+						<p>
+							Partenaires privilégiés, testés et approuvés, assurance de qualité. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex, appareat similique an usu.
+						</p>
+					</div>
+				</div>
+				<div class="col-md-6 wow fadeIn" data-wow-delay="0.4s">
+					<div class="feature">
+						<i class="icon_set_1_icon-61"></i>
+						<h3><span>Les offres spéciales négociées pour vous</span> pour plus de choix</h3>
+						<p>
+							Badge sur le spot : promo pour les clients qui viennent par Green
 						</p>
 					</div>
 				</div>

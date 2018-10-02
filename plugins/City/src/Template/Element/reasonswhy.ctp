@@ -10,51 +10,21 @@
                 </div>
 
                 <div class="row">
+                    <?php foreach ($categories as $category): ?>
                     <div class="col-md-3 col-sm-6 text-center">
-                        <p>
-                            <?php echo $this->Html->image("magasins-bio.jpg", [
-                            "alt" => "Pic", "class" => "img-responsive"]); ?>
-
-                            <!--<a href="#"><img src="img/bus.jpg" alt="Pic" class="img-responsive"></a>-->
+                        <p>      
+                            <?= $this->Html->link(
+                                    $this->Html->image($category->image, ["alt" => "<?= $category->title ?>", "class" => "img-responsive"]),
+                                ['action' => 'sort', $category->id],
+                                ['escape' => false]
+                            )?>
                         </p>
-                        <h4>Magasins <span>bio</span></h4>
+                        <h4><?= $this->Html->link($category->homename, ["class" => "homelink"], ['action' => 'sort', $category->id]) ?></h4>
                         <p>
-                            Toutes les enseignes dédiées à la distribution de produits bios : des plus connues au plus confidentielles.
+                            <?= $category->description ?>
                         </p>
                     </div>
-                    <div class="col-md-3 col-sm-6 text-center">
-                        <p>
-                            <?php echo $this->Html->image("vrac.jpg", [
-                            "alt" => "Pic", "class" => "img-responsive"]); ?>
-                            <!--<a href="#"><img src="img/transfer.jpg" alt="Pic" class="img-responsive"></a>-->
-                        </p>
-                        <h4>Epiceries <span>vrac</span></h4>
-                        <p>
-                            Marre de jeter tous ces emballages qui polluent la nature ? Faites vos courses avec vos propres contenants dans ces épiceries spécialisées.
-                        </p>
-                    </div>
-                    <div class="col-md-3 col-sm-6 text-center">
-                        <p>
-                            <?php echo $this->Html->image("resto-vegan.jpg", [
-                            "alt" => "Pic", "class" => "img-responsive"]); ?>
-                            <!--<a href="#"><img src="img/guide.jpg" alt="Pic" class="img-responsive"></a>-->
-                        </p>
-                        <h4>Restos <span>bio & vegans</span></h4>
-                        <p>
-                            Envie de manger sain, bon et healthy tout en protégeant la planète ? Ces restos vont vous plaire !
-                        </p>
-                    </div>
-                    <div class="col-md-3 col-sm-6 text-center">
-                        <p>
-                            <?php echo $this->Html->image("soins-nature.jpg", [
-                            "alt" => "Pic", "class" => "img-responsive"]); ?>
-                            <!--<a href="#"><img src="img/hotel.jpg" alt="Pic" class="img-responsive"></a>-->
-                        </p>
-                        <h4>Soins au <span>naturel</span></h4>
-                        <p>
-                            Coiffure, esthétique, plantes pour fabriquer vos cosmétiques... Les endroits où votre corps se ressource, sans produits chimiques.
-                        </p>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
                 <!-- End row -->
              
@@ -70,7 +40,10 @@
                     <p>
                         Les clichés sur la ville de Marseille ont vécu... Marseille au quotidien, c'est aussi des citoyens qui ont envie de faire avancer leur ville vers plus de respect de l'environnement.
                     </p>
-                    <a href="https://www.youtube.com/watch?v=TBDYl-NiixM" class="video"><i class="icon-play-circled2-1"></i></a>
+                        <?= $this->Html->link(__('<i class="icon-play-circled2-1"></i>'), 
+                        "https://www.youtube.com/watch?v=TBDYl-NiixM", 
+                        ['escape' => false],
+                        ['class' => 'video', 'target' => '_blank']) ?>       
                 </div>
             </div>
         </section>
@@ -122,5 +95,23 @@
 
             </div>
             <!--End row -->
+            <hr>
+
+            <div class="row">
+                <div class="col-md-6 col-sm-6 hidden-xs">
+                    <img src="<?= $this->Url->image('laptop.png') ?>" alt="Laptop" class="img-responsive laptop">
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <h3>Participer à la communauté <span>Marseille Green</span></h3>
+                    <p>Pour garantir une expérience de qualité chez nos partenaires et agrandir notre réseau en proposant les meilleurs plans écolo de Marseille, nous avons besoin de vous !</p>
+                    <ul class="list_order">
+                        <li><span>1</span>Trouvez les lieux qui vous intéressent dans notre liste de spots 100% nature</li>
+                        <li><span>2</span>Testez-les !</li>
+                        <li><span>3</span>Donnez votre avis et notez votre expérience pour</li>
+                    </ul>
+                    <a href="all_tour_list.html" class="btn_1">C'est parti</a>
+                </div>
+            </div>
+            <!-- End row -->
 
         </div>

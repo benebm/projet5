@@ -37,6 +37,10 @@ class SpotsController extends AppController
         $avgratings = $reviews->select(['moyenne' => $reviews->func()->avg('rating'), 'spot_slug'])
         ->group('spot_slug');
         $this->set(compact('avgratings'));
+
+        // affiche de façon compacte les catégories 
+        $categories = $this->Spots->Categories->find('all');
+        $this->set(compact('categories'));
       }
 
 

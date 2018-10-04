@@ -10,12 +10,16 @@ var map = new mapboxgl.Map({
  	zoom: 12.0
 });
 
+// ajout des boutons de zoom
+//map.addControl(new mapboxgl.NavigationControl());
+
+var nav = new mapboxgl.NavigationControl();
+map.addControl(nav, 'bottom-left');
+
+
 // détecte les dimensions de la map à l'affichage et resizing
 $('#map').show();
 map.resize();
-
-// ajout des boutons de zoom
-map.addControl(new mapboxgl.NavigationControl());
 
 // ajout des marqueurs à la carte
 spot_json.features.forEach(function(marker) {

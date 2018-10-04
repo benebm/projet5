@@ -1,4 +1,3 @@
-<main>
 <?= $this->element('hero/viewhero') ?>
 
 	<main>
@@ -98,11 +97,9 @@
 							</p>
 							<h4>Green aime...</h4>
 							<div class="row">
-								<div class="col-md-6 col-sm-6">
 									<ul class="list_ok">
 										<?= $spot->likelist ?>
 									</ul>
-								</div>
 							</div>
 							<!-- End row  -->
 						</div>
@@ -217,8 +214,7 @@
 		
 					<div class="box_style_4">
 						<i class="icon_set_1_icon-63"></i>
-						<h4><span>Site web</span></h4>
-						<strong><?= $this->Html->link(__($spot->website), $spot->website, ['target' => '_blank']) ?></strong>
+						<h4><span style="text-decoration:underline;"><?= $this->Html->link(__('Site web'), $spot->website, ['target' => '_blank']) ?></span></h4>
 					</div>
 				</aside>
 			</div>

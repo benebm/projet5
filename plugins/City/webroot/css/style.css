@@ -1191,7 +1191,7 @@ ul#cat_nav i {
 }
 
 #marker1 {
-  background-image: url('../img/pins/airports.png');
+  background-image: url('../img/pins/marker1.png');
 }
 
 #marker2 {
@@ -1376,9 +1376,9 @@ ul#cat_nav i {
 
 .price_list .normal_price_list {
 	display: block;
-	text-decoration: line-through;
+	/*text-decoration: line-through;*/
 	color: #999;
-	font-size: 20px;
+	font-size: 14px;
 	margin-top: 10px;
 }
 

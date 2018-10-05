@@ -72,7 +72,7 @@
 							</li>
 							<?php foreach ($categories as $category): ?>
 							<li>
-                            <?= $this->Html->link('<i class="' . $category->icon . '"></i>' . $category->title . ' <span>(' . $totalnumber . ')</span>',
+                            <?= $this->Html->link('<i class="' . $category->icon . '"></i>' . $category->title . ' <span>(' . count($category->spots) . ')</span>',
     							['action' => 'sort', $category->id],
     							['escape' => false]
 							)?>
@@ -238,7 +238,7 @@
 							</div>
 							<div class="col-lg-2 col-md-2 col-sm-2">
 								<div class="price_list">
-									<div><span class="normal_price_list"><?= $spot->area ?></span>
+									<div><span class="normal_price_list">Quartier<br/> <?= $spot->area ?></span><br />
 										<p><a href="single_tour.html" class="btn_1">Détails</a>
 										</p>
 									</div>
@@ -254,31 +254,13 @@
 
 					<div class="text-center">
 						<ul class="pagination">
-							<li><a href="#">Prev</a>
+							<li><?= $this->Paginator->prev(__('Page précédente')) ?>
 							</li>
-							<li class="active"><a href="#">1</a>
+							<li><?= $this->Paginator->numbers() ?>
 							</li>
-							<li><a href="#">2</a>
-							</li>
-							<li><a href="#">3</a>
-							</li>
-							<li><a href="#">4</a>
-							</li>
-							<li><a href="#">5</a>
-							</li>
-							<li><a href="#">Next</a>
-							</li>
+							<li><?= $this->Paginator->next(__('Page suivante')) ?>
 						</ul>
 					</div>
-
-			<?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
-            <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
-					<!-- end pagination-->
-
 				</div>
 				<!-- End col lg-9 -->
 			</div>

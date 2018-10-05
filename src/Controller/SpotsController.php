@@ -94,6 +94,16 @@ class SpotsController extends AppController
         return $this->redirect(['action' => 'view', $_POST['spot_slug']]);
     }
 
+
+    public $paginate = 
+    [
+        'limit' => 5,
+        'order' => [
+            'Spots.id' => 'asc'
+        ]
+    ];
+
+
     public function all()
     {
 
@@ -104,7 +114,6 @@ class SpotsController extends AppController
         // affiche de façon compacte tous les spots et pagine
         $spots = $this->Spots->find('all')
         ->contain(['Categories', 'Reviews']);
-        //$spots = $this->paginate($this->Spots)
         $this->set(compact('spots', $this->paginate($spots)));
 
         // affiche de façon compacte les catégories 
@@ -133,7 +142,7 @@ class SpotsController extends AppController
         $spots = $this->Spots->find()
         ->where(['Spots.category_id' => $id])
         ->contain(['Categories', 'Reviews']);
-        $this->set(compact('spots'));
+        $this->set(compact('spots', $this->paginate($spots)));
 
         // affiche de façon compacte les catégories
         $categories = $this->Spots->Categories->find('all');

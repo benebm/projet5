@@ -25,7 +25,8 @@
 					</div>
 					<div class="step">
 
-					
+						<?= $this->Flash->render(); ?>
+
 						<?php echo $this->Form->create($contact);
 echo $this->Form->control('name');
 echo $this->Form->control('email');

@@ -29,7 +29,7 @@
  										</tr>
  										<tr >
  											<td style="font-size:14px; mso-line-height-rule:exactly; line-height:18px; color:#95a5a6; font-weight:normal; font-family: Arial, Helvetica, sans-serif;" align="center">
- 												Un grand merci pour avoir donné votre avis sur <?= $spot->name ?> ! Grâce à vous, l'expérience de nos visiteurs ne cesse de gagner en qualité et en pertinence. Et en contribuant, vous oeuvrez à nos côtés pour une ville meilleure ! Vous pouvez maintenant accéder à la liste de vos avis dans votre <strong>carnet d'appréciations</strong></td>
+ 												Un grand merci pour avoir donné votre avis sur <?= $spotname ?> ! Grâce à vous, l'expérience de nos visiteurs ne cesse de gagner en qualité et en pertinence. Et en contribuant, vous oeuvrez à nos côtés pour une ville meilleure ! Vous pouvez maintenant accéder à la liste de vos avis dans votre <strong>carnet d'appréciations</strong></td>
  										</tr>
  										<tr>
  											<td height="20" style="font-size:20px; mso-line-height-rule:exactly; line-height:20px;">&nbsp;</td>

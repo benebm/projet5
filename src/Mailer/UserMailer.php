@@ -16,14 +16,24 @@ class UserMailer extends Mailer
     }
 
 
-    public function afterreview($user)
+    public function afterreview($user, $spot)
     {
         $this
            ->to($user['email'])
-           ->subject('Bravo ' . $user['username'] . ', votre avis a bien été ajouté')
+           ->subject('Bravo ' . $user['username'] . ', votre avis sur ' . $spot['name'] . ' a bien été ajouté')
            ->template('afterreview')
-           //->viewVars(['spot' => $spot])
+           ->viewVars(['spotname' => $spot->name])
            ->emailFormat('html');
+    }
+
+    public function moderation($spot, $contentreview)
+    {
+        $this
+            ->to('benedictemondon@gmail.com')
+            ->subject('Un commentaire a été posté sur le spot ' . $spot['name'])
+            ->template('moderation')
+            ->viewVars(['contentreview' => $contentreview])
+            ->emailFormat('text');
     }
 
     public function afterupdate($user)

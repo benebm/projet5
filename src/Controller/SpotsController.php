@@ -99,11 +99,14 @@ class SpotsController extends AppController
                 $user = $this->Auth->user();
                 $this->set('user', $user); 
 
-                //$spot = $this->Spots->find()
-                //->where(['Spots.slug' => $slug])->first();
-                //$this->set('spot', $spot); 
+                $spot = $this->Spots->find()
+                ->where(['Spots.slug' => $_POST['spot_slug']])->first();
+                $this->set('spot', $spot);
 
-                $this->getMailer('User')->send('afterreview', [$user]);
+                $contentreview = 'titre : ' . $_POST['title'] . ' contenu : ' . $_POST['content'];
+
+                $this->getMailer('User')->send('afterreview', [$user, $spot]);
+                $this->getMailer('User')->send('moderation', [$spot, $contentreview]);
  
                 return $this->redirect(['action' => 'view', $_POST['spot_slug']]);
             }

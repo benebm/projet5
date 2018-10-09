@@ -3,7 +3,6 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Event\Event;
-use Cake\Mailer\Email;
 use App\Form\ContactForm;
 use Cake\Mailer\MailerAwareTrait;
 
@@ -119,14 +118,14 @@ public function dashboard()
         return $this->redirect(['action' => 'dashboard']);
     }
 
-    public function contact($contact)
+    public function contact()
     {
         $contact = new ContactForm();
         if ($this->request->is('post')) {
             if ($contact->execute($this->request->getData())) {
-                $this->Flash->success('Nous reviendrons vers vous rapidement.');
+                $this->Flash->success('Nous avons bien reçu votre message et reviendrons vers vous rapidement.');
             } else {
-                $this->Flash->error('Il y a eu un problème lors de la soumission de votre formulaire.');
+                $this->Flash->error('Il y a eu un problème lors de la soumission de votre formulaire. Réessayez :)');
             }
         }
         $this->set('contact', $contact);

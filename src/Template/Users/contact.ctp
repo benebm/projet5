@@ -18,72 +18,53 @@
 			<div class="row">
 				<div class="col-md-8 col-sm-8">
 					<div class="form_title">
-						<h3><strong><i class="icon-pencil"></i></strong>Fill the form below</h3>
+						<h3><strong><i class="icon-pencil"></i></strong>Nous contacter</h3>
 						<p>
-							Mussum ipsum cacilds, vidis litro abertis.
+							Une question, une suggestion ?
+							Envoyez-nous un message, nous vous répondrons dès que possible !
 						</p>
 					</div>
 					<div class="step">
-
-						<?= $this->Flash->render(); ?>
-
-						<?php echo $this->Form->create($contact);
-echo $this->Form->control('name');
-echo $this->Form->control('email');
-echo $this->Form->control('body');
-echo $this->Form->button('Submit');
-echo $this->Form->end();
-						?>
-
-						<!--<div id="message-contact"></div>
-						<form method="post" action="assets/contact.php" id="contactform">
+						<?= $this->Flash->render(); ?><br />
+						<div id="message-contact"></div>
+						<?= $this->Form->create($contact); ?>
+						<!--<form method="post" action="assets/contact.php" id="contactform">-->
 							<div class="row">
 								<div class="col-md-6 col-sm-6">
 									<div class="form-group">
-										<label>First Name</label>
-										<input type="text" class="form-control" id="name_contact" name="name_contact" placeholder="Enter Name">
+										<?= $this->Form->control('firstname', ['class' => 'form-control', 'placeholder' => 'Votre prénom', 'label' => 'Prénom', 'id' => 'name_contact']) ?>
 									</div>
 								</div>
 								<div class="col-md-6 col-sm-6">
 									<div class="form-group">
-										<label>Last Name</label>
-										<input type="text" class="form-control" id="lastname_contact" name="lastname_contact" placeholder="Enter Last Name">
+										<?= $this->Form->control('lastname', ['class' => 'form-control', 'placeholder' => 'Votre nom', 'label' => 'Nom', 'id' => 'lastname_contact']) ?>
 									</div>
 								</div>
-							</div>-->
+							</div>
 							<!-- End row -->
-							<!--<div class="row">
+							<div class="row">
 								<div class="col-md-6 col-sm-6">
 									<div class="form-group">
-										<label>Email</label>
-										<input type="email" id="email_contact" name="email_contact" class="form-control" placeholder="Enter Email">
-									</div>
-								</div>
-								<div class="col-md-6 col-sm-6">
-									<div class="form-group">
-										<label>Phone</label>
-										<input type="text" id="phone_contact" name="phone_contact" class="form-control" placeholder="Enter Phone number">
+										<?= $this->Form->control('email', ['class' => 'form-control', 'placeholder' => 'votrenom@exemple.fr', 'label' => 'Votre email', 'id' => 'email_contact']) ?>
 									</div>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-md-12">
 									<div class="form-group">
-										<label>Message</label>
-										<textarea rows="5" id="message_contact" name="message_contact" class="form-control" placeholder="Write your message" style="height:200px;"></textarea>
+										<?= $this->Form->textarea('body', ['class' => 'form-control', 'placeholder' => 'Ecrivez ici', 'label' => 'Votre message', 'id' => 'message_contact', 'rows' => '5']) ?>
 									</div>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-md-6">
-									<label>Human verification</label>
-									<input type="text" id="verify_contact" class=" form-control add_bottom_30" placeholder="Are you human? 3 + 1 =">
-									<input type="submit" value="Submit" class="btn_1" id="submit-contact">
+									<input type="submit" value="Envoyer" class="btn_1" id="submit-contact">
+									<?= $this->Form->end(); ?>
 								</div>
 							</div>
 						</form>
 					</div>
-				</div>-->
+				</div>
 				<!-- End col-md-8 -->
 
 				<div class="col-md-4 col-sm-4">

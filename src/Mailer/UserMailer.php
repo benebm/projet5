@@ -45,14 +45,15 @@ class UserMailer extends Mailer
            ->emailFormat('html');
     }
 
-    public function contactform($data)
+    public function contactform($contact)
     {
         $this
             ->to('benedictemondon@gmail.com')
-            ->subject('Un message a été posté sur Marseille Green')
+            ->subject('Un message a été posté sur Marseille Green de ' . $contact['email'])
             ->template('contactform')
-            ->viewVars(['data' => $data])
+            ->viewVars(['senderfirstname' => $contact['firstname'], 'senderlastname' => $contact['lastname'], 'messagecontent' => $contact['body']])
             ->emailFormat('text');
+
     }
                
 

@@ -1,1 +1,2 @@
-<?= var_dump($data); ?>
+Sender : <?= $senderfirstname; ?> <?= $senderlastname; ?>  
+Message : <?= $messagecontent; ?>

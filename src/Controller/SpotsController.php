@@ -7,8 +7,6 @@ use App\Model\Table\SpotsTable;
 use Cake\Datasource\Exception\RecordNotFoundException;
 use Cake\Event\Event;
 use Cake\Http\Response;
-
-use Cake\Mailer\Email;
 use Cake\Mailer\MailerAwareTrait;
 
 

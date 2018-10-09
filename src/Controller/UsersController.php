@@ -3,7 +3,6 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Event\Event;
-
 use Cake\Mailer\Email;
 use App\Form\ContactForm;
 use Cake\Mailer\MailerAwareTrait;
@@ -17,58 +16,7 @@ use Cake\Mailer\MailerAwareTrait;
  */
 class UsersController extends AppController
 {
-
-    /**
-     * Index method
-     *
-     * @return \Cake\Http\Response|void
-     */
-    public function index()
-    {
-        $users = $this->paginate($this->Users);
-
-        $this->set(compact('users'));
-    }
-
-    /**
-     * View method
-     *
-     * @param string|null $id User id.
-     * @return \Cake\Http\Response|void
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function view($id = null)
-    {
-        $user = $this->Users->get($id, [
-            'contain' => []
-        ]);
-
-        $this->set('user', $user);
-    }
-
-   
-
-    /**
-     * Delete method
-     *
-     * @param string|null $id User id.
-     * @return \Cake\Http\Response|null Redirects to index.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function delete($id = null)
-    {
-        $this->request->allowMethod(['post', 'delete']);
-        $user = $this->Users->get($id);
-        if ($this->Users->delete($user)) {
-            $this->Flash->success(__('The user has been deleted.'));
-        } else {
-            $this->Flash->error(__('The user could not be deleted. Please, try again.'));
-        }
-
-        return $this->redirect(['action' => 'index']);
-    }
-
-    //ajout couche auth
+    //authentification
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);
@@ -80,7 +28,6 @@ class UsersController extends AppController
 
     public function login()
     {
-
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
             if ($user) {
@@ -95,10 +42,10 @@ class UsersController extends AppController
     {
         return $this->redirect($this->Auth->logout());
     }
-    //fin couche auth
+    //fin authentification
 
     /**
-     * Add method
+     * Add method (register)
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
@@ -118,38 +65,6 @@ class UsersController extends AppController
         }
         $this->set(compact('user'));
     }
-
-
-    public function dashboard()
-    {
-    	$userId = $this->Auth->user("id");
-    	$username = $this->Auth->user("username");
-        $useremail = $this->Auth->user("email");
-    	$this->set('username', $username); 
-        $this->set('useremail', $useremail); 
-
-    	$review = $this->Users->Reviews->find()
-    	->where(['Reviews.user_id' => $userId])
-        ->contain(['Spots']);
-        $this->set(compact('review'));
-
-	}
-
-    public function deleteReview($id = null)
-    {
-
-        $this->request->allowMethod(['post', 'delete']);
-
-        $review = $this->Users->Reviews->get($id);
-
-        if ($this->Users->Reviews->delete($review)) {
-            $this->Flash->success(__('L\'avis a bien été supprimé!'));
-        } else {
-            $this->Flash->error(__('L\'avis n\'a pas pu être supprimé. Veuillez réessayer :)'));
-        }
-        return $this->redirect(['action' => 'dashboard']);
-    }
-
 
      /**
      * Edit method
@@ -177,8 +92,34 @@ class UsersController extends AppController
         $this->set(compact('user'));
     }
 
+public function dashboard()
+    {
+    	$userId = $this->Auth->user("id");
+    	$username = $this->Auth->user("username");
+        $useremail = $this->Auth->user("email");
+    	$this->set('username', $username); 
+        $this->set('useremail', $useremail); 
 
-    public function contact()
+    	$review = $this->Users->Reviews->find()
+    	->where(['Reviews.user_id' => $userId])
+        ->contain(['Spots']);
+        $this->set(compact('review'));
+	}
+
+    public function deleteReview($id = null)
+    {
+        $this->request->allowMethod(['post', 'delete']);
+        $review = $this->Users->Reviews->get($id);
+
+        if ($this->Users->Reviews->delete($review)) {
+            $this->Flash->success(__('L\'avis a bien été supprimé!'));
+        } else {
+            $this->Flash->error(__('L\'avis n\'a pas pu être supprimé. Veuillez réessayer :)'));
+        }
+        return $this->redirect(['action' => 'dashboard']);
+    }
+
+    public function contact($contact)
     {
         $contact = new ContactForm();
         if ($this->request->is('post')) {
@@ -194,19 +135,17 @@ class UsersController extends AppController
 
 	public function isAuthorized($user)
     {
-        // Tous les utilisateurs enregistrés peuvent ajouter des articles
+        // Tous les utilisateurs enregistrés peuvent accéder au dashboard ou éditer leurs paramètres
          if (in_array($this->request->getParam('action'), ['dashboard', 'editUser'])) {
             return true;
         }
-
-        // Le propriétaire d'un article peut le supprimer
+        // Le propriétaire d'un avis peut le supprimer
         if (in_array($this->request->getParam('action'), ['deleteReview'])) {
             $reviewId = (int)$this->request->getParam('pass.0');
             if ($this->Users->Reviews->isOwnedBy($reviewId, $user['id'])) {
                 return true;
             }
         }
-
         return parent::isAuthorized($user);
     }        
 
@@ -215,7 +154,5 @@ class UsersController extends AppController
     {
         $this->viewBuilder()->setTheme('City');
     }
-
-
 
 }

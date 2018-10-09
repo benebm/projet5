@@ -97,10 +97,6 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
     </div>--><!-- End Search Menu -->
 
  <!-- Common scripts -->
-<!--<script src="js/jquery-2.2.4.min.js"></script>
-<script src="js/common_scripts_min.js"></script>
-<script src="js/functions.js"></script-->
-
 <?php echo $this->Html->script('jquery-2.2.4.min.js'); ?>
 <?php echo $this->Html->script('common_scripts_min.js'); ?>
 <?php echo $this->Html->script('functions.js'); ?>
@@ -116,8 +112,7 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
         });
     <?php $this->Html->scriptEnd(); ?>
 
-    <!--checking password strenght when registering-->
-    <!--<script src="js/pw_strenght.js"></script>-->
+    <!--checking password strenght when registering and updating passwords-->
     <?php echo $this->Html->script('pw_strenght.js'); ?>
 
     <!--Review modal validation -->
@@ -152,7 +147,6 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
     <!--<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB84YOXFIn5Oi5Y7zLG3a_W7c8uMlSFcqA"></script>-->                               
     <!--<script src="js/map.js"></script>
     <script src="js/infobox.js"></script>-->
-
 
 <?php echo $this->fetch('script'); ?>
 

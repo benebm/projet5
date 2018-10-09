@@ -44,8 +44,17 @@ class UserMailer extends Mailer
            ->template('afterupdate')
            ->emailFormat('html');
     }
-               
 
+    public function contactform($data)
+    {
+        $this
+            ->to('benedictemondon@gmail.com')
+            ->subject('Un message a été posté sur Marseille Green')
+            ->template('contactform')
+            ->viewVars(['data' => $data])
+            ->emailFormat('text');
+    }
+               
 
 }
 ?>

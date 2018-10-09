@@ -106,11 +106,12 @@
 								<?= $this->Form->create($user, ['url' => ['action' => 'editUser']]); ?>
 								<div class="form-group">
 									<label>Nouveau mot de passe</label>
-									<?= $this->Form->control('password', ['class' => 'form-control', 'placeholder' => 'Votre nouveau mot de passe', 'label' => false]) ?>
+									<?= $this->Form->control('password', ['class' => 'form-control', 'placeholder' => 'Votre nouveau mot de passe', 'label' => false, 'id' => 'password1']) ?>
 								<br />
 									<label>Saisissez à nouveau le mot de passe</label>
-									<?= $this->Form->password('confirm_password', ['class' => 'form-control', 'placeholder' => 'Votre nouveau mot de passe', 'label' => false]) ?>
+									<?= $this->Form->password('confirm_password', ['class' => 'form-control', 'placeholder' => 'Votre nouveau mot de passe', 'label' => false, 'id' => 'password2']) ?>
 								</div>
+								<div id="pass-info" class="clearfix"></div>
 								<button type="submit" class="btn_1 green">Mettre à jour</button>
 								<?= $this->Form->end() ?>	
 							</div>

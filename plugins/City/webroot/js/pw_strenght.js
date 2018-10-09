@@ -21,23 +21,23 @@ function passwordStrengthCheck(password1, password2, passwordsInfo)
 	$(password1).on('keyup', function(e) {
 		if(VryStrongPass.test(password1.val()))
 		{
-			passwordsInfo.removeClass().addClass('vrystrongpass').html("Very Strong! (Awesome, please don't forget your pass now!)");
+			passwordsInfo.removeClass().addClass('vrystrongpass').html("Très sécurisé! Bravo");
 		}	
 		else if(StrongPass.test(password1.val()))
 		{
-			passwordsInfo.removeClass().addClass('strongpass').html("Strong! (Enter special chars to make even stronger");
+			passwordsInfo.removeClass().addClass('strongpass').html("Sécurisé! Vous pouvez ajouter des caractères spéciaux pour le rendre encore plus invulnérable");
 		}	
 		else if(MediumPass.test(password1.val()))
 		{
-			passwordsInfo.removeClass().addClass('goodpass').html("Good! (Enter uppercase letter to make strong)");
+			passwordsInfo.removeClass().addClass('goodpass').html("Correct! Vous pouvez ajouter des lettres majuscules pour le sécuriser encore plus");
 		}
 		else if(WeakPass.test(password1.val()))
     	{
-			passwordsInfo.removeClass().addClass('stillweakpass').html("Still Weak! (Enter digits to make good password)");
+			passwordsInfo.removeClass().addClass('stillweakpass').html("Un peu faible! Ajoutez des chiffres pour créer un mot de passe suffisamment sûr");
     	}
 		else
 		{
-			passwordsInfo.removeClass().addClass('weakpass').html("Very Weak! (Must be 5 or more chars)");
+			passwordsInfo.removeClass().addClass('weakpass').html("Très faible! Il doit contenir au moins 5 caractères");
 		}
 	});
 	
@@ -45,9 +45,9 @@ function passwordStrengthCheck(password1, password2, passwordsInfo)
 		
 		if(password1.val() !== password2.val())
 		{
-			passwordsInfo.removeClass().addClass('weakpass').html("Passwords do not match!");	
+			passwordsInfo.removeClass().addClass('weakpass').html("Oups, les mots de passe ne sont pas identiques!");	
 		}else{
-			passwordsInfo.removeClass().addClass('goodpass').html("Passwords match!");	
+			passwordsInfo.removeClass().addClass('goodpass').html("Parfait, les mots de passe sont bien identiques!");	
 		}
 			
 	});

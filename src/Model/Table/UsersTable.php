@@ -69,13 +69,13 @@ class UsersTable extends Table
             ->requirePresence('password', 'create')
             ->notEmpty('password');
 
-//passer en condition si form dashboard
-        //$validator
-            //->add('password', [
-            //->'compare' => [
-           //'rule' => ['compareWith', 'confirm_password']
-           // ]
-        //]);
+        $validator
+            ->add('password', [
+                'compare' => [
+                    'rule' => ['compareWith', 'confirm_password'],
+                    'message' => 'Erreur de saisie : les 2 mots de passe ne sont pas identiques'
+                    ]
+            ]);
 
         return $validator;
     }

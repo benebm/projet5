@@ -4,7 +4,9 @@ namespace App\Controller;
 use App\Controller\AppController;
 use Cake\Event\Event;
 
+use Cake\Mailer\Email;
 use App\Form\ContactForm;
+use Cake\Mailer\MailerAwareTrait;
 
 /**
  * Users Controller
@@ -100,14 +102,16 @@ class UsersController extends AppController
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
+    use MailerAwareTrait;
+
     public function add()
     {
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('Félicitations, l\'utilisateur a bien été créé. Connectez-vous pour accéder à votre compte'));
-
+                $this->Flash->success(__('Félicitations, votre compte utilisateur a bien été créé. Connectez-vous pour accéder à votre compte :'));
+                $this->getMailer('User')->send('welcome', [$user]);
                 return $this->redirect(['controller' => 'Users', 'action' => 'login']);
             }
             $this->Flash->error(__('Impossible d\'ajouter l\'utilisateur.'));
@@ -119,9 +123,10 @@ class UsersController extends AppController
     public function dashboard()
     {
     	$userId = $this->Auth->user("id");
-
     	$username = $this->Auth->user("username");
+        $useremail = $this->Auth->user("email");
     	$this->set('username', $username); 
+        $this->set('useremail', $useremail); 
 
     	$review = $this->Users->Reviews->find()
     	->where(['Reviews.user_id' => $userId])
@@ -162,11 +167,12 @@ class UsersController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('Votre nom d\'utilisateur a bien été modifié.'));
-
+                $this->getMailer('User')->send('afterupdate', [$user]);
+                $this->Flash->success(__('Votre mise à jour a bien été prise en compte.'));
                 return $this->redirect(['action' => 'dashboard']);
             }
-            $this->Flash->error(__('Votre nom d\'utilisateur n\'a pas pu être modifié. Réessayez :)'));
+            $this->Flash->error(__('Votre mise à jour n\'a pas pu être prise en compte. Réessayez :)'));
+            return $this->redirect(['action' => 'dashboard']);
         }
         $this->set(compact('user'));
     }
@@ -189,16 +195,12 @@ class UsersController extends AppController
 	public function isAuthorized($user)
     {
         // Tous les utilisateurs enregistrés peuvent ajouter des articles
-        // Avant 3.4.0 $this->request->param('action') etait utilisée.
-        if ($this->request->getParam('action') === 'dashboard') {
+         if (in_array($this->request->getParam('action'), ['dashboard', 'editUser'])) {
             return true;
         }
 
-
-        // Le propriétaire d'un article peut l'éditer et le supprimer
-        // Avant 3.4.0 $this->request->param('action') etait utilisée.
-        if (in_array($this->request->getParam('action'), ['edit', 'delete'])) {
-            // Avant 3.4.0 $this->request->params('pass.0')
+        // Le propriétaire d'un article peut le supprimer
+        if (in_array($this->request->getParam('action'), ['deleteReview'])) {
             $reviewId = (int)$this->request->getParam('pass.0');
             if ($this->Users->Reviews->isOwnedBy($reviewId, $user['id'])) {
                 return true;

@@ -8,6 +8,10 @@ use Cake\Datasource\Exception\RecordNotFoundException;
 use Cake\Event\Event;
 use Cake\Http\Response;
 
+use Cake\Mailer\Email;
+use Cake\Mailer\MailerAwareTrait;
+
+
 
 class SpotsController extends AppController
 {
@@ -74,22 +78,38 @@ class SpotsController extends AppController
      * @param null $slug
      * @return Response|null
      */
+    use MailerAwareTrait;
+
     public function addReview($slug = null)
     {
+        
+
         $review = $this->Spots->Reviews->newEntity();
 
         if ($this->request->is(['post'])) {
             $review = $this->Spots->Reviews->patchEntity($review, $this->request->getData());
 
-            // ajout auth
+            // ajout auth nécessaire pour poster review
             $review->user_id = $this->Auth->user('id');
 
             if ($this->Spots->Reviews->save($review)) {
                 $this->Flash->success(__('Votre avis a bien été ajouté, merci !'));
+
+                // déclaration des variables nécessaires pour l'email
+                $user = $this->Auth->user();
+                $this->set('user', $user); 
+
+                //$spot = $this->Spots->find()
+                //->where(['Spots.slug' => $slug])->first();
+                //$this->set('spot', $spot); 
+
+                $this->getMailer('User')->send('afterreview', [$user]);
+ 
                 return $this->redirect(['action' => 'view', $_POST['spot_slug']]);
             }
+
             $this->Flash->error(__('Votre avis n\'a pas pu être ajouté. On réessaie ? :)'));
-            return $this->redirect(['action' => 'view']);
+            return $this->redirect(['action' => 'view', $_POST['spot_slug']]);
         }
         return $this->redirect(['action' => 'view', $_POST['spot_slug']]);
     }

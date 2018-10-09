@@ -58,10 +58,24 @@ class UsersTable extends Table
             ->notEmpty('username');
 
         $validator
+            ->scalar('email')
+            ->maxLength('email', 50)
+            ->requirePresence('email', 'create')
+            ->notEmpty('email');
+
+        $validator
             ->scalar('password')
             ->maxLength('password', 255)
             ->requirePresence('password', 'create')
             ->notEmpty('password');
+
+//passer en condition si form dashboard
+        //$validator
+            //->add('password', [
+            //->'compare' => [
+           //'rule' => ['compareWith', 'confirm_password']
+           // ]
+        //]);
 
         return $validator;
     }
@@ -75,7 +89,7 @@ class UsersTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->isUnique(['username']));
+        $rules->add($rules->isUnique(['email']));
 
         return $rules;
     }

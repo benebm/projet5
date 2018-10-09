@@ -14,6 +14,9 @@
                                 <?= $this->Form->control('username', ['class' => 'form-control', 'placeholder' => 'Pseudo', 'label' => 'Votre nom d\'utilisateur']) ?>
                                 </div>
                                 <div class="form-group">
+                                <?= $this->Form->control('email', ['class' => 'form-control', 'placeholder' => 'votreemail@exemple.fr', 'label' => 'Votre adresse email']) ?>
+                                </div>
+                                <div class="form-group">
                                 <?= $this->Form->control('password', ['class' => 'form-control', 'placeholder' => '*****', 'label' => 'Votre mot de passe']) ?>
                                 </div>
                             

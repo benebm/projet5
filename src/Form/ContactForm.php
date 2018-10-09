@@ -31,17 +31,17 @@ class ContactForm extends Form
     {
         // Envoie un email.
          $email = new Email('default');
-        $email->from($contact['email']);
+        //$email->from($contact['email']);
         $email->to('benedictemondon@gmail.com');
-        $email->subject('About');
-        $email->send('coucou');
+        $email->subject('Un nouveau message de' . $contact['name']);
+        $email->send($contact['body']);
         //$email->send($contact['body']);
 
 
         return true;
     }
 
-    public function setErrors($errors)
+    public function setErrors(array $errors)
     {
         $this->_errors = $errors;
     }

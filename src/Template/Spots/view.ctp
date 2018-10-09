@@ -152,7 +152,7 @@
 							<?php foreach ($spot->reviews as $review): ?>
 							<div class="review_strip_single">
 								<!--<img src="img/avatar1.jpg" class="img-circle">-->
-								<?php echo $this->Html->image("avatar1.jpg", ["class" => "img-circle"]); ?>
+								<?php echo $this->Html->image("default-avatar.png", ["class" => "img-circle"]); ?>
 								 <small>Publié par <?= $review->username ?><br />- le <?= $review->created->format('d M y') ?> -</small>
 								<h4><?= h($review->title) ?></h4>
 								<p>

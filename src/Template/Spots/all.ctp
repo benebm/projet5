@@ -5,11 +5,20 @@
 		<div id="position">
 			<div class="container">
 				<ul>
-					<li><a href="#">Home</a>
+					<li><a href="<?= $this->Url->build(['controller' => 'Spots','action' => 'index']); ?>">Accueil</a>
 					</li>
-					<li><a href="#">Category</a>
+					<?php if(!isset($id))
+					{
+						echo '<li>Tous les spots</li>';
+					}
+					else
+					{ ?>
+					<li><a href="<?= $this->Url->build(['controller' => 'Spots','action' => 'all']); ?>">Catégorie</a>
 					</li>
-					<li>Page active</li>
+					<?= $breadcrumb->homename;
+					} ?>
+					<li>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -22,23 +31,23 @@
 					'type' => 'FeatureCollection', 
 					'features' => array()
 				);
-				foreach ($spots as $spot) {
+				foreach ($mapspots as $mapspot) {
     				$marker = array(
         				'type' => 'Feature',
         				'geometry' => array(
             			'type' => 'Point',
             			'coordinates' => array(
-                			$spot->position_lng,
-                			$spot->position_lat
+                			$mapspot->position_lng,
+                			$mapspot->position_lat
             				)
         				),
         				'properties' => array(
-            				'title' => $spot->name,
-            				'description' => $spot->short_description,
-            				'image' => $this->Html->image($spot->imagemap),
-            				'phone' => $spot->contact,
-            				'details' => $this->Html->link(__('Site web'), $spot->website, ['class' => 'btn_infobox', 'target' => '_blank']),
-            				'category' => $spot->category_id,
+            				'title' => $mapspot->name,
+            				'description' => $mapspot->short_description,
+            				'image' => $this->Html->image($mapspot->imagemap),
+            				'phone' => $mapspot->contact,
+            				'details' => $this->Html->link(__('Site web'), $mapspot->website, ['class' => 'btn_infobox', 'target' => '_blank']),
+            				'category' => $mapspot->category_id,
         					)
     					);
     				array_push($geojson['features'], $marker);
@@ -70,14 +79,19 @@
     							['escape' => false, 'id' => 'active']
 							)?>
 							</li>
-							<?php foreach ($categories as $category): ?>
 							<li>
-                            <?= $this->Html->link('<i class="' . $category->icon . '"></i>' . $category->title . ' <span>(' . count($category->spots) . ')</span>',
-    							['action' => 'sort', $category->id],
-    							['escape' => false]
-							)?>
-							</li>
+							<?php foreach ($categories as $category):
+									foreach ($spotscounts as $spotscount): 
+										if ($spotscount->category_id === $category->id)
+										{
+
+                             			echo $this->Html->link('<i class="' . $category->icon . '"></i>' . $category->title . ' <span>(' . $spotscount->count . ')</span>',
+    									['action' => 'sort', $category->id, null],
+    									['escape' => false, 'id' => '']);
+                         				}
+							 		endforeach; ?>
 							<?php endforeach; ?>
+							</li>
 						</ul>
 					</div>
 
@@ -85,52 +99,10 @@
 						<a data-toggle="collapse" href="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters" id="filters_col_bt"><i class="icon_set_1_icon-65"></i>Filtrer par <i class="icon-plus-1 pull-right"></i></a>
 						<div class="collapse" id="collapseFilters">
 							<div class="filter_type">
-								<h6>Note</h6>
-								<ul>
+								<h6>Arrondissement</h6>
+								<ul><?php foreach ($districts as $district): ?>
 									<li>
-										<label>
-											<input type="checkbox"><span class="rating">1
-						<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i>
-						</span>
-										</label>
-									</li>
-									<li>
-										<label>
-											<input type="checkbox"><span class="rating">2
-						<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i>
-						</span>
-										</label>
-									</li>
-									<li>
-										<label>
-											<input type="checkbox"><span class="rating">3
-						<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i>
-						</span>
-										</label>
-									</li>
-									<li>
-										<label>
-											<input type="checkbox"><span class="rating">4
-						<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i><i class="icon-smile"></i>
-						</span>
-										</label>
-									</li>
-									<li>
-										<label>
-											<input type="checkbox"><span class="rating">5
-						<i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i><i class="icon-smile"></i><i class="icon-smile"></i>
-						</span>
-										</label>
-									</li>
-								</ul>
-							</div>
-							<div class="filter_type">
-								<h6>Quartier</h6>
-								<ul><?php foreach ($spots as $spot): ?>
-									<li>
-										<label>
-											<input type="checkbox"><?= $spot->area ?>
-										</label>
+											<i class="icon-ok-1"></i> <?= $this->Html->link($district->district, ['action' => 'filter', $id, $district->district])?>
 									</li>
 									<?php endforeach; ?>
 								</ul>

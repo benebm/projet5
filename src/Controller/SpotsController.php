@@ -137,6 +137,10 @@ class SpotsController extends AppController
         ->contain(['Categories', 'Reviews']);
         $this->set(compact('spots', $this->paginate($spots)));
 
+        //query spéciale pour la map
+        $mapspots = $this->Spots->find('all');
+        $this->set(compact('mapspots')); 
+
         // affiche de façon compacte les catégories 
         $categories = $this->Spots->Categories->find('all');
         $this->set(compact('categories'));
@@ -144,7 +148,13 @@ class SpotsController extends AppController
         // affiche la somme totale de tous les spots
         $totalspots = $this->Spots->find('all');
         $totalnumber = $totalspots->count();
-        $this->set('totalnumber', $totalnumber);   
+        $this->set('totalnumber', $totalnumber);
+
+        //affiche la somme de spots par catégorie
+        $allspots = $this->Spots->find();
+        $spotscounts = $allspots->select(['count' => $allspots->func()->count('id'), 'category_id'])
+        ->group('category_id');
+        $this->set(compact('spotscounts'));        
 
         // affiche la moyenne de rating par spot
         $reviews = $this->Spots->Reviews->find();
@@ -154,7 +164,7 @@ class SpotsController extends AppController
 
     }
 
-    public function sort($id = null, $rating = null)
+    public function sort($id = null)
     {
         // affiche le nom dans le header quand user connecté
         $username = $this->Auth->user("username");
@@ -164,6 +174,79 @@ class SpotsController extends AppController
         ->where(['Spots.category_id' => $id])
         ->contain(['Categories', 'Reviews']);
         $this->set(compact('spots', $this->paginate($spots)));
+        
+        // affiche les variables nécessaires au breadcrumb
+        $breadcrumb = $this->Spots->Categories->find()
+        ->select(['homename'])
+        ->where(['id' => $id])->first();
+        $this->set('id', $id);
+        $this->set('breadcrumb', $breadcrumb);
+
+        //query spéciale pour la map
+        $mapspots = $this->Spots->find()
+        ->where(['Spots.category_id' => $id]);
+        $this->set(compact('mapspots')); 
+
+        // affiche de façon compacte les catégories
+        $categories = $this->Spots->Categories->find('all');
+        $this->set(compact('categories'));
+
+        // affiche de façon compacte les arrondissements
+         $districts = $this->Spots->find('all')
+        ->select(['district'])
+        ->group('district');
+        $this->set(compact('districts'));
+
+         // affiche la somme totale de tous les spots
+        $totalspots = $this->Spots->find('all');
+        $totalnumber = $totalspots->count();
+        $this->set('totalnumber', $totalnumber);
+
+        //affiche la somme de spots par catégorie
+        $allspots = $this->Spots->find();
+        $spotscounts = $allspots->select(['count' => $allspots->func()->count('id'), 'category_id'])
+        ->group('category_id');
+        $this->set(compact('spotscounts'));   
+
+        // affiche la moyenne de rating par spot
+        $reviews = $this->Spots->Reviews->find();
+        $avgratings = $reviews->select(['moyenne' => $reviews->func()->avg('rating'), 'spot_slug'])
+        ->group('spot_slug');
+        $this->set(compact('avgratings')); 
+
+        // on utilise la view all
+        $this->render('all');
+    }
+
+    public function filter($id = null, $district = null)
+    {
+        // affiche le nom dans le header quand user connecté
+        $username = $this->Auth->user("username");
+        $this->set('username', $username); 
+
+        $districts = $this->Spots->find('all')
+        ->select(['district'])
+        ->group('district');
+        $this->set(compact('districts'));
+
+        $spots = $this->Spots->find()
+        ->where(['Spots.category_id' => $id])
+        ->where(['Spots.district' => $district])
+        ->contain(['Categories', 'Reviews']);
+        $this->set(compact('spots', $this->paginate($spots)));
+
+        // affiche les variables nécessaires au breadcrumb
+        $breadcrumb = $this->Spots->Categories->find()
+        ->select(['homename'])
+        ->where(['id' => $id])->first();
+        $this->set('id', $id);
+        $this->set('breadcrumb', $breadcrumb);
+
+        //query spéciale pour la map
+        $mapspots = $this->Spots->find()
+        ->where(['Spots.category_id' => $id])
+        ->where(['Spots.district' => $district]);
+        $this->set(compact('mapspots')); 
 
         // affiche de façon compacte les catégories
         $categories = $this->Spots->Categories->find('all');
@@ -174,6 +257,12 @@ class SpotsController extends AppController
         $totalnumber = $totalspots->count();
         $this->set('totalnumber', $totalnumber);
 
+        //affiche la somme de spots par catégorie
+        $allspots = $this->Spots->find();
+        $spotscounts = $allspots->select(['count' => $allspots->func()->count('id'), 'category_id'])
+        ->group('category_id');
+        $this->set(compact('spotscounts'));   
+
         // affiche la moyenne de rating par spot
         $reviews = $this->Spots->Reviews->find();
         $avgratings = $reviews->select(['moyenne' => $reviews->func()->avg('rating'), 'spot_slug'])
@@ -182,6 +271,7 @@ class SpotsController extends AppController
 
         // on utilise la view all
         $this->render('all');
+
     }
 
 

@@ -58,9 +58,6 @@ class AppController extends Controller
         ]);
         //fin auth
 
-        //variable utilisé dans email de confirmation
-        //$user = $this->Auth->user();
-        //$this->set('user', $user); 
 
         // affichage du nom dans le header quand user connecté
         $username = $this->Auth->user("username");

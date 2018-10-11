@@ -10,7 +10,7 @@
                 </div>
 
                 <div class="row">
-                    <?php foreach ($categories as $category): ?>
+                    <?php foreach ($categories as $category): ?><!-- ajouter spotscounts dans les categories -->
                     <div class="col-md-3 col-sm-6 text-center">
                         <p>      
                             <?= $this->Html->link(

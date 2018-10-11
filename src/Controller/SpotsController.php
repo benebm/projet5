@@ -22,11 +22,26 @@ class SpotsController extends AppController
         $totalnumber = $totalspots->count();
         $this->set('totalnumber', $totalnumber);
 
+        //affiche la somme de spots par catégorie
+        $allspots = $this->Spots->getAllSpots();
+        $spotscounts = $allspots->select(['count' => $allspots->func()->count('name'), 'category_id'])
+        ->group('category_id');
+        $this->set(compact('spotscounts'));       
+
         // affiche la moyenne de rating par spot
         $reviews = $this->Spots->Reviews->find();
         $avgratings = $reviews->select(['moyenne' => $reviews->func()->avg('rating'), 'spot_slug'])
         ->group('spot_slug');
         $this->set(compact('avgratings'));
+
+        // affiche de façon compacte les arrondissements
+        $districts = $this->Spots->getDistricts();
+        $this->set(compact('districts'));
+    }
+
+    public function beforeRender(\Cake\Event\Event $event)
+    {
+        $this->viewBuilder()->setTheme('City');
     }
     
         
@@ -90,7 +105,7 @@ class SpotsController extends AppController
     }
 
 
-    public $paginate = 
+public $paginate = 
     [
         'limit' => 5,
         'order' => [
@@ -109,21 +124,9 @@ class SpotsController extends AppController
         ->contain(['Categories', 'Reviews']);
         $this->set(compact('spots', $this->paginate($spots)));
 
-        // affiche de façon compacte les arrondissements
-         $districts = $this->Spots->find('all')
-        ->select(['district'])
-        ->group('district');
-        $this->set(compact('districts'));
-
         //query spéciale pour la map
         $mapspots = $this->Spots->find('all');
-        $this->set(compact('mapspots')); 
-
-        //affiche la somme de spots par catégorie
-        $allspots = $this->Spots->find();
-        $spotscounts = $allspots->select(['count' => $allspots->func()->count('id'), 'category_id'])
-        ->group('category_id');
-        $this->set(compact('spotscounts'));        
+        $this->set(compact('mapspots'));  
 
     
 
@@ -149,21 +152,7 @@ class SpotsController extends AppController
         $mapspots = $this->Spots->find()
         ->where(['Spots.category_id' => $id]);
         $this->set(compact('mapspots')); 
-
-
-         // affiche de façon compacte les arrondissements
-         $districts = $this->Spots->find('all')
-        ->select(['district'])
-        ->group('district');
-        $this->set(compact('districts'));
-
-        //affiche la somme de spots par catégorie
-        $allspots = $this->Spots->find();
-        $spotscounts = $allspots->select(['count' => $allspots->func()->count('id'), 'category_id'])
-        ->group('category_id');
-        $this->set(compact('spotscounts'));   
-
-
+ 
         // on utilise la view all
         $this->render('all');
     }
@@ -171,12 +160,6 @@ class SpotsController extends AppController
     public function filter($id = null, $district = null)
     {
     
-         // affiche de façon compacte les arrondissements
-        $districts = $this->Spots->find('all')
-        ->select(['district'])
-        ->group('district');
-        $this->set(compact('districts'));
-
         $spots = $this->Spots->find()
         ->where(['Spots.category_id' => $id])
         ->where(['Spots.district' => $district])
@@ -196,53 +179,35 @@ class SpotsController extends AppController
         ->where(['Spots.district' => $district]);
         $this->set(compact('mapspots')); 
 
-        //affiche la somme de spots par catégorie
-        $allspots = $this->Spots->find();
-        $spotscounts = $allspots->select(['count' => $allspots->func()->count('id'), 'category_id'])
-        ->group('category_id');
-        $this->set(compact('spotscounts'));   
-
         // on utilise la view all
         $this->render('all');
 
     }
 
 
-        public function mapall($id = null)
+        public function mapall()
     {
-        // affiche le layout
         $this->viewBuilder()->setLayout('fullmap');
 
-        $spots = $this->Spots->find('all')
-        ->contain(['Categories', 'Reviews']);
+        $spots = $this->Spots->getAllSpots();
         $this->set(compact('spots'));
     }
 
 
     public function isAuthorized($user)
     {
-        // Tous les utilisateurs enregistrés peuvent ajouter des articles
+        // Tous les utilisateurs enregistrés peuvent ajouter des reviews
         if ($this->request->getParam('action') === 'addReview') {
             return true;
         }
-
-        // Le propriétaire d'un article peut l'éditer et le supprimer
-        if (in_array($this->request->getParam('action'), ['edit', 'delete'])) {
+        // Le propriétaire d'une review peut l'éditer et la supprimer
+        /*if (in_array($this->request->getParam('action'), ['edit', 'delete'])) {
             $reviewId = (int)$this->request->getParam('pass.0');
             if ($this->Spots->Reviews->isOwnedBy($reviewId, $user['id'])) {
                 return true;
             }
-        }
-
+        }*/
         return parent::isAuthorized($user);
     }
-
-
-
-    public function beforeRender(\Cake\Event\Event $event)
-    {
-        $this->viewBuilder()->setTheme('City');
-    }
-
 
 }

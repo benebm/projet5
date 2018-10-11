@@ -56,13 +56,14 @@ class SpotsTable extends Table
         ]);
 	}
 
-    //retourne tous les spots
+    // retourne tous les spots
     public function getAllSpots()
     {
-        return $this->find('all');    
+        return $this->find('all')
+        ->contain(['Categories', 'Reviews']);  
     }  
 
-   //retourne tous les spots avec top = 1
+   // retourne tous les spots avec top = 1
     public function getTopSpots()
     {
         return $this->find()
@@ -78,20 +79,28 @@ class SpotsTable extends Table
         ->contain(['Categories', 'Reviews'])->first();
     }
 
-    //retourne les reviews associées à ce spot_slug
+    // retourne les reviews associées à ce spot_slug
     public function getSpotReviews($slug)
     {
         return $this->Reviews->find()
         ->where(['Reviews.spot_slug' => $slug]);
     }
 
+    // retourne le spot envoyé dans le form de création de review
     public function getSpotForEmail($slug)
     {
         return $this->find()
         ->where(['Spots.slug' => $_POST['spot_slug']])->first();               
     }
 
-      
+    // retourne les arrondissements groupés
+        public function getDistricts()
+    {
+        return $this->find('all')
+        ->select(['district'])
+        ->group('district');
+    }
+
 
         
         

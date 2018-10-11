@@ -101,6 +101,8 @@
 							<div class="filter_type">
 								<ul><?php foreach ($districts as $district): ?>
 									<li>
+										<!-- si isset id, url normale-->
+										<!-- si pas d'id (all) faire un autre query-->
 											<i class="icon-ok-1"></i> <?= $this->Html->link($district->district, ['action' => 'filter', $id, $district->district])?>
 									</li>
 									<?php endforeach; ?>

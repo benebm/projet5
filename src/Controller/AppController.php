@@ -46,7 +46,7 @@ class AppController extends Controller
 
         //couche d'authentification
         $this->loadComponent('Auth', [
-            'authorize' => ['Controller'], // Ajout de cette ligne
+            'authorize' => ['Controller'], 
             'loginRedirect' => [
                 'controller' => 'Users',
                 'action' => 'dashboard',
@@ -58,6 +58,19 @@ class AppController extends Controller
         ]);
         //fin auth
 
+        //variable utilisé dans email de confirmation
+        //$user = $this->Auth->user();
+        //$this->set('user', $user); 
+
+        // affichage du nom dans le header quand user connecté
+        $username = $this->Auth->user("username");
+        $this->set('username', $username); 
+
+        // affiche de façon compacte les catégories pour le menu
+        $this->loadModel('Categories');
+        $categories = $this->Categories->find('all');
+        $this->set(compact('categories'));
+
         /*
          * Enable the following components for recommended CakePHP security settings.
          * see https://book.cakephp.org/3.0/en/controllers/components/security.html
@@ -66,25 +79,30 @@ class AppController extends Controller
         //$this->loadComponent('Csrf');
     }
 
-
-
         public function isAuthorized($user) 
     {
         // Admin peuvent accéder à chaque action
         if (isset($user['role']) && $user['role'] === 'admin') {
             return true;
         }
-
         // Par défaut refuser
         return false;
     }
-
 
         // autoriser consultation sans connexion
         public function beforeFilter(Event $event)
     {
         $this->Auth->allow(['index', 'view', 'all', 'display', 'sort', 'filter', 'mapall', 'contact']);
     }
+
+
+
+
+
+        
+
+
+
 
 
 }

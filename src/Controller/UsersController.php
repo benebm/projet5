@@ -94,9 +94,7 @@ class UsersController extends AppController
 public function dashboard()
     {
     	$userId = $this->Auth->user("id");
-    	$username = $this->Auth->user("username");
         $useremail = $this->Auth->user("email");
-    	$this->set('username', $username); 
         $this->set('useremail', $useremail); 
 
     	$review = $this->Users->Reviews->find()

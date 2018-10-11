@@ -1210,6 +1210,10 @@ ul#cat_nav i {
   background-image: url('../img/pins/walking.png');
 }
 
+#markertest {
+  background-image: url('../img/pins/skyline.png');
+}
+
 /*
 .mapboxgl-popup {
   max-width: 200px;

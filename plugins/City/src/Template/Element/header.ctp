@@ -61,29 +61,21 @@
                                 <a href="javascript:void(0);" class="show-submenu">Les spots <i class="icon-down-open-mini"></i></a>
                                 <ul>
                                     <li><?= $this->Html->link('Tous les spots', ['controller' => 'Spots', 'action' => 'all'])?></li>
-                                    <li><a href="#">Par catégorie</a>
+                                    <li><a href="javascript:void(0);">Par catégorie</a>
                                         <ul>
-                                            <li><?= $this->Html->link('Magasins bio', ['action' => 'sort', 1])?></li>
-                                            <li><?= $this->Html->link('Epiceries vrac', ['action' => 'sort', 2])?></li>
-                                            <li><?= $this->Html->link('Restos bio & vegan', ['action' => 'sort', 3])?></li>
-                                            <li><?= $this->Html->link('Soins naturels', ['action' => 'sort', 4])?></li>
-                                            <li><?= $this->Html->link('Zéro déchet', ['action' => 'sort', 5])?></li>
+                                        <?php foreach ($categories as $category): ?>
+                                            <li><?= $this->Html->link('<i class="' . $category->icon . '"></i>' . $category->title,
+                                                ['action' => 'sort', $category->id],
+                                                ['escape' => false]); ?>
+                                            </li>
+                                        <?php endforeach; ?>
                                         </ul>
                                     </li>
-                                    <!--<li><a href="#">Par quartier</a>
-                                    	<ul>
-                                            <li><a href="#">Le Panier</a></li>
-                                            <li><a href="#">Euroméditerranée</a></li>
-                                            <li><a href="#">Noailles</a></li>
-                                            <li><a href="#">Le Pharo</a></li>
-                                            <li><a href="#">Saint Giniez</a></li>
-                                        </ul>
-                                    </li>-->
                                     <li><a href="<?= $this->Url->build(['controller' => 'Spots','action' => 'mapall']); ?>">Tout voir sur une carte</a></li>
                                 </ul>
                             </li>
-                              <li class="submenu">
-                                <a href="<?= $this->Url->build(['controller' => 'Pages','action' => 'contact']); ?>">Contact</a>
+                            <li class="submenu">
+                                <a href="<?= $this->Url->build(['controller' => 'Users','action' => 'contact']); ?>">Contact</a>
                             </li>
                         </ul>
                     </div><!-- End main-menu -->

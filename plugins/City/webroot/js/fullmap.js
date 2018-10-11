@@ -1,5 +1,3 @@
-
-
 mapboxgl.accessToken = 'pk.eyJ1IjoiYmVuZWJtIiwiYSI6ImNqbTBpaTlhZjBhNTAzcWs4OHR3ZnhyOTcifQ.rrN8JyistnzI9931hveh4w';
 
 // initialisation 
@@ -28,6 +26,13 @@ spot_json.features.forEach(function(marker) {
   var el = document.createElement('div');
   el.className = 'marker';
   el.id = 'marker' + marker.properties.category ;
+  el.addEventListener('click', () => 
+    { 
+      var selectedid = el.id;
+      alert("marker" + selectedid + "clicked")
+      //marker.getElement();
+    }
+  ); 
 
   //crée le marqueur et l'ajoute à la map
   var marker = new mapboxgl.Marker(el)
@@ -61,6 +66,7 @@ spot_json.features.forEach(function(marker) {
             };        
           }  
     }
+
 
     //function hideAllMarkers() {
       //          marker.remove();

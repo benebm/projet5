@@ -1,5 +1,4 @@
 <?php
-// src/Model/Table/ArticlesTable.php
 namespace App\Model\Table;
 
 use Cake\ORM\Table;
@@ -55,8 +54,67 @@ class SpotsTable extends Table
         $this->hasMany('Reviews', [
             'foreignKey' => 'spot_id'
         ]);
-
 	}
+
+    //retourne tous les spots
+    public function getAllSpots()
+    {
+        return $this->find('all');    
+    }  
+
+   //retourne tous les spots avec top = 1
+    public function getTopSpots()
+    {
+        return $this->find()
+        ->where(['spots.top' => 1])
+        ->contain(['Categories', 'Reviews']);
+    }
+  
+    // retourne le spot qui matche avec le slug envoyé
+    public function getSingleSpot($slug)
+    {
+        return $this->find()
+        ->where(['Spots.slug' => $slug])
+        ->contain(['Categories', 'Reviews'])->first();
+    }
+
+    //retourne les reviews associées à ce spot_slug
+    public function getSpotReviews($slug)
+    {
+        return $this->Reviews->find()
+        ->where(['Reviews.spot_slug' => $slug]);
+    }
+
+    public function getSpotForEmail($slug)
+    {
+        return $this->find()
+        ->where(['Spots.slug' => $_POST['spot_slug']])->first();               
+    }
+
+      
+
+        
+        
+
+
+
+/*
+
+    public function getAllArticles() {
+        return $this->find('all', [
+            'fields' => ['id', 'title'],
+            'conditions' => [
+                'OR' => ['title' => 'Cake', 'author_id' => 1],
+                'published' => true
+            ],
+            'contain' => ['Authors'],
+            'order' => ['title' => 'DESC'],
+            'limit' => 10,
+        ]);
+    }
+*/
+    //$articles = $this->Articles->getAllArticles();
+
 
     
 }

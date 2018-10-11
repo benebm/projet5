@@ -86,20 +86,19 @@
 										{
 
                              			echo $this->Html->link('<i class="' . $category->icon . '"></i>' . $category->title . ' <span>(' . $spotscount->count . ')</span>',
-    									['action' => 'sort', $category->id, null],
+    									['action' => 'sort', $category->id],
     									['escape' => false, 'id' => '']);
                          				}
-							 		endforeach; ?>
-							<?php endforeach; ?>
+							 		endforeach;
+							 endforeach; ?>
 							</li>
 						</ul>
 					</div>
 
 					<div id="filters_col">
-						<a data-toggle="collapse" href="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters" id="filters_col_bt"><i class="icon_set_1_icon-65"></i>Filtrer par <i class="icon-plus-1 pull-right"></i></a>
+						<a data-toggle="collapse" href="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters" id="filters_col_bt"><i class="icon_set_1_icon-65"></i>Filtrer par arrondissement <i class="icon-plus-1 pull-right"></i></a>
 						<div class="collapse" id="collapseFilters">
 							<div class="filter_type">
-								<h6>Arrondissement</h6>
 								<ul><?php foreach ($districts as $district): ?>
 									<li>
 											<i class="icon-ok-1"></i> <?= $this->Html->link($district->district, ['action' => 'filter', $id, $district->district])?>
@@ -114,7 +113,7 @@
 					<div class="box_style_2">
 						<i class="icon_set_1_icon-57"></i>
 						<h4>Une question ?</h4>
-						<a href="tel://004542344599" class="phone">Contactez-nous</a>
+						<a href="<?= $this->Url->build(['controller' => 'Users','action' => 'contact']); ?>" class="phone">Contactez-nous</a>
 					</div>
 				</aside>
 				<!--End aside -->
@@ -127,9 +126,6 @@
 							<div class="col-lg-4 col-md-4 col-sm-4">
 								<div class="<?= $spot->banner_type ?>"><span><?= $spot->banner ?></span>
 								</div>
-								<!--<div class="wishlist">
-									<a class="tooltip_flip tooltip-effect-1" href="javascript:void(0);">+<span class="tooltip-content-flip"><span class="tooltip-back">Add to wishlist</span></span></a>
-								</div>-->
 								<div class="img_list">
 									<a href="single_tour.html"><?php echo $this->Html->image($spot->image, ['alt' => 'Image'], ['class' => 'img-responsive']); ?>
 										<div class="<?= $spot->badge_type ?>"><?= $spot->badge ?></div>

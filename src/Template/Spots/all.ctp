@@ -7,18 +7,27 @@
 				<ul>
 					<li><a href="<?= $this->Url->build(['controller' => 'Spots','action' => 'index']); ?>">Accueil</a>
 					</li>
-					<?php if(!isset($id))
+					<?php if(!isset($id) && (!isset($district)))
 					{
 						echo '<li>Tous les spots</li>';
 					}
-					else
+					else if (isset($id) && (!isset($district)))
 					{ ?>
 					<li><a href="<?= $this->Url->build(['controller' => 'Spots','action' => 'all']); ?>">Catégorie</a>
 					</li>
-					<?= $breadcrumb->homename;
-					} ?>
 					<li>
+					<?= $breadcrumb->homename; ?>
 					</li>
+					<?php }
+					else if (isset($id) && (isset($district)))
+					{ ?>
+					<li><a href="<?= $this->Url->build(['controller' => 'Spots','action' => 'all']); ?>">Catégorie</a>
+					</li>
+					<li>
+					<a href="<?= $this->Url->build(['controller' => 'Spots','action' => 'sort', $id]); ?>"><?= $breadcrumb->homename ?></a>
+					</li>
+					<li><?= $district; ?></li>
+					<?php } ?>
 				</ul>
 			</div>
 		</div>

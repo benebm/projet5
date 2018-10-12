@@ -94,15 +94,38 @@ class SpotsTable extends Table
     }
 
     // retourne les arrondissements groupés
-        public function getDistricts()
+    public function getDistricts()
     {
         return $this->find('all')
         ->select(['district'])
         ->group('district');
     }
 
+    // retourne les spots de la catégorie envoyée en id dans l'url
+    public function sortbyCategory($id)
+    {
+        return $this->find()
+        ->where(['Spots.category_id' => $id])
+        ->contain(['Categories', 'Reviews']);
+    }
 
-        
+    // retourne les spots par catégorie + arrondissement envoyés dans l'url
+    public function filterbyDistrict($id, $district)
+    {
+        return $this->find()
+        ->where(['Spots.category_id' => $id])
+        ->where(['Spots.district' => $district])
+        ->contain(['Categories', 'Reviews']);
+    }
+
+    // retourne le nom de la catégorie envoyée en id dans l'url (breadcrumb)
+    public function getBreadcrumb($id)
+    {
+        return $this->Categories->find()
+        ->select(['homename'])
+        ->where(['id' => $id])->first();
+    }
+
         
 
 

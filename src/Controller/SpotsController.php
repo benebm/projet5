@@ -9,7 +9,6 @@ use Cake\Event\Event;
 use Cake\Http\Response;
 use Cake\Mailer\MailerAwareTrait;
 
-
 class SpotsController extends AppController
 {
 
@@ -34,7 +33,7 @@ class SpotsController extends AppController
         ->group('spot_slug');
         $this->set(compact('avgratings'));
 
-        // affiche de façon compacte les arrondissements
+        // affiche de façon compacte les arrondissements (menu)
         $districts = $this->Spots->getDistricts();
         $this->set(compact('districts'));
     }
@@ -44,7 +43,6 @@ class SpotsController extends AppController
         $this->viewBuilder()->setTheme('City');
     }
     
-        
     public function index()
     {
         $this->viewBuilder()->setLayout('home');
@@ -53,12 +51,8 @@ class SpotsController extends AppController
         $this->set(compact('spots'));
     }
 
-
     public function view($slug = null)
     {
-
-        //$review = $this->Spots->Reviews->newEntity();
-
         $spot = $this->Spots->getSingleSpot($slug);
         $this->set(compact('review', 'spot'));      
 
@@ -87,7 +81,6 @@ class SpotsController extends AppController
                 // envoi email de confirmation
                 $spot = $this->Spots->getSpotForEmail($slug);
                 $this->set('spot', $spot);
-                //variable utilisé dans email de confirmation
                 $user = $this->Auth->user();
                 $this->set('user', $user);
                 $this->getMailer('User')->send('afterreview', [$user, $spot]);
@@ -104,8 +97,7 @@ class SpotsController extends AppController
         return $this->redirect(['action' => 'view', $_POST['spot_slug']]);
     }
 
-
-public $paginate = 
+    public $paginate = 
     [
         'limit' => 5,
         'order' => [
@@ -113,45 +105,28 @@ public $paginate =
         ]
     ];
 
-
     public function all()
     {
+        $spots = $this->Spots->getAllSpots();
+        $this->set(compact('spots', $this->paginate($spots)));     
 
-     
-
-        // affiche de façon compacte tous les spots et pagine
-        $spots = $this->Spots->find('all')
-        ->contain(['Categories', 'Reviews']);
-        $this->set(compact('spots', $this->paginate($spots)));
-
-        //query spéciale pour la map
-        $mapspots = $this->Spots->find('all');
+        //query spéciale pour la map (sans pagination)
+        $mapspots = $this->Spots->getAllSpots();
         $this->set(compact('mapspots'));  
-
-    
-
     }
 
     public function sort($id = null)
     {
-     
+        $spots = $this->Spots->sortbyCategory($id);
+        $this->set(compact('spots', $this->paginate($spots))); 
 
-        $spots = $this->Spots->find()
-        ->where(['Spots.category_id' => $id])
-        ->contain(['Categories', 'Reviews']);
-        $this->set(compact('spots', $this->paginate($spots)));
-        
-        // affiche les variables nécessaires au breadcrumb
-        $breadcrumb = $this->Spots->Categories->find()
-        ->select(['homename'])
-        ->where(['id' => $id])->first();
+        //query spéciale pour la map (sans pagination)
+        $mapspots = $this->Spots->sortbyCategory($id);
+        $this->set(compact('mapspots'));     
+
+        $breadcrumb = $this->Spots->getBreadcrumb($id);
         $this->set('id', $id);
         $this->set('breadcrumb', $breadcrumb);
-
-        //query spéciale pour la map
-        $mapspots = $this->Spots->find()
-        ->where(['Spots.category_id' => $id]);
-        $this->set(compact('mapspots')); 
  
         // on utilise la view all
         $this->render('all');
@@ -159,31 +134,21 @@ public $paginate =
 
     public function filter($id = null, $district = null)
     {
-    
-        $spots = $this->Spots->find()
-        ->where(['Spots.category_id' => $id])
-        ->where(['Spots.district' => $district])
-        ->contain(['Categories', 'Reviews']);
+        $spots = $this->Spots->filterbyDistrict($id, $district);
         $this->set(compact('spots', $this->paginate($spots)));
 
-        // affiche les variables nécessaires au breadcrumb
-        $breadcrumb = $this->Spots->Categories->find()
-        ->select(['homename'])
-        ->where(['id' => $id])->first();
+        //query spéciale pour la map (sans pagination)
+        $mapspots = $this->Spots->filterbyDistrict($id, $district);
+        $this->set(compact('mapspots')); 
+
+        $breadcrumb = $this->Spots->getBreadcrumb($id);
         $this->set('id', $id);
         $this->set('breadcrumb', $breadcrumb);
-
-        //query spéciale pour la map
-        $mapspots = $this->Spots->find()
-        ->where(['Spots.category_id' => $id])
-        ->where(['Spots.district' => $district]);
-        $this->set(compact('mapspots')); 
+        $this->set('district', $district);
 
         // on utilise la view all
         $this->render('all');
-
     }
-
 
         public function mapall()
     {
@@ -192,7 +157,6 @@ public $paginate =
         $spots = $this->Spots->getAllSpots();
         $this->set(compact('spots'));
     }
-
 
     public function isAuthorized($user)
     {

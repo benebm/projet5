@@ -33,7 +33,6 @@ use Cake\Validation\Validator;
  * @mixin CounterCacheBehavior
  */
 
-
 class SpotsTable extends Table
 {
 	public function initialize(array $config)
@@ -43,9 +42,6 @@ class SpotsTable extends Table
 		$this->setTable('spots');
         $this->setDisplayField('name');
         $this->setPrimaryKey('id');
-
-    	/*$this->addBehavior('Timestamp'); */ //j'enlève timestamp qui ne servira pas pour l'objet spot
-    	$this->addBehavior('CounterCache', ['Categories' => ['post_count']]);
 
     	 $this->belongsTo('Categories', [
             'foreignKey' => 'category_id',
@@ -109,6 +105,14 @@ class SpotsTable extends Table
         ->contain(['Categories', 'Reviews']);
     }
 
+    // retourne les spots de l'arrondissement envoyé dans l'url
+    public function sortbyDistrict($district)
+    {
+        return $this->find()
+        ->where(['Spots.district' => $district])
+        ->contain(['Categories', 'Reviews']);
+    }
+
     // retourne les spots par catégorie + arrondissement envoyés dans l'url
     public function filterbyDistrict($id, $district)
     {
@@ -125,28 +129,5 @@ class SpotsTable extends Table
         ->select(['homename'])
         ->where(['id' => $id])->first();
     }
-
-        
-
-
-
-/*
-
-    public function getAllArticles() {
-        return $this->find('all', [
-            'fields' => ['id', 'title'],
-            'conditions' => [
-                'OR' => ['title' => 'Cake', 'author_id' => 1],
-                'published' => true
-            ],
-            'contain' => ['Authors'],
-            'order' => ['title' => 'DESC'],
-            'limit' => 10,
-        ]);
-    }
-*/
-    //$articles = $this->Articles->getAllArticles();
-
-
     
 }

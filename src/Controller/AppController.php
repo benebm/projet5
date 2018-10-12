@@ -58,7 +58,6 @@ class AppController extends Controller
         ]);
         //fin auth
 
-
         // affichage du nom dans le header quand user connecté
         $username = $this->Auth->user("username");
         $this->set('username', $username); 
@@ -67,6 +66,11 @@ class AppController extends Controller
         $this->loadModel('Categories');
         $categories = $this->Categories->find('all');
         $this->set(compact('categories'));
+
+         // affiche de façon compacte les arrondissements pour le menu
+        $this->loadModel('Spots');
+        $districts = $this->Spots->getDistricts();
+        $this->set(compact('districts'));
 
         /*
          * Enable the following components for recommended CakePHP security settings.
@@ -89,17 +93,7 @@ class AppController extends Controller
         // autoriser consultation sans connexion
         public function beforeFilter(Event $event)
     {
-        $this->Auth->allow(['index', 'view', 'all', 'display', 'sort', 'filter', 'mapall', 'contact']);
+        $this->Auth->allow(['index', 'view', 'all', 'display', 'sortCat', 'sortDis', 'filter', 'mapall', 'contact']);
     }
-
-
-
-
-
-        
-
-
-
-
 
 }

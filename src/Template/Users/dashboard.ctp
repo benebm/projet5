@@ -71,7 +71,6 @@
 											
 											['action' => 'deleteReview', $review->id],
 											['class' => 'btn_3']
-											//['confirm' => __('Etes vous sûr de vouloir supprimer cet avis (#{0})?', $review->id)]
 										); ?>
 										
 									</div>

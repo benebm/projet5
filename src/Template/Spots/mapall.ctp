@@ -36,10 +36,10 @@
 <div id="map_filter">
 	<ul>
 		<?php foreach ($categories as $category): ?>
-			<li class="cat" data-index="<?= $category->id ?>">
-				<i class="<?= $category->icon ?>"></i>
-				<span><?= $category->title ?></span>
-			</li>
+			<li class="cat" data-index="<?= $category->id ?>"><?= $this->Html->link('<i class="' . $category->icon . '"></i>' . $category->title,
+													['action' => 'mapall', $category->id],
+													['escape' => false]); ?></li>
+
 		<?php endforeach; ?>
 	</ul>
 </div>

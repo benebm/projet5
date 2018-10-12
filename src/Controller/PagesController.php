@@ -19,7 +19,6 @@ use Cake\Network\Exception\ForbiddenException;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
 use App\Controller\AppController;
-use App\Form\ContactForm;
 
 /**
  * Static content controller
@@ -42,10 +41,6 @@ class PagesController extends AppController
      */
     public function display(...$path)
     {
-
-        // affiche le nom dans le header quand user connecté
-        $username = $this->Auth->user("username");
-        $this->set('username', $username); 
 
         $count = count($path);
         if (!$count) {

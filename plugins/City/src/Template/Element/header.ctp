@@ -41,10 +41,9 @@
                     <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu mobile</span></a>
                     <div class="main-menu">
                         <div id="header_menu">
-                            <?php echo $this->Html->image("logo_sticky.png", [
-                                "alt" => "Marseille Green", "data-retina" => "true",
-                                'url' => ['controller' => 'Spots', 'action' => 'index']
-                        ]); ?>
+
+                            <?= $this->Html->link($this->Url->image("logo_sticky.png", ["alt" => "Marseille Green", "data-retina" => "true"]), ['controller' => 'Spots','action' => 'index']); ?>">
+                            
                         </div>
                         <a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
                         <ul>
@@ -65,7 +64,17 @@
                                         <ul>
                                         <?php foreach ($categories as $category): ?>
                                             <li><?= $this->Html->link('<i class="' . $category->icon . '"></i>' . $category->title,
-                                                ['action' => 'sort', $category->id],
+                                                ['action' => 'sortCat', $category->id],
+                                                ['escape' => false]); ?>
+                                            </li>
+                                        <?php endforeach; ?>
+                                        </ul>
+                                    </li>
+                                    <li><a href="javascript:void(0);">Par arrondissement</a>
+                                        <ul>
+                                        <?php foreach ($districts as $district): ?>
+                                            <li><?= $this->Html->link($district->district,
+                                                ['action' => 'sortDis', $district->district],
                                                 ['escape' => false]); ?>
                                             </li>
                                         <?php endforeach; ?>

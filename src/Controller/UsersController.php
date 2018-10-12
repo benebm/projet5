@@ -25,6 +25,11 @@ class UsersController extends AppController
         $this->Auth->allow(['add', 'logout']);
     }
 
+    public function beforeRender(\Cake\Event\Event $event)
+    {
+        $this->viewBuilder()->setTheme('City');
+    }
+
     public function login()
     {
         if ($this->request->is('post')) {
@@ -60,7 +65,7 @@ class UsersController extends AppController
                 $this->getMailer('User')->send('welcome', [$user]);
                 return $this->redirect(['controller' => 'Users', 'action' => 'login']);
             }
-            $this->Flash->error(__('Impossible d\'ajouter l\'utilisateur.'));
+            $this->Flash->error(__('Impossible d\'ajouter l\'utilisateur. Réessayez :)'));
         }
         $this->set(compact('user'));
     }
@@ -74,9 +79,7 @@ class UsersController extends AppController
      */
     public function editUser($id = null)
     {
-
     	$userId = $this->Auth->user("id");
-
         $user = $this->Users->get($userId);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
@@ -97,9 +100,7 @@ public function dashboard()
         $useremail = $this->Auth->user("email");
         $this->set('useremail', $useremail); 
 
-    	$review = $this->Users->Reviews->find()
-    	->where(['Reviews.user_id' => $userId])
-        ->contain(['Spots']);
+    	$review = $this->Users->getUserReviews($userId);
         $this->set(compact('review'));
 	}
 
@@ -123,12 +124,11 @@ public function dashboard()
             if ($contact->execute($this->request->getData())) {
                 $this->Flash->success('Nous avons bien reçu votre message et reviendrons vers vous rapidement.');
             } else {
-                $this->Flash->error('Il y a eu un problème lors de la soumission de votre formulaire. Réessayez :)');
+                $this->Flash->error('Il y a eu un problème lors de l\'envoi de votre message. Réessayez :)');
             }
         }
         $this->set('contact', $contact);
     }
-
 
 	public function isAuthorized($user)
     {
@@ -145,11 +145,5 @@ public function dashboard()
         }
         return parent::isAuthorized($user);
     }        
-
-
-	public function beforeRender(\Cake\Event\Event $event)
-    {
-        $this->viewBuilder()->setTheme('City');
-    }
 
 }

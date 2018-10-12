@@ -26,13 +26,6 @@ spot_json.features.forEach(function(marker) {
   var el = document.createElement('div');
   el.className = 'marker';
   el.id = 'marker' + marker.properties.category ;
-  el.addEventListener('click', () => 
-    { 
-      var selectedid = el.id;
-      alert("marker" + selectedid + "clicked")
-      //marker.getElement();
-    }
-  ); 
 
   //crée le marqueur et l'ajoute à la map
   var marker = new mapboxgl.Marker(el)

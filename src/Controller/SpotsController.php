@@ -9,6 +9,9 @@ use Cake\Event\Event;
 use Cake\Http\Response;
 use Cake\Mailer\MailerAwareTrait;
 
+use Cake\Filesystem\Folder;
+use Cake\Filesystem\File;
+
 class SpotsController extends AppController
 {
 
@@ -32,10 +35,6 @@ class SpotsController extends AppController
         $avgratings = $reviews->select(['moyenne' => $reviews->func()->avg('rating'), 'spot_slug'])
         ->group('spot_slug');
         $this->set(compact('avgratings'));
-
-        // affiche de façon compacte les arrondissements (menu)
-        $districts = $this->Spots->getDistricts();
-        $this->set(compact('districts'));
     }
 
     public function beforeRender(\Cake\Event\Event $event)
@@ -115,7 +114,7 @@ class SpotsController extends AppController
         $this->set(compact('mapspots'));  
     }
 
-    public function sort($id = null)
+    public function sortCat($id = null)
     {
         $spots = $this->Spots->sortbyCategory($id);
         $this->set(compact('spots', $this->paginate($spots))); 
@@ -128,6 +127,20 @@ class SpotsController extends AppController
         $this->set('id', $id);
         $this->set('breadcrumb', $breadcrumb);
  
+        // on utilise la view all
+        $this->render('all');
+    }
+
+    public function sortDis($district = null)
+    {
+        $spots = $this->Spots->sortbyDistrict($district);
+        $this->set(compact('spots', $this->paginate($spots)));
+        $this->set('district', $district);
+
+        //query spéciale pour la map (sans pagination)
+        $mapspots = $this->Spots->sortbyDistrict($district);
+        $this->set(compact('mapspots')); 
+
         // on utilise la view all
         $this->render('all');
     }
@@ -150,12 +163,21 @@ class SpotsController extends AppController
         $this->render('all');
     }
 
-        public function mapall()
+        public function mapall($id)
     {
         $this->viewBuilder()->setLayout('fullmap');
 
-        $spots = $this->Spots->getAllSpots();
-        $this->set(compact('spots'));
+        if (isset($id))
+        {
+        	$spots = $this->Spots->sortbyCategory($id);
+        	$this->set(compact('spots'));  
+        }
+        else 
+        {
+        	$spots = $this->Spots->getAllSpots();
+        	$this->set(compact('spots'));
+        }
+
     }
 
     public function isAuthorized($user)
@@ -164,13 +186,7 @@ class SpotsController extends AppController
         if ($this->request->getParam('action') === 'addReview') {
             return true;
         }
-        // Le propriétaire d'une review peut l'éditer et la supprimer
-        /*if (in_array($this->request->getParam('action'), ['edit', 'delete'])) {
-            $reviewId = (int)$this->request->getParam('pass.0');
-            if ($this->Spots->Reviews->isOwnedBy($reviewId, $user['id'])) {
-                return true;
-            }
-        }*/
+    
         return parent::isAuthorized($user);
     }
 

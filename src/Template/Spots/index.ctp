@@ -10,13 +10,11 @@
                     <div class="tour_container">
 
                         <div class="<?= $spot->banner_type ?>"><span><?= $spot->banner ?></span></div>
-                        <!--<div class="ribbon_3"><span>Top rated</span></div>-->
 
                         <div class="img_container">
                             <a href="#">
 
                                 <?php echo $this->Html->image($spot->image, ['alt' => 'Image'], ['class' => 'img-responsive']); ?>
-                                <!--<img src="img/tour_box_1.jpg" class="img-responsive" alt="Image">-->
 
                                 <div class="<?= $spot->badge_type ?>"><?= $spot->badge ?></div>
 

@@ -23,10 +23,17 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
     
     <!-- Google web fonts -->
     <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Lato:300,400|Montserrat:400,400i,700,700i" rel="stylesheet">
+    <!--<link href="http://fonts.googleapis.com/css?family=Raleway%3A800%2C500%2C400" rel="stylesheet" property="stylesheet" type="text/css" media="all" />-->
 
     <!-- CSS -->
     <!--<link href="css/base.css" rel="stylesheet">-->
     <?php echo $this->Html->css('base.css'); ?>
+
+    <!-- rev css -->
+    <?php echo $this->Html->css('pe-icon-7-stroke.css'); ?>
+    <?php echo $this->Html->css('font-awesome.css'); ?>
+    <?php echo $this->Html->css('settings.css'); ?>
+    <?php echo $this->Html->css('additionalrevstyle.css'); ?>
 
      <?php echo $this->fetch('css'); ?>
     
@@ -61,9 +68,8 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
     <?= $this->element('header') ?>
     </header><!-- End Header -->
     
-    <?=  $this->element('hero/homehero'); ?>  
-
     <main>
+        <?= $this->element('slider'); ?>
 
     	<?= $this->fetch('content') ?>
         <!-- End container -->
@@ -96,6 +102,21 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
 <?php echo $this->Html->script('jquery-2.2.4.min.js'); ?>
 <?php echo $this->Html->script('common_scripts_min.js'); ?>
 <?php echo $this->Html->script('functions.js'); ?>
+
+
+<!--rev js -->
+<?php echo $this->Html->script('jquery.themepunch.tools.min.js'); ?>
+<?php echo $this->Html->script('jquery.themepunch.revolution.min.js'); ?>
+
+<?php echo $this->Html->script('extensions/revolution.extension.actions.min.js'); ?>
+<?php echo $this->Html->script('extensions/revolution.extension.carousel.min.js'); ?>
+<?php echo $this->Html->script('extensions/revolution.extension.kenburn.min.js'); ?>
+<?php echo $this->Html->script('extensions/revolution.extension.layeranimation.min.js'); ?>
+<?php echo $this->Html->script('extensions/revolution.extension.migration.min.js'); ?>
+<?php echo $this->Html->script('extensions/revolution.extension.navigation.min.js'); ?>
+<?php echo $this->Html->script('extensions/revolution.extension.parallax.min.js'); ?>
+<?php echo $this->Html->script('extensions/revolution.extension.slideanims.min.js'); ?>
+<?php echo $this->Html->script('extensions/revolution.extension.video.min.js'); ?>
 
 
 <?php echo $this->fetch('script'); ?>

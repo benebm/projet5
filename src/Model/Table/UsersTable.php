@@ -94,10 +94,13 @@ class UsersTable extends Table
         return $rules;
     }
 
-
-    
-
-
+    // retourne les reviews du user authentifié
+    public function getUserReviews($userId)
+    {
+        return $this->Reviews->find()
+        ->where(['Reviews.user_id' => $userId])
+        ->contain(['Spots']);
+    }
 
 
 }

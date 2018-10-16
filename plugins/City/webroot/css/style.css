@@ -1210,7 +1210,7 @@ ul#cat_nav i {
   background-image: url('../img/pins/walking.png');
 }
 
-#markertest {
+#marker6 {
   background-image: url('../img/pins/skyline.png');
 }
 
@@ -2181,7 +2181,8 @@ ul#contact-info {
 }
 
 #login {
-	margin: 170px 0 60px;
+	/* custom : new margin values */
+	margin: 130px 0 200px;
 	color: #333;
 	text-align: left;
 	background-color: #fff;

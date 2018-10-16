@@ -102,13 +102,13 @@
             </div>
             <div class="col-md-6 col-sm-6">
                 <h3>Participer à la communauté <span>Marseille Green</span></h3>
-                <p>Pour garantir une expérience de qualité chez nos partenaires et agrandir notre réseau en proposant les meilleurs plans écolo de Marseille, nous avons besoin de vous !</p>
+                <p>Pour garantir une expérience de qualité chez nos partenaires et agrandir notre réseau en proposant <strong>les meilleurs plans écolo de Marseille</strong>, nous avons besoin de vous !</p>
                 <ul class="list_order">
-                    <li><span>1</span>Trouvez les lieux qui vous intéressent dans notre liste de spots 100% nature</li>
-                    <li><span>2</span>Testez-les !</li>
-                    <li><span>3</span>Donnez votre avis et notez votre expérience pour</li>
+                    <li><span>1</span>Choisissez vos commerces préférés dans notre liste 100% nature</li>
+                    <li><span>2</span>Testez !</li>
+                    <li><span>3</span>Donnez votre avis et notez votre expérience</li>
                 </ul>
-                <a href="all_tour_list.html" class="btn_1">C'est parti</a>
+                <?= $this->Html->link('C\'est parti', ['action' => 'all'], ['class' => 'btn_1']) ?>
             </div>
         </div>
         <!-- End row -->

@@ -51,8 +51,11 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->connect('/', ['controller' => 'Spots', 'action' => 'index']);
 
-    //redirection du logo vers la home
+    //redirection du logo vers la home quelle que soit la page d'origine
     $routes->connect('/index.html', ['controller' => 'Spots', 'action' => 'index']);
+    $routes->connect('/spots/index.html', ['controller' => 'Spots', 'action' => 'index']);
+    $routes->connect('/users/index.html', ['controller' => 'Spots', 'action' => 'index']);
+    $routes->connect('/pages/index.html', ['controller' => 'Spots', 'action' => 'index']);
 
     /**
      * ...and connect the rest of 'Pages' controller's URLs.

@@ -1,5 +1,5 @@
         <div class="container margin_60">
-            <div class="main_title">
+            <div class="main_title" id="nostops">
                 <h2>Nos <span>Green</span> Tops du moment</h2>
                 <p>Nos meilleures adresses éco-friendly, bio ou zéro déchet à Marseille.</p>
             </div>
@@ -14,7 +14,7 @@
                         <div class="img_container">
                             <a href="#">
 
-                                <?php echo $this->Html->image($spot->image, ['alt' => 'Image'], ['class' => 'img-responsive']); ?>
+                                <?php echo $this->Html->image($spot->image, ['alt' => 'Image', 'class' => 'img-responsive']); ?>
 
                                 <div class="<?= $spot->badge_type ?>"><?= $spot->badge ?></div>
 

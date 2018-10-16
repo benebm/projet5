@@ -53,7 +53,7 @@
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
 
-			style="z-index: 6; white-space: nowrap; font-size: 16px; font-weight: 400;font-family:Montserrat;">LE GUIDE DES SPOTS BIO / ECOLO / ZERO DECHET A MARSEILLE </div>
+			style="z-index: 6; white-space: nowrap; font-size: 20px; font-weight: 400;font-family:Montserrat;">LE GUIDE DES SPOTS BIO / ECOLO / ZERO DECHET A MARSEILLE </div>
 
 		<!-- LAYER NR. 3 -->
 		<div class="tp-caption NotGeneric-Icon   tp-resizeme" 
@@ -74,7 +74,7 @@
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
 
-			style="z-index: 7; white-space: nowrap;text-transform:left;cursor:default;"><i class="pe-7s-compass"></i> </div>
+			style="z-index: 7; white-space: nowrap;text-transform:left;cursor:default;"><i class="icon-leaf-1"></i> </div>
 
 		<!-- LAYER NR. 4 -->
 		<div class="tp-caption NotGeneric-Button rev-btn " 
@@ -96,7 +96,7 @@
 			data-paddingbottom="[10,10,10,10]"
 			data-paddingleft="[30,30,30,30]"
 
-			style="z-index: 8; white-space: nowrap; font-weight: 400;font-family:Montserrat;border-color:rgba(255,255,255,0.50);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">QU'EST-CE QUE C'EST ? </div>
+			style="z-index: 8; white-space: nowrap; font-weight: 400;font-family:Montserrat;border-color:rgba(255,255,255,0.50);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">J'y vais </div>
 
 		<!-- LAYER NR. 5 -->
 		<div class="tp-caption rev-scroll-btn " 
@@ -124,6 +124,8 @@
 				</span>							
 			</div>
 		</li>
+
+		
 		<!-- SLIDE  -->
 		<li data-index="rs-3005" data-transition="fadetotopfadefrombottom" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="1500"  data-thumb="<?= $this->Url->image('slider/notgeneric_bg5-100x50.jpg') ?>"  data-rotate="0"  data-saveperformance="off"  data-title="Chill" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 			<!-- MAIN IMAGE -->
@@ -151,7 +153,7 @@
 			data-paddingbottom="[10,10,10,10]"
 			data-paddingleft="[0,0,0,0]"
 
-			style="z-index: 10; white-space: nowrap;text-transform:left;">Move Yo Mouse </div>
+			style="z-index: 10; white-space: nowrap; text-transform:left; font-size: 50px; line-height: 46px; font-weight: 700;font-family:Montserrat;">Un mode de vie plus sain</div>
 
 			<!-- LAYER NR. 7 -->
 			<div class="tp-caption NotGeneric-SubTitle   tp-resizeme rs-parallaxlevel-2" 
@@ -172,8 +174,7 @@
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
 
-			style="z-index: 11; white-space: nowrap;text-transform:left;">REVOLUTION SLIDER TEMPLATE <br />
-																		  REVOLUTION SLIDER TEMPLATE <br /></div>
+			style="z-index: 11; white-space: nowrap; text-transform:left; font-size: 20px; font-weight: 400;font-family:Montserrat;">TOUS LES SERVICES DE VOTRE QUOTIDIEN, DANS LE RESPECT DE L'ENVIRONNEMENT</div>
 
 			<!-- LAYER NR. 8 -->
 			<div class="tp-caption NotGeneric-Icon   tp-resizeme rs-parallaxlevel-1" 
@@ -194,7 +195,7 @@
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
 
-			style="z-index: 12; white-space: nowrap;text-transform:left;cursor:default;"><i class="pe-7s-mouse"></i> </div>
+			style="z-index: 12; white-space: nowrap;text-transform:left;cursor:default;"><i class="icon-spin3"></i> </div>
 
 			<!-- LAYER NR. 9 -->
 			<div class="tp-caption NotGeneric-Button rev-btn " 
@@ -216,7 +217,7 @@
 			data-paddingbottom="[10,10,10,10]"
 			data-paddingleft="[30,30,30,30]"
 
-			style="z-index: 13; white-space: nowrap;text-transform:left;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">NEXT GOODIE </div>
+			style="z-index: 13; white-space: nowrap;text-transform:left;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Comment ça marche ? </div>
 
 			<!-- LAYER NR. 10 -->
 			<div class="tp-caption rev-scroll-btn " 
@@ -332,6 +333,8 @@
 		style="z-index: 18;text-transform:left;border-width:0px;">
 		<div class="rs-looped rs-wave"  data-speed="4" data-angle="0" data-radius="10" data-origin="50% 50%"><img src="<?= $this->Url->image('slider/blurflake1.png') ?>" alt="" data-ww="['120px','120px','120px','120px']" data-hh="['120px','120px','120px','120px']" width="120" height="120" data-no-retina> </div></div>
 	</li>
+
+
 	<!-- SLIDE  -->
 	<li data-index="rs-3006" data-transition="zoomin" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="<?= $this->Url->image('slider/notgeneric_bg2-100x50.jpg') ?>"  data-rotate="0"  data-saveperformance="off"  data-title="Enjoy Nature" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 		<!-- MAIN IMAGE -->
@@ -359,7 +362,7 @@
 		data-paddingbottom="[10,10,10,10]"
 		data-paddingleft="[0,0,0,0]"
 
-		style="z-index: 19; white-space: nowrap;text-transform:left;">Smooth Ken Burns </div>
+		style="z-index: 19; white-space: nowrap;text-transform:left; font-size: 40px; line-height: 46px; font-weight: 700;font-family:Montserrat;">Les commerces bio près de chez vous </div>
 
 		<!-- LAYER NR. 16 -->
 		<div class="tp-caption NotGeneric-SubTitle   tp-resizeme" 
@@ -380,7 +383,7 @@
 		data-paddingbottom="[0,0,0,0]"
 		data-paddingleft="[0,0,0,0]"
 
-		style="z-index: 20; white-space: nowrap;text-transform:left;">REVOLUTION SLIDER TEMPLATE </div>
+		style="z-index: 20; white-space: nowrap;text-transform:left;font-size: 20px; font-weight: 400;font-family:Montserrat;">CLASSES PAR CATEGORIE ET ARRONDISSEMENT, AVEC LEURS AVIS </div>
 
 		<!-- LAYER NR. 17 -->
 		<div class="tp-caption NotGeneric-Icon   tp-resizeme" 
@@ -423,7 +426,7 @@
 		data-paddingbottom="[10,10,10,10]"
 		data-paddingleft="[30,30,30,30]"
 
-		style="z-index: 22; white-space: nowrap;text-transform:left;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">NEXT GOODIE </div>
+		style="z-index: 22; white-space: nowrap;text-transform:left;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Voir la sélection </div>
 
 		<!-- LAYER NR. 19 -->
 		<div class="tp-caption rev-scroll-btn " 
@@ -451,165 +454,12 @@
 		</span>							
 	</div>
 </li>
-<!-- SLIDE  -->
-<li data-index="rs-3007" data-transition="zoomout" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="assets/images/iceberg-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Iceberg" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-	<!-- MAIN IMAGE -->
-	<img src="<?= $this->Url->image('slider/iceberg.jpg') ?>"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-	<!-- LAYERS -->
 
-	<!-- BACKGROUND VIDEO LAYER -->
-	<div class="rs-background-video-layer" 
-	data-forcerewind="on" 
-	data-volume="mute" 
-	data-videowidth="100%" 
-	data-videoheight="100%" 
-	data-videomp4="<?= $this->Html->media(['iceberg.mp4', ['src' => 'iceberg.mp4', 'type' => "video/mp4"]],['tag' => 'video', 'autoplay']); ?>" 
-	data-videopreload="auto" 
-	data-videoloop="loopandnoslidestop" 
-	data-forceCover="1" 
-	data-aspectratio="16:9" 
-	data-autoplay="true" 
-	data-autoplayonlyfirsttime="false" 
-	></div>
-	<!-- LAYER NR. 20 -->
-	<div class="tp-caption tp-shape tp-shapewrapper  " 
-	id="slide-3007-layer-10" 
-	data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-	data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
-	data-width="full"
-	data-height="full"
-	data-whitespace="nowrap"
 
-	data-type="shape" 
-	data-basealign="slide" 
-	data-responsive_offset="on" 
-	data-responsive="off"
-	data-frames='[{"from":"opacity:0;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"Power2.easeInOut"}]'
-	data-textAlign="['left','left','left','left']"
-	data-paddingtop="[0,0,0,0]"
-	data-paddingright="[0,0,0,0]"
-	data-paddingbottom="[0,0,0,0]"
-	data-paddingleft="[0,0,0,0]"
-
-	style="z-index: 24;text-transform:left;background-color:rgba(0, 0, 0, 0.25);border-color:rgba(0, 0, 0, 0);border-width:0px;"> </div>
-
-	<!-- LAYER NR. 21 -->
-	<div class="tp-caption NotGeneric-Title   tp-resizeme" 
-	id="slide-3007-layer-1" 
-	data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-	data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
-	data-fontsize="['70','70','70','45']"
-	data-lineheight="['70','70','70','50']"
-	data-width="none"
-	data-height="none"
-	data-whitespace="nowrap"
-
-	data-type="text" 
-	data-responsive_offset="on" 
-
-	data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":1500,"to":"o:1;","delay":1000,"split":"chars","splitdelay":0.05,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
-	data-textAlign="['left','left','left','left']"
-	data-paddingtop="[10,10,10,10]"
-	data-paddingright="[0,0,0,0]"
-	data-paddingbottom="[10,10,10,10]"
-	data-paddingleft="[0,0,0,0]"
-
-	style="z-index: 25; white-space: nowrap;text-transform:left;">Stay Cool Mate </div>
-
-	<!-- LAYER NR. 22 -->
-	<div class="tp-caption NotGeneric-SubTitle   tp-resizeme" 
-	id="slide-3007-layer-4" 
-	data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-	data-y="['middle','middle','middle','middle']" data-voffset="['52','52','52','51']" 
-	data-width="none"
-	data-height="none"
-	data-whitespace="nowrap"
-
-	data-type="text" 
-	data-responsive_offset="on" 
-
-	data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
-	data-textAlign="['left','left','left','left']"
-	data-paddingtop="[0,0,0,0]"
-	data-paddingright="[0,0,0,0]"
-	data-paddingbottom="[0,0,0,0]"
-	data-paddingleft="[0,0,0,0]"
-
-	style="z-index: 26; white-space: nowrap;text-transform:left;">REVOLUTION SLIDER TEMPLATE </div>
-
-	<!-- LAYER NR. 23 -->
-	<div class="tp-caption NotGeneric-Icon   tp-resizeme" 
-	id="slide-3007-layer-8" 
-	data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-	data-y="['middle','middle','middle','middle']" data-voffset="['-68','-68','-68','-68']" 
-	data-width="none"
-	data-height="none"
-	data-whitespace="nowrap"
-
-	data-type="text" 
-	data-responsive_offset="on" 
-
-	data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
-	data-textAlign="['left','left','left','left']"
-	data-paddingtop="[0,0,0,0]"
-	data-paddingright="[0,0,0,0]"
-	data-paddingbottom="[0,0,0,0]"
-	data-paddingleft="[0,0,0,0]"
-
-	style="z-index: 27; white-space: nowrap;text-transform:left;cursor:default;"><i class="pe-7s-anchor"></i> </div>
-
-	<!-- LAYER NR. 24 -->
-	<div class="tp-caption NotGeneric-Button rev-btn " 
-	id="slide-3007-layer-7" 
-	data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-	data-y="['middle','middle','middle','middle']" data-voffset="['124','124','124','123']" 
-	data-width="none"
-	data-height="none"
-	data-whitespace="nowrap"
-
-	data-type="button" 
-	data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":""}]'
-	data-responsive_offset="on" 
-	data-responsive="off"
-	data-frames='[{"from":"y:50px;opacity:0;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[175%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'
-	data-textAlign="['left','left','left','left']"
-	data-paddingtop="[10,10,10,10]"
-	data-paddingright="[30,30,30,30]"
-	data-paddingbottom="[10,10,10,10]"
-	data-paddingleft="[30,30,30,30]"
-
-	style="z-index: 28; white-space: nowrap;text-transform:left;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">NEXT GOODIE </div>
-
-	<!-- LAYER NR. 25 -->
-	<div class="tp-caption rev-scroll-btn " 
-	id="slide-3007-layer-9" 
-	data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-	data-y="['bottom','bottom','bottom','bottom']" data-voffset="['50','50','50','50']" 
-	data-width="35"
-	data-height="55"
-	data-whitespace="nowrap"
-
-	data-type="button" 
-	data-actions='[{"event":"click","action":"scrollbelow","offset":"0px","delay":""}]'
-	data-basealign="slide" 
-	data-responsive_offset="off" 
-	data-responsive="off"
-	data-frames='[{"from":"y:50px;opacity:0;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"y:50px;opacity:0;","ease":"nothing"}]'
-	data-textAlign="['left','left','left','left']"
-	data-paddingtop="[0,0,0,0]"
-	data-paddingright="[0,0,0,0]"
-	data-paddingbottom="[0,0,0,0]"
-	data-paddingleft="[0,0,0,0]"
-
-	style="z-index: 29; min-width: 35px; max-width: 35px; max-width: 55px; max-width: 55px; white-space: nowrap; font-size: px; line-height: px; font-weight: 100;text-transform:left;border-color:rgba(255, 255, 255, 0.50);border-style:solid;border-width:1px;border-radius:23px 23px 23px 23px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">							
-	<span>
-	</span>							
-</div>
-</li>
 <!-- SLIDE  -->
 <li data-index="rs-3008" data-transition="zoomin" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="<?= $this->Url->image('slider/notgeneric_bg3-100x50.jpg') ?>"  data-rotate="0"  data-saveperformance="off"  data-title="Hiking" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 	<!-- MAIN IMAGE -->
-	<img src="<?= $this->Url->image('slider/notgeneric_bg3.jpg') ?>"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+	<img src="<?= $this->Url->image('slider/notgeneric_bg8.jpg') ?>"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 	<!-- LAYERS -->
 
 	<!-- LAYER NR. 26 -->
@@ -633,7 +483,7 @@
 	data-paddingbottom="[10,10,10,10]"
 	data-paddingleft="[0,0,0,0]"
 
-	style="z-index: 30; white-space: nowrap;text-transform:left;">Want this too? </div>
+	style="z-index: 24; white-space: nowrap;text-transform:left;font-size: 50px; line-height: 46px; font-weight: 700;font-family:Montserrat;">Prêt à consommer mieux ? </div>
 
 	<!-- LAYER NR. 27 -->
 	<div class="tp-caption NotGeneric-SubTitle   tp-resizeme" 
@@ -654,7 +504,7 @@
 	data-paddingbottom="[0,0,0,0]"
 	data-paddingleft="[0,0,0,0]"
 
-	style="z-index: 31; white-space: nowrap;text-transform:left;">GET SLIDER REVOLUTION TODAY </div>
+	style="z-index: 25; white-space: nowrap;text-transform:left;font-size: 20px; font-weight: 400;font-family:Montserrat;">COMMENCEZ PAR JETER UN OEIL A NOTRE TOP DU MOMENT </div>
 
 	<!-- LAYER NR. 28 -->
 	<div class="tp-caption NotGeneric-Icon   tp-resizeme" 
@@ -675,7 +525,7 @@
 	data-paddingbottom="[0,0,0,0]"
 	data-paddingleft="[0,0,0,0]"
 
-	style="z-index: 32; white-space: nowrap;text-transform:left;cursor:default;"><i class="pe-7s-diamond"></i> </div>
+	style="z-index: 26; white-space: nowrap;text-transform:left;cursor:default;"><i class="pe-7s-diamond"></i> </div>
 
 	<!-- LAYER NR. 29 -->
 	<div class="tp-caption rev-scroll-btn " 
@@ -698,14 +548,14 @@
 	data-paddingbottom="[0,0,0,0]"
 	data-paddingleft="[0,0,0,0]"
 
-	style="z-index: 33; min-width: 35px; max-width: 35px; max-width: 55px; max-width: 55px; white-space: nowrap; font-size: px; line-height: px; font-weight: 100;text-transform:left;border-color:rgba(255, 255, 255, 0.50);border-style:solid;border-width:1px;border-radius:23px 23px 23px 23px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">							
+	style="z-index: 27; min-width: 35px; max-width: 35px; max-width: 55px; max-width: 55px; white-space: nowrap; font-size: px; line-height: px; font-weight: 100;text-transform:left;border-color:rgba(255, 255, 255, 0.50);border-style:solid;border-width:1px;border-radius:23px 23px 23px 23px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">							
 	<span>
 	</span>							
 </div>
 
 <!-- LAYER NR. 30 -->
 <a class="tp-caption NotGeneric-Button rev-btn " 
-href="http://codecanyon.net/item/slider-revolution-responsive-wordpress-plugin/2751380?ref=themepunch" target="_blank"			 id="slide-3008-layer-10" 
+href="#nostops" id="slide-3008-layer-10" 
 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
 data-y="['middle','middle','middle','middle']" data-voffset="['124','125','124','104']" 
 data-width="none"
@@ -723,7 +573,7 @@ data-paddingright="[30,30,30,30]"
 data-paddingbottom="[10,10,10,10]"
 data-paddingleft="[30,30,30,30]"
 
-style="z-index: 34; white-space: nowrap;text-transform:left;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">BUY ON ENVATO </a>
+style="z-index: 28; white-space: nowrap;text-transform:left;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">C'est parti ! </a>
 </li>
 </ul>
 <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	

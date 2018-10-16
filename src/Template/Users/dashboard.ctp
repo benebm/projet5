@@ -4,7 +4,7 @@
 <div id="position">
 			<div class="container">
 				<ul>
-					<li><a href="#">Accueil</a>
+					<li><a href="<?= $this->Url->build(['controller' => 'Spots','action' => 'index']); ?>">Accueil</a>
 					</li>
 					<li>Espace utilisateur</li>
 				</ul>

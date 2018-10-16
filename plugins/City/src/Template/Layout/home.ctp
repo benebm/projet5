@@ -34,6 +34,7 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
     <?php echo $this->Html->css('font-awesome.css'); ?>
     <?php echo $this->Html->css('settings.css'); ?>
     <?php echo $this->Html->css('additionalrevstyle.css'); ?>
+    <?php echo $this->Html->css('uranus.css'); ?>
 
      <?php echo $this->fetch('css'); ?>
     

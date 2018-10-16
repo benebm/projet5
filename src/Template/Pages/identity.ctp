@@ -4,11 +4,10 @@
 		<div id="position">
 			<div class="container">
 				<ul>
-					<li><a href="#">Home</a>
+					<li><a href="<?= $this->Url->build(['controller' => 'Spots','action' => 'index']); ?>">Accueil</a>
 					</li>
-					<li><a href="#">Category</a>
+					<li>Qui sommes-nous ?
 					</li>
-					<li>Page active</li>
 				</ul>
 			</div>
 		</div>
@@ -73,12 +72,10 @@
 				</div>
 				<div class="col-md-6 nopadding">
 					<div class="features-content">
-						<h3>"Ex vero mediocrem"</h3>
+						<h3>Plus verte la vie !</h3>
+						<p>Changer Marseille, cela ne se fera pas en un jour. Mais nous croyons vraiment que nos actions peuvent avoir un impact sur notre ville et que notre futur se joue aujourd'hui, dans nos habitudes de consommation quotidiennes. <br /><strong>C'est pourquoi Marseille Green s'engage auprès des commerces locaux qui prennent part à la lutte contre le réchauffement climatique</strong> et soutient leur action en leur apportant de la visibilité. <br /><br />Changer, c'est possible. Il suffit de le décider ! </p>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-						</p>
-						<p>
-							<a href="#" class=" btn_1 white">Read more</a>
+							<?= $this->Html->link('En savoir plus', ['controller' => 'Pages', 'action' => 'concept'], ['class' => 'btn_1 white']) ?>
 						</p>
 					</div>
 				</div>

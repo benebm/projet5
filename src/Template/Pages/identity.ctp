@@ -16,52 +16,15 @@
 		<div class="margin_60 container">
 			<div id="tour_guide">
 				<p>
-					<img src="<?= $this->Url->image('tourist_guide_pic.jpg') ?>" alt="Image" class="img-circle styled">
+					<img src="<?= $this->Url->image('identity.jpg') ?>" alt="L'équipe Green Marseille" class="img-circle styled">
 				</p>
-				<h2>Madlene - Certified tourist guide</h2>
+				<h2>L'équipe Green Marseille</h2>
 				<p class="lead add_bottom_30">
-					"Eu tota moderatius usu, ad putant aliquando constituam ius, <strong>commodo sententiae</strong> suscipiantur nam eu. Tamquam nominati abhorreant at vis, has id harum melius petentium. Mea wisi debet omnium ne, est ea graecis noluisse recusabo, denique deterruisset ius et."
+					"Notre objectif ? Contribuer à faire évoluer les comportements de tous les marseillais, pour qu'un jour, la notoriété de notre ville repose aussi sur le développement responsable et l'engagement écocitoyen de ses habitants. Parce qu'ici peut-être plus qu'ailleurs, <strong>on aime notre ville</strong> et la qualité de vie qu'elle nous offre et on a envie de <strong>protéger son patrimoine naturel unique, inestimable mais fragile</strong>"
 				</p>
 			</div>
-			<div class="row">
-				<div class="col-md-8">
-					<h3>Some words about me</h3>
-					<p>
-						Lorem ipsum dolor sit amet, ex justo nominavi eum, cu veniam salutatus reprimique quo, nisl virtute meliore ei eos. Quaestio consequat sed no, urbanitas honestatis ei usu. Ex nec aliquid appetere petentium, ei eum soleat possim. Has ea omnes prompta. Vel te magna voluptaria, cu nec fabulas voluptatum, has et dictas quaeque labores. Qui ex mazim sadipscing.
-					</p>
-					<h5>Education</h5>
-					<p>
-						Lorem ipsum dolor sit amet, ex justo nominavi eum, cu veniam salutatus reprimique quo, nisl virtute meliore ei eos. Quaestio consequat sed no, urbanitas honestatis ei usu. Ex nec aliquid appetere petentium, ei eum soleat possim. Has ea omnes prompta. Vel te magna voluptaria, cu nec fabulas voluptatum, has et dictas quaeque labores. Qui ex mazim sadipscing.
-					</p>
-					<h5>Past experiences</h5>
-					<p>
-						Lorem ipsum dolor sit amet, ex justo nominavi eum, cu veniam salutatus reprimique quo, nisl virtute meliore ei eos. Quaestio consequat sed no, urbanitas honestatis ei usu. Ex nec aliquid appetere petentium, ei eum soleat possim. Has ea omnes prompta. Vel te magna voluptaria, cu nec fabulas voluptatum, has et dictas quaeque labores. Qui ex mazim sadipscing.
-					</p>
-				</div>
-				<div class="col-md-4">
-					<h3>Spoken languages</h3>
-					<p>
-						Eu tota moderatius usu, ad putant aliquando constituam ius, commodo sententiae suscipiantur nam eu.
-					</p>
-					<p>
-						<img src="img/lang_en.png" width="40" height="26" alt="Image" data-retina="true"> <img src="img/lang_fr.png" width="40" height="26" alt="Image" data-retina="true">
-						<img src="img/lang_de.png" width="40" height="26" alt="Image" data-retina="true"> <img src="img/lang_es.png" width="40" height="26" alt="Image" data-retina="true">
-					</p>
-					<h3><i class=""></i>Certificates</h3>
-					<p>
-						Eu tota moderatius usu, ad putant aliquando constituam ius, commodo sententiae suscipiantur nam eu.
-					</p>
-					<ul class="list_ok">
-						<li>Putant aliquando constituam</li>
-						<li>Commodo sententiae</li>
-						<li>Denique deterruisset</li>
-						<li>Putant aliquando constituam</li>
-					</ul>
-				</div>
-			</div>
-			<!-- end row -->
 		</div>
-		<!-- end container -->
+
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-6 nopadding features-intro-img">
@@ -81,5 +44,84 @@
 				</div>
 			</div>
 		</div>
+		<div class="container margin_60">
+			<div class="main_title">
+				<h2>Nos <span>inspirations</span></h2>
+				<p>
+					Il existe déjà de nombreuses initiatives à Marseille ! Un petit aperçu de nos personnalités/associations coup de coeur. <br/>
+				</p>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="review_strip">
+						<img src="img/avatar1.jpg" alt="Image" class="img-circle">
+						<h4>Edmund Platt, notre superhéros des déchets</h4>
+						<p>
+							Avec sa page Facebook <strong>1 Déchet Par Jour / 1 Piece of Rubbish</strong>, ce marseillais d'origine anglaise combat avec une inlassable énergie les forces d'un mal qui ronge Marseille depuis des années : celui des déchets qui encombrent et salissent l'image de la ville. Ses initiatives et ses vidéos sont suivies quotidiennement par presque 20000 personnes !
+						</p>
+						<p>
+						<?= $this->Html->link('Suivre', "https://www.facebook.com/1PieceOfRubbish/", ['class' => 'btn_1 identity', "target" => "_blank"]) ?>	
+						</p>
+					</div>
+					<!-- End review strip -->
+				</div>
+
+				<div class="col-md-6">
+					<div class="review_strip">
+						<img src="img/avatar2.jpg" alt="Image" class="img-circle">
+						<h4>Alternatiba Marseille, le changement en action</h4>
+						<p>
+							<strong>"Changeons le système, pas le climat"</strong> est le projet prometteur de cette association militante, qui porte des alternatives capables de limiter le changement climatique à tous les niveaux de la société. En 2018, le tour Alternatiba, avec ses 5800 km parcourus, est parti à la rencontre de plus de 50 porteurs d'alternative marseillais pour échanger sur des projets concrets autour du climat.
+						</p>
+						<p>
+						<?= $this->Html->link('Suivre', "https://www.facebook.com/alternatiba.marseille/", ['class' => 'btn_1 identity', "target" => "_blank"]) ?>	
+						</p>
+					</div>
+					<!-- End review strip -->
+				</div>
+			</div>
+			<!-- End row -->
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="review_strip">
+						<img src="img/avatar3.jpg" alt="Image" class="img-circle">
+						<h4>Vélos en ville, pour le développement du cyclisme à Marseille</h4>
+						<p>
+							Parmi de nombreux projets, l'association milite pour <strong>étendre l'aménagement de voies cyclables sur l'espace urbain marseillais</strong> et faire entendre la voix des cyclistes dans une ville où les embouteillages et la pollution automobile sont un fléau connu.
+						</p>
+						<p>
+						<?= $this->Html->link('Suivre', "https://www.facebook.com/VelosEnVille/", ['class' => 'btn_1 identity', "target" => "_blank"]) ?>	
+						</p>
+					</div>
+					<!-- End review strip -->
+				</div>
+
+				<div class="col-md-6">
+					<div class="review_strip">
+						<img src="img/avatar1.jpg" alt="Image" class="img-circle">
+						<h4>Marseille Vert, le premier web magazine marseillais 100% écolo</h4>
+						<p>
+							Marseille Vert est un média qui fonctionne avec des <strong>entreprises partenaires dites "coccinelles"</strong> qui s'engagent pour la planète. Sur le site on trouve les actualités vertes de ces entreprises ainsi que tout ce qu’il se passe d’écolo, de beau, de bon et de bio en général sur la planète.
+						</p>
+						<p>
+						<?= $this->Html->link('Suivre', "https://www.facebook.com/marseillevert/", ['class' => 'btn_1 identity', "target" => "_blank"]) ?>	
+						</p>
+					</div>
+					<!-- End review strip -->
+				</div>
+			</div>
+			<!-- End row -->
+		</div>
+		<!-- End container -->
 	</main>
 	<!-- End main -->
+
+
+
+
+
+
+
+		

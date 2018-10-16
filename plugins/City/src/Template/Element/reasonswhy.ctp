@@ -4,7 +4,7 @@
         <div class="main_title">
             <h2>Les types de spot sélectionnés par <span>Green</span></h2>
             <p>
-                Marseille Green vous aide à trouver tous les services de la vie quotidienne, mais en version bio/écolo.
+                Marseille Green vous aide à trouver tous les services de la vie quotidienne, version bio/écolo.
             </p>
         </div>
 
@@ -37,7 +37,7 @@
         <div>
             <h3>Vivre Marseille, autrement</h3>
             <p>
-                Les clichés sur la ville de Marseille ont vécu... Marseille au quotidien, c'est aussi des citoyens qui ont envie de faire avancer leur ville vers plus de respect de l'environnement.
+                Les clichés sur la ville de Marseille ont vécu... Marseille aujourd'hui, ce sont aussi des citoyens qui ont envie de faire avancer leur ville. <br />La preuve en images !
             </p>
             <?= $this->Html->link(__('<i class="icon-play-circled2-1"></i>'), 
                 "https://www.youtube.com/watch?v=TBDYl-NiixM", 
@@ -53,42 +53,41 @@
         <div class="main_title">
             <h2>Le concept <span>Green</span></h2>
             <p>
-                Quisque at tortor a libero posuere laoreet vitae sed arcu. Curabitur consequat.
+                Libérez votre nature : votre quotidien à Marseille, mais en plus vert.
             </p>
         </div>
 
         <div class="row">
-
             <div class="col-md-4 wow zoomIn" data-wow-delay="0.2s">
                 <div class="feature_home">
-                    <i class="icon_set_1_icon-41"></i>
-                    <h3>Des citoyens <span>engagés</span></h3>
+                    <i class="icon_set_1_icon-49"></i>
+                    <h3>Plus de <span>100 spots...</span></h3>
                     <p>
-                        Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.
+                        Etre plus écolo au quotidien, vous aimeriez bien, mais vous ne savez pas comment faire ? Ca tombe bien, on vous a mâché le travail !
                     </p>
-                    <a href="about.html" class="btn_1 outline">Read more</a>
+                    <?= $this->Html->link('En savoir plus', ['controller' => 'Pages', 'action' => 'concept'], ['class' => 'btn_1 outline']) ?>
                 </div>
             </div>
 
             <div class="col-md-4 wow zoomIn" data-wow-delay="0.4s">
                 <div class="feature_home">
-                    <i class="icon_set_1_icon-30"></i>
-                    <h3><span>+1000</span> Customers</h3>
+                    <i class="icon_set_1_icon-78"></i>
+                    <h3>... répartis en <span>8 catégories</span></h3>
                     <p>
-                        Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.
+                        Nos spots sont classés en fonction de vos besoins de consommation de tous les jours : tous vos achats les plus courants sont couverts !
                     </p>
-                    <a href="about.html" class="btn_1 outline">Read more</a>
+                    <?= $this->Html->link('En savoir plus', ['controller' => 'Pages', 'action' => 'concept'], ['class' => 'btn_1 outline']) ?>
                 </div>
             </div>
 
             <div class="col-md-4 wow zoomIn" data-wow-delay="0.6s">
                 <div class="feature_home">
-                    <i class="icon_set_1_icon-57"></i>
-                    <h3><span>H24 </span> Support</h3>
+                    <i class="icon_set_1_icon-41"></i>
+                    <h3><span>Géolocalisés</span> sur notre carte</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.
+                        En un coup d'oeil, vous visualisez la liste complète de nos spots, pour trouver rapidement tous les commerces proches de chez vous.
                     </p>
-                    <a href="about.html" class="btn_1 outline">Read more</a>
+                    <?= $this->Html->link('En savoir plus', ['controller' => 'Pages', 'action' => 'concept'], ['class' => 'btn_1 outline']) ?>
                 </div>
             </div>
 

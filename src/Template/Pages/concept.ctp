@@ -17,100 +17,52 @@
 
 			<div class="main_title">
 				<h2>Comment ça <span>marche</span> ?</h2>
-				<p>Libérez votre nature : tout pour votre quotidien à Marseille, mais en plus vert</p>
+				<p>Libérez votre nature : votre quotidien à Marseille, mais en plus vert</p>
 			</div>
 
 			<div class="row">
 				<div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
 					<div class="feature">
-						<i class="icon_set_1_icon-30"></i>
-						<h3>+ de 100 <span>Spots</span></h3>
+						<i class="icon_set_1_icon-49"></i>
+						<h3>Plus de <span>100 spots...</span></h3>
 						<p>
-							Etre plus écolo au quotidien, vous aimeriez bien, mais vous ne savez pas comment faire ? Pas envie de se compliquer la vie ou d'y passer du temps ? Vous êtes au bon endroit avec notre sélection de spots GREEN. Un spot, c'est un de nos endroits préférés 
+							Etre plus écolo au quotidien, vous aimeriez bien, mais vous ne savez pas comment faire ? Pas envie de vous compliquer la vie ou d'y passer du temps ? Ca tombe bien, on vous a mâché le travail ! Nos "spots", ce sont <strong>tous nos commerces Green préférés à Marseille</strong>, sélectionnés pour vous avec soin afin de vous aider à réduire votre impact sur l'environnement.
 						</p>
 					</div>
 				</div>
 				<div class="col-md-6 wow fadeIn" data-wow-delay="0.2s">
 					<div class="feature">
+						<i class="icon_set_1_icon-78"></i>
+						<h3>... répartis en <span>8 catégories</span></h3>
+						<p>
+							Classés en fonction de vos besoins de consommation de tous les jours, nous avons réparti les spots en 8 catégories : <strong>magasins bio, épiceries vrac, paniers locaux, boulangeries d'antan, restos bio et/ou vegan, soins naturels, recyclage & zéro déchet, et shopping made in France</strong>. Tous vos achats les plus courants sont couverts !
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- End row -->
+			<div class="row">
+				<div class="col-md-6 wow fadeIn" data-wow-delay="0.3s">
+					<div class="feature">
 						<i class="icon_set_1_icon-41"></i>
-						<h3>Tout <span>localiser</span> en un coup d'oeil</h3>
+						<h3>Tout <span>localiser</span>  en un coup d'oeil</h3>
 						<p>
-							Notre carte interactive vous montre tous les quartiersLorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex, appareat similique an usu.
-						</p>
-					</div>
-				</div>
-			</div>
-			<!-- End row -->
-			<div class="row">
-				<div class="col-md-6 wow fadeIn" data-wow-delay="0.3s">
-					<div class="feature">
-						<i class="icon_set_1_icon-57"></i>
-						<h3>Votre espace <span>Green</span></h3>
-						<p>
-							Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex, appareat similique an usu.
+							<strong>Notre carte interactive géolocalise la liste complète de nos spots</strong>, et vous permet de visualiser rapidement tous les commerces proches de chez vous. Sur la page du spot qui vous intéresse, vous allez pouvoir obtenir votre itinéraire en rentrant directement votre adresse. On vous a aussi indiqué les transports en commun disponibles, et plein d'autres infos utiles :)
 						</p>
 					</div>
 				</div>
 				<div class="col-md-6 wow fadeIn" data-wow-delay="0.4s">
 					<div class="feature">
-						<i class="icon_set_1_icon-61"></i>
-						<h3><span>8 catégories</span> pour plus de choix</h3>
+						<i class="icon_set_1_icon-70"></i>
+						<h3>Votre espace <span>Green</span> </h3>
 						<p>
-							Nourriture, sport, loisirs : tout est à disposition !
+							En vous connectant à votre espace utilisateur, vous avez accès à votre <strong>Carnet d'appréciations</strong>, qui regroupe les notes et les avis que vous avez déjà déposés sur nos spots. Vous pouvez ainsi retrouver vos spots favoris, revoir ceux que vous avez testés et si vous le souhaitez, supprimer vos avis passés pour en déposer de nouveaux. De nouvelles fonctionnalités sont aussià venir !
 						</p>
 					</div>
 				</div>
 			</div>
 			<!-- End row -->
-			<div class="row">
-				<div class="col-md-6 wow fadeIn" data-wow-delay="0.3s">
-					<div class="feature">
-						<i class="icon_set_1_icon-57"></i>
-						<h3>Le label <span>Green</span></h3>
-						<p>
-							Partenaires privilégiés, testés et approuvés, assurance de qualité. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex, appareat similique an usu.
-						</p>
-					</div>
-				</div>
-				<div class="col-md-6 wow fadeIn" data-wow-delay="0.4s">
-					<div class="feature">
-						<i class="icon_set_1_icon-61"></i>
-						<h3><span>Les offres spéciales négociées pour vous</span> pour plus de choix</h3>
-						<p>
-							Badge sur le spot : promo pour les clients qui viennent par Green
-						</p>
-					</div>
-				</div>
-			</div>
-			<!-- End row -->
-			<hr>
-			<div class="row">
-				<div class="col-md-6 col-sm-6">
-					<h4>Tous les services en un coup d'oeil pour vous faciliter la vie</h4>
-					<p>Etre plus écolo au quotidien, vous aimeriez bien, mais vous ne savez pas comment faire ? Pas envie de se compliquer la vie ou d'y passer du temps ? <a href="#">utamur antiopam inciderint</a> sed.</p>
-					<div class="general_icons">
-						<ul>
-							<li><i class="icon_set_1_icon-59"></i>Breakfast</li>
-							<li><i class="icon_set_1_icon-8"></i>Dinner</li>
-							<li><i class="icon_set_1_icon-32"></i>Photo collection</li>
-							<li><i class="icon_set_1_icon-50"></i>Personal shopper</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-6 col-sm-6">
-					<h4>Notre ambition : un futur plus vert pour Marseille</h4>
-					<p>Avec le soutien de notre communauté, notre site est amené à évoluer avec le lancement de nouveaux projets comme un agenda d'évènements locaux, un blog regroupantet de s. Et pourquoi pas, à terme, le développement du concept sur d'autres villes! </p>
-					<div class="general_icons">
-						<ul>
-							<li><i class="icon_set_1_icon-98"></i>Audio guide</li>
-							<li><i class="icon_set_1_icon-27"></i>Parking</li>
-							<li><i class="icon_set_1_icon-36"></i>Exchange</li>
-							<li><i class="icon_set_1_icon-63"></i>Mobile</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- End row -->
+
 		</div>
 		<!-- End container -->
 

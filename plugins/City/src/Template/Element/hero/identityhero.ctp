@@ -2,7 +2,7 @@
 		<div class="parallax-content-1">
 			<div class="animated fadeInDown">
 				<h1>Notre vision</h1>
-				<p>Permettre à nous tous marseillais de profiter de la vie, sans impacter celle de nos enfants.</p>
+				<p>Aider tous les marseillais à profiter de la vie, sans impacter celle de leurs enfants.</p>
 			</div>
 		</div>
 	</section>

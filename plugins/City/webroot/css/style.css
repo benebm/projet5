@@ -1192,44 +1192,84 @@ ul#cat_nav i {
 }
 
 #marker1 {
-  background-image: url('../img/pins/marker1.png');
+  background-image: url('../img/markers/marker1.png');
 }
 
 #marker2 {
-  background-image: url('../img/pins/bar.png');
+  background-image: url('../img/markers/marker2.png');
 }
 
 #marker3 {
-  background-image: url('../img/pins/historic.png');
+  background-image: url('../img/markers/marker3.png');
 }
 
 #marker4 {
-  background-image: url('../img/pins/single_hotel.png');
+  background-image: url('../img/markers/marker4.png');
 }
 
 #marker5 {
-  background-image: url('../img/pins/walking.png');
+  background-image: url('../img/markers/markers5.png');
 }
 
 #marker6 {
-  background-image: url('../img/pins/skyline.png');
+  background-image: url('../img/markers/markers6.png');
 }
 
-/*
-.mapboxgl-popup {
-  max-width: 200px;
+#marker6 {
+  background-image: url('../img/markers/markers7.png');
 }
 
-.mapboxgl-popup-content {
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
-}*/
+#marker6 {
+  background-image: url('../img/markers/markers8.png');
+}
 
+/*color custo mapall page*/
 
-/* end of custo */
+#map_filter_cat_1 a, 
+{
+	color: #3abb9d;
+}
+
+#map_filter_cat_2 a
+{
+	color: #e66b5b;
+}
+
+#map_filter_cat_3 a
+{
+	color: #f7c23e;
+}
+
+#map_filter_cat_4 a
+{
+	color: #9069b5;
+}
+
+#map_filter_cat_5 a
+{
+	color: #4590b6;
+}
+
+#map_filter_cat_6 a
+{
+	color: #485675;
+}
+
+#map_filter_cat_7 a
+{
+	color: #ee7841;
+}
+
+#map_filter_cat_8 a
+{
+	color: #75706b;
+}
+
+/* fin mapall custo */
 
 .marker_info {
 	width: 280px;
+	/*custo suppression de la hauteur */
 	/*height: 320px;*/
 	border-radius: 3px;
 	text-align: center;

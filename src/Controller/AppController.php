@@ -64,7 +64,8 @@ class AppController extends Controller
 
         // affiche de façon compacte les catégories pour le menu
         $this->loadModel('Categories');
-        $categories = $this->Categories->find('all');
+        $categories = $this->Categories->find()
+        ->order(['id' => 'ASC']);
         $this->set(compact('categories'));
 
          // affiche de façon compacte les arrondissements pour le menu

@@ -36,7 +36,7 @@
 <div id="map_filter">
 	<ul>
 		<?php foreach ($categories as $category): ?>
-			<li class="cat" data-index="<?= $category->id ?>"><?= $this->Html->link('<i class="' . $category->icon . '"></i>' . $category->title,
+			<li id="map_filter_cat_<?= $category->id ?>" data-index="<?= $category->id ?>"><?= $this->Html->link('<i class="' . $category->icon . '"></i>' . $category->title,
 													['action' => 'mapall', $category->id],
 													['escape' => false]); ?></li>
 

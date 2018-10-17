@@ -3,7 +3,7 @@
 	<!-- START REVOLUTION SLIDER 5.4.1 fullscreen mode -->
 	<div id="rev_slider_1066_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.1">
 		<ul>	<!-- SLIDE  -->
-			<li data-index="rs-3004" data-transition="zoomout" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="<?= $this->Url->image('slider/notgeneric_bg1-100x50.jpg') ?>"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+			<li data-index="rs-3004" data-transition="zoomout" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="<?= $this->Url->image('slider/notgeneric_bg1-100x50.jpg') ?>"  data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 				<!-- MAIN IMAGE -->
 
 				<!-- image 1 -->
@@ -127,9 +127,9 @@
 
 		
 		<!-- SLIDE  -->
-		<li data-index="rs-3005" data-transition="fadetotopfadefrombottom" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="1500"  data-thumb="<?= $this->Url->image('slider/notgeneric_bg5-100x50.jpg') ?>"  data-rotate="0"  data-saveperformance="off"  data-title="Chill" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<li data-index="rs-3005" data-transition="fadetotopfadefrombottom" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="1500"  data-thumb="<?= $this->Url->image('slider/notgeneric_bg2-100x50.jpg') ?>"  data-rotate="0"  data-saveperformance="off"  data-title="Chill" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 			<!-- MAIN IMAGE -->
-			<img src="<?= $this->Url->image('slider/notgeneric_bg5.jpg') ?>"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+			<img src="<?= $this->Url->image('slider/notgeneric_bg2.jpg') ?>"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 			<!-- LAYERS -->
 
 			<!-- LAYER NR. 6 -->
@@ -153,7 +153,7 @@
 			data-paddingbottom="[10,10,10,10]"
 			data-paddingleft="[0,0,0,0]"
 
-			style="z-index: 10; white-space: nowrap; text-transform:left; font-size: 50px; line-height: 46px; font-weight: 700;font-family:Montserrat;">Un mode de vie plus sain</div>
+			style="z-index: 10; white-space: nowrap; text-transform:left; font-size: 40px; line-height: 46px; font-weight: 700;font-family:Montserrat;">Pour un mode de vie plus sain</div>
 
 			<!-- LAYER NR. 7 -->
 			<div class="tp-caption NotGeneric-SubTitle   tp-resizeme rs-parallaxlevel-2" 
@@ -195,7 +195,7 @@
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
 
-			style="z-index: 12; white-space: nowrap;text-transform:left;cursor:default;"><i class="icon-spin3"></i> </div>
+			style="z-index: 12; white-space: nowrap;text-transform:left;cursor:default;"><i class="icon-arrows-ccw"></i> </div>
 
 			<!-- LAYER NR. 9 -->
 			<div class="tp-caption NotGeneric-Button rev-btn " 
@@ -336,9 +336,9 @@
 
 
 	<!-- SLIDE  -->
-	<li data-index="rs-3006" data-transition="zoomin" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="<?= $this->Url->image('slider/notgeneric_bg2-100x50.jpg') ?>"  data-rotate="0"  data-saveperformance="off"  data-title="Enjoy Nature" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+	<li data-index="rs-3006" data-transition="zoomin" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="<?= $this->Url->image('slider/notgeneric_bg3-100x50.jpg') ?>"  data-rotate="0"  data-saveperformance="off"  data-title="Enjoy Nature" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 		<!-- MAIN IMAGE -->
-		<img src="<?= $this->Url->image('slider/notgeneric_bg2.jpg') ?>"  alt=""  data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+		<img src="<?= $this->Url->image('slider/notgeneric_bg3.jpg') ?>"  alt=""  data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 		<!-- LAYERS -->
 
 		<!-- LAYER NR. 15 -->
@@ -404,10 +404,10 @@
 		data-paddingbottom="[0,0,0,0]"
 		data-paddingleft="[0,0,0,0]"
 
-		style="z-index: 21; white-space: nowrap;text-transform:left;cursor:default;"><i class="pe-7s-expand1"></i> </div>
+		style="z-index: 21; white-space: nowrap;text-transform:left;cursor:default;"><i class="icon-shop-1"></i> </div>
 
 		<!-- LAYER NR. 18 -->
-		<div class="tp-caption NotGeneric-Button rev-btn " 
+		<div class="tp-caption NotGeneric-Button rev-btn" 
 		id="slide-3006-layer-7" 
 		data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
 		data-y="['middle','middle','middle','middle']" data-voffset="['124','124','124','123']" 
@@ -426,7 +426,7 @@
 		data-paddingbottom="[10,10,10,10]"
 		data-paddingleft="[30,30,30,30]"
 
-		style="z-index: 22; white-space: nowrap;text-transform:left;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Voir la sélection </div>
+		style="z-index: 22; white-space: nowrap;text-transform:left;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Ca m'intéresse </div>
 
 		<!-- LAYER NR. 19 -->
 		<div class="tp-caption rev-scroll-btn " 
@@ -457,9 +457,9 @@
 
 
 <!-- SLIDE  -->
-<li data-index="rs-3008" data-transition="zoomin" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="<?= $this->Url->image('slider/notgeneric_bg3-100x50.jpg') ?>"  data-rotate="0"  data-saveperformance="off"  data-title="Hiking" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+<li data-index="rs-3008" data-transition="zoomin" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="<?= $this->Url->image('slider/notgeneric_bg4-100x50.jpg') ?>"  data-rotate="0"  data-saveperformance="off"  data-title="Hiking" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 	<!-- MAIN IMAGE -->
-	<img src="<?= $this->Url->image('slider/notgeneric_bg8.jpg') ?>"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+	<img src="<?= $this->Url->image('slider/notgeneric_bg4.jpg') ?>"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 	<!-- LAYERS -->
 
 	<!-- LAYER NR. 26 -->
@@ -525,7 +525,7 @@
 	data-paddingbottom="[0,0,0,0]"
 	data-paddingleft="[0,0,0,0]"
 
-	style="z-index: 26; white-space: nowrap;text-transform:left;cursor:default;"><i class="pe-7s-diamond"></i> </div>
+	style="z-index: 26; white-space: nowrap;text-transform:left;cursor:default;"><i class="icon-globe-1"></i> </div>
 
 	<!-- LAYER NR. 29 -->
 	<div class="tp-caption rev-scroll-btn " 

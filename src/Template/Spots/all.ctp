@@ -149,7 +149,6 @@
 								</div>
 								<div class="img_list">
 									<a href="single_tour.html"><?php echo $this->Html->image($spot->image, ['alt' => 'Image'], ['class' => 'img-responsive']); ?>
-									<div class="<?= $spot->badge_type ?>"><?= $spot->badge ?></div>
 									<div class="short_info"><i class="<?= $spot->category->icon ?>"></i><?= $spot->category->title ?> </div>
 								</a>
 							</div>

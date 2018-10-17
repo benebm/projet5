@@ -1,58 +1,37 @@
-<?php
-$cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro déchet à Marseille';
-?>
-<!DOCTYPE html>
+<?= $this->Html->docType(); ?>
 <!--[if IE 8]><html class="ie ie8"> <![endif]-->
 <!--[if IE 9]><html class="ie ie9"> <![endif]-->
 <html lang="fr">
 <head>
-    <meta charset="utf-8">
+    <?= $this->Html->charset(); ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <meta name="description" content="MARSEILLE GREEN - Le guide des spots bio, écolo & zéro déchet à Marseille">
-    <meta name="author" content="benebm">
+    <?= $this->Html->meta('viewport', 'width=device-width, initial-scale=1'); ?>
+    <?= $this->Html->meta('description', 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro déchet à Marseille'); ?>
+    <?= $this->Html->meta('author', 'benebm'); ?>
+
     <title>MARSEILLE GREEN - Le guide des spots bio, écolo & zéro déchet à Marseille</title>
     
     <!-- Favicons-->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+    <?= $this->Html->meta('favicon.ico', 'img/favicon.ico', ['type' => 'icon', 'rel' => 'shortcut icon']); ?>
+    <?= $this->Html->meta('apple-touch-icon-57x57-precomposed.png', 'img/apple-touch-icon-57x57-precomposed.png', ['type' => 'icon', 'rel' => 'apple-touch-icon']); ?>
+    <?= $this->Html->meta('apple-touch-icon-72x72-precomposed.png', 'img/apple-touch-icon-72x72-precomposed.png', ['type' => 'icon', 'rel' => 'apple-touch-icon', 'sizes' => '72x72']); ?>
+    <?= $this->Html->meta('apple-touch-icon-114x114-precomposed.png', 'img/apple-touch-icon-114x114-precomposed.png', ['type' => 'icon', 'rel' => 'apple-touch-icon', 'sizes' => '114x114']); ?>
+    <?= $this->Html->meta('apple-touch-icon-144x144-precomposed.png', 'img/apple-touch-icon-144x144-precomposed.png', ['type' => 'icon', 'rel' => 'apple-touch-icon', 'sizes' => '144x144']); ?>
     
     <!-- Google web fonts -->
     <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Lato:300,400|Montserrat:400,400i,700,700i" rel="stylesheet">
 
     <!-- CSS -->
-    <!--<link href="css/base.css" rel="stylesheet">-->
     <?php echo $this->Html->css('base.css'); ?>
 
     <!-- admin CSS -->
-    <!--<link href="css/admin.css" rel="stylesheet">
-    <link href="css/jquery.switch.css" rel="stylesheet">-->
     <?php echo $this->Html->css('admin.css'); ?>
     <?php echo $this->Html->css('jquery.switch.css'); ?>
-
-    <!-- view all CSS -->
-    <!-- Radio and check inputs -->
-    <!--<link href="css/skins/square/grey.css" rel="stylesheet">-->
-    <?php echo $this->Html->css('skins_square_grey.css'); ?>
-    <!-- Range slider -->
-    <!--<link href="css/ion.rangeSlider.css" rel="stylesheet">
-    <link href="css/ion.rangeSlider.skinFlat.css" rel="stylesheet">-->
-    <?php echo $this->Html->css('ion.rangeSlider.css'); ?>
-    <?php echo $this->Html->css('ion.rangeSlider.skinFlat.css'); ?>
-
+   
      <!-- mapbox map css implementation-->
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css' rel='stylesheet' />
 
      <?php echo $this->fetch('css'); ?>
-        
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.min.js"></script>
-      <script src="js/respond.min.js"></script>
-    <![endif]-->
         
 </head>
 <body>
@@ -61,20 +40,8 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
     <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>.</p>
 <![endif]-->
 
-    <div id="preloader">
-        <div class="sk-spinner sk-spinner-wave">
-            <div class="sk-rect1"></div>
-            <div class="sk-rect2"></div>
-            <div class="sk-rect3"></div>
-            <div class="sk-rect4"></div>
-            <div class="sk-rect5"></div>
-        </div>
-    </div>
-    <!-- End Preload -->
-
     <div class="layer"></div>
     <!-- Mobile menu overlay mask -->
-
 
     <header>
     <?= $this->element('header') ?>
@@ -101,33 +68,26 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
 <?php echo $this->Html->script('common_scripts_min.js'); ?>
 <?php echo $this->Html->script('functions.js'); ?>
 
-<!-- Specific scripts -->
-    <!-- Check and radio inputs -->
-    <!--<script src="js/icheck.js"></script>-->
-    <?php echo $this->Html->script('icheck.js'); ?>
-    <?php $this->Html->scriptStart(['block' => true]); ?>
-        $('input').iCheck({
-            checkboxClass: 'icheckbox_square-grey',
-            radioClass: 'iradio_square-grey'
-        });
-    <?php $this->Html->scriptEnd(); ?>
+ <!--[if lt IE 9]>
+      <?php echo $this->Html->script('html5shiv.min.js'); ?>
+      <?php echo $this->Html->script('respond.min.js'); ?>
+    <![endif]-->
 
+<!-- Specific scripts -->
+   
     <!--checking password strenght when registering and updating passwords-->
     <?php echo $this->Html->script('pw_strenght.js'); ?>
 
     <!--Review modal validation -->
-    <!--<script src="validate.js"></script>-->
     <?php echo $this->Html->script('validate.js'); ?>
 
     <!-- Cat nav mobile -->
-    <!--<script src="js/cat_nav_mobile.js"></script>-->
     <?php echo $this->Html->script('cat_nav_mobile.js'); ?>
     <?php $this->Html->scriptStart(['block' => true]); ?>
         $('#cat_nav').mobileMenu();
      <?php $this->Html->scriptEnd(); ?>
 
     <!--admin scripts-->
-    <!--<script src="js/tabs.js"></script>-->
     <?php echo $this->Html->script('tabs.js'); ?>
     <?php $this->Html->scriptStart(['block' => true]); ?>
         new CBPFWTabs(document.getElementById('tabs'));
@@ -143,10 +103,6 @@ $cakeDescription = 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro dé
 
     <!-- Map -->
     <?php echo $this->Html->script('map.js'); ?>
-
-    <!--<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB84YOXFIn5Oi5Y7zLG3a_W7c8uMlSFcqA"></script>-->                               
-    <!--<script src="js/map.js"></script>
-    <script src="js/infobox.js"></script>-->
 
 <?php echo $this->fetch('script'); ?>
 

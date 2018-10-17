@@ -55,7 +55,7 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="review_strip">
-						<img src="img/avatar1.jpg" alt="Image" class="img-circle">
+						<img src="<?= $this->Url->image('identity-inspiration1.jpg') ?>" alt="Image" class="img-circle">
 						<h4>Edmund Platt, notre superhéros des déchets</h4>
 						<p>
 							Avec sa page Facebook <strong>1 Déchet Par Jour / 1 Piece of Rubbish</strong>, ce marseillais d'origine anglaise combat avec une inlassable énergie les forces d'un mal qui ronge Marseille depuis des années : celui des déchets qui encombrent et salissent l'image de la ville. Ses initiatives et ses vidéos sont suivies quotidiennement par presque 20000 personnes !
@@ -69,7 +69,7 @@
 
 				<div class="col-md-6">
 					<div class="review_strip">
-						<img src="img/avatar2.jpg" alt="Image" class="img-circle">
+						<img src="<?= $this->Url->image('identity-inspiration2.jpg') ?>" alt="Image" class="img-circle">
 						<h4>Alternatiba Marseille, le changement en action</h4>
 						<p>
 							<strong>"Changeons le système, pas le climat"</strong> est le projet prometteur de cette association militante, qui porte des alternatives capables de limiter le changement climatique à tous les niveaux de la société. En 2018, le tour Alternatiba, avec ses 5800 km parcourus, est parti à la rencontre de plus de 50 porteurs d'alternative marseillais pour échanger sur des projets concrets autour du climat.
@@ -86,7 +86,7 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="review_strip">
-						<img src="img/avatar3.jpg" alt="Image" class="img-circle">
+						<img src="<?= $this->Url->image('identity-inspiration3.jpg') ?>" alt="Image" class="img-circle">
 						<h4>Vélos en ville, pour le développement du cyclisme à Marseille</h4>
 						<p>
 							Parmi de nombreux projets, l'association milite pour <strong>étendre l'aménagement de voies cyclables sur l'espace urbain marseillais</strong> et faire entendre la voix des cyclistes dans une ville où les embouteillages et la pollution automobile sont un fléau connu.
@@ -100,7 +100,7 @@
 
 				<div class="col-md-6">
 					<div class="review_strip">
-						<img src="img/avatar1.jpg" alt="Image" class="img-circle">
+						<img src="<?= $this->Url->image('identity-inspiration4.jpg') ?>" alt="Image" class="img-circle">
 						<h4>Marseille Vert, le premier web magazine marseillais 100% écolo</h4>
 						<p>
 							Marseille Vert est un média qui fonctionne avec des <strong>entreprises partenaires dites "coccinelles"</strong> qui s'engagent pour la planète. Sur le site on trouve les actualités vertes de ces entreprises ainsi que tout ce qu’il se passe d’écolo, de beau, de bon et de bio en général sur la planète.

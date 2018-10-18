@@ -11,115 +11,115 @@
 
 				<!-- LAYERS -->
 
-		<!-- LAYER NR. 1 -->
-		<div class="tp-caption NotGeneric-Title   tp-resizeme" 
-			 id="slide-3004-layer-1" 
-			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
-						data-fontsize="['70','70','70','45']"
-			data-lineheight="['70','70','70','50']"
-			data-width="none"
-			data-height="none"
-			data-whitespace="nowrap"
- 
-			data-type="text" 
-			data-responsive_offset="on" 
+				<!-- LAYER NR. 1 -->
+				<div class="tp-caption NotGeneric-Title   tp-resizeme" 
+				id="slide-3004-layer-1" 
+				data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+				data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+				data-fontsize="['70','70','70','45']"
+				data-lineheight="['70','70','70','50']"
+				data-width="none"
+				data-height="none"
+				data-whitespace="nowrap"
+				
+				data-type="text" 
+				data-responsive_offset="on" 
 
-			data-frames='[{"from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1000,"split":"chars","splitdelay":0.05,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
-			data-textAlign="['left','left','left','left']"
-			data-paddingtop="[10,10,10,10]"
-			data-paddingright="[0,0,0,0]"
-			data-paddingbottom="[10,10,10,10]"
-			data-paddingleft="[0,0,0,0]"
+				data-frames='[{"from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1000,"split":"chars","splitdelay":0.05,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+				data-textAlign="['left','left','left','left']"
+				data-paddingtop="[10,10,10,10]"
+				data-paddingright="[0,0,0,0]"
+				data-paddingbottom="[10,10,10,10]"
+				data-paddingleft="[0,0,0,0]"
 
-			style="z-index: 5; white-space: nowrap; font-size: 50px; line-height: 46px; font-weight: 700;font-family:Montserrat;">Vivre Marseille au naturel </div>
+				style="z-index: 5; white-space: nowrap; font-size: 50px; line-height: 46px; font-weight: 700;font-family:Montserrat;">Vivre Marseille au naturel </div>
 
-		<!-- LAYER NR. 2 -->
-		<div class="tp-caption NotGeneric-SubTitle   tp-resizeme" 
-			 id="slide-3004-layer-4" 
-			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-			 data-y="['middle','middle','middle','middle']" data-voffset="['52','52','52','51']" 
-						data-width="none"
-			data-height="none"
-			data-whitespace="nowrap"
- 
-			data-type="text" 
-			data-responsive_offset="on" 
+				<!-- LAYER NR. 2 -->
+				<div class="tp-caption NotGeneric-SubTitle   tp-resizeme" 
+				id="slide-3004-layer-4" 
+				data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+				data-y="['middle','middle','middle','middle']" data-voffset="['52','52','52','51']" 
+				data-width="none"
+				data-height="none"
+				data-whitespace="nowrap"
+				
+				data-type="text" 
+				data-responsive_offset="on" 
 
-			data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
-			data-textAlign="['left','left','left','left']"
-			data-paddingtop="[0,0,0,0]"
-			data-paddingright="[0,0,0,0]"
-			data-paddingbottom="[0,0,0,0]"
-			data-paddingleft="[0,0,0,0]"
+				data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+				data-textAlign="['left','left','left','left']"
+				data-paddingtop="[0,0,0,0]"
+				data-paddingright="[0,0,0,0]"
+				data-paddingbottom="[0,0,0,0]"
+				data-paddingleft="[0,0,0,0]"
 
-			style="z-index: 6; white-space: nowrap; font-size: 20px; font-weight: 400;font-family:Montserrat;">LE GUIDE DES SPOTS BIO / ECOLO / ZERO DECHET A MARSEILLE </div>
+				style="z-index: 6; white-space: nowrap; font-size: 20px; font-weight: 400;font-family:Montserrat;">LE GUIDE DES SPOTS BIO / ECOLO / ZERO DECHET A MARSEILLE </div>
 
-		<!-- LAYER NR. 3 -->
-		<div class="tp-caption NotGeneric-Icon   tp-resizeme" 
-			 id="slide-3004-layer-8" 
-			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-			 data-y="['middle','middle','middle','middle']" data-voffset="['-68','-68','-68','-68']" 
-						data-width="none"
-			data-height="none"
-			data-whitespace="nowrap"
- 
-			data-type="text" 
-			data-responsive_offset="on" 
+				<!-- LAYER NR. 3 -->
+				<div class="tp-caption NotGeneric-Icon   tp-resizeme" 
+				id="slide-3004-layer-8" 
+				data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+				data-y="['middle','middle','middle','middle']" data-voffset="['-68','-68','-68','-68']" 
+				data-width="none"
+				data-height="none"
+				data-whitespace="nowrap"
+				
+				data-type="text" 
+				data-responsive_offset="on" 
 
-			data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
-			data-textAlign="['left','left','left','left']"
-			data-paddingtop="[0,0,0,0]"
-			data-paddingright="[0,0,0,0]"
-			data-paddingbottom="[0,0,0,0]"
-			data-paddingleft="[0,0,0,0]"
+				data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+				data-textAlign="['left','left','left','left']"
+				data-paddingtop="[0,0,0,0]"
+				data-paddingright="[0,0,0,0]"
+				data-paddingbottom="[0,0,0,0]"
+				data-paddingleft="[0,0,0,0]"
 
-			style="z-index: 7; white-space: nowrap;text-transform:left;cursor:default;"><i class="icon-leaf-1"></i> </div>
+				style="z-index: 7; white-space: nowrap;text-transform:left;cursor:default;"><i class="icon-leaf-1"></i> </div>
 
-		<!-- LAYER NR. 4 -->
-		<div class="tp-caption NotGeneric-Button rev-btn " 
-			 id="slide-3004-layer-7" 
-			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-			 data-y="['middle','middle','middle','middle']" data-voffset="['124','124','124','123']" 
-						data-width="none"
-			data-height="none"
-			data-whitespace="nowrap"
- 
-			data-type="button" 
-			data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":""}]'
-			data-responsive_offset="on" 
-			data-responsive="off"
-			data-frames='[{"from":"y:50px;opacity:0;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[175%];","mask":"x:inherit;y:inherit;","ease":"Power2.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'
-			data-textAlign="['left','left','left','left']"
-			data-paddingtop="[10,10,10,10]"
-			data-paddingright="[30,30,30,30]"
-			data-paddingbottom="[10,10,10,10]"
-			data-paddingleft="[30,30,30,30]"
+				<!-- LAYER NR. 4 -->
+				<div class="tp-caption NotGeneric-Button rev-btn " 
+				id="slide-3004-layer-7" 
+				data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+				data-y="['middle','middle','middle','middle']" data-voffset="['124','124','124','123']" 
+				data-width="none"
+				data-height="none"
+				data-whitespace="nowrap"
+				
+				data-type="button" 
+				data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":""}]'
+				data-responsive_offset="on" 
+				data-responsive="off"
+				data-frames='[{"from":"y:50px;opacity:0;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[175%];","mask":"x:inherit;y:inherit;","ease":"Power2.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'
+				data-textAlign="['left','left','left','left']"
+				data-paddingtop="[10,10,10,10]"
+				data-paddingright="[30,30,30,30]"
+				data-paddingbottom="[10,10,10,10]"
+				data-paddingleft="[30,30,30,30]"
 
-			style="z-index: 8; white-space: nowrap; font-weight: 400;font-family:Montserrat;border-color:rgba(255,255,255,0.50);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">J'y vais </div>
+				style="z-index: 8; white-space: nowrap; font-weight: 400;font-family:Montserrat;border-color:rgba(255,255,255,0.50);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">J'y vais </div>
 
-		<!-- LAYER NR. 5 -->
-		<div class="tp-caption rev-scroll-btn " 
-			 id="slide-3004-layer-9" 
-			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-			 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['50','50','50','50']" 
-						data-width="35"
-			data-height="55"
-			data-whitespace="nowrap"
- 
-			data-type="button" 
-			data-actions='[{"event":"click","action":"scrollbelow","offset":"0px","delay":""}]'
-			data-basealign="slide" 
-			data-responsive_offset="off" 
-			data-responsive="off"
-			data-frames='[{"from":"y:50px;opacity:0;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"y:50px;opacity:0;","ease":"nothing"}]'
-			data-textAlign="['left','left','left','left']"
-			data-paddingtop="[0,0,0,0]"
-			data-paddingright="[0,0,0,0]"
-			data-paddingbottom="[0,0,0,0]"
-			data-paddingleft="[0,0,0,0]"
+				<!-- LAYER NR. 5 -->
+				<div class="tp-caption rev-scroll-btn " 
+				id="slide-3004-layer-9" 
+				data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+				data-y="['bottom','bottom','bottom','bottom']" data-voffset="['50','50','50','50']" 
+				data-width="35"
+				data-height="55"
+				data-whitespace="nowrap"
+				
+				data-type="button" 
+				data-actions='[{"event":"click","action":"scrollbelow","offset":"0px","delay":""}]'
+				data-basealign="slide" 
+				data-responsive_offset="off" 
+				data-responsive="off"
+				data-frames='[{"from":"y:50px;opacity:0;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"y:50px;opacity:0;","ease":"nothing"}]'
+				data-textAlign="['left','left','left','left']"
+				data-paddingtop="[0,0,0,0]"
+				data-paddingright="[0,0,0,0]"
+				data-paddingbottom="[0,0,0,0]"
+				data-paddingleft="[0,0,0,0]"
 
-			style="z-index: 9; min-width: 35px; max-width: 35px; max-width: 55px; max-width: 55px; white-space: nowrap; font-size: px; line-height: px; font-weight: 100; color: transparent;border-color:rgba(255, 255, 255, 0.5);border-style:solid;border-width:1px 1px 1px 1px;border-radius:23px 23px 23px 23px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">			
+				style="z-index: 9; min-width: 35px; max-width: 35px; max-width: 55px; max-width: 55px; white-space: nowrap; font-size: px; line-height: px; font-weight: 100; color: transparent;border-color:rgba(255, 255, 255, 0.5);border-style:solid;border-width:1px 1px 1px 1px;border-radius:23px 23px 23px 23px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">			
 				<span>
 				</span>							
 			</div>
@@ -582,92 +582,92 @@ style="z-index: 28; white-space: nowrap;text-transform:left;outline:none;box-sha
 
 <?php $this->Html->scriptStart(['block' => true]); ?>
 
-	var tpj=jQuery;
+var tpj=jQuery;
 
-	var revapi1066;
-	tpj(document).ready(function() {
-		if(tpj("#rev_slider_1066_1").revolution == undefined){
-			revslider_showDoubleJqueryError("#rev_slider_1066_1");
-		}else{
-			revapi1066 = tpj("#rev_slider_1066_1").show().revolution({
-				sliderType:"standard",
-				jsFileLocation:"slider/js",
-				sliderLayout:"fullscreen",
-				dottedOverlay:"none",
-				delay:9000,
-				navigation: {
-					keyboardNavigation:"off",
-					keyboard_direction: "horizontal",
-					mouseScrollNavigation:"off",
-					mouseScrollReverse:"default",
-					onHoverStop:"off",
-					touch:{
-						touchenabled:"on",
-						swipe_threshold: 75,
-						swipe_min_touches: 1,
-						swipe_direction: "horizontal",
-						drag_block_vertical: false
-					}
-					,
-							arrows: {
-								style:"uranus",
-								enable:true,
-								hide_onmobile:true,
-								hide_under:778,
-								hide_onleave:true,
-								hide_delay:200,
-								hide_delay_mobile:1200,
-								tmp:'',
-								left: {
-									h_align:"left",
-									v_align:"center",
-									h_offset:20,
-                                    v_offset:0
-								},
-								right: {
-									h_align:"right",
-									v_align:"center",
-									h_offset:20,
-                                    v_offset:0
-								}
-						}
-				},
-				responsiveLevels:[1240,1024,778,480],
-				visibilityLevels:[1240,1024,778,480],
-				gridwidth:[1240,1024,778,480],
-				gridheight:[868,768,960,720],
-				lazyType:"none",
-				parallax: {
-					type:"mouse",
-					origo:"slidercenter",
-					speed:2000,
-					levels:[2,3,4,5,6,7,12,16,10,50,46,47,48,49,50,55],
-					type:"mouse",
-					disable_onmobile:"on"
-				},
-				shadow:0,
-				spinner:"off",
-				stopLoop:"on",
-				stopAfterLoops:0,
-				stopAtSlide:1,
-				shuffle:"off",
-				autoHeight:"off",
-				fullScreenAutoWidth:"off",
-				fullScreenAlignForce:"off",
-				fullScreenOffsetContainer: ".header",
-				fullScreenOffset: "60px",
-				disableProgressBar:"on",
-				hideThumbsOnMobile:"off",
-				hideSliderAtLimit:0,
-				hideCaptionAtLimit:0,
-				hideAllCaptionAtLilmit:0,
-				debugMode:false,
-				fallbacks: {
-					simplifyAll:"off",
-					nextSlideOnWindowFocus:"off",
-					disableFocusListener:false,
-				}
-			});
-		}
-	});	/*ready*/
+var revapi1066;
+tpj(document).ready(function() {
+if(tpj("#rev_slider_1066_1").revolution == undefined){
+revslider_showDoubleJqueryError("#rev_slider_1066_1");
+}else{
+revapi1066 = tpj("#rev_slider_1066_1").show().revolution({
+sliderType:"standard",
+jsFileLocation:"slider/js",
+sliderLayout:"fullscreen",
+dottedOverlay:"none",
+delay:9000,
+navigation: {
+keyboardNavigation:"off",
+keyboard_direction: "horizontal",
+mouseScrollNavigation:"off",
+mouseScrollReverse:"default",
+onHoverStop:"off",
+touch:{
+touchenabled:"on",
+swipe_threshold: 75,
+swipe_min_touches: 1,
+swipe_direction: "horizontal",
+drag_block_vertical: false
+}
+,
+arrows: {
+style:"uranus",
+enable:true,
+hide_onmobile:true,
+hide_under:778,
+hide_onleave:true,
+hide_delay:200,
+hide_delay_mobile:1200,
+tmp:'',
+left: {
+h_align:"left",
+v_align:"center",
+h_offset:20,
+v_offset:0
+},
+right: {
+h_align:"right",
+v_align:"center",
+h_offset:20,
+v_offset:0
+}
+}
+},
+responsiveLevels:[1240,1024,778,480],
+visibilityLevels:[1240,1024,778,480],
+gridwidth:[1240,1024,778,480],
+gridheight:[868,768,960,720],
+lazyType:"none",
+parallax: {
+type:"mouse",
+origo:"slidercenter",
+speed:2000,
+levels:[2,3,4,5,6,7,12,16,10,50,46,47,48,49,50,55],
+type:"mouse",
+disable_onmobile:"on"
+},
+shadow:0,
+spinner:"off",
+stopLoop:"on",
+stopAfterLoops:0,
+stopAtSlide:1,
+shuffle:"off",
+autoHeight:"off",
+fullScreenAutoWidth:"off",
+fullScreenAlignForce:"off",
+fullScreenOffsetContainer: ".header",
+fullScreenOffset: "60px",
+disableProgressBar:"on",
+hideThumbsOnMobile:"off",
+hideSliderAtLimit:0,
+hideCaptionAtLimit:0,
+hideAllCaptionAtLilmit:0,
+debugMode:false,
+fallbacks: {
+simplifyAll:"off",
+nextSlideOnWindowFocus:"off",
+disableFocusListener:false,
+}
+});
+}
+});	/*ready*/
 <?php $this->Html->scriptEnd(); ?>

@@ -25,11 +25,6 @@ class UsersController extends AppController
         $this->Auth->allow(['add', 'logout']);
     }
 
-    public function beforeRender(\Cake\Event\Event $event)
-    {
-        $this->viewBuilder()->setTheme('City');
-    }
-
     public function login()
     {
         if ($this->request->is('post')) {

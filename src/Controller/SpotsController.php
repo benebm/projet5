@@ -36,11 +36,6 @@ class SpotsController extends AppController
         ->group('spot_slug');
         $this->set(compact('avgratings'));
     }
-
-    public function beforeRender(\Cake\Event\Event $event)
-    {
-        $this->viewBuilder()->setTheme('City');
-    }
     
     public function index()
     {

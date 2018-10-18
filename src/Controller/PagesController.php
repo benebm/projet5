@@ -69,13 +69,4 @@ class PagesController extends AppController
         }
     }
 
-
-    
-
-
-    public function beforeRender(\Cake\Event\Event $event)
-    {
-        $this->viewBuilder()->setTheme('City');
-    }
-
 }

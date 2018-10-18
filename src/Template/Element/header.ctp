@@ -66,7 +66,7 @@
                                 <ul>
                                     <?php foreach ($categories as $category): ?>
                                         <li><?= $this->Html->link('<i class="' . $category->icon . '"></i>' . $category->title,
-                                            ['action' => 'sortCat', $category->id],
+                                            ['controller' => 'Spots', 'action' => 'sortCat', $category->id],
                                             ['escape' => false]); ?>
                                         </li>
                                     <?php endforeach; ?>
@@ -76,7 +76,7 @@
                                 <ul>
                                     <?php foreach ($districts as $district): ?>
                                         <li><?= $this->Html->link($district->district,
-                                            ['action' => 'sortDis', $district->district],
+                                            ['controller' => 'Spots', 'action' => 'sortDis', $district->district],
                                             ['escape' => false]); ?>
                                         </li>
                                     <?php endforeach; ?>

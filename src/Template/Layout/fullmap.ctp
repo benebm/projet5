@@ -8,6 +8,7 @@
     <?= $this->Html->meta('viewport', 'width=device-width, initial-scale=1'); ?>
     <?= $this->Html->meta('description', 'MARSEILLE GREEN - Le guide des spots bio, écolo & zéro déchet à Marseille'); ?>
     <?= $this->Html->meta('author', 'benebm'); ?>
+    <?= $this->Html->meta(array('name' => 'robots', 'content' => 'noindex,nofollow')); ?>
 
     <title>MARSEILLE GREEN - Le guide des spots bio, écolo & zéro déchet à Marseille</title>
     

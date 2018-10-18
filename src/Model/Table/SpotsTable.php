@@ -64,8 +64,8 @@ class SpotsTable extends Table
     public function getTopSpots()
     {
         return $this->find()
-        ->where(['spots.top' => 1])
-        ->where(['active' => 1])
+        ->where(['Spots.top' => 1])
+        ->where(['Spots.active' => 1])
         ->contain(['Categories', 'Reviews']);
     }
   

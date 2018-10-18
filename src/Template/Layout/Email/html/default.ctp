@@ -145,7 +145,7 @@ a, a:link {color: #1c344d;text-decoration: none !important;}
 												<table width="160" align="left" cellspacing="0" cellpadding="0" border="0" class="full-width">
 													<tbody>
 														<tr>
-															<td height="34" valign="middle" align="center" class="center-stack" ><a href="http://benedicte-mondon.com/projet5"><img src="<?= $this->Url->image('Email/logo.png') ?>" width="160" height="34" alt="Marseille Green" /></a></td>
+															<td height="34" valign="middle" align="center" class="center-stack" ><a href="http://benedicte-mondon.com/projet5"><?= $this->Html->image("Email/logo.png", ['fullBase' => true]); ?></a></td>
 														</tr>
 													</tbody>
 												</table>
@@ -156,11 +156,11 @@ a, a:link {color: #1c344d;text-decoration: none !important;}
 													<tbody>
 														<tr>
 															<td height="34" valign="bottom" align="right" class="center">
-																<a style="text-decoration: none; border:0;" href="#"><img src="<?= $this->Url->image('Email/fb_bt.jpg') ?></a>
+																<a style="text-decoration: none; border:0;" href="#"><?= $this->Html->image("Email/fb_bt.jpg", ['fullBase' => true]); ?></a>
 															&nbsp;
-																<a style="text-decoration: none; border:0" href="#"><img src="<?= $this->Url->image('Email/twitter_bt.jpg') ?></a>
+																<a style="text-decoration: none; border:0" href="#"><?= $this->Html->image("Email/twitter_bt.jpg", ['fullBase' => true]); ?></a>
 															&nbsp;
-																<a style="text-decoration: none; border:0" href="#"><img src="<?= $this->Url->image('Email/google_pl_bt.jpg') ?></a>													
+																<a style="text-decoration: none; border:0" href="#"><?= $this->Html->image("Email/google_pl_bt.jpg", ['fullBase' => true]); ?></a>													
 															</td>
 														</tr>
 													</tbody>
@@ -186,7 +186,7 @@ a, a:link {color: #1c344d;text-decoration: none !important;}
 							  <table bgcolor="#ffffff" width="100%" cellspacing="0" cellpadding="0" border="0" class="full-width">
 												<tbody>
 													<tr>
-														<td valign="top" align="left"><a href="#"><img src="<?= $this->Url->image('Email/main_banner.jpg') ?>" class="emailImage" alt="Main banner" border="0" width="600" height="320" /></a></td>
+														<td valign="top" align="left"><a href="http://benedicte-mondon.com/projet5"><?= $this->Html->image("Email/main_banner.jpg", ['class' => 'emailImage','alt' =>'Marseille Green', 'fullBase' => true]); ?></a></td>
 													</tr>
 												</tbody>
 							  </table>
@@ -233,7 +233,7 @@ a, a:link {color: #1c344d;text-decoration: none !important;}
 							  <table bgcolor="#e04f67" width="100%" cellspacing="0" cellpadding="0" border="0" class="full-width">
 												<tbody>
 													<tr>
-														<td valign="bottom" align="left" height="71"><img src="<?= $this->Url->image('Email/bg_footer.jpg') ?>" class="emailImage" alt="Main banner" border="0" width="600" height="71" /></td>
+														<td valign="bottom" align="left" height="71"><?= $this->Html->image("Email/bg_footer.jpg", ['class' => 'emailImage','alt' =>'Marseille Green', 'fullBase' => true]); ?></td>
 													</tr>
 												</tbody>
 											</table>

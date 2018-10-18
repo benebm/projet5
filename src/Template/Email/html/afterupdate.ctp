@@ -15,7 +15,7 @@
  											<td height="30">&nbsp;</td>
  										</tr>
  										<tr>
- 											<td align="center"><img src="img/logo_small.jpg" width="58" height="38" alt="Image"/></td>
+ 											<td align="center"><?= $this->Html->image("Email/logo_small.png", ['fullBase' => true]); ?></td>
  										</tr>
  										<tr>
  											<td height="10" style="font-size:10px; mso-line-height-rule:exactly; line-height:10px;">&nbsp;</td>

@@ -55,7 +55,8 @@ class SpotsTable extends Table
     // retourne tous les spots
     public function getAllSpots()
     {
-        return $this->find('all')
+        return $this->find()
+        ->where(['active' => 1])
         ->contain(['Categories', 'Reviews']);  
     }  
 
@@ -64,6 +65,7 @@ class SpotsTable extends Table
     {
         return $this->find()
         ->where(['spots.top' => 1])
+        ->where(['active' => 1])
         ->contain(['Categories', 'Reviews']);
     }
   
@@ -101,6 +103,7 @@ class SpotsTable extends Table
     public function sortbyCategory($id)
     {
         return $this->find()
+        ->where(['active' => 1])
         ->where(['Spots.category_id' => $id])
         ->contain(['Categories', 'Reviews']);
     }
@@ -109,6 +112,7 @@ class SpotsTable extends Table
     public function sortbyDistrict($district)
     {
         return $this->find()
+        ->where(['active' => 1])
         ->where(['Spots.district' => $district])
         ->contain(['Categories', 'Reviews']);
     }
@@ -117,6 +121,7 @@ class SpotsTable extends Table
     public function filterbyDistrict($id, $district)
     {
         return $this->find()
+        ->where(['active' => 1])
         ->where(['Spots.category_id' => $id])
         ->where(['Spots.district' => $district])
         ->contain(['Categories', 'Reviews']);

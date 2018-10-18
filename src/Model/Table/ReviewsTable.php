@@ -78,6 +78,10 @@ class ReviewsTable extends Table
             ->requirePresence('content', 'create')
             ->notEmpty('content');
 
+         $validator
+            ->requirePresence('rating', 'create')
+            ->notEmpty('rating');
+
         return $validator;
     }
 

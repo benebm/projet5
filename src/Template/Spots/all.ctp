@@ -116,11 +116,11 @@
 											<li>
 											<?php if(!isset($id))
 											{ ?>
-												<i class="icon-ok-1"></i> <?= $this->Html->link($district->district, ['action' => 'sortDis', $district->district]);
+												<?= $this->Html->link($district->district, ['action' => 'sortDis', $district->district]);
 											} 
 											else
 												{ ?>
-													<i class="icon-ok-1"></i> <?= $this->Html->link($district->district, ['action' => 'filter', $id, $district->district]);
+													<?= $this->Html->link($district->district, ['action' => 'filter', $id, $district->district]);
 												} ?>
 											</li>
 										<?php endforeach; ?>
@@ -255,4 +255,4 @@
 </div>
 <!-- End container -->
 </main>
-	<!-- End main -->
+<!-- End main -->

@@ -4,12 +4,12 @@
 	<div id="position">
 		<div class="container">
 			<ul>
-				<li><a href="#">Accueil</a>
+				<li><a href="<?= $this->Url->build(['controller' => 'Spots','action' => 'index']); ?>">Accueil</a>
 				</li>
-				<li><a href="#">Catégorie</a>
+				<li><a href="<?= $this->Url->build(['controller' => 'Spots','action' => 'all']); ?>">Catégorie</a>
 				</li>
 				<li>
-					<?= $spot->category->title ?>
+					<?= $spot->category->homename ?>
 				</li>
 			</ul>
 		</div>
@@ -72,17 +72,11 @@
 	</div>
 	<!-- End Map -->
 
-	<div class="container margin_60">
+	<div class="container margin_30">
 		<div class="row">
 			<div class="col-md-8" id="single_tour_desc">
 
-				<div id="single_tour_feat">
-					<ul>
-						<?= $spot->iconlist ?>
-					</ul>
-				</div>
-
-				<p class="visible-sm visible-xs"><a class="btn_map" data-toggle="collapse" href="#collapseMap" aria-expanded="false" aria-controls="collapseMap" data-text-swap="Hide map" data-text-original="View on map">Voir sur la carte</a>
+				<p class="visible-sm visible-xs"><a class="btn_map" data-toggle="collapse" href="#collapseMap" aria-expanded="false" aria-controls="collapseMap" data-text-swap="Replier la carte" data-text-original="View on map">Voir sur la carte</a>
 				</p>
 				<!-- Map button for tablets/mobiles -->
 
@@ -114,7 +108,7 @@
 					<div class="col-md-9">
 						<i><?= $this->Flash->render(); ?><br /></i>
 
-						<?= $this->Form->create($review, ['url' => ['action' => 'addReview']]); ?>
+						<?= $this->Form->create(isset($review), ['url' => ['action' => 'addReview']]); ?>
 						<div class="form-group">
 							<?= $this->Form->control('title', ['class' => 'form-control', 'placeholder' => 'Votre titre', 'label' => false]) ?>
 						</div>
@@ -123,15 +117,15 @@
 						<?= $this->Form->control('spot_id', ['type' => 'hidden', 'value' => $spot->id]) ?>
 						<?= $this->Form->control('spot_slug', ['type' => 'hidden', 'value' => $spot->slug]) ?>
 						<div class="form-group">
-							<?= $this->Form->control('content', ['class' => 'form-control', 'placeholder' => 'Votre commentaire', 'label' => false]) ?>
+							<?= $this->Form->control('content', ['class' => 'form-control', 'placeholder' => 'Votre commentaire', 'label' => false, 'type' => 'textarea']) ?>
 						</div>
 						<div class="form-group">
 							<?= $this->Form->radio('rating',[
-								['value' => '1', 'text' => '1 sur 5'],
-								['value' => '2', 'text' => '2 sur 5'],
-								['value' => '3', 'text' => '3 sur 5'],
-								['value' => '4', 'text' => '4 sur 5'],
-								['value' => '5', 'text' => '5 sur 5'], 
+								['class' =>'form-control-radio', 'value' => '1', 'text' => '1 sur 5'],
+								['class' =>'form-control-radio', 'value' => '2', 'text' => '2 sur 5'],
+								['class' =>'form-control-radio', 'value' => '3', 'text' => '3 sur 5'],
+								['class' =>'form-control-radio', 'value' => '4', 'text' => '4 sur 5'],
+								['class' =>'form-control-radio', 'value' => '5', 'text' => '5 sur 5'], 
 							]
 						); ?>
 					</div>
@@ -142,9 +136,20 @@
 
 					<?php if ($spot->reviews): ?>
 						<div id="general_rating"><?= count($spot->reviews) ?> Appréciations
-								<!--<div class="rating">
-									<i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i>
-								</div>-->
+								<div class="rating">
+								<?php for ($i = 1; $i <= 5; $i++)
+								{
+								if ($i <= $rating->moyenne)
+									{
+										echo "<i class=\"icon-smile voted\"></i>";
+									}
+								else
+									{
+										echo "<i class=\"icon-smile\"></i>";
+									}
+								} 
+								?>
+								</div>
 							</div>
 							<!-- End general_rating -->
 							<hr>
@@ -159,7 +164,6 @@
 										<?= h($review->content) ?>
 									</p>
 									<div class="rating">
-
 										<?php 
 										for ($i = 1; $i <= 5; $i++)
 										{
@@ -173,14 +177,11 @@
 											}
 										} 
 										?>
-
 									</div>
 								</div>
 							<?php endforeach; ?>
 						<?php endif; ?>
-						<!-- End review strip -->
-
-						
+						<!-- End review strip -->						
 					</div>		
 				</div>
 			</div>
@@ -188,7 +189,7 @@
 
 			<aside class="col-md-4">
 				<p class="hidden-sm hidden-xs">
-					<a class="btn_map" data-toggle="collapse" href="#collapseMap" aria-expanded="false" aria-controls="collapseMap" data-text-swap="Replier la carte" data-text-original="View on map">Voir sur la carte</a>
+					<a class="btn_map" data-toggle="collapse" href="#collapseMap" aria-expanded="false" aria-controls="collapseMap" data-text-swap="Replier la carte" data-text-original="Voir sur la carte">Voir sur la carte</a>
 				</p>
 
 				<div class="box_style_4">
@@ -212,12 +213,7 @@
 		<!--End row -->
 	</div>
 	<!--End container -->
-	
 	<div id="overlay"></div>
 	<!-- Mask on input focus -->
-	
 </main>
 <!-- End main -->
-
-</main>
-    <!-- End main -->

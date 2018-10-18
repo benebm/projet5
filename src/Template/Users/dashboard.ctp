@@ -1,128 +1,121 @@
 <?= $this->element('hero/dashboardhero') ?>
 
 <main>
-<div id="position">
-			<div class="container">
-				<ul>
-					<li><a href="<?= $this->Url->build(['controller' => 'Spots','action' => 'index']); ?>">Accueil</a>
-					</li>
-					<li>Espace utilisateur</li>
-				</ul>
-			</div>
+	<div id="position">
+		<div class="container">
+			<ul>
+				<li><a href="<?= $this->Url->build(['controller' => 'Spots','action' => 'index']); ?>">Accueil</a>
+				</li>
+				<li>Espace utilisateur</li>
+			</ul>
 		</div>
-		<!-- End Position -->
+	</div>
+	<!-- End Position -->
 
-		<div class="margin_60 container">
-			<div id="tabs" class="tabs">
-				<nav>
-					<ul>
-						<li><a href="#section-1" class="icon-booking"><span>Mon carnet d'appréciations</span></a>
-						</li>
-						<li><a href="#section-2" class="icon-settings"><span>Paramètres</span></a>
-						</li>
-					</ul>
-				</nav>
-				<div class="content">
-
-					<section id="section-1">
-						<?= $this->Flash->render(); ?><br />
-						<?php if ($review->isEmpty())
-							{
-							echo "Vous n'avez pas encore publié d'appréciations. " . $this->Html->link('Lancez-vous !', ['controller' => 'Spots', 'action' => 'all']);
-							}
-							else
-							{
-								foreach ($review as $review): ?>
+	<div class="margin_60 container">
+		<div id="tabs" class="tabs">
+			<nav>
+				<ul>
+					<li><a href="#section-1" class="icon-booking"><span>Mon carnet d'appréciations</span></a>
+					</li>
+					<li><a href="#section-2" class="icon-settings"><span>Paramètres</span></a>
+					</li>
+				</ul>
+			</nav>
+			<div class="content">
+				<section id="section-1">
+					<?= $this->Flash->render(); ?><br />
+					<?php if ($review->isEmpty())
+					{
+						echo "Vous n'avez pas encore publié d'appréciations. " . $this->Html->link('Lancez-vous !', ['controller' => 'Spots', 'action' => 'all']);
+					}
+					else
+					{
+						foreach ($review as $review): ?>
 						<div class="strip_booking">
 							<div class="row">
 								<div class="col-md-2 col-sm-2">
-									<div id="dashboardthumb"><?php echo $this->Html->image($review->spot->imagethumb, ['alt' => 'Image', 'url' => ['controller' => 'Spots', 'action' => 'view', $review->spot->slug]]); ?>
+									<div id="dashboardthumb"><?php echo $this->Html->image($review->spot->imagethumb, ['alt' => $review->spot->name, 'url' => ['controller' => 'Spots', 'action' => 'view', $review->spot->slug]]); ?>
 									</div>
 								</div>
-								<div class="col-md-6 col-sm-5">
-									<h3><?= $review->title ?></h3>
-									<blockquote class="styled"><?= $review->content ?></blockquote>
-								</div>
-								<div class="col-md-2 col-sm-3">
-									<ul class="info_booking">
-										<li><strong>Note</strong><div class="rating" id="dashboardrating">	
-										<?php for ($i = 1; $i <= 5; $i++) {
+							<div class="col-md-6 col-sm-5">
+								<h3><?= $review->title ?></h3>
+								<blockquote class="styled"><?= $review->content ?></blockquote>
+							</div>
+							<div class="col-md-2 col-sm-3">
+								<ul class="info_booking">
+									<li><strong>Note</strong>
+										<div class="rating" id="dashboardrating">	
+											<?php for ($i = 1; $i <= 5; $i++) {
 											if ($i <= $review->rating)
-											{
-												echo "<i class=\"icon-smile voted\"></i>";
-											}
+												{
+													echo "<i class=\"icon-smile voted\"></i>";
+												}
 											else
-											{
-												echo "<i class=\"icon-smile\"></i>";
-											}
-										} ?>
-										</div></li><br />
-										<li><strong>Spot</strong> <?php echo $this->Html->link($review->spot->name, ['controller' => 'Spots', 'action' => 'view', $review->spot->slug]) ?></li><br />
-
-										<li><strong>Quartier</strong> <?= $review->spot->area ?></li><br />
-										<li><strong>Date</strong> <?= $review->created->format('d M y') ?></li>
-									</ul>
-								</div>
-								<div class="col-md-2 col-sm-2">
-									<div class="booking_buttons">
-										<!--<a href="#0" class="btn_2">Modifier</a>-->
-										<?= $this->Html->link('Voir l\'avis', ['controller' => 'Spots', 'action' => 'view', $review->spot->slug], ['class' => 'btn_2']) ?>
-										<?= $this->Form->postLink(__('Supprimer l\'avis'),
-											
-											['action' => 'deleteReview', $review->id],
-											['class' => 'btn_3']
-										); ?>
-										
-									</div>
-								</div>
-								
+												{
+													echo "<i class=\"icon-smile\"></i>";
+												}
+											} ?>
+										</div>
+									</li><br />
+									<li><strong>Spot</strong> <?php echo $this->Html->link($review->spot->name, ['controller' => 'Spots', 'action' => 'view', $review->spot->slug]) ?>
+									</li><br />
+									<li><strong>Quartier</strong> <?= $review->spot->area ?></li><br />
+									<li><strong>Date</strong> <?= $review->created->format('d M y') ?></li>
+								</ul>
 							</div>
-							<!-- End row -->
+							<div class="col-md-2 col-sm-2">
+								<div class="booking_buttons">
+									<!--<a href="#0" class="btn_2">Modifier</a>-->
+									<?= $this->Html->link('Voir l\'avis', ['controller' => 'Spots', 'action' => 'view', $review->spot->slug], ['class' => 'btn_2']) ?>
+									<?= $this->Form->postLink(__('Supprimer l\'avis'), ['action' => 'deleteReview', $review->id], ['class' => 'btn_3']); ?>
+								</div>
+							</div>
 						</div>
-						<!-- End strip booking -->
-								<?php endforeach; 
-							}?>
-
-					</section>
-					<!-- End section 1 -->
-
-					<section id="section-2">
-						<div class="row">
-							<div class="col-md-6 col-sm-6 add_bottom_30">
-								<h4>Mettre à jour votre nom d'utilisateur</h4>
-								<strong>Nom d'utilisateur actuel</strong><br /><?= $username ?>
-								<hr>
-								<?= $this->Form->create($user, ['url' => ['action' => 'editUser']]); ?>
-								<div class="form-group">
-									<label>Nouveau nom d'utilisateur</label>
-									<?= $this->Form->control('username', ['class' => 'form-control', 'placeholder' => 'Votre nouveau pseudo', 'label' => false]) ?>
-								</div>
-								<button type="submit" class="btn_1 green">Mettre à jour</button>
-								<?= $this->Form->end() ?>				
-							</div>
-							<div class="col-md-6 col-sm-6 add_bottom_30">
-								<h4>Mettre à jour votre mot de passe</h4>
-								<?= $this->Form->create($user, ['url' => ['action' => 'editUser']]); ?>
-								<div class="form-group">
-									<label>Nouveau mot de passe</label>
-									<?= $this->Form->control('password', ['class' => 'form-control', 'placeholder' => 'Votre nouveau mot de passe', 'label' => false, 'id' => 'password1']) ?>
-								<br />
-									<label>Saisissez à nouveau le mot de passe</label>
-									<?= $this->Form->password('confirm_password', ['class' => 'form-control', 'placeholder' => 'Votre nouveau mot de passe', 'label' => false, 'id' => 'password2']) ?>
-								</div>
-								<div id="pass-info" class="clearfix"></div>
-								<button type="submit" class="btn_1 green">Mettre à jour</button>
-								<?= $this->Form->end() ?>	
-							</div>
-
 						<!-- End row -->
-					</section>
-					<!-- End section 2 -->
 					</div>
-					<!-- End content -->
-				</div>
-				<!-- End tabs -->
+					<!-- End strip booking -->
+					<?php endforeach; 
+					}?>
+				</section>
+				<!-- End section 1 -->
+
+				<section id="section-2">
+					<div class="row">
+						<div class="col-md-6 col-sm-6 add_bottom_30">
+							<h4>Mettre à jour votre nom d'utilisateur</h4>
+							<strong>Nom d'utilisateur actuel</strong><br /><?= h($username) ?>
+							<hr>
+							<?= $this->Form->create($user, ['url' => ['action' => 'editUser']]); ?>
+								<div class="form-group">
+								<label>Nouveau nom d'utilisateur</label>
+								<?= $this->Form->control('username', ['class' => 'form-control', 'placeholder' => 'Votre nouveau pseudo', 'label' => false]) ?>
+								</div>
+								<button type="submit" class="btn_1 green">Mettre à jour</button>
+							<?= $this->Form->end() ?>				
+						</div>
+					<div class="col-md-6 col-sm-6 add_bottom_30">
+						<h4>Mettre à jour votre mot de passe</h4>
+						<?= $this->Form->create($user, ['url' => ['action' => 'editUser']]); ?>
+						<div class="form-group">
+							<label>Nouveau mot de passe</label>
+							<?= $this->Form->control('password', ['class' => 'form-control', 'placeholder' => 'Votre nouveau mot de passe', 'label' => false, 'id' => 'password1']) ?>
+							<br />
+							<label>Saisissez à nouveau le mot de passe</label>
+							<?= $this->Form->password('confirm_password', ['class' => 'form-control', 'placeholder' => 'Votre nouveau mot de passe', 'label' => false, 'id' => 'password2']) ?>
+						</div>
+					<div id="pass-info" class="clearfix"></div>
+					<button type="submit" class="btn_1 green">Mettre à jour</button>
+					<?= $this->Form->end() ?>	
+					</div>
+					<!-- End row -->
+				</section>
+				<!-- End section 2 -->
 			</div>
-			<!-- end container -->
-		 </main>
-    <!-- End main -->
+			<!-- End content -->
+		</div>
+		<!-- End tabs -->
+	</div>
+	<!-- end container -->
+</main>
+<!-- End main -->

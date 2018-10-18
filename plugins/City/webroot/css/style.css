@@ -1237,27 +1237,28 @@ ul#cat_nav i {
 
 #map_filter_cat_3 a
 {
-	color: #f7c23e;
+	color: #4590b6;
+	/*color: #f7c23e;*/
 }
 
 #map_filter_cat_4 a
 {
-	color: #9069b5;
+	color: #485675;
 }
 
 #map_filter_cat_5 a
 {
-	color: #4590b6;
+	color: #ee7841;
 }
 
 #map_filter_cat_6 a
 {
-	color: #485675;
+	color: #9069b5;
 }
 
 #map_filter_cat_7 a
 {
-	color: #ee7841;
+	color: #f7c23e;
 }
 
 #map_filter_cat_8 a
@@ -1504,12 +1505,15 @@ a#filters_col_bt .icon_set_1_icon-65 {
 	margin: 0 0 15px 0;
 }
 
-.filter_type ul li .rating {
-	font-size: 16px;
-	left: -7px;
-	position: relative;
-	top: 3px;
+/*custo du tri par arrondissement */
+
+.filter_type ul li {
+	font-size: 14px;
+	padding: 10px 0 0 0;
+	margin-left: 35px;
+	
 }
+/*fin custo*/
 
 /*-------- 2.3 Single tour page --------*/
 #Img_carousel .sp-selected-thumbnail {
@@ -2690,6 +2694,14 @@ ul.list_icons li i {
 	height: 40px;
 	border-radius: 3px;
 }
+
+/*custom radio button du form review */
+.form-control-radio {
+	font-size: 12px;
+	width: 30px;
+}
+
+/*fin custo */
 
 #booking .form-group {
 	position: relative;

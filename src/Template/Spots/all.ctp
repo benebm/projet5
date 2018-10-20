@@ -147,8 +147,7 @@
 										</div>
 										<div class="img_list">
 											<?php echo $this->Html->image($spot->image, [
-											'alt' => 'Image',
-											'class' => 'img-responsive',
+											'alt' => $spot->name,
 											'url' => ['action' => 'view', $spot->slug]
 											]); ?>
 											<div class="short_info"><i class="<?= $spot->category->icon ?>"></i><?= $spot->category->title ?> </div>

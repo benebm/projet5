@@ -15,7 +15,7 @@
  											<td height="30">&nbsp;</td>
  										</tr>
  										<tr>
- 											<td align="center"><?= $this->Html->image("Email/logo_small.png", ['fullBase' => true]); ?></td>
+ 											<td align="center"><?= $this->Html->image("Email/logo_small.jpg", ['fullBase' => true]); ?></td>
  										</tr>
  										<tr>
  											<td height="10" style="font-size:10px; mso-line-height-rule:exactly; line-height:10px;">&nbsp;</td>
@@ -38,7 +38,7 @@
  												<table cellspacing="0" cellpadding="0" border="0" align="center">
  													<tbody>
  														<tr>
- 															<td align="center" style="border-radius:3px; color:#ffffff; display:block; font-family: Arial, Helvetica, sans-serif; font-size:12px; line-height:12px; text-align:center; text-decoration:none; padding-top: 10px; padding-bottom: 10px; width:110px; -webkit-text-size-adjust:none; background-color:#51bce6"><a style="color:#ffffff;font-family: Arial, Helvetica, sans-serif; font-size:12px; text-decoration:none !important" href="#">Je me connecte</a></td>
+ 															<td align="center" style="border-radius:3px; color:#ffffff; display:block; font-family: Arial, Helvetica, sans-serif; font-size:12px; line-height:12px; text-align:center; text-decoration:none; padding-top: 10px; padding-bottom: 10px; width:110px; -webkit-text-size-adjust:none; background-color:#51bce6"><a style="color:#ffffff;font-family: Arial, Helvetica, sans-serif; font-size:12px; text-decoration:none !important" href="http://benedicte-mondon.com/projet5/users/login">Je me connecte</a></td>
  														</tr>
  													</tbody>
  												</table>												

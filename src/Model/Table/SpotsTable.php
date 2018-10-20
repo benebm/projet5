@@ -57,6 +57,7 @@ class SpotsTable extends Table
     {
         return $this->find()
         ->where(['active' => 1])
+        ->order(['top' => 'DESC'])
         ->contain(['Categories', 'Reviews']);  
     }  
 

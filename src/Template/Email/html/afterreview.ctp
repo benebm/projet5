@@ -15,7 +15,7 @@
  											<td height="30">&nbsp;</td>
  										</tr>
  										<tr>
- 											<td align="center"><?= $this->Html->image("Email/logo_small.png", ['fullBase' => true]); ?></td>
+ 											<td align="center"><?= $this->Html->image("Email/logo_small.jpg", ['fullBase' => true]); ?></td>
  										</tr>
  										<tr>
  											<td height="10" style="font-size:10px; mso-line-height-rule:exactly; line-height:10px;">&nbsp;</td>
@@ -29,7 +29,7 @@
  										</tr>
  										<tr >
  											<td style="font-size:14px; mso-line-height-rule:exactly; line-height:18px; color:#95a5a6; font-weight:normal; font-family: Arial, Helvetica, sans-serif;" align="center">
- 												Un grand merci pour avoir donné votre avis sur <?= $spotname ?> ! Grâce à vous, l'expérience de nos visiteurs ne cesse de gagner en qualité et en pertinence. Et en contribuant, vous oeuvrez à nos côtés pour une ville meilleure ! Vous pouvez maintenant accéder à la liste de vos avis dans votre <strong>carnet d'appréciations</strong></td>
+ 												Un grand merci pour avoir donné votre avis sur <?= $spotname ?> ! Grâce à vous, l'expérience de nos visiteurs ne cesse de gagner en qualité et en pertinence. Et en contribuant, vous oeuvrez à nos côtés pour une ville meilleure ! Vous pouvez maintenant accéder à la liste de vos avis dans votre <strong>carnet d'appréciations :</strong></td>
  										</tr>
  										<tr>
  											<td height="20" style="font-size:20px; mso-line-height-rule:exactly; line-height:20px;">&nbsp;</td>
@@ -39,7 +39,7 @@
  												<table cellspacing="0" cellpadding="0" border="0" align="center">
  													<tbody>
  														<tr>
- 															<td align="center" style="border-radius:3px; color:#ffffff; display:block; font-family: Arial, Helvetica, sans-serif; font-size:12px; line-height:12px; text-align:center; text-decoration:none; padding-top: 10px; padding-bottom: 10px; width:110px; -webkit-text-size-adjust:none; background-color:#51bce6"><a style="color:#ffffff;font-family: Arial, Helvetica, sans-serif; font-size:12px; text-decoration:none !important" href="#">Je me connecte</a></td>
+ 															<td align="center" style="border-radius:3px; color:#ffffff; display:block; font-family: Arial, Helvetica, sans-serif; font-size:12px; line-height:12px; text-align:center; text-decoration:none; padding-top: 10px; padding-bottom: 10px; width:110px; -webkit-text-size-adjust:none; background-color:#51bce6"><a style="color:#ffffff;font-family: Arial, Helvetica, sans-serif; font-size:12px; text-decoration:none !important" href="http://benedicte-mondon.com/projet5/users/login">Je me connecte</a></td>
  														</tr>
  													</tbody>
  												</table>												

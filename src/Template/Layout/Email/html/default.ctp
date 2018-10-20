@@ -156,11 +156,11 @@ a, a:link {color: #1c344d;text-decoration: none !important;}
 													<tbody>
 														<tr>
 															<td height="34" valign="bottom" align="right" class="center">
-																<a style="text-decoration: none; border:0;" href="#"><?= $this->Html->image("Email/fb_bt.jpg", ['fullBase' => true]); ?></a>
+																<a style="text-decoration: none; border:0;" href="https://www.linkedin.com/in/benedicte-mondon/"><?= $this->Html->image("Email/linkedin_bt.png", ['fullBase' => true]); ?></a>
 															&nbsp;
-																<a style="text-decoration: none; border:0" href="#"><?= $this->Html->image("Email/twitter_bt.jpg", ['fullBase' => true]); ?></a>
+																<a style="text-decoration: none; border:0" href="https://twitter.com/BenedicteMondon"><?= $this->Html->image("Email/twitter_bt.jpg", ['fullBase' => true]); ?></a>
 															&nbsp;
-																<a style="text-decoration: none; border:0" href="#"><?= $this->Html->image("Email/google_pl_bt.jpg", ['fullBase' => true]); ?></a>													
+																<a style="text-decoration: none; border:0" href="https://github.com/benebm"><?= $this->Html->image("Email/github_bt.png", ['fullBase' => true]); ?></a>													
 															</td>
 														</tr>
 													</tbody>
@@ -186,7 +186,7 @@ a, a:link {color: #1c344d;text-decoration: none !important;}
 							  <table bgcolor="#ffffff" width="100%" cellspacing="0" cellpadding="0" border="0" class="full-width">
 												<tbody>
 													<tr>
-														<td valign="top" align="left"><a href="http://benedicte-mondon.com/projet5"><?= $this->Html->image("Email/main_banner.jpg", ['class' => 'emailImage','alt' =>'Marseille Green', 'fullBase' => true]); ?></a></td>
+														<td valign="top" align="left"><a href="http://benedicte-mondon.com/projet5"><?= $this->Html->image("Email/main_banner.png", ['class' => 'emailImage','alt' =>'Marseille Green', 'fullBase' => true]); ?></a></td>
 													</tr>
 												</tbody>
 							  </table>
@@ -195,7 +195,7 @@ a, a:link {color: #1c344d;text-decoration: none !important;}
 								<?= $this->fetch('content') ?>
                                                 
                                <!-- Start footer ================= -->
-							  <table width="600" bgcolor="#e04f67" align="center" cellspacing="0" cellpadding="0" border="0" class="mobile-width">
+							  <table width="600" bgcolor="#82ca9c" align="center" cellspacing="0" cellpadding="0" border="0" class="mobile-width">
 												<tbody>
 													<tr>	
 														<td align="center">														
@@ -217,7 +217,7 @@ a, a:link {color: #1c344d;text-decoration: none !important;}
 																						<td class="font_fix" style="font-family: 'Montserrat', sans-serif; font-size:28px;mso-line-height-rule:exactly; line-height:28px; font-weight:bold; color:#ffffff;text-decoration:none !important; " align="center">Contactez-nous</td>
 																					</tr>																																						
 																					<tr>
-																						<td class="font_fix" style="font-size:12px; font-family: 'Montserrat', sans-serif; line-height:14px; color:#ffffff; font-weight:bold; padding-top:5px" align="center"><a href="#" style="color:#ffffff;text-decoration:none !important;">contact@marseillegreen.com</a> - <a href="#" style="color:#ffffff;text-decoration:none !important; ">www.marseillegreen.com</a></td>
+																						<td class="font_fix" style="font-size:12px; font-family: 'Montserrat', sans-serif; line-height:14px; color:#ffffff; font-weight:bold; padding-top:5px" align="center"><a href="http://benedicte-mondon.com/projet5/users/contact" style="color:#ffffff;text-decoration:none !important;">contact@marseillegreen.fr</a> - <a href="http://benedicte-mondon.com/projet5" style="color:#ffffff;text-decoration:none !important; ">www.marseillegreen.fr</a></td>
 																					</tr>																			
 																					
 																				</tbody>
@@ -230,7 +230,7 @@ a, a:link {color: #1c344d;text-decoration: none !important;}
 															<!-- End Block Content -->
                                                             
                                <!-- Section img footer -->										
-							  <table bgcolor="#e04f67" width="100%" cellspacing="0" cellpadding="0" border="0" class="full-width">
+							  <table bgcolor="#82ca9c" width="100%" cellspacing="0" cellpadding="0" border="0" class="full-width">
 												<tbody>
 													<tr>
 														<td valign="bottom" align="left" height="71"><?= $this->Html->image("Email/bg_footer.jpg", ['class' => 'emailImage','alt' =>'Marseille Green', 'fullBase' => true]); ?></td>

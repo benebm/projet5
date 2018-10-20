@@ -13,7 +13,7 @@
 
 					<div class="img_container">
 						<?php echo $this->Html->image($spot->image, [
-							'alt' => 'Image',
+							'alt' => $spot->name,
 							'class' => 'img-responsive',
 							'url' => ['action' => 'view', $spot->slug]
 						]); ?>

@@ -202,7 +202,9 @@ ul#profile_summary li span{
 	left:200px;
 }
 .profile_pic{
-	float:right;
+	/*custo : right passe en left
+	float:right;*/ 
+	float:left;
 	margin-bottom:15px;
 }
 .divider{

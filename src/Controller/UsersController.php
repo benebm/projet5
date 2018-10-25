@@ -74,7 +74,7 @@ class UsersController extends AppController
      */
     public function editUser($id = null)
     {
-    	$userId = $this->Auth->user("id");
+        $userId = $this->Auth->user("id");
         $user = $this->Users->get($userId);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
@@ -89,15 +89,68 @@ class UsersController extends AppController
         $this->set(compact('user'));
     }
 
+
+    public function addPhoto()
+    {
+
+        if (!empty($this->request->data)) {
+            if (!empty($this->request->data['upload']['name'])) {
+
+            $file = $this->request->data['upload']; //put the data into a var for easy use
+            $userId = $this->Auth->user("id");
+            // $this->set('userId', $userId);
+            
+            $ext = substr(strtolower(strrchr($file['name'], '.')), 1); //get the extension
+            $arr_ext = array('jpg', 'jpeg', 'gif'); //set allowed extensions
+            //$setNewFileName = time() . "_" . rand(000000, 999999);
+            $setNewFileName = 'avatar_' . $userId;
+
+                //only process if the extension is valid
+                if (in_array($ext, $arr_ext)) {
+                //do the actual uploading of the file. First arg is the tmp name, second arg is 
+                //where we are putting it
+                move_uploaded_file($file['tmp_name'], WWW_ROOT . '/img/avatars/' . $setNewFileName . '.' . $ext);
+
+                $this->Flash->success(__('Votre mise à jour a bien été prise en compte.'));
+                return $this->redirect(['action' => 'dashboard']);
+
+    //prepare the filename for database entry 
+ //   $imageFileName = $setNewFileName . '.' . $ext;
+    }
+}
+
+/*
+$getFormvalue = $this->Users->patchEntity($particularRecord, $this->request->data);
+
+if (!empty($this->request->data['upload']['name'])) {
+            $getFormvalue->avatar = $imageFileName;
+}
+
+
+if ($this->Users->save($getFormvalue)) {
+   $this->Flash->success('Your profile has been sucessfully updated.');
+   return $this->redirect(['controller' => 'Users', 'action' => 'dashboard']);
+   } else {
+   $this->Flash->error('Records not be saved. Please, try again.');
+   }
+*/
+
+}
+    }
+
+
+
+
+
 public function dashboard()
     {
-    	$userId = $this->Auth->user("id");
+        $userId = $this->Auth->user("id");
         $useremail = $this->Auth->user("email");
         $this->set('useremail', $useremail); 
 
-    	$review = $this->Users->getUserReviews($userId);
+        $review = $this->Users->getUserReviews($userId);
         $this->set(compact('review'));
-	}
+    }
 
     public function deleteReview($id = null)
     {
@@ -125,10 +178,10 @@ public function dashboard()
         $this->set('contact', $contact);
     }
 
-	public function isAuthorized($user)
+    public function isAuthorized($user)
     {
         // Tous les utilisateurs enregistrés peuvent accéder au dashboard ou éditer leurs paramètres
-         if (in_array($this->request->getParam('action'), ['dashboard', 'editUser'])) {
+         if (in_array($this->request->getParam('action'), ['dashboard', 'editUser', 'addPhoto'])) {
             return true;
         }
         // Le propriétaire d'un avis peut le supprimer

@@ -20,6 +20,8 @@
 					</li>
 					<li><a href="#section-2" class="icon-settings"><span>Paramètres</span></a>
 					</li>
+					<li><a href="#section-3" class="icon-profile"><span>Profil</span></a>
+					</li>
 				</ul>
 			</nav>
 			<div class="content">
@@ -94,23 +96,91 @@
 								<button type="submit" class="btn_1 green">Mettre à jour</button>
 							<?= $this->Form->end() ?>				
 						</div>
-					<div class="col-md-6 col-sm-6 add_bottom_30">
-						<h4>Mettre à jour votre mot de passe</h4>
-						<?= $this->Form->create($user, ['url' => ['action' => 'editUser']]); ?>
-						<div class="form-group">
-							<label>Nouveau mot de passe</label>
-							<?= $this->Form->control('password', ['class' => 'form-control', 'placeholder' => 'Votre nouveau mot de passe', 'label' => false, 'id' => 'password1']) ?>
-							<br />
-							<label>Saisissez à nouveau le mot de passe</label>
-							<?= $this->Form->password('confirm_password', ['class' => 'form-control', 'placeholder' => 'Votre nouveau mot de passe', 'label' => false, 'id' => 'password2']) ?>
+						<div class="col-md-6 col-sm-6 add_bottom_30">
+							<h4>Mettre à jour votre mot de passe</h4>
+							<?= $this->Form->create($user, ['url' => ['action' => 'editUser']]); ?>
+								<div class="form-group">
+								<label>Nouveau mot de passe</label>
+								<?= $this->Form->control('password', ['class' => 'form-control', 'placeholder' => 'Votre nouveau mot de passe', 'label' => false, 'id' => 'password1']) ?>
+								<br />
+								<label>Saisissez à nouveau le mot de passe</label>
+								<?= $this->Form->password('confirm_password', ['class' => 'form-control', 'placeholder' => 'Votre nouveau mot de passe', 'label' => false, 'id' => 'password2']) ?>
+								</div>
+								<div id="pass-info" class="clearfix"></div>
+								<button type="submit" class="btn_1 green">Mettre à jour</button>
+							<?= $this->Form->end() ?>	
 						</div>
-					<div id="pass-info" class="clearfix"></div>
-					<button type="submit" class="btn_1 green">Mettre à jour</button>
-					<?= $this->Form->end() ?>	
-					</div>
-					<!-- End row -->
+						<!-- End row -->
 				</section>
 				<!-- End section 2 -->
+
+
+
+
+				<section id="section-3">
+						<div class="row">
+							<div class="col-md-6 col-sm-6">
+								<h4>Votre photo de profil</h4>
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<!--si une image existe à ce nom (changer l'extension en variable) -->
+								<img src="<?= $this->Url->image('avatars/avatar_' . $userId . '.jpg') ?>" alt="Image" class="img-responsive styled profile_pic">
+								<!-- sinon -->
+								<img src="<?= $this->Url->image('default-avatar.png') ?>" alt="Image" class="img-responsive styled profile_pic">
+								</p>
+							</div>
+						</div>
+						<!-- End row -->
+
+						<hr>
+						<h4>Importer une photo de profil</h4>
+						
+
+
+							<div class="ChImg">
+							<?php 
+							echo $this->Form->create($particularRecord, [
+								'url' => ['action' => 'addPhoto'],
+								'enctype' => 'multipart/form-data'
+							]);
+							echo $this->Form->input('upload', ['type' => 'file']);
+							echo $this->Form->button('Update Details', ['class' => '']);
+							echo $this->Form->end();       
+							?>
+							</div>
+
+						
+
+						<!-- Hidden on mobiles -->
+						<!--<div class="hidden-xs">-->
+							<!-- Drop Zone -->
+							<!--<h5>Or drag and drop files below</h5>
+							<div class="upload-drop-zone" id="drop-zone">
+								Just drag and drop files here
+							</div>-->
+							<!-- Progress Bar -->
+							<!--<div class="progress">
+								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+									<span class="sr-only">60% Complete</span>
+								</div>
+							</div>-->
+							<!-- Upload Finished -->
+							<!--<div class="js-upload-finished">
+								<h5>Processed files</h5>
+								<div class="list-group">
+									<a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-01.jpg</a>
+								</div>
+							</div>-->
+							<!-- End Hidden on mobiles -->
+
+							
+
+					</section>
+					<!-- End section 3 -->
+
+
+
+
 			</div>
 			<!-- End content -->
 		</div>

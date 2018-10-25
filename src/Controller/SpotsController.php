@@ -164,13 +164,13 @@ class SpotsController extends AppController
 
         if (isset($id))
         {
-        	$spots = $this->Spots->sortbyCategory($id);
-        	$this->set(compact('spots'));  
+            $spots = $this->Spots->sortbyCategory($id);
+            $this->set(compact('spots'));  
         }
         else 
         {
-        	$spots = $this->Spots->getAllSpots();
-        	$this->set(compact('spots'));
+            $spots = $this->Spots->getAllSpots();
+            $this->set(compact('spots'));
         }
 
     }

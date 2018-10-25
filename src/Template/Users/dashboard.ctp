@@ -124,7 +124,10 @@
 							</div>
 							<div class="col-md-6 col-sm-6">
 								<!--si une image existe à ce nom (changer l'extension en variable) -->
-								<img src="<?= $this->Url->image('avatars/avatar_' . $userId . '.jpg') ?>" alt="Image" class="img-responsive styled profile_pic">
+								<?php echo $this->Html->image('avatars/avatar_' . $userId . '.jpg', [
+									'alt' => $username, 
+									'class' => 'img-responsive styled profile_pic'
+								]); ?>
 								<!-- sinon -->
 								<img src="<?= $this->Url->image('default-avatar.png') ?>" alt="Image" class="img-responsive styled profile_pic">
 								</p>
@@ -137,18 +140,24 @@
 						
 
 
-							<div class="ChImg">
+							<div class="form-inline upload_1">
+							<div class="form-group">
 							<?php 
-							echo $this->Form->create($particularRecord, [
+							echo $this->Form->create($photo, [
 								'url' => ['action' => 'addPhoto'],
 								'enctype' => 'multipart/form-data'
 							]);
-							echo $this->Form->input('upload', ['type' => 'file']);
-							echo $this->Form->button('Update Details', ['class' => '']);
-							echo $this->Form->end();       
+							echo $this->Form->input('upload', [
+								'type' => 'file',
+								'label' => 'Taille recommandée : 68 x 68 pixels | Formats acceptés gif, jpg, png'
+							]); ?>
+							<br />
+							<?= $this->Form->button('Mettre à jour ma photo de profil', ['class' => 'btn_1 green']);
+							echo $this->Form->end();  
 							?>
+							
 							</div>
-
+							</div>
 						
 
 						<!-- Hidden on mobiles -->

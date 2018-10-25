@@ -117,6 +117,7 @@ class UsersController extends AppController
     //prepare the filename for database entry 
  //   $imageFileName = $setNewFileName . '.' . $ext;
     }
+
 }
 
 /*
@@ -147,6 +148,7 @@ public function dashboard()
         $userId = $this->Auth->user("id");
         $useremail = $this->Auth->user("email");
         $this->set('useremail', $useremail); 
+        $this->set('userId', $userId); 
 
         $review = $this->Users->getUserReviews($userId);
         $this->set(compact('review'));

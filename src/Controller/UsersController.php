@@ -5,6 +5,9 @@ use App\Controller\AppController;
 use Cake\Event\Event;
 use App\Form\ContactForm;
 use Cake\Mailer\MailerAwareTrait;
+use Cake\Filesystem\Folder;
+use Cake\Filesystem\File;
+
 
 /**
  * Users Controller
@@ -92,63 +95,44 @@ class UsersController extends AppController
 
     public function addPhoto()
     {
-
         if (!empty($this->request->data)) {
             if (!empty($this->request->data['upload']['name'])) {
 
-            $file = $this->request->data['upload']; //put the data into a var for easy use
+            $file = $this->request->data['upload']; // place la data dans une variable
             $userId = $this->Auth->user("id");
-            // $this->set('userId', $userId);
-            
-            $ext = substr(strtolower(strrchr($file['name'], '.')), 1); //get the extension
-            $arr_ext = array('jpg', 'jpeg', 'gif'); //set allowed extensions
-            //$setNewFileName = time() . "_" . rand(000000, 999999);
+            $ext = substr(strtolower(strrchr($file['name'], '.')), 1); //récupère l'extension
+            $arr_ext = array('jpg', 'jpeg', 'gif', 'png'); // définit les extensions autorisées
             $setNewFileName = 'avatar_' . $userId;
 
-                //only process if the extension is valid
-                if (in_array($ext, $arr_ext)) {
-                //do the actual uploading of the file. First arg is the tmp name, second arg is 
-                //where we are putting it
-                move_uploaded_file($file['tmp_name'], WWW_ROOT . '/img/avatars/' . $setNewFileName . '.' . $ext);
-
+                if (in_array($ext, $arr_ext)) { // si l'extension récupérée est dans le tableau
+                
+                move_uploaded_file($file['tmp_name'], WWW_ROOT . '/img/avatars/' . $setNewFileName . '.' . $ext); // téléverse le fichier sur le serveur
                 $this->Flash->success(__('Votre mise à jour a bien été prise en compte.'));
                 return $this->redirect(['action' => 'dashboard']);
-
-    //prepare the filename for database entry 
- //   $imageFileName = $setNewFileName . '.' . $ext;
+                }
+                $this->Flash->error(__('Votre mise à jour n\'a pas pu être prise en compte car l\'extension ne semble pas valide.'));
+                return $this->redirect(['action' => 'dashboard']);
+            }
+            $this->Flash->error(__('Votre mise à jour n\'a pas pu être prise en compte. Réessayez :)'));
+            return $this->redirect(['action' => 'dashboard']);
+        }
     }
-
-}
-
-/*
-$getFormvalue = $this->Users->patchEntity($particularRecord, $this->request->data);
-
-if (!empty($this->request->data['upload']['name'])) {
-            $getFormvalue->avatar = $imageFileName;
-}
-
-
-if ($this->Users->save($getFormvalue)) {
-   $this->Flash->success('Your profile has been sucessfully updated.');
-   return $this->redirect(['controller' => 'Users', 'action' => 'dashboard']);
-   } else {
-   $this->Flash->error('Records not be saved. Please, try again.');
-   }
-*/
-
-}
-    }
-
-
-
-
 
 public function dashboard()
     {
         $userId = $this->Auth->user("id");
-        $useremail = $this->Auth->user("email");
-        $this->set('useremail', $useremail); 
         $this->set('userId', $userId); 
+        $useremail = $this->Auth->user("email");
+        $this->set('useremail', $useremail);          
+
+        $dir = new Folder(WWW_ROOT . 'img\avatars\\');
+        $files = $dir->findRecursive('avatar_' . $userId. '.*');
+        if (isset($files[0])) // s'il y a déjà un fichier avatar avec l'id du user
+        {
+        $path_parts = pathinfo($files[0]);
+        $ext = $path_parts['extension'];
+        $this->set('ext', $ext); // récupère l'extension de ce fichier pour l'afficher
+        }
 
         $review = $this->Users->getUserReviews($userId);
         $this->set(compact('review'));

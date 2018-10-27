@@ -114,34 +114,35 @@
 				</section>
 				<!-- End section 2 -->
 
-
-
-
 				<section id="section-3">
-						<div class="row">
-							<div class="col-md-6 col-sm-6">
-								<h4>Votre photo de profil</h4>
-							</div>
-							<div class="col-md-6 col-sm-6">
-								<!--si une image existe à ce nom (changer l'extension en variable) -->
-								<?php echo $this->Html->image('avatars/avatar_' . $userId . '.jpg', [
+					<div class="row">
+						<div class="col-md-6 col-sm-6">
+							<h4>Votre photo de profil</h4>
+						</div>
+						<div class="col-md-6 col-sm-6">
+								<?php if (isset($ext))
+									{	
+   									echo $this->Html->image('avatars/avatar_' . $userId . '.' . $ext, [
 									'alt' => $username, 
 									'class' => 'img-responsive styled profile_pic'
-								]); ?>
-								<!-- sinon -->
-								<img src="<?= $this->Url->image('default-avatar.png') ?>" alt="Image" class="img-responsive styled profile_pic">
-								</p>
-							</div>
+									]);
+									}
+								else
+									{
+									echo $this->Html->image('default-avatar.png', [
+									'alt' => $username, 
+									'class' => 'img-responsive styled profile_pic'
+									]);
+									} 
+								?>
+							</p>
 						</div>
-						<!-- End row -->
-
-						<hr>
-						<h4>Importer une photo de profil</h4>
-						
-
-
-							<div class="form-inline upload_1">
-							<div class="form-group">
+					</div>
+					<!-- End row -->
+					<hr>
+					<h4>Importer une photo de profil</h4>
+					<div class="form-inline upload_1">
+						<div class="form-group">
 							<?php 
 							echo $this->Form->create($photo, [
 								'url' => ['action' => 'addPhoto'],
@@ -154,41 +155,11 @@
 							<br />
 							<?= $this->Form->button('Mettre à jour ma photo de profil', ['class' => 'btn_1 green']);
 							echo $this->Form->end();  
-							?>
-							
-							</div>
-							</div>
-						
-
-						<!-- Hidden on mobiles -->
-						<!--<div class="hidden-xs">-->
-							<!-- Drop Zone -->
-							<!--<h5>Or drag and drop files below</h5>
-							<div class="upload-drop-zone" id="drop-zone">
-								Just drag and drop files here
-							</div>-->
-							<!-- Progress Bar -->
-							<!--<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-									<span class="sr-only">60% Complete</span>
-								</div>
-							</div>-->
-							<!-- Upload Finished -->
-							<!--<div class="js-upload-finished">
-								<h5>Processed files</h5>
-								<div class="list-group">
-									<a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-01.jpg</a>
-								</div>
-							</div>-->
-							<!-- End Hidden on mobiles -->
-
-							
-
-					</section>
-					<!-- End section 3 -->
-
-
-
+							?>	
+						</div>
+					</div>		
+				</section>
+				<!-- End section 3 -->
 
 			</div>
 			<!-- End content -->

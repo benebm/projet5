@@ -150,7 +150,7 @@
 							]);
 							echo $this->Form->input('upload', [
 								'type' => 'file',
-								'label' => 'Taille recommandée : 68 x 68 pixels | Formats acceptés gif, jpg, png'
+								'label' => 'Dimensions : 68 x 68 pixels | Formats acceptés gif, jpg, png | Poids max 10 Ko'
 							]); ?>
 							<br />
 							<?= $this->Form->button('Mettre à jour ma photo de profil', ['class' => 'btn_1 green']);

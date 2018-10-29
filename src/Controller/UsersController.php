@@ -6,7 +6,6 @@ use Cake\Event\Event;
 use App\Form\ContactForm;
 use Cake\Mailer\MailerAwareTrait;
 use Cake\Filesystem\Folder;
-use Cake\Filesystem\File;
 
 
 /**
@@ -92,28 +91,36 @@ class UsersController extends AppController
         $this->set(compact('user'));
     }
 
-
     public function addPhoto()
     {
         if (!empty($this->request->data)) {
             if (!empty($this->request->data['upload']['name'])) {
 
             $file = $this->request->data['upload']; // place la data dans une variable
-            $userId = $this->Auth->user("id");
+            $userId = $this->Auth->user("id"); // récupère id pour nommage
+            $setNewFileName = 'avatar_' . $userId; // définit le futur nom
             $ext = substr(strtolower(strrchr($file['name'], '.')), 1); //récupère l'extension
             $arr_ext = array('jpg', 'jpeg', 'gif', 'png'); // définit les extensions autorisées
-            $setNewFileName = 'avatar_' . $userId;
+            $size = getimagesize($file['tmp_name']); // récupère hauteur et largeur
 
-                if (in_array($ext, $arr_ext)) { // si l'extension récupérée est dans le tableau
+                if ($file['size'] < 10000) {  // test poids              
+                    if (($size[0] == 68) && ($size[1] == 68)) { // test hauteur/largeur          
+                        if (in_array($ext, $arr_ext)) { // si l'extension récupérée est dans le tableau
                 
-                move_uploaded_file($file['tmp_name'], WWW_ROOT . '/img/avatars/' . $setNewFileName . '.' . $ext); // téléverse le fichier sur le serveur
-                $this->Flash->success(__('Votre mise à jour a bien été prise en compte.'));
-                return $this->redirect(['action' => 'dashboard']);
-                }
-                $this->Flash->error(__('Votre mise à jour n\'a pas pu être prise en compte car l\'extension ne semble pas valide.'));
+                            move_uploaded_file($file['tmp_name'], WWW_ROOT . '/img/avatars/' . $setNewFileName . '.' . $ext); // téléverse le fichier sur le serveur
+                            $this->Flash->success(__('Votre mise à jour a bien été prise en compte.'));
+                            return $this->redirect(['action' => 'dashboard']);
+                        }
+                        $this->Flash->error(__('Votre mise à jour n\'a pas pu être prise en compte car l\'extension ne semble pas valide.'));
+                        return $this->redirect(['action' => 'dashboard']);
+                    }
+                    $this->Flash->error(__('Votre mise à jour n\'a pas pu être prise en compte car les dimensions ne conviennent pas : l\'image doit faire 68 pixels de haut par 68 pixels de large.'));
+                    return $this->redirect(['action' => 'dashboard']);
+                } 
+                $this->Flash->error(__('Votre mise à jour n\'a pas pu être prise en compte car le fichier est trop lourd : poids maximum accepté 10 Ko.'));
                 return $this->redirect(['action' => 'dashboard']);
             }
-            $this->Flash->error(__('Votre mise à jour n\'a pas pu être prise en compte. Réessayez :)'));
+            $this->Flash->error(__('Votre mise à jour n\'a pas pu être prise en compte car vous n\'avez pas sélectionné de fichier.'));
             return $this->redirect(['action' => 'dashboard']);
         }
     }

@@ -156,8 +156,20 @@
 
 							<?php foreach ($spot->reviews as $review): ?>
 								<div class="review_strip_single">
-									<!--<img src="img/avatar1.jpg" class="img-circle">-->
-									<?php echo $this->Html->image("default-avatar.png", ["class" => "img-circle"]); ?>
+									<div id="review_img">
+									<?php foreach ($files as $file):
+										$path_parts = pathinfo($file);										
+										$img_name = $path_parts['filename'];
+										$img_ext = $path_parts['extension'];
+
+                							if (('avatar_' . $review->user_id) === $img_name) { 	
+											echo $this->Html->image('avatars/' . $img_name . '.' . $img_ext, [
+                                    		'alt' => $review->username, 
+                                    		'class' => 'img-circle'
+                                    		]);
+											}
+                					endforeach; ?>   
+                                	</div>
 									<small>Publié par <?= $review->username ?><br />- le <?= $review->created->format('d M y') ?> -</small>
 									<h4><?= h($review->title) ?></h4>
 									<p>

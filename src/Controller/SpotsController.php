@@ -52,9 +52,8 @@ class SpotsController extends AppController
         
         $dir = new Folder(WWW_ROOT . 'img\avatars\\');
         $files = $dir->findRecursive('avatar_' . '.*');
+        $this->set('dir', $dir);
         $this->set('files', $files);
-
-        
 
         //affiche la moyenne des reviews pour ce spot_slug
         $query = $this->Spots->getSpotReviews($slug);

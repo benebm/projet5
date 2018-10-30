@@ -134,6 +134,7 @@ public function dashboard()
 
         $dir = new Folder(WWW_ROOT . 'img\avatars\\');
         $files = $dir->findRecursive('avatar_' . $userId. '.*');
+
         if (isset($files[0])) // s'il y a déjà un fichier avatar avec l'id du user
         {
         $path_parts = pathinfo($files[0]);

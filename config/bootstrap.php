@@ -211,8 +211,16 @@ Type::build('timestamp')
  * Only try to load DebugKit in development mode
  * Debug Kit should not be installed on a production system
  */
+<<<<<<< HEAD
 //if (Configure::read('debug')) {
 //    Plugin::load('DebugKit', ['bootstrap' => true]);
 //}
 
 //Plugin::load('City', ['bootstrap' => false, 'routes' => true]);
+=======
+if (Configure::read('debug')) {
+    Plugin::load('DebugKit', ['bootstrap' => true]);
+}
+
+Plugin::load('City', ['bootstrap' => false, 'routes' => true]);
+>>>>>>> 0b334cc161da02d06bafc8e69cb8b07ac12dc147

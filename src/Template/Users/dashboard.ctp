@@ -88,7 +88,11 @@
 							<h4>Mettre à jour votre nom d'utilisateur</h4>
 							<strong>Nom d'utilisateur actuel</strong><br /><?= h($username) ?>
 							<hr>
+<<<<<<< HEAD
 							<?= $this->Form->create(isset($user), ['url' => ['action' => 'editUser']]); ?>
+=======
+							<?= $this->Form->create($user, ['url' => ['action' => 'editUser']]); ?>
+>>>>>>> 0b334cc161da02d06bafc8e69cb8b07ac12dc147
 								<div class="form-group">
 								<label>Nouveau nom d'utilisateur</label>
 								<?= $this->Form->control('username', ['class' => 'form-control', 'placeholder' => 'Votre nouveau pseudo', 'label' => false]) ?>
@@ -98,7 +102,11 @@
 						</div>
 						<div class="col-md-6 col-sm-6 add_bottom_30">
 							<h4>Mettre à jour votre mot de passe</h4>
+<<<<<<< HEAD
 							<?= $this->Form->create(isset($user), ['url' => ['action' => 'editUser']]); ?>
+=======
+							<?= $this->Form->create($user, ['url' => ['action' => 'editUser']]); ?>
+>>>>>>> 0b334cc161da02d06bafc8e69cb8b07ac12dc147
 								<div class="form-group">
 								<label>Nouveau mot de passe</label>
 								<?= $this->Form->control('password', ['class' => 'form-control', 'placeholder' => 'Votre nouveau mot de passe', 'label' => false, 'id' => 'password1']) ?>
@@ -144,7 +152,11 @@
 					<div class="form-inline upload_1">
 						<div class="form-group">
 							<?php 
+<<<<<<< HEAD
 							echo $this->Form->create(isset($photo), [
+=======
+							echo $this->Form->create($photo, [
+>>>>>>> 0b334cc161da02d06bafc8e69cb8b07ac12dc147
 								'url' => ['action' => 'addPhoto'],
 								'enctype' => 'multipart/form-data'
 							]);

@@ -54,8 +54,11 @@ Router::scope('/', function (RouteBuilder $routes) {
     //redirection du logo vers la home quelle que soit la page d'origine
     $routes->connect('/index.html', ['controller' => 'Spots', 'action' => 'index']);
     $routes->connect('/spots/index.html', ['controller' => 'Spots', 'action' => 'index']);
+<<<<<<< HEAD
     $routes->connect('/spots/view/index.html', ['controller' => 'Spots', 'action' => 'index']);
     $routes->connect('/spots/mapall/index.html', ['controller' => 'Spots', 'action' => 'mapall']);
+=======
+>>>>>>> 0b334cc161da02d06bafc8e69cb8b07ac12dc147
     $routes->connect('/users/index.html', ['controller' => 'Spots', 'action' => 'index']);
     $routes->connect('/pages/index.html', ['controller' => 'Spots', 'action' => 'index']);
 

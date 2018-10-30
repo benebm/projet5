@@ -50,10 +50,19 @@ class SpotsController extends AppController
         $spot = $this->Spots->getSingleSpot($slug);
         $this->set(compact('review', 'spot'));       
         
+<<<<<<< HEAD
         $dir = new Folder(WWW_ROOT . 'img/avatars/');
         $files = $dir->findRecursive('avatar_' . '.*');
         $this->set('files', $files);
 
+=======
+        $dir = new Folder(WWW_ROOT . 'img\avatars\\');
+        $files = $dir->findRecursive('avatar_' . '.*');
+        $this->set('files', $files);
+
+        
+
+>>>>>>> 0b334cc161da02d06bafc8e69cb8b07ac12dc147
         //affiche la moyenne des reviews pour ce spot_slug
         $query = $this->Spots->getSpotReviews($slug);
         $rating = $query->select(['moyenne' => $query->func()->avg('rating')])->first();

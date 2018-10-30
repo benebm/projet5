@@ -37,7 +37,11 @@
                             <li><a href="https://twitter.com/benedictemondon" target="_blank"><i class="icon-twitter" target="_blank"></i></a></li>
                             <li><a href="https://www.linkedin.com/in/benedicte-mondon/" target="_blank"><i class="icon-linkedin" target="_blank"></i></a></li>
                         </ul>
+<<<<<<< HEAD
                         <p>© Benedicte for Openclassroom 2018<br />Powered by Cakephp 3.5.17</p>
+=======
+                        <p>© Benedicte for Openclassroom 2018<br />Powered by Cakephp 3.5.11</p>
+>>>>>>> 0b334cc161da02d06bafc8e69cb8b07ac12dc147
                     </div>
                 </div>
             </div><!-- End row -->

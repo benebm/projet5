@@ -132,10 +132,15 @@ public function dashboard()
         $useremail = $this->Auth->user("email");
         $this->set('useremail', $useremail);          
 
+<<<<<<< HEAD
         
         $dir = new Folder(WWW_ROOT . 'img/avatars/');
         $files = $dir->findRecursive('avatar_' . $userId. '.*');
 
+=======
+        $dir = new Folder(WWW_ROOT . 'img\avatars\\');
+        $files = $dir->findRecursive('avatar_' . $userId. '.*');
+>>>>>>> 0b334cc161da02d06bafc8e69cb8b07ac12dc147
         if (isset($files[0])) // s'il y a déjà un fichier avatar avec l'id du user
         {
         $path_parts = pathinfo($files[0]);

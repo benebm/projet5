@@ -13,7 +13,7 @@ MOBILE SELECT MENU
     //plugin's default options
     var settings = {
       switchWidth: 767,
-      topOptionText: 'Filter by category',
+      topOptionText: 'Trier par catégorie',
       indentString: '&nbsp;&nbsp;&nbsp;'
     };
     

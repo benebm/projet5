@@ -632,6 +632,12 @@ only screen and (min-device-pixel-ratio: 2) and (max-width: 991px) {
 	}
 	
 	/* New v1.8 */
+
+	/*custo mapall mobile : je cache les catégories*/
+	#map_filter {
+		display: none;
+	}
+
 	#map_filter ul li a {
 		min-width: inherit;
 	}
@@ -726,7 +732,7 @@ only screen and (min-device-pixel-ratio: 2) and (max-width: 991px) {
 	}
 	
 	.features-content {
-		padding: 10%;
+		padding: 0.5%;
 	}
 	
 	.box_style_1 {
@@ -823,6 +829,12 @@ only screen and (min-device-pixel-ratio: 2) and (max-width: 991px) {
 	}
 	
 	/* New v1.8 */
+
+	/*custo mapall mobile : je cache les catégories*/
+	#map_filter {
+		display: none;
+	}
+
 	#map_filter ul li a i {
 		font-size: 18px;
 	}

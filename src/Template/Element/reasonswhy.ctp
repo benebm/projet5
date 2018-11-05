@@ -62,7 +62,7 @@
         <div class="col-md-4 wow zoomIn" data-wow-delay="0.2s">
             <div class="feature_home">
                 <i class="icon_set_1_icon-49"></i>
-                <h3>Plus de <span>100 spots...</span></h3>
+                <h3>Plus de <span>50 spots...</span></h3>
                 <p>Etre plus écolo au quotidien, vous aimeriez bien, mais vous ne savez pas comment faire ? Ca tombe bien, on vous a mâché le travail !</p>
                 <?= $this->Html->link('En savoir plus', ['controller' => 'Pages', 'action' => 'concept'], ['class' => 'btn_1 outline']) ?>
             </div>

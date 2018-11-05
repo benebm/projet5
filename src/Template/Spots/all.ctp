@@ -92,19 +92,19 @@
 											['action' => 'all'],
 											['escape' => false, 'id' => 'active']
 										)?>
-									</li>
+									</li>									
+									<?php foreach ($categories as $category): ?>
 									<li>
-										<?php foreach ($categories as $category):
-											foreach ($spotscounts as $spotscount): 
-												if ($spotscount->category_id === $category->id)
-												{
-													echo $this->Html->link('<i class="' . $category->icon . '"></i>' . $category->title . ' <span>(' . $spotscount->count . ')</span>',
-														['action' => 'sortCat', $category->id],
-														['escape' => false, 'id' => '']);
-												}
-											endforeach;
+										<?php foreach ($spotscounts as $spotscount): 
+											if ($spotscount->category_id === $category->id) 
+											{
+												echo $this->Html->link('<i class="' . $category->icon . '"></i>' . $category->title . ' <span>(' . $spotscount->count . ')</span>',
+													['action' => 'sortCat', $category->id],
+													['escape' => false, 'id' => '']);
+											} 
 										endforeach; ?>
 									</li>
+									<?php endforeach; ?>
 								</ul>
 							</div>
 

@@ -4356,7 +4356,8 @@ ul.plan-features {
 #map_filter {
 	position: fixed;
 	bottom: 0;
-	left: 0;
+	/*custo left, avant : 0; */
+	left: 50px;
 	background-color: rgba(255, 255, 255, 0.7);
 	z-index: 2;
 	width: 100%;

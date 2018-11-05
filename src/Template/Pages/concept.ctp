@@ -24,7 +24,7 @@
 				<div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
 					<div class="feature">
 						<i class="icon_set_1_icon-49"></i>
-						<h3>Plus de <span>100 spots...</span></h3>
+						<h3>Plus de <span>50 spots...</span></h3>
 						<p>
 							Etre plus écolo au quotidien, vous aimeriez bien, mais vous ne savez pas comment faire ? Pas envie de vous compliquer la vie ou d'y passer du temps ? Ca tombe bien, on vous a mâché le travail ! Nos "spots", ce sont <strong>tous nos commerces Green préférés à Marseille</strong>, sélectionnés pour vous avec soin afin de vous aider à réduire votre impact sur l'environnement.
 						</p>
